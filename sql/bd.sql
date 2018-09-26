@@ -11,8 +11,10 @@ create table anuncio(
      valido tinyint not null
 );
 
-create table usuario( id int auto_increment primary key,
-     nome varchar(100),
-     login varchar(15),
-     senha varchar(100)
+create table usuario( 
+    id int auto_increment primary key,
+    nome varchar(100),
+    login varchar(15),
+    senha varchar(61),
+    adm tinyint
 );

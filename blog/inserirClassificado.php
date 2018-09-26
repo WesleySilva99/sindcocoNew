@@ -1,6 +1,6 @@
 <?php
 
-    require("../conexao.php");
+    require("../util/conexao.php");
 
     require("uploadImagem.php");
 

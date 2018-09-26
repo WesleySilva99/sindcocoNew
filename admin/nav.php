@@ -11,7 +11,7 @@
 									<span class="icon-bar"></span>
 								</button>
 								
-								<a href="#" class="navbar-brand"><h1>SINDCOCO</h1></a>
+								<!-- <a href="" class="navbar-brand"><img src="img/logo.png" alt="Logo" /></a>	-->
 							</div>
 							
 							<div class="navbar-collapse collapse">
@@ -19,7 +19,7 @@
 									<li><a href="/index.html">Início</a></li>
 									<li><a href="/blog/sobre.php">Sobre</a></li>
 									<li><a href="/blog/classificados.php">classificados</a></li>
-									<li><a href="/blog/contact.html">Contact</a></li>
+									<li><a href="logof.php">Sair</a></li>
 								</ul>
 							</div>
 							
