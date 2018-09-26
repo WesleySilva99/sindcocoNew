@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Sobre o SINDCOCO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,8 +11,8 @@
         <!-- Place favicon.ico in the root directory -->
 		
 		<!-- Font -->
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<!-- Font -->
 		
 		
@@ -22,7 +22,11 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/responsive.css">
-        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+		<!-- fav icon -->
+
+			<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
+
     </head>
     <body class="blog">
         <!--[if lt IE 8]>
@@ -45,10 +49,10 @@
 				<div class="row">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<h3>Sobre nós.</h3>
-							<img src="/img/logo.gif" alt="Blog Image" width="100%"/>
+							<h3>Serviços de defesa comercial</h3>
+							<img src="/img/sindcoco.png" alt="Blog Image" width="100%"/>
 							<h4>
-								Serviços de defesa comercial
+                                Serviços de defesa comercial
 							</h4>
 							<p>
 								O Sindcoco possui larga experiência na área de defesa comercial. Essa experiência foi adquirida ao longo dos últimos 20 (vinte anos). No início dos anos de 1990, o governo brasileiro abriu as portas para as importações, sem que para tanto estivesse devidamente estruturado para lidar com as peculiaridades do comércio exterior. Assim é que, no caso do coco ralado, as importações chegaram a ultrapassar o consumo brasileiro. Essas importações chegavam ao Brasil com preços irrisórios, frutos dos altos subsídios concedidos à cadeia produtiva do coco pelos países asiáticos, maiores produtores mundiais, como a Indonésia, as Filipinas e o Sri Lanka, entre outros. O elo mais atingido da cadeia produtiva foi exatamente o produtor de coco. Isto porque a indústria brasileira, diante dos baixos preços do coco ralado importado, passaram a adquirir esse produto e com ele passou a fabricar tudo aquilo que fabricava com o coco seco adquirido no mercado doméstico: leite de coco, doce de coco, óleo de coco, entre outros produtos, além de fracionar a embalagem do coco ralado importado para lançar nas gôndolas dos supermercados bem como para abastecer padarias, docerias, sorveterias e toda uma rede consumidora de produtos de coco processados. A consequência mais imediata é que essas indústrias deixaram de comprar o coco seco ao produtor nacional, que viu de uma hora para outra desaparecer o seu mercado de coco para indústria. Diante disso, os preços do coco seco chegaram a patamares tão baixos que sequer remuneravam a despesa com o tirador de coco.
@@ -117,63 +121,9 @@
 					</div>
 					
 					<!-- Right Sidebar -->
-					<div class="col-md-4">
-						<aside class="right-sidebar">
-							<div class="widget">
-								<form class="form-search">
-									<input class="form-control" type="text" placeholder="Search..">
-								</form>
-							</div>
-							<div class="widget">
-								<h5 class="widgetheading">Categories</h5>
-								<ul class="cat">
-									<li><i class="icon-angle-right"></i><a href="#">Web design</a><span> (20)</span></li>
-									<li><i class="icon-angle-right"></i><a href="#">Online business</a><span> (11)</span></li>
-									<li><i class="icon-angle-right"></i><a href="#">Marketing strategy</a><span> (9)</span></li>
-									<li><i class="icon-angle-right"></i><a href="#">Technology</a><span> (12)</span></li>
-									<li><i class="icon-angle-right"></i><a href="#">About finance</a><span> (18)</span></li>
-								</ul>
-							</div>
-							<div class="widget">
-								<h5 class="widgetheading">Latest posts</h5>
-								<ul class="recent">
-									<li>
-									<img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" />
-									<h6><a href="#">Lorem ipsum dolor sit</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
-									<li>
-									<a href="#"><img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" /></a>
-									<h6><a href="#">Maiorum ponderum eum</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
-									<li>
-									<a href="#"><img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" /></a>
-									<h6><a href="#">Et mei iusto dolorum</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
-								</ul>
-							</div>
-							<div class="widget">
-								<h5 class="widgetheading">Popular tags</h5>
-								<ul class="tags">
-									<li><a href="#">Web design</a></li>
-									<li><a href="#">Trends</a></li>
-									<li><a href="#">Technology</a></li>
-									<li><a href="#">Internet</a></li>
-									<li><a href="#">Tutorial</a></li>
-									<li><a href="#">Development</a></li>
-								</ul>
-							</div>
-							</aside>
-					</div>
-				</div>
+                    <?php
+                        require("rightSidebar.php");
+                    ?>
 			</div>
 		</section>
 		
@@ -181,112 +131,12 @@
 		
 		<!-- footer -->
 		
-		<footer>
-			<div class="container">
-				<div class="row">
-				
-					<!-- Single Footer -->
-					<div class="col-sm-3">
-						<div class="single-footer">
-							<div class="footer-logo">
-								<img src="/img/logoMini.png" alt="Footer Logo" />
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut .</p>
-							</div>
-						</div>
-					</div>
-					<!-- Single Footer -->
-					
-					
-					<!-- Single Footer -->
-					<div class="col-sm-3">
-						<div class="single-footer">
-							<h4>Keep In Touch</h4>
-							<p>44 New Design Street, Melbourne 005 <br />
-							+1 (123) 456-7890-321 <br />
-							info@weburl.com <br />
-							(01) 800 854 633</p>
-						</div>
-					</div>
-					<!-- Single Footer -->
-					
-					
-					<!-- Single Footer -->
-					<div class="col-sm-3">
-						<div class="single-footer">
-							<h4>Suscribe</h4>
-							<p>Enter your Email Address For Subscirbe Our Monthly Newsletters</p>
-							
-							<form action="">
-								<div class="form-group">
-									<input type="email" class="form-control my-form" id="exampleInputEmail1" placeholder="Enter Your Email Address">
-								</div>
-								<div class="form-group">
-									<button class="btn btn-subscribe">Subscirbe</button>
-								</div>
-							</form>
-							
-						</div>
-					</div>
-					<!-- Single Footer -->
-					
-					<!-- Single Footer -->
-					<div class="col-sm-3">
-						<div class="single-footer">
-							<h4>Recent Projects</h4>
-							<ul class="projects">
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-							</ul>
-						</div>
-					</div>
-					<!-- Single Footer -->
-					
-				</div>
-			</div>
-			
-		</footer>
-		
-		<!-- Copyright -->
-		<div class="copyright">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="copy-text">
-								<p>All Rights Reserved | Copyright 2016 © <strong><a href="http://www.pfind.com/goodies/bizium/">The Bizium</a></strong> template by <strong><a href="http://www.pfind.com/goodies/">pFind's Goodies</a></strong></p>
-							</div>
-						</div>
-						<div class="col-sm-5">
-							<div class="footer-menu pull-right">
-								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">About</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Faq</a></li>
-									<li><a href="#">Pricing</a></li>
-									<li><a href="#">Blog</a></li>
-									<li><a href="#">Contact</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="social">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
+            <?php
+
+                require("footer.php");
+
+            ?>
+        
 		<!-- footer -->
 		
 		

@@ -16,10 +16,10 @@
 							
 							<div class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="/index.html">Início</a></li>
-									<li><a href="/blog/sobre.php">Sobre</a></li>
-									<li><a href="/blog/classificados.php">classificados</a></li>
-									<li><a href="/blog/contact.html">Contact</a></li>
+									<li><a href="/index.php">Início</a></li>
+									<li><a href="/sobre/">Sobre</a></li>
+									<li><a href="/classificados/classificados.php">classificados</a></li>
+									<li><a href="/index.php#contact-us">Contact</a></li>
 								</ul>
 							</div>
 							
