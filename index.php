@@ -242,7 +242,7 @@
 
 						<div class="icon-box text-center">
 						<span class="ico">
-						<img src="img/certificado.png" width="25%">
+						<img src="/img/certificado.png" width="25%">
 						</span>
 						<h4>Certificado</h4>
 						<p>Registro Sindical certificado no Cadastro Nacional de Entidades Sindicais – CNES, do Ministério do Trabalho (processo 46000.008076/99-33).</p>
@@ -283,7 +283,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="title">
-							<h3>Our <span>Services</span></h3>
+							<h3>Notícias: <span>Informativos</span></h3>
 						</div>
 					</div>
 				</div>
@@ -442,7 +442,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="title">
-							<h3>Galeria de <span>Fotos</span> <a href="/fotos.php" class="btn btn-read-more">Ver mais >></a></h3> 	
+							<h3>Galeria de <span>Fotos</span> <a href="/noticias/" class="btn btn-read-more">Ver mais >></a></h3> 	
 						</div>
 					</div>
 				</div>
@@ -683,7 +683,7 @@
 				<div class="row">
 					<?php
 						require("util/conexao.php");
-						$sql = "SELECT * FROM anuncio ORDER BY data_anuncio DESC";
+						$sql = "SELECT * FROM anuncio ORDER BY data DESC limit 3";
 						$anuncios = $conexao->query($sql);
 						foreach ($anuncios as $linha) {
 					?>						

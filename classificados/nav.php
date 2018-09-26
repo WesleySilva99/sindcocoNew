@@ -1,5 +1,5 @@
 <!-- Main Menu Start -->
-<div class="main-menu">
+<div class="main-menu" >
 				<div class="navbar-wrapper">
 					<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 						<div class="container">

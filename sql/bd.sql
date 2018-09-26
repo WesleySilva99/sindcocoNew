@@ -3,7 +3,7 @@ create table anuncio(
      nome varchar(150) not null,
      email varchar(100) not null,
      titulo varchar(100) not null,
-     descricao varchar(256) not null,
+     descricao blob not null,
      preco float not null,
      foto varchar(256) not null,
      telefone varchar(200) not null,

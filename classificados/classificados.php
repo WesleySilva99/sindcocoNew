@@ -44,18 +44,24 @@
 							</h2>
 						
 							<?php
-								$sql = "SELECT * FROM anuncio ORDER BY data_anuncio DESC";
+								$sql = "SELECT * FROM anuncio WHERE autorizado = 1 ORDER BY data DESC";
 								$anuncios = $conexao->query($sql);
 								foreach ($anuncios as $linha) {
+									$id = $linha["id"];
+									$foto = "/img/anuncios/".$id.".jpg";
 							?>
 
 							<div class="single-blog">
 							<a href="#"><h3><?=$linha['titulo'];?></h3></a>
-							<img src="/img/anuncios/<?=$linha['foto'];?>" alt="Blog Image" />
+							<? if(file_exists($foto)) {?>
+								<img src="/img/anuncios/<?=$id?>.jpg&l=119&a=80" />
+							<? } else { ?>
+									<img src="/img/anuncios/off.jpg&l=119&a=80" />
+							<? } ?>
 							<p><?=$linha['descricao'];?></p>
 							<div class="blog-info">
 								<ul>
-									<li><a href="#">Data: <?=date('d/m/Y H:i:s', strtotime($linha['data_anuncio']));?></a></li>
+									<li><a href="#">Data: <?=date('d/m/Y H:i:s', strtotime($linha['data']));?></a></li>
 									<li><a href="#">Nome: <?=$linha['nome'];?></a></li>
 									<li><a href="#">Telefone: <?=$linha['telefone'];?></a></li>
 								</ul>
