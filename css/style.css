@@ -971,8 +971,8 @@ form#commentform textarea {
 }
 
 .btn.btn-theme.margintop10 {
-  background: #ffff37;
-  color:#fff;
+  background: #eeee44;
+  color:#0d0c0c;
 }
 
 
@@ -991,8 +991,9 @@ form#commentform textarea {
 /* --- Map --- */
 .map{
 	position:relative;
-	margin-top:-50px;
+	margin-top:50px;
 	margin-bottom:40px;
+	width: 700px;
 }
 
 .map iframe{
