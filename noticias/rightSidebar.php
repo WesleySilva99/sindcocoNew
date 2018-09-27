@@ -14,31 +14,34 @@
 									<li><i class="icon-angle-right"></i><a href="/noticias/midia.php">SINDCOCO na mídia</a></li>
 								</ul>
                             </div>
-                            <!-- Notícias -->
+                            <!-- Informativos -->
 							<div class="widget">
-								<h5 class="widgetheading">Ultimas notícias</h5>
+								<h5 class="widgetheading">Informativos</h5>
 								<ul class="recent">
-									<li>
-									<img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" />
-									<h6><a href="#">Lorem ipsum dolor sit</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
-									<li>
-									<a href="#"><img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" /></a>
-									<h6><a href="#">Maiorum ponderum eum</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
-									<li>
-									<a href="#"><img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" /></a>
-									<h6><a href="#">Et mei iusto dolorum</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
+									<?php
+
+										require("../util/conexao.php");
+										$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 3";
+										$anuncios = $conexao->query($sql);
+										foreach ($anuncios as $linha) {
+
+									?>
+										<li>
+											<center>
+												<i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i>
+											</center>
+											<h6><?=$linha["titulo"];?></h6>
+												<p></p>
+												<center>
+													<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
+														Ler mais>>
+													</a>
+												</center>
+										</li>
+									<?php
+										}
+									?>
+									
 								</ul>
 							</div>
 							<div class="widget">

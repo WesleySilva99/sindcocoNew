@@ -7,22 +7,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+		<?php
 		
-		<!-- Font -->
-			<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
-			<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-		<!-- Font -->
-		
-		
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/responsive.css">
-		<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+			require("../util/imports.php");
+		?>
 		<!-- fav icon -->
 
 			<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
@@ -49,37 +37,24 @@
 				<div class="row">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<h3>O SINDCOCO.</h3>
+							<h3>Notícias.</h3>
 							<img src="/img/sindcoco.png" alt="Blog Image" width="100%"/>
-							<h4>
-								Institucional
-							</h4>
-							<p>
-							Registro Sindical certificado no Cadastro Nacional de Entidades Sindicais – CNES, do Ministério do Trabalho (processo 46000.008076/99-33).
-							</p>
-							<p>
-								Fundada em maio de 1995.
-							</p>
-							<p>
-							Representante da categoria econômica dos produtores de coco, sementes e mudas e seus subprodutos não industrializados como:
-							</p>
-							<h1>
-								Aquela lista aqui
+							<?php
 
-							</h1>
-							<h4>
-								Missão
-							</h4>
-							<p>
-								Atuar em prol do desenvolvimento das atividades da coconicultura, através do apoio e defesa dos produtores e de suas comunidades.
-							</p>
-							<h4>
-								Visão
-							</h4>
-							<p>
-							Ser organização de referência nacional nas ações voltadas à promoção e defesa da coconicultura brasileira.
-							</p>
+								require("../util/conexao.php");
+								$sql = "select * from noticias";
+								$noticia = $conexao->query($sql);
 
+									foreach ($noticia as $linha) {	
+								?>
+								<h4>
+									<?=$linha["titulo"];?>
+								</h4><br>
+								<img src="/img/noticias/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
+								
+							<?php
+							}
+							?>
 							
 						</div>
 						

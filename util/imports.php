@@ -1,4 +1,8 @@
-        <!-- Imports dos css -->
+            <!-- Icone PDF -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    		<!-- icone PDF -->       
+       
+       <!-- Imports dos css -->
         
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->

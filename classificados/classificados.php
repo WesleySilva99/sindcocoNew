@@ -48,16 +48,22 @@
 								$anuncios = $conexao->query($sql);
 								foreach ($anuncios as $linha) {
 									$id = $linha["id"];
-									$foto = "/img/anuncios/".$id.".jpg";
 							?>
 
 							<div class="single-blog">
 							<a href="#"><h3><?=$linha['titulo'];?></h3></a>
-							<? if(file_exists($foto)) {?>
-								<img src="/img/anuncios/<?=$id?>.jpg&l=119&a=80" />
-							<? } else { ?>
-									<img src="/img/anuncios/off.jpg&l=119&a=80" />
-							<? } ?>
+							<?php
+								if($linha["imagem"] != null){
+							?>
+								<img src="/img/anuncios/<?=$linha['imagem'];?>" alt="Blog Image"/>
+							<?php
+							}else {
+								?>
+								<img src="/img/anuncios/off.jpg"/>
+							<?php
+								}
+							?>
+							
 							<p><?=$linha['descricao'];?></p>
 							<div class="blog-info">
 								<ul>

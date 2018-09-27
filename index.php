@@ -15,7 +15,10 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<!-- Font -->
 		
-		
+		<!-- Icone PDF -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- icone PDF -->
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -284,6 +287,10 @@
 					<div class="col-sm-12">
 						<div class="title">
 							<h3>Notícias: <span>Informativos</span></h3>
+							
+							<center>
+								<a href="/noticias/" class="btn btn-read-more"> Ver Todas Notícias >> </a>
+							</center>
 						</div>
 					</div>
 				</div>
@@ -291,6 +298,13 @@
 			
 			<div class="container">
 				<div class="row">
+
+					<?php
+						require("util/conexao.php");
+						$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 6";
+						$anuncios = $conexao->query($sql);
+						foreach ($anuncios as $linha) {
+					?>
 				
 					<!-- Single Feature-->
 					<div class="col-sm-4">
@@ -298,132 +312,27 @@
 							<div class="row">
 								<div class="col-md-2">
 									<div class="feature-icon">
-										<i class="fa fa-bitbucket"></i>
+										<i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i>
 									</div>
 								</div>
 								<div class="col-md-10">
 									<div class="feature-text">
-										<h4>Lorem ipsum dolor sit amet</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-										<a href="#">Read More>></a>
+										
+										<h4><?=$linha["titulo"];?></h4>
+										<p></p>
+										<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
+											Ler mais>>
+                    					</a>
+										
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- Single Feature-->
-					
-					<!-- Single Feature-->
-					<div class="col-sm-4">
-						<div class="single-feature wow fadeInLeft">
-							<div class="row">
-								<div class="col-md-2">
-									<div class="feature-icon">
-										<i class="fa fa-apple "></i>
-									</div>
-								</div>
-								<div class="col-md-10">
-									<div class="feature-text">
-										<h4>Lorem ipsum dolor sit amet</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-										<a href="#">Read More>></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Single Feature-->
-					
-					<!-- Single Feature-->
-					<div class="col-sm-4">
-						<div class="single-feature wow fadeInRight">
-							<div class="row">
-								<div class="col-md-2">
-									<div class="feature-icon">
-										<i class="fa fa-automobile "></i>
-									</div>
-								</div>
-								<div class="col-md-10">
-									<div class="feature-text">
-										<h4>Lorem ipsum dolor sit amet</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-										<a href="#">Read More>></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Single Feature-->
-					
-					
-				</div>
-				
-				
-				<div class="row">
-				
-					<!-- Single Feature-->
-					<div class="col-sm-4">
-						<div class="single-feature wow fadeInLeft">
-							<div class="row">
-								<div class="col-md-2">
-									<div class="feature-icon">
-										<i class="fa fa-bullhorn "></i>
-									</div>
-								</div>
-								<div class="col-md-10">
-									<div class="feature-text">
-										<h4>Lorem ipsum dolor sit amet</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-										<a href="#">Read More>></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Single Feature-->
-					
-					<!-- Single Feature-->
-					<div class="col-sm-4">
-						<div class="single-feature wow fadeInLeft">
-							<div class="row">
-								<div class="col-md-2">
-									<div class="feature-icon">
-										<i class="fa fa-camera-retro"></i>
-									</div>
-								</div>
-								<div class="col-md-10">
-									<div class="feature-text">
-										<h4>Lorem ipsum dolor sit amet</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-										<a href="#">Read More>></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Single Feature-->
-					
-					<!-- Single Feature-->
-					<div class="col-sm-4">
-						<div class="single-feature wow fadeInRight">
-							<div class="row">
-								<div class="col-md-2">
-									<div class="feature-icon">
-										<i class="fa fa-coffee "></i>
-									</div>
-								</div>
-								<div class="col-md-10">
-									<div class="feature-text">
-										<h4>Lorem ipsum dolor sit amet</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-										<a href="#">Read More>></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Single Feature-->
-					
+					<?php
+						}
+					?>
 					
 				</div>
 				
@@ -682,8 +591,8 @@
 				
 				<div class="row">
 					<?php
-						require("util/conexao.php");
-						$sql = "SELECT * FROM anuncio ORDER BY data DESC limit 3";
+						
+						$sql = "SELECT * FROM anuncio WHERE autorizado = 1 ORDER BY data DESC LIMIT 3";
 						$anuncios = $conexao->query($sql);
 						foreach ($anuncios as $linha) {
 					?>						
@@ -691,7 +600,17 @@
 						<div class="col-sm-4">
 							<div class="single-blog">
 								<h4> <?=$linha["titulo"];?>
-								<img src="/img/anuncios/<?=$linha['foto'];?>" alt="Blog Image" />
+								<?php
+								if($linha["imagem"] != null){
+							?>
+								<img src="/img/anuncios/<?=$linha['imagem'];?>" alt="Blog Image"/>
+							<?php
+							}else {
+								?>
+								<img src="/img/anuncios/off.jpg"/>
+							<?php
+								}
+							?>
 								<h5>Nome do anunciante: <?=$linha["nome"];?></h5>
 								<p>Descrição do anuncio: <?=$linha["descricao"];?></p>
 								<a href="#" class="btn btn-read-more">Ver mais &gt;&gt;</a>
@@ -1264,17 +1183,21 @@
 							<div class="copy-text">
 								<p>All Rights Reserved | Copyright 2016 © <strong><a href="http://www.pfind.com/goodies/bizium/">The Bizium</a></strong> template by <strong><a href="http://www.pfind.com/goodies/">pFind's Goodies</a></strong></p>
 							</div>
+							<div class="copy-text">
+								<p>Edited by Wesley Silva and Leandro Siqueira</p>
+                            </div>
 						</div>
 						<div class="col-sm-5">
 							<div class="footer-menu pull-right">
 								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">About</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Faq</a></li>
-									<li><a href="#">Pricing</a></li>
-									<li><a href="#">Blog</a></li>
-									<li><a href="#">Contact</a></li>
+								<li><a href="#home">Inicio</a></li>
+									<li><a href="#about">Sobre</a></li>
+									<li><a href="#features">Notícias</a></li>
+									<li><a href="#feature-work">Eventos</a></li>
+									<li><a href="#testimonials">Links úteis</a></li>
+									<li><a href="/classificados/classificados.php">Classificados</a></li>
+									<li><a href="#pricing">Ações Judiciais</a></li>
+									<li><a href="#contact-us">Contate-nos</a></li>
 								</ul>
 							</div>
 						</div>
