@@ -9,7 +9,7 @@
 
         <?php
 
-require "../util/imports.php";
+require "../../util/imports.php";
 
 ?>
 		<!-- fav icon -->
@@ -27,9 +27,9 @@ require "../util/imports.php";
 
 			<?php
 
-include "nav.php";
+				include "nav.php";
 
-?>
+			?>
 
 
 
@@ -41,7 +41,7 @@ include "nav.php";
 							<h3>Informativos.</h3>
 							<img src="/img/sindcoco.png" alt="Blog Image" width="100%"/>
 							<?php
-								require "../util/conexao.php";
+								require "../../util/conexao.php";
 								$sql = "SELECT * FROM informativos ORDER BY id DESC";
 								$anuncios = $conexao->query($sql);
 								foreach ($anuncios as $linha) {
@@ -53,7 +53,7 @@ include "nav.php";
 								<div class="feature-icon">
 										<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7;"></i>
 										<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
-											Ler mais>>
+											Editar >>
                     					</a><br>
 								</div>
 								<br>
@@ -102,7 +102,7 @@ include "nav.php";
 					</div>
 					<!-- Right Sidebar -->
 					<?php
-						require "rightSidebar.php";
+						require "../rightSidebar.php";
 					?>
 			</div>
 		</section>
@@ -112,7 +112,7 @@ include "nav.php";
 		<!-- Footer -->
 		<?php
 
-			require "footer.php";
+			require "../footer.php";
 
 		?>
 

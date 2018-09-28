@@ -1,5 +1,6 @@
 <?php
 
+    session_start();
     if(isset($_SESSION["login"])){
         header("Location: /admin/home.php");
     }
@@ -19,7 +20,8 @@
 		<?php
 		
 			require("../util/imports.php");
-			require("../util/conexao.php");
+            require("../util/conexao.php");
+           
 
 		?>
     </head>
@@ -36,7 +38,7 @@
             <section class="login-form">
                 <form method="POST" action="/admin/verificaLogin.php" role="login">
                 <center>
-                    <img src="/img/logo.gif" class="img-responsive" alt="" />
+                    <img src="/img/sindcoco.png" class="img-responsive" alt=""/>
                 </center>
                 <br>
                 <h3>

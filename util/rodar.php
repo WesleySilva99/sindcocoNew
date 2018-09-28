@@ -3,7 +3,7 @@
     require("conexao.php");
 
     $nome = "Francisco";
-    $login = "newSindcoco";
+    $login = "sindcoco";
     $senha = md5("admsindcoco");
 
     //$senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);

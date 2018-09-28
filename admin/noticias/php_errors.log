@@ -1,0 +1,22 @@
+[27-Sep-2018 15:14:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php:46
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 46
+[28-Sep-2018 01:46:07 UTC] PHP Warning:  require(config/conectaBd.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 36
+[28-Sep-2018 01:46:07 UTC] PHP Fatal error:  require(): Failed opening required 'config/conectaBd.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 36
+[28-Sep-2018 01:48:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 47
+[28-Sep-2018 01:48:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 47
+[28-Sep-2018 01:48:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_fetch_assoc() in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php:49
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 49
+[28-Sep-2018 01:58:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_fetch_assoc() in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php:49
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 49

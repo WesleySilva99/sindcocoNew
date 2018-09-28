@@ -1,3 +1,15 @@
+<?php
+
+	session_start();
+	if(!isset($_SESSION["login"])){
+		$msg = "Você precisa estar logado para entrar aqui!";
+		header("Location: /admin/index.php?msg=".$msg);
+	}else if ($_SESSION["adm"] == 0){
+		$msg = "Você não tem permissão para entrar aqui!";
+		header("Location: /admin/index.php?msg=".$msg);
+	}
+
+?>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -7,11 +19,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <?php
-
-require "../util/imports.php";
-
-?>
+		<?php
+		
+			require("../../util/imports.php");
+		?>
 		<!-- fav icon -->
 
 			<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
@@ -21,54 +32,65 @@ require "../util/imports.php";
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+		
 		<!-- Header Start -->
 		<header>
-
+			
 			<?php
 
-include "nav.php";
+				include("../nav.php");
 
-?>
+			?>
+		
 
-
-
+		
+		
+		
 		<section class="blog-single">
 			<div class="container">
-				<div class="row">
+				<div class="row" style="margin-top: 100px;">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<h3>Informativos.</h3>
-							<img src="/img/sindcoco.png" alt="Blog Image" width="100%"/>
+							<h1>Notícias.</h1>
+							<br>
 							<?php
-								require "../util/conexao.php";
-								$sql = "SELECT * FROM informativos ORDER BY id DESC";
-								$anuncios = $conexao->query($sql);
-								foreach ($anuncios as $linha) {
-							?>
 
-								<h5>
+								require("../../util/conexao.php");
+								$sql = "select * from noticias";
+								$noticia = $conexao->query($sql);
+
+									foreach ($noticia as $linha) {	
+								?>
+								<h4>
 									<?=$linha["titulo"];?>
-								</h5>
-								<div class="feature-icon">
-										<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7;"></i>
-										<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
-											Ler mais>>
-                    					</a><br>
+								</h4><br>
+								<img src="/img/noticias/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
+								
+								<div class="blog-info">
+								<ul>
+									<li><a href="">Data: 25/05/2016</a></li>
+									
+								</ul>
+								
+								<div class="read-more pull-right">
+									<a href="/admin/noticias/alterar.php"  class="btn  btn-sm" style="  color: white;  background-color: #337ab7;">
+           								Editar<span class="glyphicon glyphicon-chevron-right"></span>
+        							</a>
 								</div>
-								<br>
+								
+							</div>
 							<?php
-								}
+							}
 							?>
-
+							
 						</div>
-
-
-
-
-
-
-
+						
+						
+						
+						
+						
+						
+						
 						<div class="single-blog">
 							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
 							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>
@@ -80,16 +102,16 @@ include "nav.php";
 									<li><a href="">Category</a></li>
 									<li><a href="">10 Comments</a></li>
 								</ul>
-
+								
 								<div class="read-more pull-right">
 									<a href="#" class="btn btn-readmore">Continue Reading</a>
 								</div>
-
+								
 							</div>
-
+							
 						</div>
-
-
+						
+						
 						<!-- Pagination -->
 						<div id="pagination">
 							<span class="all">Page 1 of 3</span>
@@ -98,26 +120,26 @@ include "nav.php";
 							<a href="#" class="inactive">3</a>
 						</div>
 						<!-- Pagination -->
-
+						
 					</div>
 					<!-- Right Sidebar -->
 					<?php
-						require "rightSidebar.php";
+						require("rightSidebar.php");
 					?>
 			</div>
 		</section>
-
-
-
+		
+		
+		
 		<!-- Footer -->
 		<?php
 
-			require "footer.php";
+			require("footer.php");
 
 		?>
-
-
-
+		
+		
+		
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
