@@ -16,15 +16,70 @@
 		
 		<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
 
+        <link rel="stylesheet" href="/css/teste.css">
+        <link rel="stylesheet" href="/css/bootstrap.java.css">
+
 		<?php
 		
-			require("../util/imports.php");
+			
 			require("../util/conexao.php");
 
 		?>
     </head>
     <body>
-        <center>
+
+   <div class="container" style="margin-top: 30px;">
+        <br>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <header>
+                         <br>
+                        <div class="imgcontainer">
+                            <img src="/img/9.png"
+                                alt="Avatar" class="avatar">
+                        </div>
+                    </header>
+                    <article class="card-body">
+                        <form  method="POST" action="/admin/verificaLogin.php" role="login" class="register-form">
+                            <div class="form-group">
+                                <label for="usr">Usuário:</label> 
+                                <input type="text" name="login"     class="form-control" id="usr">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Senha:</label> 
+                                <input type="password" name="senha"  class="form-control" id="password">
+                            </div>
+                            
+
+
+                            <!-- form-group end.// -->
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block">Entrar</button>
+                            </div>
+
+                            <label> <input type="checkbox" checked="checked"
+                                name="remember"> Lembre-me
+                            </label>
+
+                            <div class="container" style="background-color: #f1f1f1">
+                                <input class="btn btn-danger" type="reset" value="Cancelar">
+                                <span class="psw" >Esqueceu a <a href="#">senha?</a></span>
+                            </div>
+                            <!-- form-group// -->
+                        </form>
+
+
+                        
+                        </form>
+                    
+
+
+    </div>
+    <!--container end.//-->
+
+       <!-- <center>
             <h1>Administração SINDCOCO</h1> 
         </center>
         <div class="container">
@@ -62,7 +117,7 @@
     
   
   
-    </div>   
+    </div>   -->
 
     </body>
 </html>
