@@ -1,5 +1,6 @@
 <?php
 
+    session_start();
     if(isset($_SESSION["login"])){
         header("Location: /admin/home.php");
     }
@@ -21,8 +22,14 @@
 
 		<?php
 		
+<<<<<<< HEAD
 			
 			require("../util/conexao.php");
+=======
+			require("../util/imports.php");
+            require("../util/conexao.php");
+           
+>>>>>>> bb3cdfaa8a8c756443009c74c820a51b45824a1d
 
 		?>
     </head>
@@ -91,7 +98,7 @@
             <section class="login-form">
                 <form method="POST" action="/admin/verificaLogin.php" role="login">
                 <center>
-                    <img src="/img/logo.gif" class="img-responsive" alt="" />
+                    <img src="/img/sindcoco.png" class="img-responsive" alt=""/>
                 </center>
                 <br>
                 <h3>

@@ -11,31 +11,17 @@
 									<span class="icon-bar"></span>
 								</button>
 								
-								<!-- <a href="" class="navbar-brand"><img src="img/logo.png" alt="Logo" /></a>	-->
+								<a href="#" class="navbar-brand"><h1>SINDCOCO</h1></a>
 							</div>
 							
 							<div class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="/admin/home.php">Início</a></li>
-									<?php
-
-										if($_SESSION["adm"] == 1){
-
-									?>
-									
-									<li><a href="/admin/usuarios/">Usuarios</a></li>
-									<li><a href="/admin/noticias/">noticias</a></li>
-									<li><a href="/admin/banners/">Banners</a></li>
-									<li><a href="/admin/eventos/">Eventos</a></li>
-									<li><a href="/admin/links/">Links úteis</a></li>
-									<li><a href="/admin/informativos/">Informaticos</a></li>
-									<li><a href="/admin/acoes/">Ações judiciais</a></li>
-									
-									<?php
-										}
-									?>
-									<li><a href="/admin/classificados/">classificados</a></li>
-									<li><a href="/admin/logof.php">Sair</a></li>
+								<li><a href="/index.php">Início</a></li>
+									<li><a href="/admin/noticias/informativos">Informativos</a></li>
+									<li><a href="/admin/noticias/news.php">Notícias</a></li>
+									<li><a href="/admin/noticias/midia.php">SINDCOCO na mídia</a></li>
+									<li><a href="/admin/classificados/classificados.php">classificados</a></li>
+									<li><a href="/admin/index.php#contact-us">Contate-nos</a></li>
 								</ul>
 							</div>
 							

@@ -7,11 +7,20 @@
 								</form>
 							</div>
 							<div class="widget">
-								<h4 class="widgetheading" style="margin: 10px;">Saiba mais</h4>
+								<h4 class="widgetheading" style="margin: 10px;">Deseja criar alguma coisa?</h4>
+								
 								<ul class="cat">
-									<li><i class="icon-angle-right"></i><a href="/noticias/informativos.php" class="btn  btn-sm">Informativos</a></li>
-									<li><i class="icon-angle-right"></i><a href="/noticias/news.php" class="btn  btn-sm">Notícias</a></li>
-									<li><i class="icon-angle-right"></i><a href="/noticias/midia.php" class="btn  btn-sm">Sindcoco na mídia</a></li>
+									<li><i class="icon-angle-right"></i><a href="/admin/noticias/iserirInformativos/" class="btn  btn-sm">Informativos</a></li>
+									<li><i class="icon-angle-right"></i><a href="/admin/noticias/inserirNews.php" class="btn  btn-sm">Notícias</a></li>
+									<li><i class="icon-angle-right"></i><a href="/admin/noticias/inserirMidia.php" class="btn  btn-sm">Sindcoco na mídia</a></li>
+								</ul>
+                            </div>
+							<div class="widget">
+								<h4 class="widgetheading" style="margin: 10px;">Deseja alterar alguma coisa?</h4>
+								<ul class="cat">
+									<li><i class="icon-angle-right"></i><a href="/admin/noticias/informativos/" class="btn  btn-sm">Informativos</a></li>
+									<li><i class="icon-angle-right"></i><a href="/admin/noticias/news/" class="btn  btn-sm">Notícias</a></li>
+									<li><i class="icon-angle-right"></i><a href="/admin/noticias/midia/" class="btn  btn-sm">Sindcoco na mídia</a></li>
 								</ul>
                             </div>
 
@@ -22,7 +31,7 @@
 								<ul class="recent">
 									<?php
 
-										require("../util/conexao.php");
+										require("../../util/conexao.php");
 										$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 3";
 										$anuncios = $conexao->query($sql);
 										foreach ($anuncios as $linha) {
