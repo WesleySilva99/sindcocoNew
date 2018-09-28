@@ -7,16 +7,18 @@
 								</form>
 							</div>
 							<div class="widget">
-								<h5 class="widgetheading">Saiba mais</h5>
+								<h4 class="widgetheading" style="margin: 10px;">Saiba mais</h4>
 								<ul class="cat">
-									<li><i class="icon-angle-right"></i><a href="/noticias/">Informativos</a></li>
-									<li><i class="icon-angle-right"></i><a href="/noticias/news.php">Notícias</a></li>
-									<li><i class="icon-angle-right"></i><a href="/noticias/midia.php">SINDCOCO na mídia</a></li>
+									<li><i class="icon-angle-right"></i><a href="/noticias/" class="btn  btn-sm">Informativos</a></li>
+									<li><i class="icon-angle-right"></i><a href="/noticias/news.php" class="btn  btn-sm">Notícias</a></li>
+									<li><i class="icon-angle-right"></i><a href="/noticias/midia.php" class="btn  btn-sm">Sindcoco na mídia</a></li>
 								</ul>
                             </div>
+
+                           
                             <!-- Informativos -->
 							<div class="widget">
-								<h5 class="widgetheading">Informativos</h5>
+								<h4 class="widgetheading" style="margin: 10px;">Informativos</h4>
 								<ul class="recent">
 									<?php
 
@@ -28,13 +30,13 @@
 									?>
 										<li>
 											<center>
-												<i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i>
+												<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7"></i>
 											</center>
 											<h6><?=$linha["titulo"];?></h6>
 												<p></p>
 												<center>
-													<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
-														Ler mais>>
+													<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank" style="background: #37b49c; color: white;">
+														Ler mais <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span>
 													</a>
 												</center>
 										</li>
@@ -44,7 +46,8 @@
 									
 								</ul>
 							</div>
-							<div class="widget">
+
+							<!--<div class="widget">
 								<h5 class="widgetheading">Popular tags</h5>
 								<ul class="tags">
 									<li><a href="#">Web design</a></li>
@@ -54,7 +57,7 @@
 									<li><a href="#">Tutorial</a></li>
 									<li><a href="#">Development</a></li>
 								</ul>
-							</div>
+							</div>-->
 							</aside>
 					</div>
                 </div>

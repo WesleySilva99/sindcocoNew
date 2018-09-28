@@ -65,7 +65,7 @@ icon color: #a1a1a1;
 
 /*Top Navbar*/
 .navbar-inverse {
-  background-color: #fff;
+  background-color: #ffff37;
   border-color: transparent;
   padding:10px 0;
 }
@@ -103,7 +103,7 @@ ul.navbar-nav li a{
 }
 
 .carousel-caption h1 {
-  font-size: 40px;
+  font-size: 30px;
   line-height: auto;
   text-transform: uppercase;
 }
@@ -203,7 +203,7 @@ ul.navbar-nav li a{
 }
 
 .title h3 span{
-	color:#ffff37;
+	color:#41bdb1;
 }
 
 .title{
@@ -414,11 +414,15 @@ ul.navbar-nav li a{
 
 /*Blog*/
 #blog{
-	background:#f7f7f7;
+	background:#f8fce3;
 }
 
 .single-blog img{
 	margin-bottom:15px;
+	  max-width:300px;
+    max-height: 230px;
+    width: auto;
+    height: auto;
 }
 
 .single-blog{
@@ -677,8 +681,9 @@ ul.projects li {
 
 /*Blog*/
 .blog-single{
-	margin-top:140px;
+	margin-top:50px;
 	margin-bottom:70px;
+	background-color: rgba(0,0,0,0);
 }
 
 .single-blog h3{
@@ -752,6 +757,7 @@ box-shadow:inset 1px 0 0 0 rgba(0,0,0,.01);
 
 aside .widget {
 	margin-bottom:40px;
+	border: 1px solid rgba(0,0,0,.125);
 }
 
 
@@ -767,7 +773,11 @@ ul.cat li, ul.recent li, ul.folio-detail li, ul.contact-info li {
 }
 
 ul.cat li a, ul.folio-detail li a{
-	color:#656565;
+	color: #f4f7f7;
+    background-color: #999;
+    width: 93%;
+    margin-left: 8px;
+   	font-size: 13px;
 }
 
 ul.folio-detail li label{
@@ -897,6 +907,7 @@ form#contactform input[type="text"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom:20px;
+  border-radius: 50px;
 }
 
 form#contactform textarea {
@@ -1015,7 +1026,7 @@ form#commentform textarea {
 /*FAQ*/
 #faq{
 	padding:70px 0;
-	background:#F7F7F7;
+	background:#ddd;
 }
 
 .faqHeader {
@@ -1075,4 +1086,16 @@ form#commentform textarea {
 
 #contact-us{
 	padding:70px 0;
+	    background-color: #ddd;
 }
+
+.mapa{
+	 position: absolute;
+    width: 300px;
+    height: 200px;
+    border-radius: 30%;
+    -moz-border-radius: 10px; /* Firefox */  
+    -webkit-border-radius: 15px; /* Safari, Chrome */
+    overflow: hidden;
+}
+

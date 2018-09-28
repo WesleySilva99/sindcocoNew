@@ -1,0 +1,20 @@
+[27-Sep-2018 14:29:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php:26
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\sobre\index.php(125): require()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php on line 26
+[27-Sep-2018 14:30:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php:26
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\sobre\index.php(125): require()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php on line 26
+[27-Sep-2018 14:31:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php:26
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\sobre\index.php(125): require()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php on line 26
+[27-Sep-2018 14:52:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php:26
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\sobre\index.php(125): require()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php on line 26

@@ -1,9 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
-        <meta charset="utf-8">
+        
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>SINDCOCO</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -167,9 +168,10 @@
 		</header>
 		<!-- Fim do Header -->
 		
-		
+		<
 		<!-- Seção do "Sobre" -->
-		<section id="about" class="site-padding">
+	 <section id="about" class="site-padding">
+
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
@@ -195,7 +197,7 @@
 		<section id="awards" class="site-padding">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4">
+				<!--	<div class="col-sm-4">
 						<div class="progress-bar-custom wow fadeInLeft">
 							<h3>Missão</h5>
 							<div class="text">
@@ -214,38 +216,31 @@
 											voltadas à promoção e defesa da coconicultura brasileira.
 									</h4>
 							</div>
-						</div>
+						</div>-->
 						
-					</div>
+					</div> 
 					
-					<div class="col-sm-4">
-						
-						<div class="progress-bar-custom wow fadeInLeft">
-							<h3>O SindCoco</h5>
-							<div class="text">
-								<h4>
-										
-									
-										Frutos;<br>
-										
-										Copra;<br>
-										
-										Água;<br>
-										
-										Madeira;<br>
-										
-										Fibra e pó provenientes da casca;<br>
-										
-										Todas as partes e derivados do coqueiro, inclusive tronco.
-									
-										
-								</h4>
-							</div>
-						</div>
+			
 
-						<div class="icon-box text-center">
+						<div class="col-md-4 icon-box text-center">
 						<span class="ico">
-						<img src="/img/certificado.png" width="25%">
+						<img src="/img/missao.png" width="30%">
+						</span>
+						<h4>Missão</h4>
+						<p>Atuar em prol do desenvolvimento das atividades da coconicultura, através do apoio e defesa dos produtores e de suas comunidade</p>
+					</div>
+
+					<div class=" col-md-4 icon-box text-center">
+						<span class="ico">
+						<img src="/img/visao.png" width="30%">
+						</span>
+						<h4>Vissão</h4>
+						<p>Ser organização de referência nacional nas ações,voltadas à promoção e defesa da coconicultura brasileira.</p>
+					</div>
+
+					<div class=" col-md-4 icon-box text-center">
+						<span class="ico">
+						<img src="/img/certificado.png" width="30%">
 						</span>
 						<h4>Certificado</h4>
 						<p>Registro Sindical certificado no Cadastro Nacional de Entidades Sindicais – CNES, do Ministério do Trabalho (processo 46000.008076/99-33).</p>
@@ -261,18 +256,10 @@
 						</div>
 						-->
 						
-					</div>
 					
 					
-					<div class="col-sm-4">
-						<div class="award-win wow fadeInRight">
-							
-							<img src="/img/faleComPersidente.png" alt="About Image">
-							<!-- teste <h3 style="color: #000;">180 <br /> awards get & win</h3>-->
-						</div>
-					</div>
-				</div>
-			</div>
+					
+					
 		</section>
 		
 		<!-- Award Winning Section -->
@@ -299,7 +286,7 @@
 			<div class="container">
 				<div class="row">
 
-					<?php
+					<?php 
 						require("util/conexao.php");
 						$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 6";
 						$anuncios = $conexao->query($sql);
@@ -312,7 +299,7 @@
 							<div class="row">
 								<div class="col-md-2">
 									<div class="feature-icon">
-										<i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i>
+										<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7;"></i>
 									</div>
 								</div>
 								<div class="col-md-10">
@@ -477,104 +464,7 @@
 		<!-- Featured Work -->
 		
 		
-		<!-- Testimonials -->
 		
-		<section id="testimonials">
-			<div class="container">
-				
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="title">
-							<h3>Client <span>Testimonials</span></h3>
-						</div>
-					</div>
-				</div>
-				
-				<div id="fawesome-carousel-two" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#fawesome-carousel-two" data-slide-to="0" class="active"></li>
-						<li data-target="#fawesome-carousel-two" data-slide-to="1"></li>
-					</ol>
-				 
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="single-testimonials">
-										<div class="text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-										</div>
-										
-										<div class="profile-image">
-											<img src="img/client.jpg" alt="Author Image" />
-											<h4>John Doe</h4>
-											<p>Marketing Manager</p>
-										</div>
-										
-									</div>
-								</div>
-								
-								<div class="col-sm-6">
-									<div class="single-testimonials">
-										<div class="text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-										</div>
-										
-										<div class="profile-image">
-											<img src="img/client.jpg" alt="Author Image" />
-											<h4>John Doe</h4>
-											<p>Marketing Manager</p>
-										</div>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!-- Next Slide -->
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="single-testimonials">
-										<div class="text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-										</div>
-										
-										<div class="profile-image">
-											<img src="img/client.jpg" alt="Author Image" />
-											<h4>Jason Cheng</h4>
-											<p>Marketing Manager</p>
-										</div>
-										
-									</div>
-								</div>
-								
-								<div class="col-sm-6">
-									<div class="single-testimonials">
-										<div class="text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-										</div>
-										
-										<div class="profile-image">
-											<img src="img/client.jpg" alt="Author Image" />
-											<h4>Kim Cheng</h4>
-											<p>Marketing Manager</p>
-										</div>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Next Slide -->
-						
-					</div>
-				 
-				</div>
-				
-			</div>
-		</section>
-		
-		<!-- Testimonials -->
 		
 		
 		<!-- From the Blog-->
@@ -603,11 +493,15 @@
 								<?php
 								if($linha["imagem"] != null){
 							?>
-								<img src="/img/anuncios/<?=$linha['imagem'];?>" alt="Blog Image"/>
+							
+								<img  src="/img/anuncios/<?=$linha['imagem'];?>" alt="Blog Image"/>
+							
 							<?php
 							}else {
 								?>
+								
 								<img src="/img/anuncios/off.jpg"/>
+							
 							<?php
 								}
 							?>
@@ -629,128 +523,12 @@
 		<!-- From the Blog-->
 		
 		
-		<!-- Pricing --->
-		<section class="pricing" id="pricing">
-		
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="title">
-							<h3>Our Affordable<span>Pricing</span></h3>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-				
-					<!-- PRICE ITEM -->
-					<div class="panel price panel-green">
-						<div class="panel-heading arrow_box text-center">
-						<h3>Standard</h3>
-						</div>
-						<div class="panel-body text-center">
-							<p class="lead" style="font-size:30px"><strong>$9 / Month</strong></p>
-						</div>
-						<ul class="list-group list-group-flush text-center">
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Personal use</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Unlimited projects</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> 27/7 support</li>
-						</ul>
-						<div class="panel-footer">
-							<a class="btn btn-lg btn-block btn-success" href="#">BUY NOW!</a>
-						</div>
-					</div>
-					<!-- /PRICE ITEM -->
-					
-					
-					</div>
-					
-					
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-				
-					<!-- PRICE ITEM -->
-					<div class="panel price panel-green">
-						<div class="panel-heading arrow_box text-center">
-						<h3>Premium</h3>
-						</div>
-						<div class="panel-body text-center">
-							<p class="lead" style="font-size:30px"><strong>$19 / Month</strong></p>
-						</div>
-						<ul class="list-group list-group-flush text-center">
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Personal use</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Unlimited projects</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> 27/7 support</li>
-						</ul>
-						<div class="panel-footer">
-							<a class="btn btn-lg btn-block btn-success" href="#">BUY NOW!</a>
-						</div>
-					</div>
-					<!-- /PRICE ITEM -->
-					
-					
-				</div>
-				
-				
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-				
-					<!-- PRICE ITEM -->
-					<div class="panel price panel-green">
-						<div class="panel-heading arrow_box text-center">
-						<h3>Professional</h3>
-						</div>
-						<div class="panel-body text-center">
-							<p class="lead" style="font-size:30px"><strong>$29 / Month</strong></p>
-						</div>
-						<ul class="list-group list-group-flush text-center">
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Personal use</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Unlimited projects</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> 27/7 support</li>
-						</ul>
-						<div class="panel-footer">
-							<a class="btn btn-lg btn-block btn-success" href="#">BUY NOW!</a>
-						</div>
-					</div>
-					<!-- /PRICE ITEM -->
-					
-					
-				</div>
-				
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-				
-					<!-- PRICE ITEM -->
-					<div class="panel price panel-grey">
-						<div class="panel-heading arrow_box text-center">
-						<h3>Ultimate</h3>
-						</div>
-						<div class="panel-body text-center">
-							<p class="lead" style="font-size:30px"><strong>$39 / Month</strong></p>
-						</div>
-						<ul class="list-group list-group-flush text-center">
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Personal use</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Unlimited projects</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> 27/7 support</li>
-						</ul>
-						<div class="panel-footer">
-							<a class="btn btn-lg btn-block btn-primary" href="#">BUY NOW!</a>
-						</div>
-					</div>
-					<!-- /PRICE ITEM -->
-					
-					
-				</div>
-				
-				</div>
-			</div>
-		</section>
-		<!-- Pricing --->
+	
 		
 		
 		<!--FAQ-->
 		
-		<section id="faq">
+		<!--<section id="faq">
 		
 			<div class="container">
 				<div class="row">
@@ -1018,7 +796,7 @@
 					
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!--FAQ-->
 		
 		
@@ -1088,8 +866,8 @@
 							</form>
 								 <br class="b1">
 									<div class="col-md-6 field">
-										<div class="map">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14608.272959726353!2d90.38896245!3d23.744945849999997!3m2!1i1024!2i768!4f13.1!4m3!3e1!4m0!4m0!5e0!3m2!1sen!2sbd!4v1465238371126"  frameborder="0" style="border:0" allowfullscreen></iframe>
+										<div class="map"> 
+								<iframe src="https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Av.+Barbosa+Lima+n%C2%BA+149,+Recife+Antigo&aq=&sll=-6.643776,-36.868306&sspn=8.99385,14.27124&ie=UTF8&hq=&hnear=Av.+Barbosa+Lima,+149+-+Recife,+Pernambuco,+50030-330&t=m&ll=-8.061567,-34.881892&spn=0.014872,0.026393&z=15&output=embed"  frameborder="0" style="border:0" allowfullscreen></iframe>
 									</div>
 								</div>	
 						

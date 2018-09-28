@@ -30,15 +30,17 @@
 
 			?>
 		
+
+		
 		
 		
 		<section class="blog-single">
 			<div class="container">
-				<div class="row">
+				<div class="row" style="margin-top: 100px;">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<h3>Notícias.</h3>
-							<img src="/img/sindcoco.png" alt="Blog Image" width="100%"/>
+							<h1>Notícias.</h1>
+							<br>
 							<?php
 
 								require("../util/conexao.php");
@@ -52,6 +54,19 @@
 								</h4><br>
 								<img src="/img/noticias/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
 								
+								<div class="blog-info">
+								<ul>
+									<li><a href="">Data: 25/05/2016</a></li>
+									
+								</ul>
+								
+								<div class="read-more pull-right">
+									<a href=""  class="btn  btn-sm" style="  color: white;  background-color: #337ab7;">
+           Contiue Lendo<span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+								</div>
+								
+							</div>
 							<?php
 							}
 							?>

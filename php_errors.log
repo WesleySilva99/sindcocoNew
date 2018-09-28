@@ -1,0 +1,62 @@
+[27-Sep-2018 12:13:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 12:51:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 13:07:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 13:44:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 13:44:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 13:45:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 13:46:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 14:29:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 14:29:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 14:31:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 14:37:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 14:52:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 14:52:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 15:13:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 15:14:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\leandro\Documents\sindcocoNew\index.php:305
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
+[27-Sep-2018 20:08:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\leandro\Documents\sindcocoNew\index.php:1) in C:\Users\leandro\Documents\sindcocoNew\index.php on line 288
+[27-Sep-2018 20:08:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\leandro\Documents\sindcocoNew\index.php:1) in C:\Users\leandro\Documents\sindcocoNew\index.php on line 288
