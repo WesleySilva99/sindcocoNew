@@ -27,7 +27,7 @@
             $_SESSION["adm"] = $linha["adm"];
             $_SESSION["id"] = $linha["id"];
 
-            header("Location: /admin/home.php");
+            header("Location: /admin/indexLogin.php");
             
         } else {
 

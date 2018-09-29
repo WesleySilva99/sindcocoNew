@@ -2,9 +2,9 @@
 
     require("conexao.php");
 
-    $nome = "Francisco";
-    $login = "sindcoco";
-    $senha = md5("admsindcoco");
+    $nome = "leandro";
+    $login = "leandro";
+    $senha = md5("123456");
 
     //$senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
 

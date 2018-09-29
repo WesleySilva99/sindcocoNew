@@ -22,14 +22,13 @@
 
 		<?php
 		
-<<<<<<< HEAD
 			
 			require("../util/conexao.php");
-=======
-			require("../util/imports.php");
+
+			
             require("../util/conexao.php");
            
->>>>>>> bb3cdfaa8a8c756443009c74c820a51b45824a1d
+
 
 		?>
     </head>
