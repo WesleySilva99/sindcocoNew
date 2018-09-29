@@ -7,7 +7,8 @@
 								</form>
 							</div>
 							<div class="widget">
-								<h4 class="widgetheading" style="margin: 10px;">Saiba mais</h4>
+
+								<h4 class="widgetheading">Saiba mais</h4>
 								<ul class="cat">
 									<li><i class="icon-angle-right"></i><a href="/noticias/informativos.php" class="btn  btn-sm">Informativos</a></li>
 									<li><i class="icon-angle-right"></i><a href="/noticias/news.php" class="btn  btn-sm">Notícias</a></li>
@@ -18,7 +19,7 @@
                            
                             <!-- Informativos -->
 							<div class="widget">
-								<h4 class="widgetheading" style="margin: 10px;">Informativos</h4>
+								<h4 class="widgetheading" >Informativos</h4>
 								<ul class="recent">
 									<?php
 

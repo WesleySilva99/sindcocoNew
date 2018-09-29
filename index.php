@@ -52,7 +52,7 @@
 									<span class="icon-bar"></span>
 								</button>
 								
-								<a href="#" class="navbar-brand"><h1>SINDCOCO</h1></a>
+									<a href="#" class="navbar-brand"><h1 style="color: white;">SIND<span style="color : #ffff37;">COCO</span></h1></a>
 							</div>
 							
 							<div class="navbar-collapse collapse">
@@ -1004,8 +1004,8 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
         <script src="js/paralax.js"></script>
-        <script src="js/jquery.smooth-scroll.js"></script>
-        <script src="js/jquery.sticky.js"></script>
+      <!--  <script src="js/jquery.smooth-scroll.js"></script> -->
+      <!--  <script src="js/jquery.sticky.js"></script> -->
         <script src="js/wow.min.js"></script>
         <script src="js/main.js"></script>
         

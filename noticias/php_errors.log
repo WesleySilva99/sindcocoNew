@@ -20,3 +20,4 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 49
+[29-Sep-2018 17:25:12 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 44

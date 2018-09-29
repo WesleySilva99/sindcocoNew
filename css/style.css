@@ -65,7 +65,7 @@ icon color: #a1a1a1;
 
 /*Top Navbar*/
 .navbar-inverse {
-  background-color: #ffff37;
+  background-color: #555;
   border-color: transparent;
   padding:10px 0;
 }
@@ -75,7 +75,7 @@ ul.navbar-nav li a{
 	font-size:14px;
 	text-transform:uppercase;
 	font-weight:400;
-	color:#414141 !important;
+	color:white !important;
 }
 
 .is-sticky .main-menu{
@@ -740,6 +740,9 @@ box-shadow:inset 1px 0 0 0 rgba(0,0,0,.01);
 
 }
 
+.a{
+	color: green;
+}
 
 .left-sidebar{
 	border-right:1px solid #f5f5f5;
@@ -774,10 +777,11 @@ ul.cat li, ul.recent li, ul.folio-detail li, ul.contact-info li {
 
 ul.cat li a, ul.folio-detail li a{
 	color: #f4f7f7;
-    background-color: #999;
+        background-color: #31708f;
     width: 93%;
     margin-left: 8px;
-   	font-size: 13px;
+   	font-size: 14px;
+   	border-radius: 50px;
 }
 
 ul.folio-detail li label{
@@ -848,6 +852,7 @@ aside .widgetheading {
   margin-bottom: 17px;
   padding-bottom: 9px;
   position: relative;
+      background-color: #eee;
 }
 
 .widget ul.tags li a:hover {

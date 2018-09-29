@@ -44,13 +44,13 @@
 		
 		
 		
-		<section class="blog-single">
+		<section class="blog-single" style="    margin-top: 150px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<h3>O SINDCOCO.</h3>
-							<img src="/img/sindcoco.png" alt="Blog Image" width="100%"/>
+								
+							<img src="/img/sindcoco.png" alt="Blog Image" width="100%" style="margin-left:  25%;" />
 							<h4>
 								Institucional
 							</h4>
@@ -63,10 +63,23 @@
 							<p>
 							Representante da categoria econômica dos produtores de coco, sementes e mudas e seus subprodutos não industrializados como:
 							</p>
-							<h1>
-								Aquela lista aqui
+							<h4>
+								<span class="glyphicon glyphicon-ok green a"></span> Frutos;
+								<br>
 
-							</h1>
+								<span class="glyphicon glyphicon-ok a"></span> Copra;
+								<br>
+								<span class="glyphicon glyphicon-ok a"></span> Água;
+								<br>
+								<span class="glyphicon glyphicon-ok a"></span> Madeira;
+								<br>
+								<span class="glyphicon glyphicon-ok a"></span> Fibra e pó provenientes da casca;
+								<br>
+								<span class="glyphicon glyphicon-ok a"></span> Todas as partes e derivados do coqueiro, inclusive tronco.
+								<br>
+
+							</h4>
+							<br>
 							<h4>
 								Missão
 							</h4>

@@ -38,9 +38,12 @@
 			<div class="container">
 				<div class="row" style="margin-top: 100px;">
 					<div class="col-md-8">
-						<div class="single-blog">
-							<h1>Notícias.</h1>
+						<h1>Noticias.</h1>
+						
+
+							
 							<br>
+							
 							<?php
 
 								require("../util/conexao.php");
@@ -49,6 +52,7 @@
 
 									foreach ($noticia as $linha) {	
 								?>
+								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
 								<h4>
 									<?=$linha["titulo"];?>
 								</h4><br>
@@ -61,25 +65,37 @@
 								</ul>
 								
 								<div class="read-more pull-right">
-									<a href=""  class="btn  btn-sm" style="  color: white;  background-color: #337ab7;">
+									<a href=""  class="btn  btn-sm" style="  color: white;  background-color: #1997f6;">
            Contiue Lendo<span class="glyphicon glyphicon-chevron-right"></span>
         </a>
 								</div>
+								<br>
 								
 							</div>
-							<?php
-							}
-							?>
+							
+
 							
 						</div>
 						
+						<?php
+							}
+							?>
+							
+						<!-- Pagination -->
+						<div id="pagination">
+							<span class="all">Page 1 of 3</span>
+							<span class="current">1</span>
+							<a href="#" class="inactive">2</a>
+							<a href="#" class="inactive">3</a>
+						</div>
+						</div>
+
+						<?php
+						require("rightSidebar.php");
+							?>
 						
 						
-						
-						
-						
-						
-						<div class="single-blog">
+						<!--<div class="single-blog">
 							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
 							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
@@ -97,23 +113,11 @@
 								
 							</div>
 							
-						</div>
+						</div> -->
 						
 						
 						<!-- Pagination -->
-						<div id="pagination">
-							<span class="all">Page 1 of 3</span>
-							<span class="current">1</span>
-							<a href="#" class="inactive">2</a>
-							<a href="#" class="inactive">3</a>
-						</div>
-						<!-- Pagination -->
-						
-					</div>
-					<!-- Right Sidebar -->
-					<?php
-						require("rightSidebar.php");
-					?>
+					
 			</div>
 		</section>
 		

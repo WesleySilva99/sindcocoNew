@@ -11,7 +11,7 @@
 									<span class="icon-bar"></span>
 								</button>
 								
-								<a href="#" class="navbar-brand"><h1>SINDCOCO</h1></a>
+								<a href="#" class="navbar-brand"><h1 style="color: white;">SIND<span style="color : #ffff37;">COCO</span></h1></a>
 							</div>
 							
 							<div class="navbar-collapse collapse">
