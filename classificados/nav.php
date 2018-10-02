@@ -18,7 +18,7 @@
 								<ul class="nav navbar-nav navbar-right">
 									<li><a href="/index.php">Início</a></li>
 									<li><a href="/sobre/">Sobre</a></li>
-									<li><a href="/classificados/classificados.php">classificados</a></li>
+									<li><a href="/classificados/">classificados</a></li>
 									<li><a href="/index.php#contact-us">Contact</a></li>
 								</ul>
 							</div>

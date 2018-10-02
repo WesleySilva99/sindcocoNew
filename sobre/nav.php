@@ -20,7 +20,7 @@
 									<li><a href="/sobre/">Sobre</a></li>
 									<li><a href="/sobre/certidao.php">Certidão sindical</a></li>
 									<li><a href="/sobre/pragas.php">Pragas e Soluções</a></li>
-									<li><a href="/classificados/classificados.php">classificados</a></li>
+									<li><a href="/classificados/">classificados</a></li>
 									<li><a href="/index.php#contact-us">Contate-nos</a></li>
 								</ul>
 							</div>

@@ -62,7 +62,7 @@
 									<li><a href="#features">Notícias</a></li>
 									<li><a href="#feature-work">Eventos</a></li>
 									<li><a href="#testimonials">Links úteis</a></li>
-									<li><a href="/classificados/classificados.php">Classificados</a></li>
+									<li><a href="/classificados/">Classificados</a></li>
 									<li><a href="#pricing">Ações Judiciais</a></li>
 									<li><a href="#contact-us">Contate-nos</a></li>
 								</ul>

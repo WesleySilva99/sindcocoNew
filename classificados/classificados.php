@@ -123,88 +123,11 @@
 						
 					</div>
 					
-					<!-- Right Sidebar -->
-					<div class="col-md-4">
-						<aside class="right-sidebar">
-							<div class="widget">
-								<form class="form-search">
-									<input class="form-control" type="text" placeholder="Search..">
-								</form>
-							</div>
+				<?php
 
-							<!-- Formulário de classificados -->
-							<div class="widget">
-							<?php
+					require("rightSidebar.php");
 
-								if($_GET['msg'] != null){
-									echo "<h3>".$_GET['msg']."</h3>";	
-								}
-							?>
-								
-								<center>
-									<img src="/img/anuncie.png" />
-								</center>
-									<form class="form" action="/blog/inserirClassificado.php" enctype="multipart/form-data" method="POST">
-										<h4>Nome: </h4>
-										<input type="text" class="form-control" required placeholder="José Carlos de Souza" require="require" name="nome" /><br>
-										<h4>Email: </h4>
-										<input type="email" class="form-control" placeholder="example@example.com" require name="email" /><br>
-										<h4>Título: </h4>
-										<input type="text" class="form-control" placeholder="Vendo cocos por unidade" require name="titulo" /><br>
-										<h4>Descrição: </h4>
-										<textarea type="text" class="form-control" required name="descricao"> </textarea><br>
-										<h4>Preço: </h4>
-										<input type="number" class="form-control" required name="preco" /><br>
-										<h4>Imagem: </h4>
-										<input type="file" class="form-control" required name="imagem" /><br>
-										<h4>Telefone: </h4>
-										<input type="text" maxlength="14" minlength="14" class="form-control" required name="telefone" /><br>
-
-										<button class="btn btn-success"> Enviar </button>
-										<button class="btn btn-danger"> Resetar </button>
-
-									</form>
-									<!-- Fim do Formulário de classificados -->
-							</div>
-							<div class="widget">
-								<h5 class="widgetheading">Latest posts</h5>
-								<ul class="recent">
-									<li>
-									<img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" />
-									<h6><a href="#">Lorem ipsum dolor sit</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
-									<li>
-									<a href="#"><img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" /></a>
-									<h6><a href="#">Maiorum ponderum eum</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
-									<li>
-									<a href="#"><img src="img/blog-thumb.jpg" class="pull-left blog-thumb-image" alt="" /></a>
-									<h6><a href="#">Et mei iusto dolorum</a></h6>
-									<p>
-										 Mazim alienum appellantur eu cu ullum officiis pro pri
-									</p>
-									</li>
-								</ul>
-							</div>
-							<div class="widget">
-								<h5 class="widgetheading">Popular tags</h5>
-								<ul class="tags">
-									<li><a href="#">Web design</a></li>
-									<li><a href="#">Trends</a></li>
-									<li><a href="#">Technology</a></li>
-									<li><a href="#">Internet</a></li>
-									<li><a href="#">Tutorial</a></li>
-									<li><a href="#">Development</a></li>
-								</ul>
-							</div>
-							</aside>
-					</div>
+				?>
 				</div>
 			</div>
 		</section>

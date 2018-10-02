@@ -47,7 +47,7 @@
 							<?php
 
 								require("../util/conexao.php");
-								$sql = "select * from noticias";
+								$sql = "select * from noticias order by id desc";
 								$noticia = $conexao->query($sql);
 
 									foreach ($noticia as $linha) {	
@@ -60,7 +60,7 @@
 								
 								<div class="blog-info">
 								<ul>
-									<li><a href="">Data: 25/05/2016</a></li>
+									<li><a href="">Data: <?=$linha['data'];?></a></li>
 									
 								</ul>
 								

@@ -64,8 +64,28 @@
 								<h4>
 									<?=$linha["titulo"];?>
 								</h4><br>
+								<?php
+
+									if(file_exists("../img/noticias/".$linha['imagem'])){
+
+
+								?>
+
 								<img src="/img/noticias/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
-								
+
+								<?php
+
+								}else{
+
+								?>
+
+								<img src="/img/noticias/0.jpg" alt="Blog Image" width="100%"/>
+
+								<?php
+
+								}
+
+								?>
 								<div class="blog-info">
 								<ul>
 									<li><a href="">Data: 25/05/2016</a></li>

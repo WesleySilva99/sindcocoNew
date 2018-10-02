@@ -47,7 +47,19 @@
  					<div class="card-wrap class5">
  						<div class="card-header class6"><h4 class="class7">Total de Anuncios.</h4>
  						</div>
- 						<div class="card-body class8">122
+ 						<div class="card-body class8">
+						 <?php
+
+							 $query = "select count(id) as id from anuncio where autorizado = 1";
+							 $resultado = $conexao->query($query);
+								foreach ($resultado as $linha) {
+									$quantidade = $linha["id"];
+							 
+						?>
+						<?=$quantidade;?>
+						<?php
+								}
+						?>
  						</div>
  					</div>
  				</div>
