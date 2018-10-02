@@ -1,82 +1,86 @@
 <aside>
       <div id="sidebar" class="nav-collapse ">
+      
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><a href="profile.html"><img src="img/7.png" class="img-circle" width="80"></a></p>
           <h5 class="centered"><?=$_SESSION["nome"];?></h5>
           <li class="mt">
-            <a class="active" href="index.html">
+            <a class="active" href="indexLogin.php">
               <i class="fa fa-dashboard"></i>
-              <span>Dashboard</span>
+              <span>Início</span>
               </a>
           </li>
+          <?php
+
+              if($_SESSION["adm"] == 1) {
+
+          ?>
           <li class="sub-menu">
-            <a href="javascript:;">
+            <a href="/admin/usuarios/">
               <i class="fa fa-desktop"></i>
-              <span>UI Elements</span>
+              <span>Usuários</span>
               </a>
-            <ul class="sub">
-              <li><a href="general.html">General</a></li>
-              <li><a href="buttons.html">Buttons</a></li>
-              <li><a href="panels.html">Panels</a></li>
-              <li><a href="font_awesome.html">Font Awesome</a></li>
-            </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-cogs"></i>
-              <span>Components</span>
+              <span>Notícias</span>
               </a>
             <ul class="sub">
-              <li><a href="grids.html">Grids</a></li>
-              <li><a href="calendar.html">Calendar</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="todo_list.html">Todo List</a></li>
-              <li><a href="dropzone.html">Dropzone File Upload</a></li>
-              <li><a href="inline_editor.html">Inline Editor</a></li>
-              <li><a href="file_upload.html">Multiple File Upload</a></li>
+              <li><a href="grids.html">Cadastrar Categoria</a></li>
+              <li><a href="calendar.html">Cadastrar Notícias</a></li>
+              <li><a href="gallery.html">Consultar Notícias</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-book"></i>
-              <span>Extra Pages</span>
+              <span>Eventos</span>
               </a>
             <ul class="sub">
-              <li><a href="blank.html">Blank Page</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="lock_screen.html">Lock Screen</a></li>
-              <li><a href="profile.html">Profile</a></li>
-              <li><a href="invoice.html">Invoice</a></li>
-              <li><a href="pricing_table.html">Pricing Table</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="404.html">404 Error</a></li>
-              <li><a href="500.html">500 Error</a></li>
+              <li><a href="blank.html">Cadastrar Eventos</a></li>
+              <li><a href="login.html">Cadastrar fotos de eventos</a></li>
+              <li><a href="lock_screen.html">Consultar Eventos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-tasks"></i>
-              <span>Forms</span>
+              <span>Informativos</span>
               </a>
             <ul class="sub">
-              <li><a href="form_component.html">Form Components</a></li>
-              <li><a href="advanced_form_components.html">Advanced Components</a></li>
-              <li><a href="form_validation.html">Form Validation</a></li>
-              <li><a href="contactform.html">Contact Form</a></li>
+              <li><a href="blank.html">Cadastrar Informtivos</a></li>
+              <li><a href="lock_screen.html">Consultar Informativos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-th"></i>
-              <span>Data Tables</span>
+              <span>Ações judiciais</span>
               </a>
             <ul class="sub">
-              <li><a href="basic_table.html">Basic Table</a></li>
-              <li><a href="responsive_table.html">Responsive Table</a></li>
-              <li><a href="advanced_table.html">Advanced Table</a></li>
+              <li><a href="basic_table.html">Inserir Arquivo</a></li>
+              <li><a href="responsive_table.html">Consultar Arquivos</a></li>
+              
             </ul>
           </li>
+          <?php
+
+              }
+
+          ?>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-th"></i>
+              <span>Anuncios</span>
+              </a>
+            <ul class="sub">
+              <li><a href="basic_table.html">Autorizar</a></li>
+              <li><a href="responsive_table.html">Autorizados</a></li>
+            </ul>
+          </li>
+          <!-- resto do menu lateral 
           <li>
             <a href="inbox.html">
               <i class="fa fa-envelope"></i>
@@ -113,6 +117,7 @@
               </a>
           </li>
         </ul>
+        -->
         <!-- sidebar menu end-->
       </div>
     </aside>
