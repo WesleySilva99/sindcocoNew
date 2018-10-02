@@ -6,7 +6,7 @@
           <p class="centered"><a href="profile.html"><img src="img/7.png" class="img-circle" width="80"></a></p>
           <h5 class="centered"><?=$_SESSION["nome"];?></h5>
           <li class="mt">
-            <a class="active" href="indexLogin.php">
+            <a class="active" href="/admin/indexLogin.php">
               <i class="fa fa-dashboard"></i>
               <span>Início</span>
               </a>
@@ -39,9 +39,9 @@
               <span>Eventos</span>
               </a>
             <ul class="sub">
-              <li><a href="blank.html">Cadastrar Eventos</a></li>
-              <li><a href="login.html">Cadastrar fotos de eventos</a></li>
-              <li><a href="lock_screen.html">Consultar Eventos</a></li>
+              <li><a href="/admin/eventos/cadastrar.php">Cadastrar Eventos</a></li>
+              <li><a href="/admin/eventos/fotos.php">Cadastrar fotos de eventos</a></li>
+              <li><a href="/admin/eventos/">Consultar Eventos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
