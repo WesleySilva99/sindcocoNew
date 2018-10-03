@@ -76,8 +76,8 @@
               <span>Anuncios</span>
               </a>
             <ul class="sub">
-              <li><a href="basic_table.html">Autorizar</a></li>
-              <li><a href="responsive_table.html">Autorizados</a></li>
+              <li><a href="/admin/classificados/autorizar.php">Autorizar</a></li>
+              <li><a href="/admin/classificados/autorizados.php">Autorizados</a></li>
             </ul>
           </li>
           <!-- resto do menu lateral 
