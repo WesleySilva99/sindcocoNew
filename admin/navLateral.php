@@ -40,7 +40,7 @@
               </a>
             <ul class="sub">
               <li><a href="/admin/eventos/cadastrar.php">Cadastrar Eventos</a></li>
-              <li><a href="/admin/eventos/fotos.php">Cadastrar fotos de eventos</a></li>
+              
               <li><a href="/admin/eventos/">Consultar Eventos</a></li>
             </ul>
           </li>

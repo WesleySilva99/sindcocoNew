@@ -91,11 +91,11 @@
                 <?php
     				if($linha["imagem"] != null){
 				?>
-					<img src="/img/anuncios/<?=$linha['imagem'];?>" alt="Blog Image"/>
+					<td> <img src="/img/anuncios/<?=$linha['imagem'];?>" class="img-thumbnail"/> </td>
 				<?php
 					}else {
 				?>
-	    				<img src="/img/anuncios/off.jpg"/>
+	    				<td> <img src="/img/anuncios/off.jpg" class="img-thumbnail"/> </td>
 		    	<?php
 					}
 				?>

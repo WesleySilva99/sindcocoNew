@@ -39,9 +39,13 @@ if ( isset( $_FILES[ 'imagem' ][ 'name' ] ) && $_FILES[ 'imagem' ][ 'error' ] ==
         else
             echo 'Erro ao salvar o imagem. Aparentemente você não tem permissão de escrita.<br />';
     }
-    else
-        echo 'Você poderá enviar apenas imagens "*.jpg;*.jpeg;*.gif;*.png"<br />';
+    else{
+        $msg = 'Você poderá enviar apenas imagens "*.jpg;*.jpeg;*.gif;*.png"<br />';
+        header("Location: /admin/eventos/index.php?msg=".$msg);
+    }
 }
-else
-    echo 'Você não enviou nenhum imagem!';
+else{
+    $msg = 'Você não enviou nenhum imagem!';
+    header("Location: /admin/eventos/index.php?msg=".$msg);
+}
 ?>
