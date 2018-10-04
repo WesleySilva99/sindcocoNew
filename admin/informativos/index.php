@@ -90,7 +90,7 @@
             </tr>
             <?php
 
-                $sql = "SELECT * FROM informativos WHERE id = 1 ORDER BY id DESC";
+                $sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC";
                 $anuncios = $conexao->query($sql);
                 foreach ($anuncios as $linha) {
             ?>

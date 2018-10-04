@@ -90,7 +90,7 @@
             </tr>
             <?php
 
-                $sql = "SELECT * FROM informativos WHERE id = 0 ORDER BY id DESC ";
+                $sql = "SELECT * FROM informativos WHERE autorizado = 0 ORDER BY id DESC ";
                 $anuncios = $conexao->query($sql);
                 foreach ($anuncios as $linha) {
             ?>
@@ -100,21 +100,12 @@
                 <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
                 <td scope="col"><a href="/pdf/informativos/<?=$linha['arquivo'];?>">Clique aqui para abrir</a></td>
                 <td scope="col">
-                    <a href="/admin/informativos/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Editar
+                    <a href="/admin/informativos/sim.php?id=<?=$linha['id']?>">
+                        <button class="btn btn-sm btn-success">
+                            Autorizar
                         </button>
                     </a><br>
-                    <a href="/admin/informativos/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Trocar de arquivo
-                        </button>
-                    </a><br>
-                    <a href="/admin/informativos/nao.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-danger">
-                            Tirar Autorização
-                        </button>
-                    </a><br>
+                    
                 </th>
             </tr>
 
