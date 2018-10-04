@@ -33,7 +33,7 @@ include "nav.php";
 
 
 
-		<section class="blog-single">
+		<section class="blog-single" style="margin-top: 150px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
