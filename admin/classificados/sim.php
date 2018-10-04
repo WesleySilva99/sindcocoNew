@@ -15,7 +15,7 @@ try {
 
     $msg = "Anuncio autorizado com sucesso!";
 
-    header("Location: /admin/classificados/autorizados.php?msg=" . $msg);
+    header("Location: /admin/classificados/index.php?msg=" . $msg);
 } catch (Exception $e) {
     echo 'Exceção capturada (Entre em contato com o administrador do sistema: wesleyceni99@gmail.com)<br>', $e->getMessage(), "\n";
 }

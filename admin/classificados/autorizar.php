@@ -90,7 +90,7 @@
             </tr>
             <?php
 
-                $sql = "SELECT * FROM anuncio WHERE autorizado = 1 ORDER BY data DESC";
+                $sql = "SELECT * FROM anuncio WHERE autorizado = 0 ORDER BY data DESC";
                 $query = $conexao->query($sql);
 				foreach ($query as $linha) {
             ?>
@@ -112,7 +112,7 @@
                 <td scope="col"><?=$linha["descricao"];?></td>
                 <td scope="col">
                     <a href="/admin/classificados/sim.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-danger">
+                        <button class="btn btn-sm btn-success">
                             Autorizar
                         </button>
                     </a><br>
