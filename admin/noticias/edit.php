@@ -1,9 +1,8 @@
 <?php
 
-require "uploadImagem.php";
 require "../../util/conexao.php";
 
-$foto = $novoNome;
+$id = $_POST["id"];
 $titulo = $_POST["titulo"];
 $data = $_POST["data"];
 $chamada = $_POST["chamada"];
@@ -14,7 +13,7 @@ $fonte = $_POST["fonte"];
 
 try {
 
-    $sql = "INSERT INTO noticias(idCategoria, titulo, data, chamada, fonte, imagem, texto) VALUES (?,?,?,?,?,?,?)";
+    $sql = "UPDATE noticias set idCategoria = ?, titulo = ?, data = ?, chamada = ?, fonte = ?, texto = ? where id = ?";
 
     $stmt = $conexao->prepare($sql);
     $stmt->bindValue(1, $categoria);
@@ -22,12 +21,12 @@ try {
     $stmt->bindValue(3, $data);
     $stmt->bindValue(4, $chamada);
     $stmt->bindValue(5, $fonte);
-    $stmt->bindValue(6, $foto);
-    $stmt->bindValue(7, $texto);
+    $stmt->bindValue(6, $texto);
+    $stmt->bindValue(7, $id);
 
     $stmt->execute();
 
-    $msg = "Notícia Cadastrada com sucesso!";
+    $msg = "Notícia editada com sucesso!";
 
     header("Location: /admin/noticias/index.php?msg=" . $msg);
 } catch (Exception $e) {

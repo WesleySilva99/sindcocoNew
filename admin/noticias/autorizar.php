@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Noticias</title>
+  <title>Eventos</title>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
@@ -90,7 +90,7 @@
             </tr>
             <?php
 
-                $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and idCategoria = 3 ORDER BY id DESC";
+                $sql = "SELECT * FROM noticias as n WHERE autorizada = 0 and idCategoria = 3 ORDER BY id DESC";
                 $query = $conexao->query($sql);
 				foreach ($query as $linha) {
             ?>
@@ -111,19 +111,14 @@
                 <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
                 <td scope="col"><?=$linha["descricao"];?></td>
                 <td scope="col">
-                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
+                    <a href="/admin/noticias/sim.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-success">
-                            Adicionar arquivo
+                            Autorizar
                         </button>
                     </a><br>
-                    <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Editar
-                        </button>
-                    </a><br>
-                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
+                    <a href="/admin/noticias/deletar.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-danger">
-                            Tirar Autorização
+                            Deletar
                         </button>
                     </a><br>
                 </th>

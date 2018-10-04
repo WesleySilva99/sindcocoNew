@@ -82,46 +82,35 @@
         <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Imagem</th>
+                
                 <th scope="col">Titulo</th>
                 <th scope="col">Data</th>
-                <th scope="col">Chamada</th>
+                <th scope="col">Arquivo</th>
                 <th scope="col">Ações</th>
             </tr>
             <?php
 
-                $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and idCategoria = 3 ORDER BY id DESC";
-                $query = $conexao->query($sql);
-				foreach ($query as $linha) {
+                $sql = "SELECT * FROM informativos WHERE id = 1 ORDER BY id DESC";
+                $anuncios = $conexao->query($sql);
+                foreach ($anuncios as $linha) {
             ?>
 
             <tr>
-                <?php
-					if($linha["imagem"] != null){
-				?>
-					<td><img src="/img/noticias/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
-				<?php
-					}else {
-				?>
-					<td><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
-				<?php
-					}
-				?>
                 <td scope="col"><?=$linha["titulo"];?></td>
                 <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col"><?=$linha["descricao"];?></td>
+                <td scope="col"><a href="/pdf/informativos/<?=$linha['arquivo'];?>">Clique aqui para abrir</a></td>
                 <td scope="col">
-                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-success">
-                            Adicionar arquivo
-                        </button>
-                    </a><br>
-                    <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>">
+                    <a href="/admin/informativos/editar.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-warning">
                             Editar
                         </button>
                     </a><br>
-                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
+                    <a href="/admin/informativos/editar.php?id=<?=$linha['id']?>">
+                        <button class="btn btn-sm btn-warning">
+                            Trocar de arquivo
+                        </button>
+                    </a><br>
+                    <a href="/admin/informativos/nao.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-danger">
                             Tirar Autorização
                         </button>

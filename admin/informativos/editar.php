@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Noticias</title>
+  <title>Informativos</title>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
@@ -69,71 +69,36 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-      <?php
-
-        if($_GET["msg"] != null){
-
-      ?>
-
-        <h3><?=$_GET["msg"];?></h3>
-
-        <?php } ?>
-
-        <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Imagem</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Data</th>
-                <th scope="col">Chamada</th>
-                <th scope="col">Ações</th>
-            </tr>
+       
+       <form action="edit.php" class="form" method="POST" enctype="multipart/form-data">
+       <input type="hidden" name="id" value="<?=$_GET['id'];?>">
             <?php
+                $sql = "SELECT * FROM informativos WHERE id = ?";
+                
+                $stmt = $conexao->prepare($sql);
+                $stmt->bindValue(1, $_GET['id']);
 
-                $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and idCategoria = 3 ORDER BY id DESC";
-                $query = $conexao->query($sql);
-				foreach ($query as $linha) {
+                $stmt->execute();
+                foreach ($stmt as $linha) {
             ?>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Titulo: </label>
+            <div class="col-10">
+                <input class="form-control" required="required" value="<?=$linha['titulo'];?>" type="text" name="titulo" required="required" id="example-search-input">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Data:</label>
+            <div class="col-10">
+                <input class="form-control" required="required" value="<?=$linha['data'];?>" type="date" name="data" required="required" id="example-search-input">
+            </div>
+            </div>
 
-            <tr>
-                <?php
-					if($linha["imagem"] != null){
-				?>
-					<td><img src="/img/noticias/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
-				<?php
-					}else {
-				?>
-					<td><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
-				<?php
-					}
-				?>
-                <td scope="col"><?=$linha["titulo"];?></td>
-                <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col"><?=$linha["descricao"];?></td>
-                <td scope="col">
-                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-success">
-                            Adicionar arquivo
-                        </button>
-                    </a><br>
-                    <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Editar
-                        </button>
-                    </a><br>
-                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-danger">
-                            Tirar Autorização
-                        </button>
-                    </a><br>
-                </th>
-            </tr>
-
-            <?php
-                }
-            ?>
-
-        </table>
+                <?php } ?>
+            
+            
+            <button class="btn btn-success" type="submit"> Enviar </button>
+        </form>
       </section>
     </section>
     <!--main content end-->

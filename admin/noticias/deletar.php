@@ -6,14 +6,14 @@ $id = $_GET["id"];
 
 try {
 
-    $sql = "UPDATE noticias SET autorizada = 0 WHERE id = ?";
+    $sql = "DELETE FROM noticias WHERE id = ?";
 
     $stmt = $conexao->prepare($sql);
     $stmt->bindValue(1, $id);
 
     $stmt->execute();
 
-    $msg = "Noticia não autorizada!";
+    $msg = "Noticia deletada com sucesso!";
 
     header("Location: /admin/noticias/index.php?msg=" . $msg);
 } catch (Exception $e) {

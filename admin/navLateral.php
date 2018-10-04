@@ -31,6 +31,7 @@
               <li><a href="grids.html">Cadastrar Categoria</a></li>
               <li><a href="/admin/noticias/cadastrar.php">Cadastrar Notícias</a></li>
               <li><a href="/admin/noticias/">Consultar Notícias</a></li>
+              <li><a href="/admin/noticias/autorizar.php">Autorizar</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -52,8 +53,9 @@
               <span>Informativos</span>
               </a>
             <ul class="sub">
-              <li><a href="blank.html">Cadastrar Informtivos</a></li>
-              <li><a href="lock_screen.html">Consultar Informativos</a></li>
+              <li><a href="/admin/informativos/cadastrar.php">Cadastrar Informtivos</a></li>
+              <li><a href="/admin/informativos/">Consultar Informativos</a></li>
+              <li><a href="/admin/informativos/autorizar.php">Autorizar</a></li>
             </ul>
           </li>
           <li class="sub-menu">
