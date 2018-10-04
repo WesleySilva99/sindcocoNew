@@ -69,11 +69,20 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+      <?php
+
+        if($_GET["msg"] != null){
+
+      ?>
+
+        <h3><?=$_GET["msg"];?></h3>
+
+        <?php } ?>
+
         <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Imagem</th>
+                <th scope="col">Capa</th>
                 <th scope="col">Titulo</th>
                 <th scope="col">Data</th>
                 <th scope="col">Descrição</th>
@@ -81,17 +90,16 @@
             </tr>
             <?php
 
-                $sql = "SELECT * FROM anuncio where autorizado = 1 ORDER BY id DESC limit 30";
+                $sql = "SELECT * FROM eventos WHERE ativo = 0 ORDER BY data DESC";
                 $query = $conexao->query($sql);
 				foreach ($query as $linha) {
             ?>
 
             <tr>
-                <td scope="col"><?=$linha["id"];?></td>
                 <?php
-					if($linha["imagem"] != null){
+					if($linha["capa"] != null){
 				?>
-					<td><img src="/img/anuncios/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
+					<td><img src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
 				<?php
 					}else {
 				?>
@@ -99,19 +107,18 @@
 				<?php
 					}
 				?>
-
                 <td scope="col"><?=$linha["titulo"];?></td>
-                <td scope="col"><?=date('d/m/Y H:i:s', strtotime($linha['data']));?></td>
+                <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
                 <td scope="col"><?=$linha["descricao"];?></td>
                 <td scope="col">
-                    <a href="/admin/classificados/sim.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Tirar Autorização
+                    <a href="/admin/eventos/reativarEvento.php?id=<?=$linha['id']?>">
+                        <button class="btn btn-sm btn-success">
+                            Reativar evento
                         </button>
                     </a><br>
-                    <a href="/admin/classificados/nao.php?id=<?=$linha['id']?>">
+                    <a href="/admin/eventos/inativarEvento.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-danger">
-                            Deletar
+                            Inativar Evento
                         </button>
                     </a>
                 </th>

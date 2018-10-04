@@ -69,51 +69,58 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <table class="table responsive-table">
+      <?php
+
+        if($_GET["msg"] != null){
+
+      ?>
+
+        <h3><?=$_GET["msg"];?></h3>
+
+        <?php } ?>
+
+        <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Titulo</th>
                 <th scope="col">Imagem</th>
+                <th scope="col">Titulo</th>
                 <th scope="col">Data</th>
                 <th scope="col">Descrição</th>
                 <th scope="col">Ações</th>
             </tr>
             <?php
 
-                $sql = "SELECT * FROM anuncio where autorizado = 0 ORDER BY data DESC";
+                $sql = "SELECT * FROM anuncio WHERE autorizado = 1 ORDER BY data DESC";
                 $query = $conexao->query($sql);
 				foreach ($query as $linha) {
             ?>
 
             <tr>
-                <td scope="col"><?=$linha["id"];?></td>
                 <?php
-    				if($linha["imagem"] != null){
+					if($linha["imagem"] != null){
 				?>
-					<td> <img src="/img/anuncios/<?=$linha['imagem'];?>" class="img-thumbnail"/> </td>
+					<td><img src="/img/anuncios/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
 				<?php
 					}else {
 				?>
-	    				<td> <img src="/img/anuncios/off.jpg" class="img-thumbnail"/> </td>
-		    	<?php
+					<td><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
+				<?php
 					}
 				?>
-
                 <td scope="col"><?=$linha["titulo"];?></td>
-                <td scope="col"><?=date('d/m/Y H:i:s', strtotime($linha['data']));?></td>
+                <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
                 <td scope="col"><?=$linha["descricao"];?></td>
                 <td scope="col">
                     <a href="/admin/classificados/sim.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-success">
+                        <button class="btn btn-sm btn-danger">
                             Autorizar
                         </button>
                     </a><br>
-                    <a href="/admin/classificados/nao.php?id=<?=$linha['id']?>">
+                    <a href="/admin/classificados/deletar.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-danger">
                             Deletar
                         </button>
-                    </a>
+                    </a><br>
                 </th>
             </tr>
 

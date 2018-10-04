@@ -29,8 +29,8 @@
               </a>
             <ul class="sub">
               <li><a href="grids.html">Cadastrar Categoria</a></li>
-              <li><a href="calendar.html">Cadastrar Notícias</a></li>
-              <li><a href="gallery.html">Consultar Notícias</a></li>
+              <li><a href="/admin/noticias/cadastrar.php">Cadastrar Notícias</a></li>
+              <li><a href="/admin/noticias/">Consultar Notícias</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -40,8 +40,10 @@
               </a>
             <ul class="sub">
               <li><a href="/admin/eventos/cadastrar.php">Cadastrar Eventos</a></li>
-              
               <li><a href="/admin/eventos/">Consultar Eventos</a></li>
+              <li><a href="/admin/eventos/imagensEvento.php">Consultar Fotos de Eventos</a></li>
+              <li><a href="/admin/eventos/eventosInativos.php">Consultar Eventos Inativos</a></li>
+              <li><a href="/admin/eventos/imagensInativas.php">Consultar Fotos Inativas</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -77,7 +79,7 @@
               </a>
             <ul class="sub">
               <li><a href="/admin/classificados/autorizar.php">Autorizar</a></li>
-              <li><a href="/admin/classificados/autorizados.php">Autorizados</a></li>
+              <li><a href="/admin/classificados/">Autorizados</a></li>
             </ul>
           </li>
           <!-- resto do menu lateral 
