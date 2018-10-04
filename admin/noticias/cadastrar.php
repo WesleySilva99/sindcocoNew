@@ -1,0 +1,158 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION["login"])){
+        header("Location: /admin/index.php");
+    }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Eventos</title>
+
+  <!-- Favicons
+  <link href="/admin/img/favicon.png" rel="icon">
+  <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
+-->
+    <?php
+		
+			
+			
+        require("../imports.php");
+        require("../../util/conexao.php");
+       
+
+
+    ?>
+
+  <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+     <?php
+
+            require("../nav.php");
+
+        ?>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+      <?php
+
+            require("../navLateral.php");
+
+        ?>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+       
+       <form action="cadastrarNoticia.php" class="form" method="POST" enctype="multipart/form-data">
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Categoria: </label>
+            <div class="col-10">
+            <select required="required" class="select" name="categoria">
+                <option value="">Selecione uma categoria</option>
+                <?php
+
+                $sql = "SELECT * FROM categoria";
+                $query = $conexao->query($sql);
+                foreach ($query as $linha) {
+
+                ?> 
+                    <option value="<?=$linha['id'];?>"><?=$linha['titulo'];?></option>
+                <?php } ?>
+            </select>
+            </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Titulo: </label>
+            <div class="col-10">
+                <input class="form-control" required="required" type="text" name="titulo" required="required" id="example-search-input">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Data:</label>
+            <div class="col-10">
+                <input class="form-control" required="required" type="date" name="data" required="required" id="example-search-input">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="comment">Chamada: </label>
+            <div class="col-10">
+                <input class="form-control" name="chamada" required="required" />
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="comment">Texto: </label>
+            <div class="col-10">
+                <textarea class="form-control" name="texto" required="required" rows="5" id="comment"></textarea>
+            </div>
+            </div>
+            <label for="comment">Fonte: </label>
+            <div class="col-10">
+                <input class="form-control" name="fonte" required="required" />
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="example-url-input" class="col-2 col-form-label">Imagem: </label>
+            <div class="col-10">
+                <input class="form-control" required="required" name="imagem" type="file">
+            </div>
+            </div>
+            
+            
+            <button class="btn btn-success" type="submit"> Cadastrar </button>
+        </form>
+      </section>
+    </section>
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+      <div class="text-center">
+        <p>
+          &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
+        </p>
+        <div class="credits">
+          <!--
+            You are NOT allowed to delete the credit link to TemplateMag with free version.
+            You can delete the credit link only if you bought the pro version.
+            Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
+            Licensing information: https://templatemag.com/license/
+          -->
+          Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+        </div>
+        <a href="index.html#" class="go-top">
+          <i class="fa fa-angle-up"></i>
+          </a>
+      </div>
+    </footer>
+    <!--footer end-->
+  </section>
+  
+</body>
+
+</html>
