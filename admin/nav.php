@@ -84,7 +84,7 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="logof.php">Sair</a></li>
+          <li><a class="logout" href="/admin/logof.php">Sair</a></li>
         </ul>
       </div>
     </header>

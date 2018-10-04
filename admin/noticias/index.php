@@ -1,180 +1,165 @@
 <?php
 
-	session_start();
-	if(!isset($_SESSION["login"])){
-		$msg = "Você precisa estar logado para entrar aqui!";
-		header("Location: /admin/index.php?msg=".$msg);
-	}else if ($_SESSION["adm"] == 0){
-		$msg = "Você não tem permissão para entrar aqui!";
-		header("Location: /admin/index.php?msg=".$msg);
-	}
+    session_start();
+
+    if(!isset($_SESSION["login"])){
+        header("Location: /admin/index.php");
+    }
 
 ?>
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Sobre o SINDCOCO</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-		<?php
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Noticias</title>
+
+  <!-- Favicons
+  <link href="/admin/img/favicon.png" rel="icon">
+  <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
+-->
+    <?php
 		
-			require("../../util/imports.php");
-		?>
-		<!-- fav icon -->
-
-			<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
-
-    </head>
-    <body class="blog">
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-		
-		<!-- Header Start -->
-		<header>
 			
-			<?php
-
-				include("../nav.php");
-
-			?>
-		
-
-		
-		
-		
-		<section class="blog-single">
-			<div class="container">
-				<div class="row" style="margin-top: 100px;">
-					<div class="col-md-8">
-						<div class="single-blog">
-							<h1>Notícias.</h1>
-							<br>
-							<?php
-
-								require("../../util/conexao.php");
-								$sql = "select * from noticias";
-								$noticia = $conexao->query($sql);
-
-									foreach ($noticia as $linha) {	
-								?>
-								<h4>
-									<?=$linha["titulo"];?>
-								</h4><br>
-								<?php
-
-									if(file_exists("../img/noticias/".$linha['imagem'])){
+			
+        require("../imports.php");
+        require("../../util/conexao.php");
+       
 
 
-								?>
+    ?>
 
-								<img src="/img/noticias/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
+  <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
 
-								<?php
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+     <?php
 
-								}else{
+            require("../nav.php");
 
-								?>
+        ?>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+      <?php
 
-								<img src="/img/noticias/0.jpg" alt="Blog Image" width="100%"/>
+            require("../navLateral.php");
 
-								<?php
+        ?>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+      <?php
 
-								}
+        if($_GET["msg"] != null){
 
-								?>
-								<div class="blog-info">
-								<ul>
-									<li><a href="">Data: 25/05/2016</a></li>
-									
-								</ul>
-								
-								<div class="read-more pull-right">
-									<a href="/admin/noticias/alterar.php"  class="btn  btn-sm" style="  color: white;  background-color: #337ab7;">
-           								Editar<span class="glyphicon glyphicon-chevron-right"></span>
-        							</a>
-								</div>
-								
-							</div>
-							<?php
-							}
-							?>
-							
-						</div>
-						
-						
-						
-						
-						
-						
-						
-						<div class="single-blog">
-							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
-							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-							<div class="blog-info">
-								<ul>
-									<li><a href="">Date: June 05, 2016</a></li>
-									<li><a href="">Author Name</a></li>
-									<li><a href="">Category</a></li>
-									<li><a href="">10 Comments</a></li>
-								</ul>
-								
-								<div class="read-more pull-right">
-									<a href="#" class="btn btn-readmore">Continue Reading</a>
-								</div>
-								
-							</div>
-							
-						</div>
-						
-						
-						<!-- Pagination -->
-						<div id="pagination">
-							<span class="all">Page 1 of 3</span>
-							<span class="current">1</span>
-							<a href="#" class="inactive">2</a>
-							<a href="#" class="inactive">3</a>
-						</div>
-						<!-- Pagination -->
-						
-					</div>
-					<!-- Right Sidebar -->
-					<?php
-						require("rightSidebar.php");
-					?>
-			</div>
-		</section>
-		
-		
-		
-		<!-- Footer -->
-		<?php
+      ?>
 
-			require("footer.php");
+        <h3><?=$_GET["msg"];?></h3>
 
-		?>
-		
-		
-		
+        <?php } ?>
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Imagem</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Data</th>
+                <th scope="col">Chamada</th>
+                <th scope="col">Ações</th>
+            </tr>
+            <?php
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+                $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and idCategoria = 3 ORDER BY id DESC";
+                $query = $conexao->query($sql);
+				foreach ($query as $linha) {
+            ?>
+
+            <tr>
+                <?php
+					if($linha["imagem"] != null){
+				?>
+					<td><img src="/img/noticias/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
+				<?php
+					}else {
+				?>
+					<td><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
+				<?php
+					}
+				?>
+                <td scope="col"><?=$linha["titulo"];?></td>
+                <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
+                <td scope="col"><?=$linha["descricao"];?></td>
+                <td scope="col">
+                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
+                        <button class="btn btn-sm btn-success">
+                            Adicionar arquivo
+                        </button>
+                    </a><br>
+                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
+                        <button class="btn btn-sm btn-warning">
+                            Editar
+                        </button>
+                    </a><br>
+                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
+                        <button class="btn btn-sm btn-danger">
+                            Tirar Autorização
+                        </button>
+                    </a><br>
+                </th>
+            </tr>
+
+            <?php
+                }
+            ?>
+
+        </table>
+      </section>
+    </section>
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+      <div class="text-center">
+        <p>
+          &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
+        </p>
+        <div class="credits">
+          <!--
+            You are NOT allowed to delete the credit link to TemplateMag with free version.
+            You can delete the credit link only if you bought the pro version.
+            Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
+            Licensing information: https://templatemag.com/license/
+          -->
+          Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+        </div>
+        <a href="index.html#" class="go-top">
+          <i class="fa fa-angle-up"></i>
+          </a>
+      </div>
+    </footer>
+    <!--footer end-->
+  </section>
+  
+</body>
+
 </html>

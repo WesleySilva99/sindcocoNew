@@ -90,7 +90,7 @@
             </tr>
             <?php
 
-                $sql = "SELECT * FROM eventos WHERE ativo = 1 ORDER BY data DESC";
+                $sql = "SELECT * FROM eventos WHERE ativo = 0 ORDER BY data DESC";
                 $query = $conexao->query($sql);
 				foreach ($query as $linha) {
             ?>
@@ -111,19 +111,14 @@
                 <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
                 <td scope="col"><?=$linha["descricao"];?></td>
                 <td scope="col">
-                    <a href="/admin/eventos/imagens.php?id=<?=$linha['id']?>">
+                    <a href="/admin/eventos/reativarEvento.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-success">
-                            Adicionar Fotos
+                            Reativar evento
                         </button>
                     </a><br>
                     <a href="/admin/eventos/inativarEvento.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-danger">
                             Inativar Evento
-                        </button>
-                    </a>
-                    <a href="/admin/eventos/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Editar Evento
                         </button>
                     </a>
                 </th>

@@ -69,71 +69,64 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-      <?php
-
-        if($_GET["msg"] != null){
-
-      ?>
-
-        <h3><?=$_GET["msg"];?></h3>
-
-        <?php } ?>
-
-        <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Capa</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Data</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Ações</th>
-            </tr>
-            <?php
-
-                $sql = "SELECT * FROM eventos WHERE ativo = 1 ORDER BY data DESC";
-                $query = $conexao->query($sql);
-				foreach ($query as $linha) {
-            ?>
-
-            <tr>
+       
+       <form action="cadastrarNoticia.php" class="form" method="POST" enctype="multipart/form-data">
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Categoria: </label>
+            <div class="col-10">
+            <select required="required" class="select" name="categoria">
+                <option value="">Selecione uma categoria</option>
                 <?php
-					if($linha["capa"] != null){
-				?>
-					<td><img src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
-				<?php
-					}else {
-				?>
-					<td><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
-				<?php
-					}
-				?>
-                <td scope="col"><?=$linha["titulo"];?></td>
-                <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col"><?=$linha["descricao"];?></td>
-                <td scope="col">
-                    <a href="/admin/eventos/imagens.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-success">
-                            Adicionar Fotos
-                        </button>
-                    </a><br>
-                    <a href="/admin/eventos/inativarEvento.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-danger">
-                            Inativar Evento
-                        </button>
-                    </a>
-                    <a href="/admin/eventos/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Editar Evento
-                        </button>
-                    </a>
-                </th>
-            </tr>
 
-            <?php
-                }
-            ?>
+                $sql = "SELECT * FROM categoria";
+                $query = $conexao->query($sql);
+                foreach ($query as $linha) {
 
-        </table>
+                ?> 
+                    <option value="<?=$linha['id'];?>"><?=$linha['titulo'];?></option>
+                <?php } ?>
+            </select>
+            </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Titulo: </label>
+            <div class="col-10">
+                <input class="form-control" required="required" type="text" name="titulo" required="required" id="example-search-input">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Data:</label>
+            <div class="col-10">
+                <input class="form-control" required="required" type="date" name="data" required="required" id="example-search-input">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="comment">Chamada: </label>
+            <div class="col-10">
+                <input class="form-control" name="chamada" required="required" />
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="comment">Texto: </label>
+            <div class="col-10">
+                <textarea class="form-control" name="texto" required="required" rows="5" id="comment"></textarea>
+            </div>
+            </div>
+            <label for="comment">Fonte: </label>
+            <div class="col-10">
+                <input class="form-control" name="fonte" required="required" />
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="example-url-input" class="col-2 col-form-label">Imagem: </label>
+            <div class="col-10">
+                <input class="form-control" required="required" name="imagem" type="file">
+            </div>
+            </div>
+            
+            
+            <button class="btn btn-success" type="submit"> Cadastrar </button>
+        </form>
       </section>
     </section>
     <!--main content end-->

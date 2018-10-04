@@ -78,55 +78,30 @@
         <h3><?=$_GET["msg"];?></h3>
 
         <?php } ?>
-
         <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Capa</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Data</th>
-                <th scope="col">Descrição</th>
+                <th scope="col">Imagem</th>
+                <th scope="col">Titulo do evento</th>
                 <th scope="col">Ações</th>
             </tr>
             <?php
 
-                $sql = "SELECT * FROM eventos WHERE ativo = 1 ORDER BY data DESC";
+                $sql = "SELECT ei.id, ei.id_evento, ei.imagem, e.titulo FROM eventos AS e, imagem_evento AS ei WHERE e.id = ei.id_evento and ei.ativo = 0";
                 $query = $conexao->query($sql);
 				foreach ($query as $linha) {
             ?>
 
             <tr>
-                <?php
-					if($linha["capa"] != null){
-				?>
-					<td><img src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
-				<?php
-					}else {
-				?>
-					<td><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
-				<?php
-					}
-				?>
+				<td><img src="/img/eventos/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
                 <td scope="col"><?=$linha["titulo"];?></td>
-                <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col"><?=$linha["descricao"];?></td>
                 <td scope="col">
-                    <a href="/admin/eventos/imagens.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-success">
-                            Adicionar Fotos
-                        </button>
-                    </a><br>
-                    <a href="/admin/eventos/inativarEvento.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-danger">
-                            Inativar Evento
+                    <a href="/admin/eventos/reativarImagemEvento.php?id=<?=$linha['id'];?>">
+                        <button class="btn btn-success">
+                            Reativar imagem nesse evento
                         </button>
                     </a>
-                    <a href="/admin/eventos/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Editar Evento
-                        </button>
-                    </a>
-                </th>
+                </td>
             </tr>
 
             <?php
@@ -163,3 +138,4 @@
 </body>
 
 </html>
+

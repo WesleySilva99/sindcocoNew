@@ -82,7 +82,7 @@
         <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Capa</th>
+                <th scope="col">Imagem</th>
                 <th scope="col">Titulo</th>
                 <th scope="col">Data</th>
                 <th scope="col">Descrição</th>
@@ -90,16 +90,16 @@
             </tr>
             <?php
 
-                $sql = "SELECT * FROM eventos WHERE ativo = 1 ORDER BY data DESC";
+                $sql = "SELECT * FROM anuncio WHERE autorizado = 0 ORDER BY data DESC";
                 $query = $conexao->query($sql);
 				foreach ($query as $linha) {
             ?>
 
             <tr>
                 <?php
-					if($linha["capa"] != null){
+					if($linha["imagem"] != null){
 				?>
-					<td><img src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
+					<td><img src="/img/anuncios/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
 				<?php
 					}else {
 				?>
@@ -111,21 +111,16 @@
                 <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
                 <td scope="col"><?=$linha["descricao"];?></td>
                 <td scope="col">
-                    <a href="/admin/eventos/imagens.php?id=<?=$linha['id']?>">
+                    <a href="/admin/classificados/sim.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-success">
-                            Adicionar Fotos
+                            Autorizar
                         </button>
                     </a><br>
-                    <a href="/admin/eventos/inativarEvento.php?id=<?=$linha['id']?>">
+                    <a href="/admin/classificados/deletar.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-danger">
-                            Inativar Evento
+                            Deletar
                         </button>
-                    </a>
-                    <a href="/admin/eventos/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Editar Evento
-                        </button>
-                    </a>
+                    </a><br>
                 </th>
             </tr>
 
