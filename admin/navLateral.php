@@ -75,6 +75,7 @@
               <i class="fa fa-th"></i>
               <span>Anuncios</span>
               </a>
+              
             <ul class="sub">
               <li><a href="basic_table.php">Autorizar</a></li>
               <li><a href="responsive_table.php">Autorizados</a></li>
