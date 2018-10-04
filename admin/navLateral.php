@@ -79,6 +79,7 @@
               <i class="fa fa-th"></i>
               <span>Anuncios</span>
               </a>
+              
             <ul class="sub">
               <li><a href="/admin/classificados/autorizar.php">Autorizar</a></li>
               <li><a href="/admin/classificados/">Autorizados</a></li>
