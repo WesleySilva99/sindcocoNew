@@ -21,6 +21,10 @@
               <i class="fa fa-desktop"></i>
               <span>Usuários</span>
               </a>
+              <ul class="sub">
+              <li><a href="/admin/usuarios/cadastrar.php">Cadastrar Usuários</a></li>
+              <li><a href="/admin/usuarios/">Consultar Usuários</a></li>
+            </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
@@ -64,8 +68,8 @@
               <span>Ações judiciais</span>
               </a>
             <ul class="sub">
-              <li><a href="basic_table.html">Inserir Arquivo</a></li>
-              <li><a href="responsive_table.html">Consultar Arquivos</a></li>
+              <li><a href="/admin/acoes/cadastrar.php">Cadastrar Ação</a></li>
+              <li><a href="/admin/acoes/">Consultar Ações</a></li>
               
             </ul>
           </li>

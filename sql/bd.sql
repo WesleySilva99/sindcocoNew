@@ -18,3 +18,9 @@ create table usuario(
     senha varchar(61),
     adm tinyint
 );
+create table acoes( 
+    id int auto_increment primary key,
+    titulo varchar(100),
+    data date,
+    arquivo varchar(100)
+);
