@@ -18,6 +18,7 @@
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
   <title>Noticias</title>
 
+</style>
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -41,7 +42,7 @@
   ======================================================= -->
 </head>
 
-<body>
+<body style="background-color: white;">
   <section id="container">
     <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
@@ -69,71 +70,60 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-      <?php
+        <h4><i class="fa fa-angle-right"></i> Noticias.</h4>
+                  <?php
 
-        if($_GET["msg"] != null){
+                if($_GET["msg"] != null){
 
-      ?>
+                      ?>
+           <h4><i class="fa fa-angle-right"></i> <?=$_GET["msg"];?></h4>
+        
 
-        <h3><?=$_GET["msg"];?></h3>
-
-        <?php } ?>
-
-        <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Imagem</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Data</th>
-                <th scope="col">Chamada</th>
-                <th scope="col">Ações</th>
-            </tr>
+             <?php } ?>
+                <div class="container" style="margin-top: 50px;">
+                <div class="row">
             <?php
 
                 $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and idCategoria = 3 ORDER BY id DESC";
-                $query = $conexao->query($sql);
-				foreach ($query as $linha) {
-            ?>
+                  $query = $conexao->query($sql);
+                    foreach ($query as $linha) {
+                            ?>
 
-            <tr>
-                <?php
-					if($linha["imagem"] != null){
-				?>
-					<td><img src="/img/noticias/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
-				<?php
-					}else {
-				?>
-					<td><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
-				<?php
-					}
-				?>
-                <td scope="col"><?=$linha["titulo"];?></td>
-                <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col"><?=$linha["descricao"];?></td>
-                <td scope="col">
-                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-success">
-                            Adicionar arquivo
-                        </button>
-                    </a><br>
-                    <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
-                            Editar
-                        </button>
-                    </a><br>
-                    <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-danger">
-                            Tirar Autorização
-                        </button>
-                    </a><br>
-                </th>
-            </tr>
+            <div class="col-md-4" style="margin-top: 15px;">
+                <div class="card-content">
+                    <div class="card-img">
+                      <?php
+                    if($linha["imagem"] != null){
+                            ?>
+                    <img src="/img/noticias/<?=$linha['imagem'];?>"  class="cd1"/>
+                      <?php
+                        }else {
+                            ?>
+                    <img src="/img/anuncios/off.jpg" class="cd1"/>
+                        <?php
+                          }
+                            ?> 
+                        <span>novo</span>
+                    </div>
+                    <div class="card-desc">
+                        <h3 class="cd3"><?=$linha["titulo"];?></h3>
+                        <p><?=$linha["descricao"];?></p>
 
+                        <a ><?=date('d/m/Y', strtotime($linha['data']));?></a>
+                        <br>
+                        <br>
+                            <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>" class="btn-card">Adc.Arquivo</a>
+                             <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #ec9c18;">Editar</a>
+                              <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #e14c25;">Revogar</a>
+
+                    </div>
+                </div>
+            </div>
             <?php
                 }
             ?>
-
-        </table>
+        </div>
+    </div>
       </section>
     </section>
     <!--main content end-->

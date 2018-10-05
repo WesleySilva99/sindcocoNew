@@ -122,7 +122,7 @@
                   <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-8">
                       <br>
-                      <button class="btn btn-theme" type="submit">cadastrar</button>
+                      <button class="btn btn-theme" type="submit">Alterar</button>
                       
                       <button class="btn btn-warning" type="button">Cancelar</button>
                     </div>
