@@ -2,8 +2,8 @@
 
     require("conexao.php");
 
-    $nome = "leandro";
-    $login = "leandro";
+    $nome = "admin";
+    $login = "teste";
     $senha = md5("123456");
 
     //$senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
@@ -14,7 +14,7 @@
     $stmt->bindValue(1, $nome);
     $stmt->bindValue(2, $login);
     $stmt->bindValue(3, $senha);
-    $stmt->bindValue(4, 0);
+    $stmt->bindValue(4, 1);
     $stmt->execute();
 
 ?>

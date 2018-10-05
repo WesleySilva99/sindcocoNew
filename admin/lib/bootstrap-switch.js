@@ -22,7 +22,7 @@
               , classes = $element.attr('class')
               , color
               , moving
-              , onLabel = "ON"
+              , onLabel = "ADM"
               , offLabel = "OFF"
               , icon = false;
 

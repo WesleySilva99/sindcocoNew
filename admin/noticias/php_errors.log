@@ -1,0 +1,45 @@
+[04-Oct-2018 23:33:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php:82
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php(82): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php on line 82
+[04-Oct-2018 23:34:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php:82
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php(82): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php on line 82
+[04-Oct-2018 23:34:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\editar.php:91
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\editar.php(91): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\editar.php on line 91
+[05-Oct-2018 03:43:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php:82
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php(82): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php on line 82
+[05-Oct-2018 03:43:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php:82
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php(82): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php on line 82
+[05-Oct-2018 03:53:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php:82
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php(82): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php on line 82
+[05-Oct-2018 03:54:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php:82
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php(82): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php on line 82
+[05-Oct-2018 03:54:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php:82
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php(82): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php on line 82
+[05-Oct-2018 12:45:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.categoria' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php:82
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php(82): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\admin\noticias\cadastrar.php on line 82

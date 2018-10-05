@@ -17,6 +17,23 @@
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
   <title>Informativos</title>
+  <style type="text/css">
+    .dlk-radio input[type="radio"],
+.dlk-radio input[type="checkbox"] 
+{
+  
+  display:none;
+}
+.dlk-radio input[type="radio"] + .fa ,
+.dlk-radio input[type="checkbox"] + .fa {
+     opacity:0.30
+}
+.dlk-radio input[type="radio"]:checked + .fa,
+.dlk-radio input[type="checkbox"]:checked + .fa{
+    opacity:1
+}
+
+  </style>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
@@ -69,37 +86,58 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-       
-       <form action="cadastra.php" class="form" method="POST" enctype="multipart/form-data">
-            <div class="form-group row">
-                <label for="example-text-input" class="col-2 col-form-label">Nome: </label>
-            <div class="col-10">
-                <input class="form-control" required="required" type="text" name="nome" required="required" id="example-search-input">
+         <h4><i class="fa fa-angle-right"></i> Cadastro de Usuario.</h4>
+       <div class="row mt">
+          <div class="col-lg-6" style="margin-left: 20%">
+           
+            <div class="form-panel" style="border-radius: 10px;">
+              <h4><i class="fa fa-angle-right"></i> Preencha todos os campos.</h4>
+              <div class=" form">
+                <form class="cmxform form-horizontal style-form" id="commentForm"  action="cadastra.php" method="POST" enctype="multipart/form-data">
+                  <br>
+                  <div class="form-group ">
+                    <label for="cname" class="control-label col-lg-2"><i class="glyphicon glyphicon-user"></i> Nome*:</label>
+                    <div class="col-lg-10">
+                      <input class=" form-control" id="cname" name="nome" minlength="2" type="text" required />
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="cemail" class="control-label col-lg-2"><i class="  glyphicon glyphicon-pencil"></i>Usuario*:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="cuser" type="text" name="login" required />
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="curl" class="control-label col-lg-2"><i class="  glyphicon glyphicon-asterisk"></i> Senha:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="cpassword" type="password" name="senha" required  />
+                    </div>
+                  </div>
+                  <div class="well well-sm text-center">
+      <h3>Permisão de usuario ADM:</h3>
+      <div class="dlk-radio btn-group">
+      <label class="btn btn-success">
+          <input class="form-control" required="required" value="1" name="adm" type="radio">
+          <i class="fa fa-check glyphicon glyphicon-ok">Sim</i>
+     </label>
+    
+           <label class="btn btn-danger">
+         <input  class="form-control" required="required" value="0" name="adm" type="radio">
+         <i class="fa fa-check glyphicon glyphicon-remove">não</i>
+       </label>
+    </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-8">
+                      <br>
+                      <button class="btn btn-theme" type="submit">cadastrar</button>
+                      
+                      <button class="btn btn-warning" type="button">Cancelar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-search-input" class="col-2 col-form-label">Login:</label>
-            <div class="col-10">
-                <input class="form-control" required="required" type="text" name="login" required="required" id="example-search-input">
-            </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-url-input" class="col-2 col-form-label">Senha: </label>
-            <div class="col-10">
-                <input class="form-control" required="required" name="senha" type="password">
-            </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-url-input" class="col-2 col-form-label">Adm: </label>
-            <div class="col-10">
-                <p>Sim</p><input class="form-control" required="required" value="1" name="adm" type="radio"><br>
-                <p>Não</p><input class="form-control" required="required" value="0" name="adm" type="radio">
-            </div>
-            </div>
-            
-            
-            <button class="btn btn-success" type="submit"> Cadastrar </button>
-        </form>
+      
       </section>
     </section>
     <!--main content end-->
