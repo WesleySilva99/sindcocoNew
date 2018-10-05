@@ -56,6 +56,21 @@ a, a:hover, a:focus {
 	color: white;
 }
 
+ .dlk-radio input[type="radio"],
+.dlk-radio input[type="checkbox"] 
+{
+  
+  display:none;
+}
+.dlk-radio input[type="radio"] + .fa ,
+.dlk-radio input[type="checkbox"] + .fa {
+     opacity:0.30
+}
+.dlk-radio input[type="radio"]:checked + .fa,
+.dlk-radio input[type="checkbox"]:checked + .fa{
+    opacity:1
+}
+
 .btn-round {
 	border-radius: 20px;
 	-webkit-border-radius: 20px;

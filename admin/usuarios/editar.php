@@ -70,8 +70,16 @@
     <section id="main-content">
       <section class="wrapper">
        
-       <form action="edit.php" class="form" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?=$_GET['id'];?>">
+      <h4><i class="fa fa-angle-right"></i> Alterar Usuario.</h4>
+       <div class="row mt">
+          <div class="col-lg-6" style="margin-left: 20%">
+           
+            <div class="form-panel" style="border-radius: 10px;">
+              <h4><i class="fa fa-angle-right"></i> Alteração.</h4>
+              <div class=" form">
+                <form class="cmxform form-horizontal style-form" id="commentForm"  action="edit.php" method="POST" enctype="multipart/form-data">
+                  <br>
+                   <input type="hidden" name="id" value="<?=$_GET['id'];?>">
             <?php
                 $sql = "SELECT * FROM usuario WHERE id = ?";
                 $stmt = $conexao->prepare($sql);
@@ -79,41 +87,54 @@
                 $stmt->execute();
                 foreach ($stmt as $linha) {
             ?>
-            <div class="form-group row">
-                <label for="example-text-input" class="col-2 col-form-label">Nome: </label>
-            <div class="col-10">
-                <input class="form-control" required="required" value="<?=$linha['nome'];?>" type="text" name="nome" required="required" id="example-search-input">
+                  <div class="form-group ">
+                    <label for="cname" class="control-label col-lg-2"><i class="glyphicon glyphicon-user"></i> Nome*:</label>
+                    <div class="col-lg-10">
+                      <input class=" form-control" id="cname" name="nome" value="<?=$linha['nome'];?>" minlength="2" type="text" required />
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="cemail" class="control-label col-lg-2"><i class="  glyphicon glyphicon-pencil"></i>Usuario*:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="cuser" type="text" name="login" value="<?=$linha['login'];?>" required />
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="curl" class="control-label col-lg-2"><i class="  glyphicon glyphicon-asterisk"></i> Senha:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="cpassword" type="password" name="senha" value="<?=$linha['senha'];?>" required  />
+                    </div>
+                  </div>
+                  <div class="well well-sm text-center">
+      <h3>Permisão de usuario ADM:</h3>
+      <div class="dlk-radio btn-group">
+      <label class="btn btn-success">
+          <input class="form-control" required="required" value="1" name="adm" type="radio">
+          <i class="fa fa-check glyphicon glyphicon-ok">Sim</i>
+     </label>
+    
+           <label class="btn btn-danger">
+         <input  class="form-control" required="required" value="0" name="adm" type="radio">
+         <i class="fa fa-check glyphicon glyphicon-remove">não</i>
+       </label>
+    </div>
+    <?php } ?>
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-8">
+                      <br>
+                      <button class="btn btn-theme" type="submit">cadastrar</button>
+                      
+                      <button class="btn btn-warning" type="button">Cancelar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-search-input" class="col-2 col-form-label">Login:</label>
-            <div class="col-10">
-                <input class="form-control" required="required" value="<?=$linha['login'];?>" type="text" name="login" required="required" id="example-search-input">
-            </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-url-input" class="col-2 col-form-label">Senha: </label>
-            <div class="col-10">
-                <input class="form-control" required="required" value="<?=$linha['senha'];?>" name="senha" type="password">
-            </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-url-input" class="col-2 col-form-label">Adm: </label>
-            <div class="col-10">
-                <p>Sim</p><input class="form-control" required="required" value="1" name="adm" type="radio"><br>
-                <p>Não</p><input class="form-control" required="required" value="0" name="adm" type="radio">
-            </div>
-            </div>
-            
-                <?php } ?>
-            
-            <button class="btn btn-success" type="submit"> Cadastrar </button>
-        </form>
       </section>
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top:60px;">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved

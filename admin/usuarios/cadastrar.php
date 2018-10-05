@@ -17,23 +17,7 @@
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
   <title>Informativos</title>
-  <style type="text/css">
-    .dlk-radio input[type="radio"],
-.dlk-radio input[type="checkbox"] 
-{
   
-  display:none;
-}
-.dlk-radio input[type="radio"] + .fa ,
-.dlk-radio input[type="checkbox"] + .fa {
-     opacity:0.30
-}
-.dlk-radio input[type="radio"]:checked + .fa,
-.dlk-radio input[type="checkbox"]:checked + .fa{
-    opacity:1
-}
-
-  </style>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
@@ -142,7 +126,7 @@
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top:60px;">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved

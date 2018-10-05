@@ -69,7 +69,11 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-      <?php
+       <!-- row -->
+        <div class="row mt">
+          <div class="col-md-12">
+            <div class="content-panel">
+              <?php
 
         if($_GET["msg"] != null){
 
@@ -78,44 +82,52 @@
         <h3><?=$_GET["msg"];?></h3>
 
         <?php } ?>
+              <table class="table table-striped table-advance table-hover">
+                <h4><i class="fa fa-angle-right"></i> Usuarios Cadastrados.</h4>
+                <hr>
+                <thead>
+                  <tr>
+                    
+                    <th><i class=" fa fa-edit"></i> Nome</th>
+                    <th><i class="fa fa-user" aria-hidden="true"></i> Login</th>
+                    
+                    <th><i class="glyphicon glyphicon-lock" aria-hidden="true"></i> ADM</th>
+                    <th class="hidden-phone"><i class="fa fa-question-circle"></i> Ações</th>
 
-        <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                
-                <th scope="col">Nome</th>
-                <th scope="col">Login</th>
-                <th scope="col">Adm</th>
-                <th scope="col">Ações</th>
-            </tr>
-            <?php
+                    
+                    
+                  </tr>
+                  <?php
 
                 $sql = "SELECT * FROM usuario";
                 $anuncios = $conexao->query($sql);
                 foreach ($anuncios as $linha) {
             ?>
-
-            <tr>
-                <td scope="col"><?=$linha["nome"];?></td>
-                <td scope="col"> <?=$linha["login"];?></td>
-                <?php
+                </thead>
+                <tbody>
+                  <tr>
+                  
+                    <td><?=$linha["nome"];?></td>
+                    <td><?=$linha["login"];?></td>
+                    <?php
 
                     if($linha["adm"] == 1){
 
                 ?>
-                <td scope="col">Sim</td>
+                <td ><span class="label label-info label-mini">Sim</span></td>
                 <?php
                     }else {
 
                 ?>
                 
-                <td scope="col">Não</td>
+                <td><span class="label label-info label-danger">Não</span></td>
                 
                 <?php } ?>
-                <td>
-                <td>
+                   
+                    
+                    <td>
                     <a href="/admin/usuarios/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
+                        <button class="btn btn-sm btn-success">
                             Editar
                         </button>
                     </a>
@@ -125,18 +137,23 @@
                         </button>
                     </a>                   
                 </td>
-            </tr>
-
-            <?php
+                   
+                  </tr>
+                 <?php
                 }
             ?>
-
-        </table>
+                </tbody>
+              </table>
+            </div>
+            <!-- /content-panel -->
+          </div>
+          <!-- /col-md-12 -->
+        </div>
       </section>
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 18.5%">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
