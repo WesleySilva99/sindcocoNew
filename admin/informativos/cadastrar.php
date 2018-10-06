@@ -17,7 +17,7 @@
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
   <title>Informativos</title>
-
+<link rel="stylesheet" type="text/css" href="../lib/bootstrap-fileupload/bootstrap-fileupload.css" />
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -70,34 +70,61 @@
     <section id="main-content">
       <section class="wrapper">
        
-       <form action="cadastra.php" class="form" method="POST" enctype="multipart/form-data">
-            <div class="form-group row">
-                <label for="example-text-input" class="col-2 col-form-label">Titulo: </label>
-            <div class="col-10">
-                <input class="form-control" required="required" type="text" name="titulo" required="required" id="example-search-input">
-            </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-search-input" class="col-2 col-form-label">Data:</label>
-            <div class="col-10">
-                <input class="form-control" required="required" type="date" name="data" required="required" id="example-search-input">
-            </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-url-input" class="col-2 col-form-label">Arquivo: </label>
-            <div class="col-10">
-                <input class="form-control" required="required" name="pdf" type="file">
-            </div>
-            </div>
-            
-            
-            <button class="btn btn-success" type="submit"> Cadastrar </button>
-        </form>
+      <h4><i class="fa fa-angle-right"></i> Cadastro informativos.</h4>
+       <div class="row mt">
+          <div class="col-lg-6" style="margin-left: 20%">
+           
+            <div class="form-panel" style="border-radius: 10px;">
+              <h4><i class="fa fa-angle-right"></i> Preencha todos os campos.</h4>
+              <div class=" form">
+                <form class="cmxform form-horizontal style-form" id="commentForm"  action="cadastra.php" method="POST" enctype="multipart/form-data">
+                  <br>
+                  <div class="form-group ">
+                    <label for="cname" class="control-label col-lg-2"><i class="glyphicon glyphicon-pencil"></i> Titulo*:</label>
+                    <div class="col-lg-10">
+                      <input class=" form-control" id="cname" name="titulo" minlength="2" type="text" required />
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="cemail" class="control-label col-lg-2"><i class="glyphicon glyphicon-calendar"></i>Data*:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="cuser" type="text" name="data" required />
+                    </div>
+                  </div>
+                 
+                
+                   <div class="form-group">
+                  <label class="control-label col-md-3">Arquivo:</label>
+                  <div class="controls col-md-9">
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                      <span class="btn btn-theme02 btn-file">
+                        <span class="fileupload-new"><i class="fa fa-paperclip"></i> Selecione o arquivo</span>
+                      <span class="fileupload-exists"><i class="fa fa-undo"></i> Novo arquivo</span>
+                      <input type="file" class="default" />
+                      </span>
+                      <span class="fileupload-preview" style="margin-left:5px;"></span>
+                      <a href="advanced_form_components.html#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+                    </div>
+                  </div>
+                </div>
+                 
+                  <div class="form-group">
+                    <div class="col-lg-offset-8 col-lg-4">
+                      <br>
+                      <button class="btn btn-theme" type="submit">cadastrar</button>
+                      
+                      <button class="btn btn-danger" type="reset">Cancelar</button>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div
       </section>
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 12.5%">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
@@ -118,7 +145,23 @@
     </footer>
     <!--footer end-->
   </section>
-  
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+  <script class="include" type="text/javascript" src="../lib/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="../lib/jquery.scrollTo.min.js"></script>
+  <script src="../lib/jquery.nicescroll.js" type="text/javascript"></script>
+  <!--common script for all pages-->
+  <script src="../lib/common-scripts.js"></script>
+  <!--script for this page-->
+  <script src="../lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-daterangepicker/date.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-daterangepicker/moment.min.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+  <script src="../lib/advanced-form-components.js"></script>
 </body>
 
 </html>
