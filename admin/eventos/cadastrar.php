@@ -91,7 +91,7 @@
             <div class="form-panel" style="border-radius: 10px;">
               <h4><i class="fa fa-angle-right"></i> Preencha todos os campos.</h4>
               <div class=" form">
-                <form class="cmxform form-horizontal style-form" id="commentForm"  action="cadastrarEvento.php" method="POST" enctype="multipart/form-data">
+                <form class="cmxform form-horizontal style-form" id="commentForm"  action="/admin/eventos/cadastrarEvento.php" method="POST" enctype="multipart/form-data">
                   <br>
                   <div class="form-group ">
                     <label for="cname" class="control-label col-lg-2"><i class="glyphicon glyphicon-pencil"></i> Titulo*:</label>
@@ -102,7 +102,7 @@
                   <div class="form-group ">
                     <label for="cemail" class="control-label col-lg-2"><i class="glyphicon glyphicon-calendar"></i>Data*:</label>
                     <div class="col-lg-10">
-                      <input class="form-control " id="cuser" type="text" name="data" required />
+                      <input class="form-control " id="cuser" type="date" name="data" required />
                     </div>
                   </div>
                   <div class="form-group ">
@@ -124,7 +124,7 @@
                         <span class="btn btn-theme02 btn-file">
                           <span class="fileupload-new"><i class="fa fa-paperclip"></i> Seleciona a imagem</span>
                         <span class="fileupload-exists"><i class="fa fa-undo"></i> nova imagem</span>
-                        <input type="file" class="default" />
+                        <input type="file" name="imagem" class="default" />
                         </span>
                         
                       </div>

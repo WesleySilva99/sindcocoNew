@@ -116,9 +116,9 @@
                             Reativar evento
                         </button>
                     </a><br>
-                    <a href="/admin/eventos/inativarEvento.php?id=<?=$linha['id']?>">
+                    <a href="/admin/eventos/delete.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-danger">
-                            Inativar Evento
+                            Deletar Evento
                         </button>
                     </a>
                 </th>

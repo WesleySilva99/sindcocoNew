@@ -11,13 +11,14 @@ $descricao = $_POST["descricao"];
 
 try {
 
-    $sql = "INSERT INTO eventos(titulo, descricao, data, capa) VALUES (?,?,?,?)";
+    $sql = "INSERT INTO eventos(titulo, descricao, data, capa, ativo) VALUES (?,?,?,?,?)";
 
     $stmt = $conexao->prepare($sql);
     $stmt->bindValue(1, $titulo);
     $stmt->bindValue(2, $descricao);
     $stmt->bindValue(3, $data);
     $stmt->bindValue(4, $foto);
+    $stmt->bindValue(5, 1);
 
     $stmt->execute();
 
