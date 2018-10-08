@@ -69,6 +69,7 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+        <h4><i class="fa fa-angle-right"></i> Eventos Inativos.</h4>
       <?php
 
         if($_GET["msg"] != null){
@@ -79,13 +80,14 @@
 
         <?php } ?>
 
-        <table class="table">
+        <table class="table ">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Capa</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Data</th>
-                <th scope="col">Descrição</th>
+                <th scope="col"><i class="fa fa-picture-o"></i>Capa</th>
+                <th scope="col"><i class=" fa fa-edit"></i>Titulo</th>
+                <th scope="col"><i class="fa fa-calendar"></i>Data</th>
+                <th scope="col"><i class=" fa fa-edit">Descrição</th>
+                <th scope="col"><i class="fa fa-question-circle"></i>Situação</th>
                 <th scope="col">Ações</th>
             </tr>
             <?php
@@ -99,29 +101,24 @@
                 <?php
 					if($linha["capa"] != null){
 				?>
-					<td><img src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
+					<td><img style="max-width: 200px;" src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
 				<?php
 					}else {
 				?>
-					<td><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
+					<td><img style="max-width: 200px;" src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
 				<?php
 					}
 				?>
-                <td scope="col"><?=$linha["titulo"];?></td>
-                <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col"><?=$linha["descricao"];?></td>
-                <td scope="col">
-                    <a href="/admin/eventos/reativarEvento.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-success">
-                            Reativar evento
-                        </button>
-                    </a><br>
-                    <a href="/admin/eventos/delete.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-danger">
-                            Deletar Evento
-                        </button>
-                    </a>
-                </th>
+                <td scope="col" style="width: 200px;"><?=$linha["titulo"];?></td>
+                <td scope="col" style="width: 100px;"><?=date('d/m/Y', strtotime($linha['data']));?></td>
+                <td scope="col" style="width: 600px;"><?=$linha["descricao"];?></td>
+                <td scope="col" style="width: "><span class="label label-warning">Imativo</span></td>
+                <td>
+                     <a href="/admin/eventos/reativarEvento.php?id=<?=$linha['id']?>"> <button  class="btn btn-primary btn-xs"><i class="fa fa-check"></i></button> </a>
+                      
+                    <a href="/admin/eventos/delete.php?id=<?=$linha['id']?>">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
+                    </td>
+               
             </tr>
 
             <?php
@@ -133,7 +130,7 @@
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 35%">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
