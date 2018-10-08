@@ -136,7 +136,16 @@
     <div class="col-md-3">
       <div class="card-counter primary">
         <i class="fa fa-code-fork"></i>
-        <span class="count-numbers">12</span>
+        <?php 
+						require("../util/conexao.php");
+						$sql = "SELECT count(*) as ids FROM anuncio";
+						$stmt = $conexao->query($sql);
+						foreach ($stmt as $linha) {
+					?>
+
+                <span class="count-numbers"><?=$linha["ids"];?></span>
+
+          <?php } ?>
         <span class="count-name">Anuncios</span>
       </div>
     </div>
@@ -144,7 +153,17 @@
     <div class="col-md-3">
       <div class="card-counter danger">
         <i class="fa fa-ticket"></i>
-        <span class="count-numbers">599</span>
+         <?php 
+						/*
+						$sql = "SELECT count(*) as ids pragas FROM informativos";
+						$stmt = $conexao->query($sql);
+						foreach ($stmt as $linha) {
+            */
+					?>
+
+                <span class="count-numbers">599</span>
+                
+
         <span class="count-name">Pragas</span>
       </div>
     </div>
@@ -152,7 +171,17 @@
     <div class="col-md-3">
       <div class="card-counter success">
         <i class="fa fa-database"></i>
-        <span class="count-numbers">6875</span>
+        <?php 
+						
+						$sql = "SELECT count(*) as ids FROM informativos";
+						$stmt = $conexao->query($sql);
+						foreach ($stmt as $linha) {
+            
+					?>
+
+                <span class="count-numbers"><?=$linha['ids'];?></span>
+
+            <?php } ?>
         <span class="count-name">Informativos</span>
       </div>
     </div>
@@ -160,7 +189,17 @@
     <div class="col-md-3">
       <div class="card-counter info">
         <i class="fa fa-users"></i>
-        <span class="count-numbers">35</span>
+        <?php 
+						
+						$sql = "SELECT count(*) as ids FROM noticias";
+						$stmt = $conexao->query($sql);
+						foreach ($stmt as $linha) {
+            
+					?>
+
+                <span class="count-numbers"><?=$linha['ids'];?></span>
+                
+            <?php } ?>
         <span class="count-name">Noticias</span>
       </div>
     </div>

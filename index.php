@@ -300,7 +300,7 @@
 								<div class="col-md-2">
 									<div class="feature-icon">
 										<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7;"></i>
-									</div>
+									</div>a
 								</div>
 								<div class="col-md-10">
 									<div class="feature-text">
@@ -338,7 +338,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="title">
-							<h3>Galeria de <span>Fotos</span> <a href="/noticias/" class="btn btn-read-more">Ver mais >></a></h3> 	
+							<h3>Galeria de <span>Fotos</span> <a href="/eventos/" class="btn btn-read-more">Ver mais >></a></h3> 	
 						</div>
 					</div>
 				</div>
@@ -346,21 +346,32 @@
 			
 			<div class="featured-list">
 				<div id="grid" class="clearfix">
+
+				<?php
+
+					$sql = "SELECT ei.id, ei.id_evento, ei.imagem, e.titulo FROM eventos AS e, imagem_evento AS ei WHERE e.id = ei.id_evento and ei.ativo = 1 LIMIT 8";
+					$query = $conexao->query($sql);
+					foreach ($query as $linha) {
+
+				?>
 					
 					<div class="thumb">
 						<a href="#">
-							<img src="img/galeria/3_destaque.jpg" alt="Feature Image" />
+							<img src="/img/eventos/<?=$linha['imagem'];?>"  height="380" width="42" alt="Feature Image" />
 						</a>
 						
 						<div class="thumb-rollover">
 							<div class="project-title">
-								<h4>Project Title</h4>
-								<h5>Category: Web Design</h5>
+								<h4><?=$linha["titulo"];?></h4>
+								<!-- <h5>Category: Web Design</h5> -->
 							</div>
 						</div>
 						
 					</div>
-					
+				
+				<?php } ?>
+					<!--
+
 					<div class="thumb">
 						<a href="#">
 							<img src="img/galeria/2_destaque.jpg" alt="Feature Image" width="100%" height="100%"/>
@@ -452,7 +463,7 @@
 					</div>
 					
 					
-					
+					-->
 					
 					
 				</div>
@@ -494,7 +505,7 @@
 								if($linha["imagem"] != null){
 							?>
 							
-								<img  src="/img/anuncios/<?=$linha['imagem'];?>" alt="Blog Image"/>
+								<img  src="/img/anuncios/<?=$linha['imagem'];?>" alt="Blog Image" />
 							
 							<?php
 							}else {

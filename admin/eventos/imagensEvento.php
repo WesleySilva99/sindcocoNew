@@ -96,7 +96,7 @@
 				<td><img src="/img/eventos/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
                 <td scope="col"><?=$linha["titulo"];?></td>
                 <td scope="col">
-                    <a href="/admin/eventos/inativarImagemEvento.php?id=<?=$linha['id'];?>">
+                    <a href="/admin/eventos/inativarImagemEvento.php?id=<?=$linha['id'];?>&?titulo=<?=$linha["titulo"];?>">
                         <button class="btn btn-danger">
                             Inativar imagem nesse evento
                         </button>

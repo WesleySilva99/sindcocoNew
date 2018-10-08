@@ -47,7 +47,7 @@
 							<?php
 
 								require("../util/conexao.php");
-								$sql = "select * from noticias order by id desc";
+								$sql = "SELECT * FROM noticias WHERE autorizada = 1 AND idCategoria = 3 order by id desc";
 								$noticia = $conexao->query($sql);
 
 									foreach ($noticia as $linha) {	

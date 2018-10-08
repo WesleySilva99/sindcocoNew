@@ -24,7 +24,7 @@
 									<?php
 
 										require("../util/conexao.php");
-										$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 3";
+										$sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
 										$anuncios = $conexao->query($sql);
 										foreach ($anuncios as $linha) {
 

@@ -17,10 +17,8 @@
 							<div class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
 								<li><a href="/index.php">Início</a></li>
-									<li><a href="/noticias/informativos.php">Informativos</a></li>
-									<li><a href="/noticias/">Notícias</a></li>
-									<li><a href="/noticias/midia.php">SINDCOCO na mídia</a></li>
-									<li><a href="/classificados/">classificados</a></li>
+									<li><a href="/eventos/">Eventos</a></li>
+									<li><a href="/classificados/">Classificados</a></li>
 									<li><a href="/index.php#contact-us">Contate-nos</a></li>
 								</ul>
 							</div>
