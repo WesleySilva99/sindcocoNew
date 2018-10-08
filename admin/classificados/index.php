@@ -105,11 +105,11 @@
                 <?php
           if($linha["imagem"] != null){
         ?>
-          <td style="width: 10%"><img src="/img/anuncios/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
+          <td style="max-width: 100px;"><img src="/img/anuncios/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
         <?php
           }else {
         ?>
-          <td style="width: 10%"><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
+          <td style="max-width: 100px;"><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
         <?php
           }
         ?>
