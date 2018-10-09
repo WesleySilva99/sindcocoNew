@@ -69,6 +69,7 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+        <h4><i class="fa fa-angle-right"></i>Informativos.</h4>
       <?php
 
         if($_GET["msg"] != null){
@@ -83,10 +84,10 @@
         <thead class="thead-dark">
             <tr>
                 
-                <th scope="col">Titulo</th>
-                <th scope="col">Data</th>
-                <th scope="col">Arquivo</th>
-                <th scope="col">Ações</th>
+                <th scope="col"><i class="fa fa-picture-o" ></i>Titulo</th>
+                <th scope="col"><i class="fa fa-calendar" ></i>Data</th>
+                <th scope="col"><i class="fa fa-file"></i>Arquivo</th>
+                <th scope="col"><i class="fa fa-question-circle"></i>Ações</th>
             </tr>
             <?php
 
@@ -98,18 +99,18 @@
             <tr>
                 <td scope="col"><?=$linha["titulo"];?></td>
                 <td scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col"><a href="/pdf/informativos/<?=$linha['arquivo'];?>">Clique aqui para abrir</a></td>
+    <td scope="col"><a href="/pdf/informativos/<?=$linha['arquivo'];?>"><span class="label label-primary label-mini">Clique aqui para abrir</span></a></td>
                 <td scope="col">
                     <a href="/admin/informativos/editar.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-warning">
                             Editar
                         </button>
-                    </a><br>
+                    </a>
                     <a href="/admin/informativos/editar.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-warning">
                             Trocar de arquivo
                         </button>
-                    </a><br>
+                    </a>
                     <a href="/admin/informativos/nao.php?id=<?=$linha['id']?>">
                         <button class="btn btn-sm btn-danger">
                             Tirar Autorização

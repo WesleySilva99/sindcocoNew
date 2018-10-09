@@ -17,15 +17,7 @@
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
   <title>Eventos</title>
-<style type="text/css">
-  .text_center {text-align: center;width: 100%;}
-.img_polygon{position: relative;-webkit-transition: .6s all, .3s .3s -webkit-transform;transition: .6s all, .3s .3s transform;-webkit-clip-path: polygon(50% 0%, 50% 0%, 100% 50%, 50% 100%, 50% 100%, 0% 50%);clip-path: polygon(50% 0%, 50% 0%, 100% 50%, 50% 100%, 50% 100%, 0% 50%);opacity: .8; -webkit-filter: grayscale(100%); filter: grayscale(100%);}
-img {border: 0px;border-style: solid; -webkit-transform-origin: left top; -ms-transform-origin: left top; -o-transform-origin: left top;transform-origin: left top;}
-.img_polygon:hover { -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%); clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%); -webkit-transform: scale(1.4); -ms-transform: scale(1.4);transform: scale(1.4);z-index: 10;box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);border-radius: 0px;opacity: 1;transform-origin: center center; -webkit-filter: grayscale(0%);filter: grayscale(0%);}
-.img_polygon:nth-child(1n + 5) { -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);}
-.img_polygon:nth-child(1n + 5):hover {-webkit-transform: translateY(-50%) scale(1.4);-ms-transform: translateY(-50%) scale(1.4);transform: translateY(-50%) scale(1.4);}
 
-</style>
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -121,7 +113,7 @@ img {border: 0px;border-style: solid; -webkit-transform-origin: left top; -ms-tr
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 20%;">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved

@@ -85,7 +85,7 @@
             <tr>
                 <th scope="col"><i class="fa fa-picture-o" ></i>Imagem</th>
                 <th scope="col"><i class=" fa fa-edit"></i>Titulo</th>
-                <th scope="col"><i class="fa fa-calendar" aria-hidden="true"></i>Data</th>
+                <th scope="col"><i class="fa fa-calendar"></i>Data</th>
                 <th scope="col"><i class="fa fa-question-circle"></i>Descrição</th>
                 <th><i class="fa fa-usd" aria-hidden="true"></i> Preço</th>
                 <th><i class="fa fa-user" aria-hidden="true"></i> Nome</th>

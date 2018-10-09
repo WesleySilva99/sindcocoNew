@@ -69,6 +69,7 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+        <h4><i class="fa fa-angle-right"></i>Ações Judiciais.</h4>
       <?php
 
         if($_GET["msg"] != null){
@@ -82,10 +83,10 @@
         <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Título</th>
-                <th scope="col">Data</th>
-                <th scope="col">Arquivo</th>
-                <th scope="col">Ações</th>
+                <th scope="col"><i class="fa fa-picture-o" ></i>Título</th>
+                <th scope="col"><i class="fa fa-calendar" ></i>Data</th>
+                <th scope="col"><i class="fa fa-file"></i>Arquivo</th>
+                <th scope="col"><i class="fa fa-question-circle">Ações</th>
             </tr>
             <?php
 
@@ -128,7 +129,7 @@
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 26%">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved

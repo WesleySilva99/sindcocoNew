@@ -69,6 +69,7 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+        <h4><i class="fa fa-angle-right"></i>Autorizar Informativos.</h4>
       <?php
 
         if($_GET["msg"] != null){
@@ -118,7 +119,7 @@
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 29%">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved

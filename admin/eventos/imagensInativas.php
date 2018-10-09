@@ -69,6 +69,7 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+        <h4><i class="fa fa-angle-right"></i> Imagens Inativos.</h4>
       <?php
 
         if($_GET["msg"] != null){
@@ -81,9 +82,9 @@
         <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Imagem</th>
-                <th scope="col">Titulo do evento</th>
-                <th scope="col">Ações</th>
+                <th scope="col"><i class="fa fa-picture-o"></i>Imagem</th>
+                <th scope="col"><i class=" fa fa-edit"></i>Titulo do evento</th>
+                <th scope="col"><i class="fa fa-question-circle"></i>Ações</th>
             </tr>
             <?php
 
@@ -93,7 +94,17 @@
             ?>
 
             <tr>
-				<td><img src="/img/eventos/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
+				<?php
+          if($linha["capa"] != null){
+        ?>
+          <td><img style="max-width: 200px;" src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
+        <?php
+          }else {
+        ?>
+          <td><img style="max-width: 200px;" src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
+        <?php
+          }
+        ?>
                 <td scope="col"><?=$linha["titulo"];?></td>
                 <td scope="col">
                     <a href="/admin/eventos/reativarImagemEvento.php?id=<?=$linha['id'];?>">
@@ -113,7 +124,7 @@
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 35%">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
