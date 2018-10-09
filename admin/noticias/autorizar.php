@@ -106,8 +106,9 @@
                     </div>
                     <div class="card-desc">
                         <h3 class="cd3"><?=$linha["titulo"];?></h3>
-                        <p><?=$linha["descricao"];?></p>
-
+                        <div class="pTexto">
+                        <p><?=$linha["texto"];?></p>
+                        </div>
                         <a ><?=date('d/m/Y', strtotime($linha['data']));?></a>
                         <br>
                         <br>

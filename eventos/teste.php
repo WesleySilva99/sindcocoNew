@@ -47,7 +47,7 @@
 							<?php
 
 								require("../util/conexao.php");
-								$sql = "SELECT * FROM imagem_evento WHERE id_evento = ? AND ativo = 1";
+								$sql = "SELECT e.titulo, e.data, ei.imagem FROM imagem_evento AS ei INNER JOIN eventos AS e ON e.id = ei.id_evento WHERE ei.id_evento = ? AND ei.ativo = 1";
                                 $stmt = $conexao->prepare($sql);
                                 $stmt->bindValue(1, $_GET['id']);
                             
@@ -59,7 +59,7 @@
 								<h4>
 									<?=$linha["titulo"];?>
 								</h4><br>
-								<img src="/img/eventos/<?=$linha['capa'];?>" alt="Blog Image" width="100%"/>
+								<img src="/img/eventos/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
 								
 								<div class="blog-info">
 								<ul>

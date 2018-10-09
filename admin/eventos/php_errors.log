@@ -68,3 +68,7 @@ Stack trace:
 #0 C:\Users\leandro\Documents\sindcocoNew\admin\eventos\index.php(94): PDO->query('SELECT * FROM e...')
 #1 {main}
   thrown in C:\Users\leandro\Documents\sindcocoNew\admin\eventos\index.php on line 94
+[07-Oct-2018 21:47:54 UTC] PHP Warning:  require(../util/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\admin\eventos\index.php on line 83
+[07-Oct-2018 21:47:54 UTC] PHP Fatal error:  require(): Failed opening required '../util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\admin\eventos\index.php on line 83
+[07-Oct-2018 21:48:15 UTC] PHP Warning:  require(../util/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\admin\eventos\index.php on line 83
+[07-Oct-2018 21:48:15 UTC] PHP Fatal error:  require(): Failed opening required '../util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\admin\eventos\index.php on line 83

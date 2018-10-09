@@ -276,7 +276,7 @@
 							<h3>Notícias: <span>Informativos</span></h3>
 							
 							<center>
-								<a href="/noticias/" class="btn btn-read-more"> Ver Todas Notícias >> </a>
+								<a href="/noticias/teste.php" class="btn btn-read-more"> Ver Todas Notícias >> </a>
 							</center>
 						</div>
 					</div>
@@ -300,14 +300,14 @@
 								<div class="col-md-2">
 									<div class="feature-icon">
 										<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7;"></i>
-									</div>a
+									</div>
 								</div>
 								<div class="col-md-10">
 									<div class="feature-text">
 										
 										<h4><?=$linha["titulo"];?></h4>
 										<p></p>
-										<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
+										 <a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
 											Ler mais>>
                     					</a>
 										

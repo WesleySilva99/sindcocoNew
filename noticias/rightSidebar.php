@@ -11,7 +11,7 @@
 								<h4 class="widgetheading">Saiba mais</h4>
 								<ul class="cat">
 									<li><i class="icon-angle-right"></i><a href="/noticias/informativos.php" class="btn  btn-sm">Informativos</a></li>
-									<li><i class="icon-angle-right"></i><a href="/noticias/" class="btn  btn-sm">Notícias</a></li>
+									<li><i class="icon-angle-right"></i><a href="/noticias/teste.php" class="btn  btn-sm">Notícias</a></li>
 									<li><i class="icon-angle-right"></i><a href="/noticias/midia.php" class="btn  btn-sm">Sindcoco na mídia</a></li>
 								</ul>
                             </div>

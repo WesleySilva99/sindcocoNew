@@ -21,7 +21,7 @@ try {
 
     $msg = "Imagem Cadastrada com sucesso!";
     
-    header("Location: /admin/eventos/imagensEvento.php?msg=".$msg);
+    header("Location: /admin/eventos/index.php?msg=".$msg);
 } catch (Exception $e) {
     echo 'Exceção capturada (Entre em contato com o administrador do sistema: ',  $e->getMessage(), "\n";
 }

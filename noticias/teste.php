@@ -52,7 +52,7 @@
 <?php
 
                                 require("../util/conexao.php");
-                                $sql = "select * from noticias order by id desc";
+                                $sql = "select * from noticias where autorizada = 1 and idCategoria = 3 order by id desc";
                                 $noticia = $conexao->query($sql);
 
                                     foreach ($noticia as $linha) {  

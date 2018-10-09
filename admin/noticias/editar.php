@@ -70,66 +70,92 @@
     <section id="main-content">
       <section class="wrapper">
        
-       <form action="edit.php" class="form" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?=$_GET['id'];?>">
-            <div class="form-group row">
-                <label for="example-text-input" class="col-2 col-form-label">Categoria: </label>
-            <div class="col-10">
-            <?php
+      <h4><i class="fa fa-angle-right"></i> Novas noticias.</h4>
+       <div class="row mt">
+          <div class="col-lg-6" style="margin-left: 20%">
+           
+            <div class="form-panel" style="border-radius: 10px;">
+              <h4><i class="fa fa-angle-right"></i> Preencha todos os campos.</h4>
+
+              <div class=" form">
+                <form class="cmxform form-horizontal style-form" id="commentForm" action="edit.php" method="POST" enctype="multipart/form-data">
+                  <input type="hidden" name="id" value="<?=$_GET['id'];?>">
+                  <br>
+                  <?php
                 $sql = "SELECT * FROM noticias where id = ?";
                 $stmt = $conexao->prepare($sql);
                 $stmt->bindValue(1, $_GET['id']);
                 $stmt->execute();
                 foreach ($stmt as $linha) {
             ?>
-            
-                    <select required="required" class="select" name="categoria">
-                        <option value="">Selecione uma categoria</option>
-                    <?php
+                  <div >
+                   
+                    <div class="col-lg-6">
+                      <label for="cname" ><i class="glyphicon glyphicon-pencil"></i> Titulo*:</label>
+                      <input class=" form-control" id="cname"  value="<?=$linha['titulo'];?>" name="titulo" minlength="2" type="text" required />
+                    </div>
+                  </div>
+                  <div >
+                    
+                    <div class="col-lg-4">
+                       <label for="cemail" ><i class="glyphicon glyphicon-calendar"></i>Data*:</label>
+                      <input class="form-control " id="cuser" value="<?=$linha['data'];?>" type="date" name="data" required />
+                    </div>
+                  </div>
+                  <div >
+                    
+                    <div class="col-lg-6">
+                      <br>
+                      <label for="cname"><i class="glyphicon glyphicon-pencil"></i> Chamada*:</label>
+                      <input class=" form-control" value="<?=$linha['chamada'];?>" id="cname" name="chamada"  type="text" required />
+                    </div>
+                  </div>
+                   
+                  <select required="required" class="select selectNoticia" name="categoria" style="margin-top: 45px;">
+                <option value="">Selecione uma categoria</option>
+                <?php
             
                         $sql2 = "SELECT * FROM categoria";
                         $query2 = $conexao->query($sql2);
                         foreach ($query2 as $linha2) {
 
                         ?> 
-                            <option value="<?=$linha2['id'];?>"><?=$linha2['titulo'];?></option>
-                        <?php } ?>
-                    </select>
-                    </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-2 col-form-label">Titulo: </label>
-                    <div class="col-10">
-                        <input class="form-control" value="<?=$linha['titulo'];?>" required="required" type="text" name="titulo" required="required" id="example-search-input">
-                    </div>
-                    </div>
-                    <div class="form-group row">
-                    <label for="example-search-input" class="col-2 col-form-label">Data:</label>
-                    <div class="col-10">
-                        <input class="form-control" required="required" type="date" value="<?=$linha['data'];?>" name="data" required="required" id="example-search-input">
-                    </div>
-                    </div>
-                    <div class="form-group row">
-                    <label for="comment">Chamada: </label>
-                    <div class="col-10">
-                        <input class="form-control" name="chamada" value="<?=$linha['chamada'];?>" required="required" />
-                    </div>
-                    </div>
-                    <div class="form-group row">
-                    <label for="comment">Texto: </label>
-                    <div class="col-10">
-                        <input class="form-control" type="text" name="texto" value="<?=$linha['texto'];?>" required="required" />
-                    </div>
-                    </div>
-                    <label for="comment">Fonte: </label>
-                    <div class="col-10">
-                        <input class="form-control" name="fonte" value="<?=$linha['fonte'];?>" required="required" />
-                    </div>
-                    </div>            
+                    <option value="<?=$linha2['id'];?>"><?=$linha2['titulo'];?></option>
+                <?php } ?>
+            </select>
+                  <div >
+                  <div >
                     
-                    <button class="btn btn-success" type="submit"> Enviar </button>
-            <?php } ?>
-        </form>
+                    <div class="col-lg-12">
+                      <br>
+                      <label for="cname" ><i class="glyphicon glyphicon-font"></i> Fonte*:</label>
+                      <input class=" form-control" id="cname" name="fonte" value="<?=$linha['fonte'];?>" type="text" required />
+                    </div>
+                  </div>
+                    <div class="col-lg-12">
+                      <br>
+                      <label for="curl" ><i class="glyphicon glyphicon-text-size"></i> Texto*:</label>
+                      <textarea class="form-control" name="texto" id="contact-message" value="<?=$linha['texto'];?>"  rows="5" data-rule="required" data-msg="po"></textarea>
+                    </div>
+                  </div>
+                  
+                
+      
+                  
+                 
+                  <div class="form-group">
+                    <div class="col-lg-offset-8 col-lg-4">
+                      <br>
+                      <button class="btn btn-theme" type="submit">Alterar</button>
+                      
+                      <button class="btn btn-danger" type="reset">Cancelar</button>
+                    </div>
+                  </div>
+               <?php } ?>
+                </form>
+              </div>
+            </div>
+
       </section>
     </section>
     <!--main content end-->

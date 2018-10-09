@@ -71,6 +71,11 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+        <h1>
+
+          <?=$_GET['msg'];?>
+
+        </h1>
         <form method="POST" class="form-control" enctype="multipart/form-data" action="/admin/eventos/inserirImagem.php">
         <input type="hidden" name="idEvento" require="require" value="<?=$_GET['id'];?>" />
         <div class="form-group row">

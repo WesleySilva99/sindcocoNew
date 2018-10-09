@@ -43,6 +43,26 @@
 
 							
 							<br>
+							<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
+								<h4>
+									Vídeo da palestra em brasília
+								</h4><br>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/aAHD4ET5Xes" frameborder="0" allow="autoplay; encrypted-media" alt="Blog Image" allowfullscreen></iframe>
+								
+								<div class="blog-info">
+								<ul>
+									<li>Data: 05/09/2018</li>
+									
+								</ul>
+								
+								<br>
+								
+							</div>
+							
+
+							
+						</div>
+							
 							
 							<?php
 
