@@ -77,17 +77,16 @@
 									<?=$linha["titulo"];?>
 								</h4><br>
 								<img src="/img/eventos/<?=$linha['capa'];?>" alt="Blog Image" width="100%"/>
-								
+
+								 <p class="pTexto"><?=$linha["descricao"];?></p>
 								<div class="blog-info">
 								<ul>
-									<li>Data: <?=$linha['data'];?></li>
+									<li style="color: #337ab7; font-weight: 500px;">Data: <?=$linha['data'];?></li>
 									
 								</ul>
 								
 								<div class="read-more pull-right">
-									<a href="/eventos/teste.php?id=<?=$linha['id'];?>"  class="btn  btn-sm" style="  color: white;  background-color: #1997f6; " >
-										Ver Mais<span class="glyphicon glyphicon-chevron-right"></span>
-									</a>
+									
 								</div>
 								<br>
 								

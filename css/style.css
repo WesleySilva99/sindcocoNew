@@ -927,6 +927,15 @@ width: 100%;
 
 
 /* fim card noticias*/
+
+.pTexto{
+    width:100%;
+  height:150px;
+  background-color:#F2F2F2;
+  overflow:auto;
+}
+
+
 .class1{
 	display: -webkit-box;
     display: -ms-flexbox;
