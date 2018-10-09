@@ -73,11 +73,11 @@
                                 </ul>
                             </div>
                             <div class="card-footer cardn13" >
-                                <button class="btn btn-outline-primary text-primary d-block w-75 mx-auto cardn14" >Ver mais.</button>
+                                <a href="../noticias/lerMais.php" class="btn btn-outline-primary text-primary d-block w-75 mx-auto cardn14">Ler mais.</a>
                             </div>
                         </div>
                     </div><!-- Card # -->
-
+                      
 <?php
                             }
                             ?>
@@ -94,16 +94,22 @@
 		</section>
 		
 		
-		
+		<!-- Footer -->
+        <?php
+
+            require("footer.php");
+
+        ?>
+        
 		
 		
 		
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
