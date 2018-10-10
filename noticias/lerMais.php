@@ -9,7 +9,8 @@
 
 		<?php
 		
-			require("../util/imports.php");
+            require("../util/imports.php");
+            require("../util/conexao.php");
 		?>
 		<!-- fav icon -->
 
@@ -35,22 +36,62 @@
 		
 		
 		<section class="blog-single cardn1"  >
-            <div class="container" >
-			<h3 class="font-weight-light text-center my-3 cardn4" >Titulo da Noticia informe aqui, o tuitulo da noticia, que desaja postar, caso não tenha o titulo poderar deixar do jeito que quizer essa poha aqui kkkk.</h3>
+            <?php
 
-            <li><a style="font-weight: 200; margin-left: 40%;" >20/10/2018 | 15:00</a></li>
-            <br>
-                 
-            <div class="card-body cardn10" >
+                $sql = "SELECT * FROM noticias WHERE id = ?";
+
+                $stmt = $conexao->prepare($sql);
+                $stmt->bindValue(1, $_GET['id']);
+
+                $stmt->execute();
+
+                foreach ($stmt as $linha) {	
+
+            ?>
+
+                         <div class="container" >
+                            <h3 class="font-weight-light text-center my-3 cardn4" ><?=$linha['titulo'];?></h3>
+
+                            <br>
+                    
+                            <div class="card-body cardn10" >
                                 <!-- Imagem da noticia -->
-                                <img src="/img/protfolio4.jpg" alt="card-alt-img-text" class="card-img-top img-fluid cardn11" style="width: 40%; margin-left: 30%">
+                                <img src="/img/noticias/<?=$linha['imagem'];?>" alt="card-alt-img-text" class="card-img-top img-fluid cardn11" style="width: 40%; margin-left: 30%">
                                 <!-- Fim Imagem da noticia -->
 
-                                <!-- Descrição da noticia -->
-                                <p style="width: 80%; margin-left: 15%; margin-top: 30px;">Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.</p>
+                                <!-- Fonte da noticia -->
+                                <h1 style="width: 80%; margin-left: 15%; margin-top: 30px;">Fonte: <?=$linha['fonte'];?></h1>
+                                <!-- Fim Fonte da noticia -->
+                                <!-- Chamada da noticia -->
+                                
                                 <!-- Fim Descrição da noticia -->
+
+                                <?php
+
+                                    if($linha['arquivo'] == null){
+                                ?>
+                                    <!-- Texto da noticia -->
+
+                                    <p style="width: 80%; margin-left: 15%; margin-top: 30px;"><?=$linha['texto'];?></p>
+                                    <!-- Fim Texto da noticia -->
+                                <?php
+
+                                    }else{
+
+                                ?>
+
+                                    <!-- Arquivo da noticia -->
+                                        <a href="/noticias/arquivos/<?=$linha['arquivo'];?>" class="btn btn-read-more"> Clique aqui para ver o arquivo >> </a>
+                                    <!-- Fim Arquivo da noticia -->
+                                <?php
+
+                                    }
+
+                                ?>
                             </div>
                         </div>
+            <?php } ?>
+            
 		</section>
 		
 		

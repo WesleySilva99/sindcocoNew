@@ -73,7 +73,7 @@
                                 </ul>
                             </div>
                             <div class="card-footer cardn13" >
-                                <a href="../noticias/lerMais.php" class="btn btn-outline-primary text-primary d-block w-75 mx-auto cardn14">Ler mais.</a>
+                                <a href="/noticias/lerMais.php?id=<?=$linha['id'];?>" class="btn btn-outline-primary text-primary d-block w-75 mx-auto cardn14">Ler mais.</a>
                             </div>
                         </div>
                     </div><!-- Card # -->

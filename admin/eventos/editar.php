@@ -92,7 +92,7 @@
             <div class="form-group row">
             <label for="example-search-input" class="col-2 col-form-label">Data:</label>
             <div class="col-10">
-                <input class="form-control" required="required" value="<?=date('d/m/Y', strtotime($linha['data']));?>" type="date" name="data" required="required" id="example-search-input">
+                <input class="form-control" required="required" value="<?=$linha['data'];?>" type="date" name="data" required="required" id="example-search-input">
             </div>
             </div>
             <div class="form-group row">

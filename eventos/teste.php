@@ -10,6 +10,15 @@
 		<?php
 		
 			require("../util/imports.php");
+			require("../util/conexao.php");
+			$sql = "SELECT titulo FROM eventos WHERE id = ?";
+            $stmt = $conexao->prepare($sql);
+			$stmt->bindValue(1, $_GET['id']);
+			$titulo;
+			$stmt->execute();
+			foreach ($stmt as $linha) {
+				$titulo = $linha['titulo'];
+			}
 		?>
 		<!-- fav icon -->
 
@@ -38,7 +47,7 @@
 			<div class="container">
 				<div class="row" style="margin-top: 100px;">
 					<div class="col-md-8">
-						<h1>Eventos.</h1>
+						<h1>Evento: <?=$titulo;?></h1>
 						
 
 							
@@ -46,8 +55,8 @@
 							
 							<?php
 
-								require("../util/conexao.php");
-								$sql = "SELECT e.titulo, e.data, ei.imagem FROM imagem_evento AS ei INNER JOIN eventos AS e ON e.id = ei.id_evento WHERE ei.id_evento = ? AND ei.ativo = 1";
+								
+								$sql = "SELECT e.titulo, e.descricao, e.data, ei.imagem FROM imagem_evento AS ei INNER JOIN eventos AS e ON e.id = ei.id_evento WHERE ei.id_evento = ? AND ei.ativo = 1";
                                 $stmt = $conexao->prepare($sql);
                                 $stmt->bindValue(1, $_GET['id']);
                             
@@ -57,7 +66,6 @@
 								?>
 								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
 								<h4>
-									<?=$linha["titulo"];?>
 								</h4><br>
 								<img src="/img/eventos/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
 								

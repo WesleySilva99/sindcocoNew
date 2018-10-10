@@ -86,7 +86,9 @@
 								</ul>
 								
 								<div class="read-more pull-right">
-									
+									<a href="/eventos/teste.php?id=<?=$linha["id"];?>" class="btn btn-read-more">
+										Ver Mais >>
+									</a>
 								</div>
 								<br>
 								
