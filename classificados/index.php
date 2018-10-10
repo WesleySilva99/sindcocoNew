@@ -100,83 +100,40 @@
 		<section class="blog-single b">
 			<div class="container">
     <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-6">
       <div class="card-counter primary">
-        <i class="fa fa-code-fork"></i>
-        <span class="count-numbers">12</span>
+        <i class="glyphicon glyphicon-bullhorn"></i>
+         <?php
+
+               $query = "select count(id) as id from anuncio where autorizado = 1";
+               $resultado = $conexao->query($query);
+                foreach ($resultado as $linha) {
+                  $quantidade = $linha["id"];
+               
+            ?>
+            
+            
+        <span class="count-numbers"><?=$quantidade;?></span>
+        <?php
+                }
+            ?>
         <span class="count-name">Total de anuncios.</span>
       </div>
     </div>
 
-    <div class="col-md-3">
-      <div class="card-counter danger">
-        <i class="fa fa-ticket"></i>
-        <span class="count-numbers">599</span>
-        <span class="count-name">Instances</span>
-      </div>
-    </div>
+    
 
-    <div class="col-md-3">
-      <div class="card-counter success">
-        <i class="fa fa-database"></i>
-        <span class="count-numbers">Anuncie aqui.</span>
-        <span class="count-name">Data</span>
-      </div>
-    </div>
-
-    <div class="col-md-3">
+    <div class="col-md-6" data-toggle="modal" data-target="#exampleModalLong">
       <div class="card-counter info">
-        <i class="fa fa-users"></i>
-        <span class="count-numbers">Anuncie aqui.</span>
-        <span class="count-name">.</span>
+        <i class="glyphicon glyphicon-new-window"></i>
+        <span class="count-numbers">Anuncie</span>
+        <span class="count-name">Clique aqui para fazer seu anuncio.</span>
       </div>
     </div>
   </div>
 </div>
 
-			<div class="row class1" >
-				<br>
- 			<div class="col-lg-3 col-md-6 col-12 class2" >
- 				<div class="card card-sm-3 class3" >
- 					<div class="card-icon bg-primary class4">
- 						<i class="	glyphicon glyphicon-list-alt"></i>
- 					</div>
- 					<div class="card-wrap class5">
- 						<div class="card-header class6"><h4 class="class7">Total de Anuncios.</h4>
- 						</div>
- 						<div class="card-body class8">
-						 <?php
-
-							 $query = "select count(id) as id from anuncio where autorizado = 1";
-							 $resultado = $conexao->query($query);
-								foreach ($resultado as $linha) {
-									$quantidade = $linha["id"];
-							 
-						?>
-						<?=$quantidade;?>
-						<?php
-								}
-						?>
- 						</div>
- 					</div>
- 				</div>
- 			</div>
- 			
- 			<div class="col-lg-3 col-md-6 col-12 class2" data-toggle="modal" data-target="#exampleModalLong">
- 				<div class="card card-sm-3 class3">
- 					<div class="card-icon bg-warning class4 " style="background-color: #ffff37;">
- 						<i class="glyphicon glyphicon-pencil" style="color: black;"></i>
- 					</div>
- 					<div class="card-wrap class5">
- 						<div class="card-header class6"><h4 class="class7">Clique aqui e faça seu anuncio.</h4>
- 						</div>
- 						<div class="card-body class8">
- 						</div>
-
- 					</div>
- 				</div>
-
- 			</div>
+			
 
 
 
