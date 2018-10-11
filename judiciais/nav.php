@@ -17,7 +17,7 @@
 							<div class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
 								<li><a href="/index.php">Início</a></li>
-									<li><a href="/eventos/">Eventos</a></li>
+									<li><a href="/judiciais/">Ações Judiciais</a></li>
 									<li><a href="/classificados/">Classificados</a></li>
 									<li><a href="/index.php#contact-us">Contate-nos</a></li>
 								</ul>

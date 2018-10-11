@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Sobre o SINDCOCO</title>
+        <title>Noticias do SINDCOCO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -81,7 +81,7 @@
                                 ?>
 
                                     <!-- Arquivo da noticia -->
-                                        <a href="/noticias/arquivos/<?=$linha['arquivo'];?>" class="btn btn-read-more"> Clique aqui para ver o arquivo >> </a>
+                                        <a href="/noticias/arquivos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank"> Clique aqui para ver o arquivo >> </a>
                                     <!-- Fim Arquivo da noticia -->
                                 <?php
 

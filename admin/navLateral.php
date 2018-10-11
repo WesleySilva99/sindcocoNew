@@ -73,6 +73,17 @@
               
             </ul>
           </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-cogs"></i>
+              <span>Pragas</span>
+              </a>
+            <ul class="sub">
+              <li><a href="/admin/pragas/cadastrar.php">Cadastrar Praga</a></li>
+              <li><a href="/admin/pragas/">Consultar Pragas</a></li>
+              <li><a href="/admin/pragas/autorizar.php">Autorizar</a></li>
+            </ul>
+          </li>
           <?php
 
               }

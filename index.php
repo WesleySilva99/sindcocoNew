@@ -63,7 +63,7 @@
 									<li><a href="#feature-work">Eventos</a></li>
 									<li><a href="#testimonials">Pragas</a></li>
 									<li><a href="/classificados/">Classificados</a></li>
-									<li><a href="/Judiciais/">Ações Judiciais</a></li>
+									<li><a href="/judiciais/">Ações Judiciais</a></li>
 									<li><a href="#contact-us">Contate-nos</a></li>
 								</ul>
 							</div>
@@ -340,6 +340,9 @@
 						<div class="title">
 							<h3>Galeria de <span>Fotos</span> <a href="/eventos/" class="btn btn-read-more">Ver mais >></a></h3> 	
 						</div>
+						<center>
+							<iframe width="1200" height="630" src="https://www.youtube.com/embed/aAHD4ET5Xes" frameborder="0" allow="autoplay; encrypted-media" alt="Blog Image" allowfullscreen></iframe>
+						</center>
 					</div>
 				</div>
 			</div>
