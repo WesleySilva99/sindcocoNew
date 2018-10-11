@@ -1,11 +1,7 @@
 <!-- Right Sidebar -->
 <div class="col-md-4">
 						<aside class="right-sidebar">
-							<div class="widget">
-								<form class="form-search">
-									<input class="form-control" type="text" placeholder="Search..">
-								</form>
-							</div>
+							
 							<div class="widget">
 
 								<h4 class="widgetheading">Saiba mais</h4>

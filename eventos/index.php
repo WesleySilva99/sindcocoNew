@@ -78,7 +78,7 @@
 								</h4><br>
 								<img src="/img/eventos/<?=$linha['capa'];?>" alt="Blog Image" width="100%"/>
 
-								 <p class="pTexto"><?=$linha["descricao"];?></p>
+								
 								<div class="blog-info">
 								<ul>
 									<li style="color: #337ab7; font-weight: 500px;">Data: <?=$linha['data'];?></li>

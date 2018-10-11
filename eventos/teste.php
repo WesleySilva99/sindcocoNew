@@ -47,8 +47,9 @@
 			<div class="container">
 				<div class="row" style="margin-top: 100px;">
 					<div class="col-md-8">
-						<h1>Evento: <?=$titulo;?></h1>
-						
+						<div class="eventoDetalhe">
+						<h1 class="eventoDetalhe1"><?=$titulo;?></h1>
+						</div>
 
 							
 							<br>
@@ -64,16 +65,19 @@
 
 									foreach ($stmt as $linha) {	
 								?>
-								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
-								<h4>
-								</h4><br>
+								<div class="eventoDetalhe2">
+								Sindcoco
+								Data: <?=$linha['data'];?>
+								</div>
+								<div>
+								
 								<img src="/img/eventos/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
 								
-								<div class="blog-info">
-								<ul>
-									<li>Data: <?=$linha['data'];?></li>
-									
-								</ul>
+								<p class="fontTexto1"><?=$linha['descricao'];?>
+									Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.
+								</p>
+								
+								
 								<br>
 								
 							</div>
@@ -85,14 +89,10 @@
 						<?php
 							}
 							?>
-							
+
+							<div class="">
 						<!-- Pagination -->
-						<div id="pagination">
-							<span class="all">Page 1 of 3</span>
-							<span class="current">1</span>
-							<a href="#" class="inactive">2</a>
-							<a href="#" class="inactive">3</a>
-						</div>
+						
 						</div>
 
 						<?php

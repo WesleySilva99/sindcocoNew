@@ -935,6 +935,20 @@ width: 100%;
   overflow:auto;
 }
 
+.eventoDetalhe{
+border-top: 1px solid; border-bottom: 1px solid; border-color:#ddd;
+}
+.eventoDetalhe1{
+	margin-top: 5px; margin-bottom: 5px;
+}
+.eventoDetalhe2{
+	color: #337ab7; font-size: 15px; font-weight: 500;
+}
+
+.fontTexto1{
+	font-weight: 500;
+	margin-top: 15px;
+}
 
 .class1{
 	display: -webkit-box;
