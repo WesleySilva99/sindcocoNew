@@ -91,6 +91,51 @@
                             </div>
                         </div>
             <?php } ?>
+            <?php
+
+                $sql = "SELECT * FROM arquivo_noticia WHERE id_noticia = ? and ativo = 1";
+
+                $stmt = $conexao->prepare($sql);
+                $stmt->bindValue(1, $_GET['id']);
+
+                $stmt->execute();
+
+                foreach ($stmt as $linha) {	
+
+            ?>
+
+                         <div class="container" >
+                            <h3 class="font-weight-light text-center my-3 cardn4" ><?=$linha['titulo'];?></h3>
+
+                            <br>
+
+                        <?php
+
+                            if ($linha['imagem'] == 1) {
+
+                        ?>
+                    
+                            <div class="card-body cardn10" >
+                                <!-- Imagem da noticia -->
+                                <img src="/img/noticias/<?=$linha['arquivo'];?>" alt="card-alt-img-text" class="card-img-top img-fluid cardn11" style="width: 40%; margin-left: 30%">
+                                <!-- Fim Imagem da noticia -->
+                                <?php
+
+                                    }else{
+
+                                ?>
+
+                                    <!-- Arquivo da noticia -->
+                                        <a href="/img/noticias/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank"> Clique aqui para ver o arquivo >> </a>
+                                    <!-- Fim Arquivo da noticia -->
+                                <?php
+
+                                    }
+
+                                ?>
+                            </div>
+                        </div>
+            <?php } ?>
             
 		</section>
 		

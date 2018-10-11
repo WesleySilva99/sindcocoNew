@@ -157,7 +157,7 @@ else{
                 <div class="row">
             <?php
 
-                $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and idCategoria = 3 ORDER BY id DESC";
+                $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and id <> 8 ORDER BY idCategoria";
                   $query = $conexao->query($sql);
                     foreach ($query as $linha) {
                             ?>
@@ -186,7 +186,7 @@ else{
                         <a ><?=date('d/m/Y', strtotime($linha['data']));?></a>
                         <br>
                         <br>
-                            <a  class="btn-card" data-toggle="modal" data-target="#myModal">Adc.Arquivo</a>
+                            <a  href="/admin/noticias/imagens.php?id=<?=$linha['id']?>" class="btn-card" >Adc. Arquivo</a>
                              <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #ec9c18;">Editar</a>
                               <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #e14c25;">Revogar</a>
 
@@ -242,9 +242,9 @@ else{
                         <a ><?=date('d/m/Y', strtotime($linha['data']));?></a>
                         <br>
                         <br>
-                            <a href="/admin/eventos/imagens.php?id=<?=$linha['id']?>" class="btn-card">Adc.Fotos</a>
-                             <a href="/admin/eventos/editar.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #ec9c18;">Editar</a>
-                              <a href="/admin/eventos/inativarEvento.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #e14c25;">Inativar</a>
+                            <a href="/admin/noticias/imagens.php?id=<?=$linha['id']?>" class="btn-card">Adc.Fotos</a>
+                             <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #ec9c18;">Editar</a>
+                              <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #e14c25;">Inativar</a>
 
                     </div>
                 </div>

@@ -22,7 +22,7 @@ if ( isset( $_FILES[ 'imagem' ][ 'name' ] ) && $_FILES[ 'imagem' ][ 'error' ] ==
     // Somente imagens, .jpg;.jpeg;.gif;.png
     // Aqui eu enfileiro as extensões permitidas e separo por ';'
     // Isso serve apenas para eu poder pesquisar dentro desta String
-    if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
+    if ( strstr ( '.jpg;.jpeg;.gif;.png;.pdf', $extensao ) ) {
         // Cria um nome único para esta imagem
         // Evita que duplique as imagens no servidor.
         // Evita nomes com acentos, espaços e caracteres não alfanuméricos

@@ -65,9 +65,9 @@
 								</ul>
 								
 								<div class="read-more pull-right">
-									<a href=""  class="btn  btn-sm" style="  color: white;  background-color: #1997f6; " >
-           Contiue Lendo<span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
+									<a href="/noticias/lerMais.php?id=<?=$linha['id'];?>"  class="btn  btn-sm" style="  color: white;  background-color: #1997f6; " >
+										Contiue Lendo<span class="glyphicon glyphicon-chevron-right"></span>
+									</a>
 								</div>
 								<br>
 								
