@@ -292,7 +292,6 @@
 <!-- Button trigger modal -->
 
 
-<!-- Modal -->
 <div class="modal fade" id="example1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -303,27 +302,28 @@
         </button>
       </div>
       <div class="modal-body">
-      	<?php
-								if($linha["imagem"] != null){
-							?>
+        <center>
+        <?php
+                if($linha["imagem"] != null){
+              ?>
   <img class="card-img-top"  style="height: 350px;" src="/img/anuncios/<?=$linha['imagem'];?>" alt="Card image cap">
   <?php
-							}else {
-								?>
-								<img src="/img/anuncios/off.jpg" class="card2" />
-							<?php
-								}
-							?>
-       
-    <p class="card-text " > Descrição: <?=$linha['descricao'];?></p>
+              }else {
+                ?>
+                <img src="/img/anuncios/off.jpg" class="card2" />
+              <?php
+                }
+              ?>
+       </center>
+    <p class="card-text" ><i class="glyphicon glyphicon-edit sd2"> Descrição:</i> <?=$linha['descricao'];?></p>
     <h5 class="card-title" style="    color: #ab9812;" >Preço R$: <?=$linha['preco'];?></h5>
     <br>
     <h4 class="card-title" >Dados do usuario.</h4>
-    <p class="card-text " > Nome: <?=$linha['nome'];?></p>
-    <p class="card-text " > Telefone: <?=$linha['telefone'];?></p>
-    <p class="card-text " > E-mail: <?=$linha['email'];?></p>
-    <p class="card-text " > Estado: <?=$linha['estado'];?></p>
-    <p class="card-text " > Cidade: <?=$linha['cidade'];?></p>
+    <p class="col-md-6" ><i class=" glyphicon glyphicon-user sd2"> Nome:</i> <?=$linha['nome'];?></p>
+    <p class="col-md-5" ><i class="glyphicon glyphicon-earphone sd2"> Tefone:</i> <?=$linha['telefone'];?></p>
+    <p class="col-md-6" > <i class="glyphicon glyphicon-envelope sd2"> E-mail:</i> <?=$linha['email'];?></p>
+    <p class="col-md-5" ><i class="glyphicon glyphicon-road sd2"> Estado:</i> <?=$linha['estado'];?></p>
+    <p class="col-md-4" ><i class="glyphicon glyphicon-home sd2"> Cidade:</i> <?=$linha['cidade'];?></p>
 
 
       </div>
@@ -335,8 +335,8 @@
   </div>
 </div>
 <?php
-								}
-							?>
+                }
+              ?>
 
 </div>
  

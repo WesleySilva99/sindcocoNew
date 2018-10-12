@@ -29,6 +29,8 @@
         <link rel="stylesheet" href="css/responsive.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
+
+
 		
     </head>
     <body>
@@ -56,7 +58,7 @@
 							</div>
 							
 							<div class="navbar-collapse collapse">
-								<ul class="nav navbar-nav navbar-right">
+								<ul class="nav navbar-nav">
 									<li><a href="#home">Inicio</a></li>
 									<li><a href="#about">Sobre</a></li>
 									<li><a href="#features">Notícias</a></li>
@@ -340,15 +342,17 @@
 						<div class="title">
 							<h3>Galeria de <span>Fotos</span> <a href="/eventos/" class="btn btn-read-more">Ver mais >></a></h3> 	
 						</div>
-						<center>
-							<iframe width="1200" height="630" src="https://www.youtube.com/embed/aAHD4ET5Xes" frameborder="0" allow="autoplay; encrypted-media" alt="Blog Image" allowfullscreen></iframe>
-						</center>
+						
+						
+						
 					</div>
 				</div>
 			</div>
+
 			
 			<div class="featured-list">
 				<div id="grid" class="clearfix">
+
 
 				<?php
 
@@ -360,7 +364,7 @@
 					
 					<div class="thumb">
 						<a href="#">
-							<img src="/img/eventos/<?=$linha['imagem'];?>"  height="380" width="42" alt="Feature Image" />
+							<img src="/img/eventos/<?=$linha['imagem'];?>"   alt="Feature Image" />
 						</a>
 						
 						<div class="thumb-rollover">
@@ -373,6 +377,16 @@
 					</div>
 				
 				<?php } ?>
+						
+						<div class="thumb">
+						<div class="embed-responsive embed-responsive-16">
+								  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aAHD4ET5Xes"></iframe>
+								</div>
+						
+						
+					</div>
+					<!-- 4:3 aspect ratio -->
+							
 					<!--
 
 					<div class="thumb">
@@ -492,44 +506,93 @@
 						</div>
 					</div>
 				</div>
-				
-				<div class="row">
-					<?php
-						
-						$sql = "SELECT * FROM anuncio WHERE autorizado = 1 ORDER BY data DESC LIMIT 3";
-						$anuncios = $conexao->query($sql);
-						foreach ($anuncios as $linha) {
-					?>						
-						<!-- Single Blog -->				
-						<div class="col-sm-4">
-							<div class="single-blog">
-								<h4> <?=$linha["titulo"];?>
-								<?php
+									
+
+
+											 <div class="container">
+        <div class="row">
+        	<?php
+                        
+                        $sql = "SELECT * FROM anuncio WHERE autorizado = 1 ORDER BY data DESC LIMIT 3";
+                        $anuncios = $conexao->query($sql);
+                        foreach ($anuncios as $linha) {
+                      ?> 
+            <div class="col-md-4">
+                <div class="card-content">
+                    <div class="card-img">
+                    	 <?php
+                            if($linha["imagem"] != null){
+                          ?>
+              <img  src="/img/anuncios/<?=$linha['imagem'];?>" alt="" style="max-width: 600px;
+    max-height: 270px;" >
+              <?php
+                          }else {
+                            ?>
+                            <img src="/img/anuncios/off.jpg" alt="" />
+                          <?php
+                            }
+                          ?>
+                        
+                        <span><h4>novo</h4></span>
+                    </div>
+                    <div class="card-desc">
+                        <h3><?=$linha['titulo'];?></h3>
+                        <p class="ppTexto"><?=$linha['descricao'];?></p>
+                            <a href="#" class="btn-card" data-toggle="modal" data-target="#example1">Detalhes</a>   
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+<div class="modal fade" id="example1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLongTitle"><?=$linha['titulo'];?></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<center>
+      	<?php
 								if($linha["imagem"] != null){
 							?>
-							
-								<img  src="/img/anuncios/<?=$linha['imagem'];?>" alt="Blog Image" />
-							
-							<?php
+  <img class="card-img-top"  style="height: 350px;" src="/img/anuncios/<?=$linha['imagem'];?>" alt="Card image cap">
+  <?php
 							}else {
 								?>
-								
-								<img src="/img/anuncios/off.jpg"/>
-							
+								<img src="/img/anuncios/off.jpg" class="card2" />
 							<?php
 								}
 							?>
-								<h5>Nome do anunciante: <?=$linha["nome"];?></h5>
-								<p>Descrição do anuncio: <?=$linha["descricao"];?></p>
-								<a href="#" class="btn btn-read-more">Ver mais &gt;&gt;</a>
-							</div>
-						</div>
-						<!-- Single Blog -->
-					<?php
-						}
-					?>
-					
-				</div>
+       </center>
+    <p class="card-text" ><i class="glyphicon glyphicon-edit sd2"> Descrição:</i> <?=$linha['descricao'];?></p>
+    <h5 class="card-title" style="    color: #ab9812;" >Preço R$: <?=$linha['preco'];?></h5>
+    <br>
+    <h4 class="card-title" >Dados do usuario.</h4>
+    <p class="col-md-6" ><i class="	glyphicon glyphicon-user sd2"> Nome:</i> <?=$linha['nome'];?></p>
+    <p class="col-md-5" ><i class="glyphicon glyphicon-earphone sd2"> Tefone:</i> <?=$linha['telefone'];?></p>
+    <p class="col-md-6" > <i class="glyphicon glyphicon-envelope sd2"> E-mail:</i> <?=$linha['email'];?></p>
+    <p class="col-md-5" ><i class="glyphicon glyphicon-road sd2"> Estado:</i> <?=$linha['estado'];?></p>
+    <p class="col-md-4" ><i class="glyphicon glyphicon-home sd2"> Cidade:</i> <?=$linha['cidade'];?></p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<?php
+								}
+							?>
+        </div>
+    </div>
+
+
+				
 				
 			</div>
 		</section>
@@ -878,9 +941,10 @@
 								
 			
 							</form>
+							<br>
 								 <br class="b1">
 									<div class="col-md-6 field">
-										<div class="map"> 
+										<div class="map-responsive"> 
 								<iframe src="https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Av.+Barbosa+Lima+n%C2%BA+149,+Recife+Antigo&aq=&sll=-6.643776,-36.868306&sspn=8.99385,14.27124&ie=UTF8&hq=&hnear=Av.+Barbosa+Lima,+149+-+Recife,+Pernambuco,+50030-330&t=m&ll=-8.061567,-34.881892&spn=0.014872,0.026393&z=15&output=embed"  frameborder="0" style="border:0" allowfullscreen></iframe>
 									</div>
 								</div>	

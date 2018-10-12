@@ -60,3 +60,8 @@ Stack trace:
   thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 305
 [27-Sep-2018 20:08:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\leandro\Documents\sindcocoNew\index.php:1) in C:\Users\leandro\Documents\sindcocoNew\index.php on line 288
 [27-Sep-2018 20:08:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\leandro\Documents\sindcocoNew\index.php:1) in C:\Users\leandro\Documents\sindcocoNew\index.php on line 288
+[12-Oct-2018 15:14:50 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\index.php on line 1121
+[12-Oct-2018 15:14:51 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\index.php on line 1121
+[12-Oct-2018 15:17:02 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\index.php on line 1127
+[12-Oct-2018 15:17:03 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\index.php on line 1127
+[12-Oct-2018 15:27:50 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\index.php on line 1176
