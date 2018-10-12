@@ -48,7 +48,8 @@
 				<div class="row" style="margin-top: 100px;">
 					<div class="col-md-8">
 						<div class="eventoDetalhe">
-						<h1 class="eventoDetalhe1"><?=$titulo;?></h1>
+
+						<h3 class="eventoDetalhe1 sd3"><?=$titulo;?></h3>
 						</div>
 
 							
@@ -65,9 +66,9 @@
 
 									foreach ($stmt as $linha) {	
 								?>
-								<div class="eventoDetalhe2">
+								<div class="sd2">
 								Sindcoco
-								Data: <?=$linha['data'];?>
+								Data:<?=$linha['data'];?>
 								</div>
 								<div>
 								

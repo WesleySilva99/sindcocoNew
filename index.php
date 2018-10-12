@@ -176,7 +176,7 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="about-image wow fadeInLeft">
-							<img src="/img/sindcoco.png" alt="About Image" width="100%" height="100%" />
+							<img src="/img/logoPag.png" alt="About Image"  />
 						</div>
 					</div>
 					<div class="col-sm-6">

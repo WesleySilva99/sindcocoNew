@@ -50,7 +50,7 @@
 					<div class="col-md-8">
 						<div class="single-blog">
 							<h3>Serviços de defesa comercial</h3>
-							<img src="/img/sindcoco.png" alt="Blog Image" width="100%" style="margin-left: 25%" />
+							<img src="/img/logoPag.png" alt="Blog Image" width="100%" style="margin-left: 25%" />
 							<h4>
                                 Serviços de defesa comercial
 							</h4>

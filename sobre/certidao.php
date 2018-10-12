@@ -50,7 +50,7 @@
 					<div class="col-md-8">
 						<div class="single-blog">
 							<h3>Certidão Sindical.</h3>
-							<img src="/img/sindcoco.png" alt="Blog Image" width="100%" style="margin-left: 20%" />
+							<img src="/img/logoPag.png" alt="Blog Image" width="100%" style="margin-left: 20%" />
 							<h4>
 								Certidão:
                             </h4>

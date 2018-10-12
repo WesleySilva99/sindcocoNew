@@ -39,7 +39,7 @@ include "nav.php";
 					<div class="col-md-8">
 						<div class="single-blog">
 							<h3>Informativos.</h3>
-							<img src="/img/sindcoco.png" alt="Blog Image" width="100%"/>
+							<img src="/img/logoPag.png" alt="Blog Image" width="100%"/>
 							<?php
 								require "../util/conexao.php";
 								$sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC";
@@ -68,26 +68,6 @@ include "nav.php";
 
 
 
-
-						<div class="single-blog">
-							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
-							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-							<div class="blog-info">
-								<ul>
-									<li><a href="">Date: June 05, 2016</a></li>
-									<li><a href="">Author Name</a></li>
-									<li><a href="">Category</a></li>
-									<li><a href="">10 Comments</a></li>
-								</ul>
-
-								<div class="read-more pull-right">
-									<a href="#" class="btn btn-readmore">Continue Reading</a>
-								</div>
-
-							</div>
-
-						</div>
 
 
 						<!-- Pagination -->

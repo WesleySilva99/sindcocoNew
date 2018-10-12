@@ -110,6 +110,107 @@ ul.navbar-nav li a{
   text-transform: uppercase;
 }
 
+
+.sd1{
+text-align: center; margin-top: 5px; text-transform: uppercase; color: #3f51b5;
+}
+
+.sd2{
+	font-weight: 500;
+}
+
+.sd3{
+	text-transform: uppercase; color: #3f51b5;
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+.sd1{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .slider-btn {
   margin-top: 21px;
 }
@@ -135,7 +236,16 @@ ul.navbar-nav li a{
 .site-padding{
 	padding:70px 0;
 }
-
+ .btn.btn-read-54 {
+    background: #ccc none repeat scroll 0 0;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 9px 21px;
+}
 .btn.btn-read-more {
   background: #ffff37 none repeat scroll 0 0;
   border-radius: 50px;

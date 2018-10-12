@@ -21,3 +21,38 @@ Stack trace:
 #0 {main}
   thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 49
 [29-Sep-2018 17:25:12 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\Users\leandro\Documents\sindcocoNew\noticias\index.php on line 44
+[11-Oct-2018 23:43:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.arquivo_noticia' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php:101
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php(101): PDOStatement->execute()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php on line 101
+[11-Oct-2018 23:44:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.arquivo_noticia' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php:101
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php(101): PDOStatement->execute()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php on line 101
+[11-Oct-2018 23:44:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.arquivo_noticia' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php:101
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php(101): PDOStatement->execute()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php on line 101
+[11-Oct-2018 23:44:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.arquivo_noticia' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php:101
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php(101): PDOStatement->execute()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php on line 101
+[11-Oct-2018 23:44:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.arquivo_noticia' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php:101
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php(101): PDOStatement->execute()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php on line 101
+[12-Oct-2018 02:06:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.arquivo_noticia' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php:101
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php(101): PDOStatement->execute()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php on line 101
+[12-Oct-2018 02:07:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.arquivo_noticia' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php:101
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php(101): PDOStatement->execute()
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php on line 101

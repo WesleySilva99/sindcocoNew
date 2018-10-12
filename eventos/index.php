@@ -6,7 +6,13 @@
         <title>Sobre o SINDCOCO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style type="text/css">
+     	
 
+.videoEvento{
+	padding-bottom: 50%;
+}
+     </style>
 		<?php
 		
 			require("../util/imports.php");
@@ -38,16 +44,20 @@
 			<div class="container">
 				<div class="row" style="margin-top: 100px;">
 					<div class="col-md-8">
-						<h1>Eventos.</h1>
-						
+						<h1>Eventos</h1>
 
-							
+
+
 							<br>
-							<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
-								<h4>
-									Vídeo da palestra em brasília
-								</h4><br>
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/aAHD4ET5Xes" frameborder="0" allow="autoplay; encrypted-media" alt="Blog Image" allowfullscreen></iframe>
+							<br>
+							<div class="single-blog " style="border: 1px solid rgba(0,0,0,.125);">
+								
+								<h3  class="text-center font-up font-bold indigo-text py-2 mb-3 sd3"><strong>Vídeo da palestra em brasília</strong></h3><br>
+								
+								<!-- 4:3 aspect ratio -->
+								<div class="embed-responsive embed-responsive-16by9">
+								  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aAHD4ET5Xes"></iframe>
+								</div>
 								
 								<div class="blog-info">
 								<ul>
@@ -73,21 +83,21 @@
 									foreach ($eventos as $linha) {	
 								?>
 								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
-								<h4>
+								<h4 class="sd1">
 									<?=$linha["titulo"];?>
 								</h4><br>
-								<img src="/img/eventos/<?=$linha['capa'];?>" alt="Blog Image" width="100%"/>
+								<img src="/img/eventos/<?=$linha['capa'];?>" alt="Blog Image" style="max-width: 90%; max-height: 90%; margin-left: 30px; border-radius: 5px;"/>
 
 								
 								<div class="blog-info">
 								<ul>
-									<li style="color: #337ab7; font-weight: 500px;">Data: <?=$linha['data'];?></li>
+									<li class="sd2">Data: <?=$linha['data'];?></li>
 									
 								</ul>
 								
-								<div class="read-more pull-right">
-									<a href="/eventos/teste.php?id=<?=$linha["id"];?>" class="btn btn-read-more">
-										Ver Mais >>
+								<div class="btn pull-right">
+									<a href="/eventos/teste.php?id=<?=$linha["id"];?>" class="btn btn-read-54" >
+										Ler Mais <i class="glyphicon glyphicon-chevron-right"></i> <i class="glyphicon glyphicon-chevron-right"></i>
 									</a>
 								</div>
 								<br>
