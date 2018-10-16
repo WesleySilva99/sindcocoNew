@@ -36,7 +36,7 @@
 		
 		
 		<section class="blog-single cardn1"  >
-            <?php
+             <?php
 
                 $sql = "SELECT * FROM noticias WHERE id = ?";
 
@@ -45,34 +45,51 @@
 
                 $stmt->execute();
 
-                foreach ($stmt as $linha) {	
+                foreach ($stmt as $linha) { 
 
             ?>
 
-                         <div class="container" >
-                            <h3 class="font-weight-light text-center my-3 cardn4" ><?=$linha['titulo'];?></h3>
+<!-- Page Content -->
+    <div class="container">
 
-                            <br>
-                    
-                            <div class="card-body cardn10" >
-                                <!-- Imagem da noticia -->
-                                <img src="/img/noticias/<?=$linha['imagem'];?>" alt="card-alt-img-text" class="card-img-top img-fluid cardn11" style="width: 40%; margin-left: 30%">
-                                <!-- Fim Imagem da noticia -->
+      <div class="row">
 
-                                <!-- Fonte da noticia -->
-                                <h1 style="width: 80%; margin-left: 15%; margin-top: 30px;">Fonte: <?=$linha['fonte'];?></h1>
-                                <!-- Fim Fonte da noticia -->
-                                <!-- Chamada da noticia -->
-                                
-                                <!-- Fim Descrição da noticia -->
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
 
-                                <?php
+          <!-- Title -->
+          <h1 class="mt-4"><?=$linha['titulo'];?></h1>
+
+          <!-- Author -->
+          <p class="lead">
+            Fonte:
+            <a href="#"><?=$linha['fonte'];?></a>
+          </p>
+
+          <hr>
+
+          <!-- Date/Time -->
+          <p>Postado em <?=$linha['data'];?></p>
+
+          <hr>
+
+          <!-- Preview Image -->
+          <img class="img-fluid rounded" src="/img/noticias/<?=$linha['imagem'];?>" alt="">
+
+          <hr>
+
+          <!-- Post Content -->
+          
+
+          
+ 
+          <?php
 
                                     if($linha['arquivo'] == null){
                                 ?>
                                     <!-- Texto da noticia -->
 
-                                    <p style="width: 80%; margin-left: 15%; margin-top: 30px;"><?=$linha['texto'];?></p>
+                                    <p><?=$linha['texto'];?></p>
                                     <!-- Fim Texto da noticia -->
                                 <?php
 
@@ -81,6 +98,7 @@
                                 ?>
 
                                     <!-- Arquivo da noticia -->
+                                    <center></center>
                                         <a href="/noticias/arquivos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank"> Clique aqui para ver o arquivo >> </a>
                                     <!-- Fim Arquivo da noticia -->
                                 <?php
@@ -88,55 +106,76 @@
                                     }
 
                                 ?>
+
+         
+        </div>
+
+        <?php
+        }
+        ?>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+         <aside class="right-sidebar">
+                            <div class="widget">
+                                <form class="form-search">
+                                    <input class="form-control" type="text" placeholder="Search..">
+                                </form>
                             </div>
-                        </div>
-            <?php } ?>
-            <?php
+                            <div class="widget">
 
-                $sql = "SELECT * FROM arquivo_noticia WHERE id_noticia = ? and ativo = 1";
-
-                $stmt = $conexao->prepare($sql);
-                $stmt->bindValue(1, $_GET['id']);
-
-                $stmt->execute();
-
-                foreach ($stmt as $linha) {	
-
-            ?>
-
-                         <div class="container" >
-                            <h3 class="font-weight-light text-center my-3 cardn4" ><?=$linha['titulo'];?></h3>
-
-                            <br>
-
-                        <?php
-
-                            if ($linha['imagem'] == 1) {
-
-                        ?>
-                    
-                            <div class="card-body cardn10" >
-                                <!-- Imagem da noticia -->
-                                <img src="/img/noticias/<?=$linha['arquivo'];?>" alt="card-alt-img-text" class="card-img-top img-fluid cardn11" style="width: 40%; margin-left: 30%">
-                                <!-- Fim Imagem da noticia -->
-                                <?php
-
-                                    }else{
-
-                                ?>
-
-                                    <!-- Arquivo da noticia -->
-                                        <a href="/img/noticias/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank"> Clique aqui para ver o arquivo >> </a>
-                                    <!-- Fim Arquivo da noticia -->
-                                <?php
-
-                                    }
-
-                                ?>
+                                <h4 class="widgetheading">Saiba mais</h4>
+                                <ul class="cat">
+                                    <li><i class="icon-angle-right"></i><a href="/noticias/informativos.php" class="btn  btn-sm">Informativos</a></li>
+                                    <li><i class="icon-angle-right"></i><a href="/noticias/teste.php" class="btn  btn-sm">Notícias</a></li>
+                                    <li><i class="icon-angle-right"></i><a href="/noticias/midia.php" class="btn  btn-sm">Sindcoco na mídia</a></li>
+                                </ul>
                             </div>
-                        </div>
-            <?php } ?>
-            
+
+                           
+                            <!-- Informativos -->
+                            <div class="widget">
+                                <h4 class="widgetheading" >Informativos</h4>
+                                <ul class="recent">
+                                    <?php
+
+                                        require("../util/conexao.php");
+                                        $sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
+                                        $anuncios = $conexao->query($sql);
+                                        foreach ($anuncios as $linha) {
+
+                                    ?>
+                                        <li>
+                                            <center>
+                                                <i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7"></i>
+                                            </center>
+                                            <h6><?=$linha["titulo"];?></h6>
+                                                <p></p>
+                                                <center>
+                                                    <a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank" style="background: #37b49c; color: white;">
+                                                        Ler mais <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span>
+                                                    </a>
+                                                </center>
+                                        </li>
+                                    <?php
+                                        }
+                                    ?>
+                                    
+                                </ul>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+           
 		</section>
 		
 		

@@ -316,7 +316,16 @@
               ?>
        </center>
     <p class="card-text" ><i class="glyphicon glyphicon-edit sd2"> Descrição:</i> <?=$linha['descricao'];?></p>
-    <h5 class="card-title" style="    color: #ab9812;" >Preço R$: <?=$linha['preco'];?></h5>
+    <h5 class="card-title" style="    color: #ab9812;" >Preço R$: <?php if($linha["preco"] != null){
+                                      ?>
+                                      <?=$linha['preco'];?>
+                                        <?php
+                                      }else{
+                                        ?>
+                                        Valor a combinar.
+                                        <?php
+                                         }
+                                         ?></h5>
     <br>
     <h4 class="card-title" >Dados do usuario.</h4>
     <p class="col-md-6" ><i class=" glyphicon glyphicon-user sd2"> Nome:</i> <?=$linha['nome'];?></p>
