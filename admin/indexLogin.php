@@ -135,7 +135,7 @@
     <div class="row">
     <div class="col-md-3">
       <div class="card-counter primary">
-        <i class="fa fa-code-fork"></i>
+        <i class="fa fa-bullhorn"></i>
         <?php 
 						require("../util/conexao.php");
 						$sql = "SELECT count(*) as ids FROM anuncio";
@@ -152,7 +152,7 @@
 
     <div class="col-md-3">
       <div class="card-counter danger">
-        <i class="fa fa-ticket"></i>
+        <i class="glyphicon glyphicon-remove"></i>
          <?php 
 						/*
 						$sql = "SELECT count(*) as ids pragas FROM informativos";
@@ -170,7 +170,7 @@
 
     <div class="col-md-3">
       <div class="card-counter success">
-        <i class="fa fa-database"></i>
+        <i class="fa fa-file-pdf-o"></i>
         <?php 
 						
 						$sql = "SELECT count(*) as ids FROM informativos";
@@ -188,7 +188,7 @@
 
     <div class="col-md-3">
       <div class="card-counter info">
-        <i class="fa fa-users"></i>
+        <i class="fa fa-list-alt"></i>
         <?php 
 						
 						$sql = "SELECT count(*) as ids FROM noticias";

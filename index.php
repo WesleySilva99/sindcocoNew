@@ -914,36 +914,36 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<h4>Por favor, entre em contato conosco para qualquer tipo de informação.</strong></h4>
-							<form id="contactform" action="" method="post" class="validateform" name="send-contact">
+							<form id="contactform" action="" method="post" class="validateform" name="send-contact" onsubmit="return validaForm(this);">
 								<div class="row">
 									
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="name" placeholder="* Nome Completo" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+										<input type="text" name="nome" id="csnome" placeholder="* Nome Completo" pattern="[a-z\s]+$" oninvalid="setCustomValidity('Preencha corretamente!')" onchange="try{setCustomValidity('')}catch(e){}" />
 										<div class="validation">
 										</div>
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="email" placeholder="* Seu E-mail" data-rule="email" data-msg="Please enter a valid email" />
+										<input type="text" name="email" placeholder="* Seu E-mail" />
 										<div class="validation">
 										</div>
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="subject" placeholder="Cidade" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+										<input type="text" name="cidade" placeholder="Cidade" pattern="[a-z\s]+$" oninvalid="setCustomValidity('Preencha corretamente!')" onchange="try{setCustomValidity('')}catch(e){}"/>
 										<div class="validation">
 										</div>
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="subject" placeholder="Telefone" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+										<input type="text" name="telefone" placeholder="Telefone" pattern="[0-9]+$" />
 										<div class="validation">
 										</div>
 									</div>
 									<div class="col-lg-12 margintop10 field">
-										<textarea rows="12" name="message" class="input-block-level" placeholder="* Sua Mensagem..." data-rule="required" data-msg="Please write something"></textarea>
+										<textarea rows="12" name="message" class="input-block-level" placeholder="* Sua Mensagem..."></textarea>
 										<div class="validation">
 										</div>
 										<p>
-											<button class="btn btn-theme margintop10 pull-left" type="submit">Submit message</button>
+											<button class="btn btn-theme margintop10 pull-left" type="submit">Enviar Mensagem</button>
 											
 										</p>
 									</div>
@@ -1124,6 +1124,45 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+
+        <script type="text/javascript">
+        	function validaForm(frm){
+
+        		if (frm.nome.value == "" || frm.nome.value == null || frm.nome.value.lenght <= 5){
+
+        			alert("por favor, preenchar o campo nome.");
+        			frm.nome.focus();
+        			return false;
+        		}
+
+        		if (frm.email.value.indexOf("@") == -1 || frm.email.value.indexOf(".") == -1 || frm.email.value == "" || frm.email.value == null) {
+
+        			alert("informe um e-mail valido.");
+        			frm.email.focus();
+        			return false;
+        		}
+
+        		if (frm.cidade.value == "" || frm.cidade.value == null) {
+        			alert("informe sua cidade.");
+        			frm.cidade.focus();
+        			return false;
+        		}
+
+        		if (frm.telefone.value == "" || frm.telefone.value == null) {
+        			alert("informe seu telefone.");
+        			frm.telefone.focus();
+        			return false;
+        		}
+
+        		if (frm.message.value == "" || frm.message.value == null) {
+        			alert("informe sua Mensagem.");
+        			frm.message.focus();
+        			return false;
+        		}
+
+        	}
+
         </script>
     </body>
 </html>
