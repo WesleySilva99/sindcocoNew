@@ -170,7 +170,7 @@
 		</header>
 		<!-- Fim do Header -->
 		
-		<
+		
 		<!-- Seção do "Sobre" -->
 	 <section id="about" class="site-padding">
 
@@ -270,12 +270,13 @@
 		<!-- Feature Section -->
 		
 		<section id="features" class="site-padding">
+
 		
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="title">
-							<h3>Notícias: <span>Informativos</span></h3>
+							<h3>Notícias e <span>Informativos</span></h3>
 							
 							<center>
 								<a href="/noticias/teste.php" class="btn btn-read-more"> Ver Todas Notícias >> </a>
@@ -284,6 +285,8 @@
 					</div>
 				</div>
 			</div>
+			
+
 			
 			<div class="container">
 				<div class="row">
@@ -348,6 +351,8 @@
 					</div>
 				</div>
 			</div>
+
+			
 
 			
 			<div class="featured-list">

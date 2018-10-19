@@ -50,7 +50,9 @@
 					<div class="col-md-8">
 						<div class="single-blog">
 							<h3>Certidão Sindical.</h3>
-							<img src="/img/logoPag.png" alt="Blog Image" width="100%" style="margin-left: 20%" />
+							<center>
+							<img src="/img/logoPag.png" alt="Blog Image" width="100%" />
+							</center>
 							<h4>
 								Certidão:
                             </h4>
@@ -119,10 +121,10 @@
 		
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
