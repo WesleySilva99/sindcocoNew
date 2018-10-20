@@ -37,7 +37,7 @@
 		<section class="blog-single cardn1" >
 
 
-            
+            <center
 			<div class="container bg-light cardn2">
         
         <!-- cards -->
@@ -86,7 +86,8 @@
 </div><!--/container -->
           
 
-    </div>
+    </div>  
+</center>
 					
 		</section>
 		
