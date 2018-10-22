@@ -44,3 +44,7 @@
 [10-Oct-2018 18:04:02 UTC] PHP Fatal error:  require(): Failed opening required '../footer.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\judiciais\index.php on line 133
 [10-Oct-2018 18:12:49 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\Users\leandro\Documents\sindcocoNew\judiciais\index.php on line 127
 [10-Oct-2018 18:13:50 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\Users\leandro\Documents\sindcocoNew\judiciais\index.php on line 127
+[20-Oct-2018 14:04:32 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\judiciais\index.php on line 137
+[20-Oct-2018 14:04:33 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\judiciais\index.php on line 137
+[20-Oct-2018 14:42:36 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\judiciais\rightSidebar.php on line 51
+[20-Oct-2018 14:42:42 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\judiciais\rightSidebar.php on line 66

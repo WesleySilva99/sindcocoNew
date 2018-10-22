@@ -16,6 +16,50 @@
 
 			<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
 
+			<style type="text/css">
+				.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+.notice-success {
+    border-color: #80D651;
+}
+.notice-success>strong {
+    color: #80D651;
+}
+.notice-info {
+    border-color: #45ABCD;
+}
+.notice-info>strong {
+    color: #45ABCD;
+}
+.notice-warning {
+    border-color: #FEAF20;
+}
+.notice-warning>strong {
+    color: #FEAF20;
+}
+.notice-danger {
+    border-color: #d73814;
+}
+.notice-danger>strong {
+    color: #d73814;
+}
+			</style>
+
     </head>
     <body class="blog">
         <!--[if lt IE 8]>
@@ -38,28 +82,24 @@
 				<div class="row">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<h3>Informativos.</h3>
-							<img src="/img/sindcoco.png" alt="Blog Image" width="100%"/>
-							<?php
-								require "../util/conexao.php";
-								$sql = "SELECT * FROM acoes ORDER BY id DESC";
-								$anuncios = $conexao->query($sql);
-								foreach ($anuncios as $linha) {
-							?>
-
-								<h5>
-									<?=$linha["titulo"];?>
-								</h5>
-								<div class="feature-icon">
-										<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7;"></i>
-										<a href="/pdf/judicial/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
-											Ler mais>>
-                    					</a><br>
-								</div>
+							<h3>Ações judiciais.</h3>
 								<br>
 							<?php
-								}
-							?>
+                require "../util/conexao.php";
+                $sql = "SELECT * FROM acoes ORDER BY id DESC";
+                $anuncios = $conexao->query($sql);
+                foreach ($anuncios as $linha) {
+              ?>
+    <div class="notice notice-info">
+    	<strong >Leia Mais</strong>
+    	<a href="/pdf/judicial/<?=$linha['arquivo'];?>"> <?=$linha["titulo"];?></a>
+        
+    </div>
+    <?php
+                }
+              ?>
+    
+
 
 						</div>
 

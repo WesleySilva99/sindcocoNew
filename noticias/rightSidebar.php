@@ -1,51 +1,80 @@
 <!-- Right Sidebar -->
+
+
 <div class="col-md-4">
 						<aside class="right-sidebar">
-							<div class="widget">
-								<form class="form-search">
-									<input class="form-control" type="text" placeholder="Search..">
-								</form>
-							</div>
-							<div class="widget">
-
+							
+							<div class="widget" style="        border-right: 1px solid #e7e7e7;">
+                                <center>
 								<h4 class="widgetheading">Saiba mais</h4>
+                                </center>
 								<ul class="cat">
-									<li><i class="icon-angle-right"></i><a href="/noticias/informativos.php" class="btn  btn-sm">Informativos</a></li>
-									<li><i class="icon-angle-right"></i><a href="/noticias/teste.php" class="btn  btn-sm">Notícias</a></li>
-									<li><i class="icon-angle-right"></i><a href="/noticias/midia.php" class="btn  btn-sm">Sindcoco na mídia</a></li>
+									<li class="estilizando1"><a href="/noticias/informativos.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-arrow-left estilizando3"></i> Informativos</a>
+                                    </li>
+                                    <li class="estilizando1"><a href="/noticias/teste.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-list-alt estilizando3"></i> noticias</a></li>
+                                    <li class="estilizando1"><a href="/noticias/midia.php" class="textoanav" style="color: #777;"><i class="fa fa-newspaper-o estilizando3"></i> Sindcoco na midia</a>
+                                    </li>
 								</ul>
                             </div>
+
+                            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+                                    <script type="text/javascript">
+                                    $(document).on('click', 'ul li', function(){
+                                        $(this).addClass('active').siblings().removeClass('active')
+                                    })
+                                </script>
+
 
                            
                             <!-- Informativos -->
 							<div class="widget">
-								<h4 class="widgetheading" >Informativos</h4>
-								<ul class="recent">
-									<?php
+								
+	<div class="row">
+		<div class="col-lg-12 col-sm-6">
 
-										require("../util/conexao.php");
-										$sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
-										$anuncios = $conexao->query($sql);
-										foreach ($anuncios as $linha) {
+            <div class="card hovercard">
+                <div class="cardheader">
 
-									?>
-										<li>
-											<center>
-												<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7"></i>
-											</center>
-											<h6><?=$linha["titulo"];?></h6>
-												<p></p>
-												<center>
-													<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank" style="background: #37b49c; color: white;">
-														Ler mais <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span>
-													</a>
-												</center>
-										</li>
-									<?php
-										}
-									?>
-									
-								</ul>
+                </div>
+                <div class="avatar">
+                    <img alt="" src="../img/protfolio5.jpg">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank" href="https://scripteden.com/">Francisco Porto</a>
+                    </div>
+                    <div style=" font-size: 10px;
+    background: #e91e63;
+    color: #fff;
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: 10px;" class="desc">Presidente</div>
+                    <div class="desc">Fale diretamente com o Presidente.</div>
+                    
+                </div>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://plus.google.com/+ahmshahnuralam">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+	</div>
+
 							</div>
 
 							<!--<div class="widget">

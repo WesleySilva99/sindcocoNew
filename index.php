@@ -30,6 +30,13 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
 
+<style type="text/css">
+	ul.navtop li.activenavtop {
+        background-color: transparent;
+    border-radius: 2px;
+    background-color: #32c532;
+}
+</style>
 
 		
     </head>
@@ -58,7 +65,7 @@
 							</div>
 							
 							<div class="navbar-collapse collapse">
-								<ul class="nav navbar-nav">
+								<ul class="navtop nav navbar-nav">
 									<li><a href="#home">Inicio</a></li>
 									<li><a href="#about">Sobre</a></li>
 									<li><a href="#features">Notícias</a></li>
@@ -170,7 +177,7 @@
 		</header>
 		<!-- Fim do Header -->
 		
-		<
+		
 		<!-- Seção do "Sobre" -->
 	 <section id="about" class="site-padding">
 
@@ -270,12 +277,13 @@
 		<!-- Feature Section -->
 		
 		<section id="features" class="site-padding">
+
 		
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="title">
-							<h3>Notícias: <span>Informativos</span></h3>
+							<h3>Notícias e <span>Informativos</span></h3>
 							
 							<center>
 								<a href="/noticias/teste.php" class="btn btn-read-more"> Ver Todas Notícias >> </a>
@@ -284,6 +292,8 @@
 					</div>
 				</div>
 			</div>
+			
+
 			
 			<div class="container">
 				<div class="row">
@@ -348,6 +358,8 @@
 					</div>
 				</div>
 			</div>
+
+			
 
 			
 			<div class="featured-list">
@@ -557,7 +569,7 @@
       	<?php
 								if($linha["imagem"] != null){
 							?>
-  <img class="card-img-top"  style="height: 350px;" src="/img/anuncios/<?=$linha['imagem'];?>" alt="Card image cap">
+  <img class="card-img-top"  style="max-height: 350px;" src="/img/anuncios/<?=$linha['imagem'];?>" alt="Card image cap">
   <?php
 							}else {
 								?>
@@ -567,7 +579,19 @@
 							?>
        </center>
     <p class="card-text" ><i class="glyphicon glyphicon-edit sd2"> Descrição:</i> <?=$linha['descricao'];?></p>
-    <h5 class="card-title" style="    color: #ab9812;" >Preço R$: <?=$linha['preco'];?></h5>
+    <h5 class="card-title" style="    color: #ab9812;" >Preço R$:
+
+    																<?php if($linha["preco"] != null){
+    																	?>
+    																  <?=$linha['preco'];?>
+    																  	<?php
+    																  }else{
+    																  	?>
+    																  	Valor a combinar.
+    																  	<?php
+    																  	 }
+    																  	 ?>
+    																  </h5>
     <br>
     <h4 class="card-title" >Dados do usuario.</h4>
     <p class="col-md-6" ><i class="	glyphicon glyphicon-user sd2"> Nome:</i> <?=$linha['nome'];?></p>
@@ -902,36 +926,36 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<h4>Por favor, entre em contato conosco para qualquer tipo de informação.</strong></h4>
-							<form id="contactform" action="" method="post" class="validateform" name="send-contact">
+							<form id="contactform" action="" method="post" class="validateform" name="send-contact" onsubmit="return validaForm(this);">
 								<div class="row">
 									
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="name" placeholder="* Nome Completo" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+										<input type="text" name="nome" id="csnome" placeholder="* Nome Completo" pattern="[a-z\s]+$" oninvalid="setCustomValidity('Preencha corretamente!')" onchange="try{setCustomValidity('')}catch(e){}" />
 										<div class="validation">
 										</div>
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="email" placeholder="* Seu E-mail" data-rule="email" data-msg="Please enter a valid email" />
+										<input type="text" name="email" placeholder="* Seu E-mail" />
 										<div class="validation">
 										</div>
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="subject" placeholder="Cidade" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+										<input type="text" name="cidade" placeholder="Cidade" pattern="[a-z\s]+$" oninvalid="setCustomValidity('Preencha corretamente!')" onchange="try{setCustomValidity('')}catch(e){}"/>
 										<div class="validation">
 										</div>
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="subject" placeholder="Telefone" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+										<input type="text" name="telefone" placeholder="Telefone" pattern="[0-9]+$" />
 										<div class="validation">
 										</div>
 									</div>
 									<div class="col-lg-12 margintop10 field">
-										<textarea rows="12" name="message" class="input-block-level" placeholder="* Sua Mensagem..." data-rule="required" data-msg="Please write something"></textarea>
+										<textarea rows="12" name="message" class="input-block-level" placeholder="* Sua Mensagem..."></textarea>
 										<div class="validation">
 										</div>
 										<p>
-											<button class="btn btn-theme margintop10 pull-left" type="submit">Submit message</button>
+											<button class="btn btn-theme margintop10 pull-left" type="submit">Enviar Mensagem</button>
 											
 										</p>
 									</div>
@@ -1113,5 +1137,53 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+
+        <script type="text/javascript">
+        	function validaForm(frm){
+
+        		if (frm.nome.value == "" || frm.nome.value == null || frm.nome.value.lenght <= 5){
+
+        			alert("por favor, preenchar o campo nome.");
+        			frm.nome.focus();
+        			return false;
+        		}
+
+        		if (frm.email.value.indexOf("@") == -1 || frm.email.value.indexOf(".") == -1 || frm.email.value == "" || frm.email.value == null) {
+
+        			alert("informe um e-mail valido.");
+        			frm.email.focus();
+        			return false;
+        		}
+
+        		if (frm.cidade.value == "" || frm.cidade.value == null) {
+        			alert("informe sua cidade.");
+        			frm.cidade.focus();
+        			return false;
+        		}
+
+        		if (frm.telefone.value == "" || frm.telefone.value == null) {
+        			alert("informe seu telefone.");
+        			frm.telefone.focus();
+        			return false;
+        		}
+
+        		if (frm.message.value == "" || frm.message.value == null) {
+        			alert("informe sua Mensagem.");
+        			frm.message.focus();
+        			return false;
+        		}
+
+        	}
+        	 
+
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+                                    <script type="text/javascript">
+                                    $(document).on('click', 'ul li', function(){
+                                        $(this).addClass('activenavtop').siblings().removeClass('activenavtop')
+                                    })
+                                </script>
     </body>
 </html>

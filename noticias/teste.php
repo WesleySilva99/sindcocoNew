@@ -35,21 +35,21 @@
 		
 		
 		<section class="blog-single cardn1" >
-            
+
+
+            <center
 			<div class="container bg-light cardn2">
         
         <!-- cards -->
         <div id="cards" class="bg-light cardn3" >
 
-            <h3 class="font-weight-light text-center my-3 cardn4" >Notícias</h3>
+            <h1 class="font-weight-light text-center my-3 cardn4" >Notícias</h1>
             <br>
 
           
-
-            <!-- full size Card container -->
-            <div class="container-fluid mx-auto d-none d-md-block my-3 cardn5">
-                <div class="row cardn6">
-<?php
+                <div class="container">
+      <div class="row">
+        <?php
 
                                 require("../util/conexao.php");
                                 $sql = "select * from noticias where autorizada = 1 and idCategoria = 3 order by id desc";
@@ -57,39 +57,37 @@
 
                                     foreach ($noticia as $linha) {  
                                 ?>
-                    <!-- Card # -->
-                    <div class="col-6 col-lg-3 d-flex mb-3 cardn7" >
-                        <div class="card flex-fill cardn8">
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="/img/noticias/<?=$linha['imagem'];?>" style="    max-width: 850px; max-height: 160px;">
+            <span class="cardn15" ><h6 style="font-size: 8px;">novo</h6></span>
+              <div class="caption">
+                <h4 style="max-width: 80ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;"><?=$linha["titulo"];?></h4>
+                <p ></p>
+                <a href="/noticias/lerMais.php?id=<?=$linha['id'];?>" class="btn btn-info btn-xs" role="button">Detalhes</a> <a  class="btn btn-default btn-xs pull-right" role="">data: <?=$linha['data'];?></a>
+            </div>
+          </div>
 
-                            <div class="card-header bg-primary text-light rounded cardn9" style="font-size: 15px;"><?=$linha["titulo"];?></div>
-                            <div class="card-body cardn10" >
-                                <img src="/img/noticias/<?=$linha['imagem'];?>" alt="card-alt-img-text" class="card-img-top img-fluid cardn11">
-                                <span class="cardn15" ><h6 style="font-size: 8px;">novo</h6></span>
-                                <!--caso tenha alguma descrição, descomentar essa linha.
-                                    <p class="my-2 cardn12" >Shorter description of the card.</p> -->
-                                <ul>
-                                    <li><a style="font-weight: 500;" >Data: <?=$linha['data'];?></a></li>
-                                    
-                                </ul>
-                            </div>
-                            <div class="card-footer cardn13" >
-                                <a href="/noticias/lerMais.php?id=<?=$linha['id'];?>" class="btn btn-outline-primary text-primary d-block w-75 mx-auto cardn14">Ler mais.</a>
-                            </div>
-                        </div>
-                    </div><!-- Card # -->
-                      
-<?php
-                            }
-                            ?>
 
-                   
 
-                
-            </div><!-- /full size Card container -->
+        </div>
+        
+       <?php
 
-        </div><!-- /cards -->
+      }
+      ?>
 
-    </div>
+
+       <!--fim --> 
+  </div><!--/row-->
+</div><!--/container -->
+          
+
+    </div>  
+</center>
 					
 		</section>
 		
