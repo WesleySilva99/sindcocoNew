@@ -44,7 +44,7 @@
 		
 		
 		
-		<section class="blog-single" style="    margin-top: 150px;">
+		<section class="blog-single" style="    margin-top: 80px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">

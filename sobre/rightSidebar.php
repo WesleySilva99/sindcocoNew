@@ -7,43 +7,59 @@
 								</form>
 							</div>
 							<div class="widget">
+								<center>
 								<h4 class="widgetheading">Saiba mais</h4>
+								</center>
 								<ul class="cat">
-									<li><i class="icon-angle-right"></i><a href="/sobre/" class="btn  btn-sm">Institucional</a></li>
-									<li><i class="icon-angle-right"></i><a href="/sobre/sdc.php" class="btn  btn-sm">Serviços de defesa comercial</a></li>
-									<li><i class="icon-angle-right"></i><a href="/sobre/certidao.php" class="btn  btn-sm">Certidão sindical</a></li>
-									<li><i class="icon-angle-right"></i><a href="/sobre/pragas.php" class="btn  btn-sm">Pragas e Soluções</a></li>									
+									<li class="estilizando1"><a href="/sobre/index.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-arrow-left estilizando3"></i> Institucional</a>
+                                    </li>
+                                    <li class="estilizando1"><a href="/sobre/sdc.php" class="textoanav" style="color: #777;"><i class=" 	
+                                    	fa fa-lock estilizando3"></i> Serviços de Defesa Comercial</a></li>
+                                    <li class="estilizando1"><a href="/sobre/certidao.php" class="textoanav" style="color: #777;"><i class="fa fa-file-photo-o estilizando3"></i> Centidão Sindical</a>
+                                    </li>
+                                    <li class="estilizando1"><a href="/sobre/pragas.php" class="textoanav" style="color: #777;"><i class="fa fa-newspaper-o estilizando3"></i> Pragas e Soluções</a>
+                                    </li>
+																	
 								</ul>
                             </div>
                             <!-- Informativos -->
 							<div class="widget">
+								<center>
 								<h4 class="widgetheading">Informativos</h4>
-								<ul class="recent">
-									<?php
+								</center>
+								<?php
+			                require "../util/conexao.php";
+			                $sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
+			                $anuncios = $conexao->query($sql);
+			                foreach ($anuncios as $linha) {
+			              ?>
+												<div class="card informativo1">
+					  <h5 class="card-header informativo2">Boletim Informativo</h5>
+					  <div class="card-body informativo3">
+					  	<?php
+					  	if($linha["data"] != null){
+					  	?>
+					    <h5 class="card-title" style="color: #999;">Data: <?=$linha["data"];?></h5>
 
-										require("../util/conexao.php");
-										$sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
-										$anuncios = $conexao->query($sql);
-										foreach ($anuncios as $linha) {
+					    	<?php
+					    	}else{
+					    	?>
+					    	<h5 class="card-title" style="color: #999;">Data: Não informada</h5>
 
-									?>
-										<li>
-											<center>
-												<i class="fa fa-file-pdf-o" style="font-size:48px;color:#337ab7"></i>
-											</center>
-											<h6><?=$linha["titulo"];?></h6>
-												<p></p>
-												<center>
-													<a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank" style="color: white; background-color: #37b49c">
-														Ler mais<span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span>
-													</a>
-												</center>
-										</li>
-									<?php
-										}
-									?>
-									
-								</ul>
+					    	<?php
+								}
+							?>
+					   
+					    <p class="card-text"><?=$linha["titulo"];?></p>
+					    <a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-primary" style="color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;" >Abrir PDF</a>
+					  </div>
+					</div>
+					 <?php
+                }
+              ?>
+							</div>
 							</div>
 
 							<!--<div class="widget">

@@ -44,14 +44,15 @@
 		
 		
 		
-		<section class="blog-single" style="margin-top: 150px;">
+		<section class="blog-single" style="margin-top: 80px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
 						<div class="single-blog">
+							<h1 class="font-weight-light  bd bd2" >Certidão Sindical</h1>
+							<br>
+							<br>
 							<center>
-							<h3>Certidão Sindical.</h3>
-							
 							<img src="/img/logoPag.png" alt="Blog Image" width="100%" />
 							</center>
 							<h4>

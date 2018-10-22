@@ -17,47 +17,20 @@
 			<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
 
 			<style type="text/css">
-				.notice {
-    padding: 15px;
-    background-color: #fafafa;
-    border-left: 6px solid #7f7f84;
-    margin-bottom: 10px;
-    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
-       -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
-            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
-}
-.notice-sm {
-    padding: 10px;
-    font-size: 80%;
-}
-.notice-lg {
-    padding: 35px;
-    font-size: large;
-}
-.notice-success {
-    border-color: #80D651;
-}
-.notice-success>strong {
-    color: #80D651;
-}
-.notice-info {
-    border-color: #45ABCD;
-}
-.notice-info>strong {
-    color: #45ABCD;
-}
-.notice-warning {
-    border-color: #FEAF20;
-}
-.notice-warning>strong {
-    color: #FEAF20;
-}
-.notice-danger {
-    border-color: #d73814;
-}
-.notice-danger>strong {
-    color: #d73814;
-}
+
+.glyphicon-lg{font-size:3em}
+.blockquote-box{border-right:5px solid #E6E6E6;margin-bottom:25px}
+.blockquote-box .square{width:100px;min-height:50px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:20px 0}
+.blockquote-box.blockquote-primary{border-color:#357EBD}
+.blockquote-box.blockquote-primary .square{background-color:#428BCA;color:#FFF}
+.blockquote-box.blockquote-success{border-color:#4CAE4C}
+.blockquote-box.blockquote-success .square{background-color:#5CB85C;color:#FFF}
+.blockquote-box.blockquote-info{border-color:#46B8DA}
+.blockquote-box.blockquote-info .square{background-color:#5BC0DE;color:#FFF}
+.blockquote-box.blockquote-warning{border-color:#EEA236}
+.blockquote-box.blockquote-warning .square{background-color:#F0AD4E;color:#FFF}
+.blockquote-box.blockquote-danger{border-color:#D43F3A}
+.blockquote-box.blockquote-danger .square{background-color:#D9534F;color:#FFF}
 			</style>
 
     </head>
@@ -77,27 +50,52 @@
 
 
 
-		<section class="blog-single" style="margin-top: 150px;">
+		<section class="blog-single" style="margin-top: 80px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<h3>Ações judiciais.</h3>
+							<h3 style="    border-bottom: 1px solid #e7e7e7;">Ações judiciais.</h3>
 								<br>
-							<?php
+                                <br>
+
+
+        
+            
+        <div class="col-md-10">
+             <?php
                 require "../util/conexao.php";
                 $sql = "SELECT * FROM acoes ORDER BY id DESC";
                 $anuncios = $conexao->query($sql);
                 foreach ($anuncios as $linha) {
               ?>
-    <div class="notice notice-info">
-    	<strong >Leia Mais</strong>
-    	<a href="/pdf/judicial/<?=$linha['arquivo'];?>"> <?=$linha["titulo"];?></a>
-        
-    </div>
-    <?php
+            <div class="blockquote-box blockquote-info clearfix">
+                <div class="square pull-left">
+                    <span class="fa fa-gavel glyphicon-lg"></span>
+                </div>
+                <?php
+                        if($linha["data"] != null){
+                        ?>
+                <h5 style=" color: rgba(0, 0, 0, 0.48);">Data: <?=$linha["data"];?></h5>
+                            <?php
+                            }else{
+                            ?>
+                <h5 style=" color: rgba(0, 0, 0, 0.48);">Data: Não Informada.</h5>
+                            <?php
+                                 }
+                            ?>
+                <p>
+                    <?=$linha["titulo"];?>
+                </p>
+            </div>
+             <?php
                 }
               ?>
+        </div>
+ 
+
+
+							
     
 
 

@@ -49,9 +49,10 @@
 				<div class="row">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<center>
-							<h3>Pragas e Soluções.</h3>
-							
+							<h1 class="font-weight-light  bd bd2" >Pragas e Soluções</h1>
+							<br>
+							<br>
+							<center>	
 							<img src="/img/logoPag.png" alt="Blog Image" width="100%"  />
 						</center>
 

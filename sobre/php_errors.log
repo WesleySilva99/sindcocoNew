@@ -18,3 +18,9 @@ Stack trace:
 #0 C:\Users\leandro\Documents\sindcocoNew\sobre\index.php(125): require()
 #1 {main}
   thrown in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php on line 26
+[22-Oct-2018 16:57:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3' at line 1 in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php:29
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php(29): PDO->query('SELECT * FROM i...')
+#1 C:\Users\leandro\Documents\sindcocoNew\sobre\index.php(121): require('C:\\Users\\leandr...')
+#2 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php on line 29

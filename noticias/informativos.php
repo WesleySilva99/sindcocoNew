@@ -47,7 +47,7 @@ include "nav.php";
 					<div class="col-md-8">
 						<div class="single-blog">
 							
-							<h3 style="    border-bottom: 1px solid #e7e7e7;">Informativos.</h3>
+							<h1 class="font-weight-light  bd bd2" >Informativos</h1>
 							<center>
 							<img src="/img/logoPag.png" alt="Blog Image" width="100%"/>
 							</center>
