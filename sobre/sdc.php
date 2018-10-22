@@ -49,9 +49,12 @@
 				<div class="row">
 					<div class="col-md-8">
 						<div class="single-blog">
-							<center>
-							<h3>Serviços de Defesa Comercial</h3>
 							
+								<h1 class="font-weight-light  bd bd2" >Serviços de Defesa Comercial</h1>
+							
+							<center>
+								<br>
+								<br>
 							<img src="/img/logoPag.png" alt="Blog Image" width="100%"/>
 						</center>
 							<h4>

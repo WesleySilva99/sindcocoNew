@@ -42,9 +42,9 @@
 		
 		<section class="blog-single">
 			<div class="container">
-				<div class="row" style="margin-top: 100px;">
+				<div class="row" style="margin-top: 20px;">
 					<div class="col-md-8">
-						<h1>Eventos</h1>
+						<h1 class="font-weight-light  bd bd2" >Eventos</h1>
 
 
 
