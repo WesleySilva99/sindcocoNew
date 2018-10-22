@@ -266,3 +266,8 @@ Stack trace:
 #0 C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php(240): PDOStatement->execute()
 #1 {main}
   thrown in C:\Users\leandro\Documents\sindcocoNew\noticias\lerMais.php on line 240
+[21-Oct-2018 17:29:58 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\noticias\informativos.php on line 135
+[21-Oct-2018 17:44:08 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\leandro\Documents\sindcocoNew\noticias\informativos.php on line 71
+[21-Oct-2018 17:44:15 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\leandro\Documents\sindcocoNew\noticias\informativos.php on line 71
+[21-Oct-2018 17:44:17 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\leandro\Documents\sindcocoNew\noticias\informativos.php on line 71
+[21-Oct-2018 17:44:17 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\leandro\Documents\sindcocoNew\noticias\informativos.php on line 71

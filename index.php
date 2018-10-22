@@ -30,6 +30,13 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
 
+<style type="text/css">
+	ul.navtop li.activenavtop {
+        background-color: transparent;
+    border-radius: 2px;
+    background-color: #32c532;
+}
+</style>
 
 		
     </head>
@@ -58,7 +65,7 @@
 							</div>
 							
 							<div class="navbar-collapse collapse">
-								<ul class="nav navbar-nav">
+								<ul class="navtop nav navbar-nav">
 									<li><a href="#home">Inicio</a></li>
 									<li><a href="#about">Sobre</a></li>
 									<li><a href="#features">Notícias</a></li>
@@ -1167,7 +1174,16 @@
         		}
 
         	}
+        	 
 
         </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+                                    <script type="text/javascript">
+                                    $(document).on('click', 'ul li', function(){
+                                        $(this).addClass('activenavtop').siblings().removeClass('activenavtop')
+                                    })
+                                </script>
     </body>
 </html>

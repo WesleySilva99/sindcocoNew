@@ -15,13 +15,13 @@
 							</div>
 							
 							<div class="navbar-collapse collapse">
-								<ul class="nav navbar-nav navbar-right">
-									<li><a href="/index.php">Início</a></li>
-									<li><a href="/sobre/">Sobre</a></li>
-									<li><a href="/sobre/certidao.php">Certidão sindical</a></li>
-									<li><a href="/sobre/pragas.php">Pragas e Soluções</a></li>
-									<li><a href="/classificados/">classificados</a></li>
-									<li><a href="/index.php#contact-us">Contate-nos</a></li>
+								<ul class="navsobre nav navbar-nav navbar-right">
+									<li class="inicio"><a href="/index.php">Início</a></li>
+									<li class="sobre"><a href="/sobre/">Sobre</a></li>
+									<li class="certidao"><a href="/sobre/certidao.php">Certidão sindical</a></li>
+									<li class="pragas"><a href="/sobre/pragas.php">Pragas e Soluções</a></li>
+									<li class="classificados"><a href="/classificados/">classificados</a></li>
+									<li class="contato"><a href="/index.php#contact-us">Contate-nos</a></li>
 								</ul>
 							</div>
 							
@@ -34,4 +34,11 @@
 			
 		</header>
         <!-- Header End -->
-        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+                                    <script type="text/javascript">
+                                    $(document).on('click', 'ul li', function(){
+                                        $(this).addClass('activesobre').siblings().removeClass('activesobre')
+                                    })
+                                </script>
