@@ -356,7 +356,7 @@
 
 				<?php
 
-					$sql = "SELECT ei.id, ei.id_evento, ei.imagem, e.titulo FROM eventos AS e, imagem_evento AS ei WHERE e.id = ei.id_evento and ei.ativo = 1 LIMIT 8";
+					$sql = "SELECT ei.id, ei.id_evento, ei.imagem, e.titulo FROM eventos AS e, imagem_evento AS ei WHERE e.id = ei.id_evento and ei.ativo = 1 AND ei.id <> 8 ORDER BY ei.id DESC LIMIT 8";
 					$query = $conexao->query($sql);
 					foreach ($query as $linha) {
 
@@ -364,7 +364,7 @@
 					
 					<div class="thumb">
 						<a href="#">
-							<img src="/img/eventos/<?=$linha['imagem'];?>"   alt="Feature Image" />
+							<img src="/img/eventos/<?=$linha['imagem'];?>"   alt="Feature Image" height="402" width="402"/>
 						</a>
 						
 						<div class="thumb-rollover">
