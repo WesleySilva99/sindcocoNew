@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Eventos</title>
+  <title>Pragas</title>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
@@ -69,7 +69,7 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <h4><i class="fa fa-angle-right"></i> Anuncios aceitos.</h4>
+        <h4><i class="fa fa-angle-right"></i>Pragas Cadastradas</h4>
         <?php
 
         if($_GET["msg"] != null){
@@ -83,49 +83,76 @@
         <table class="table">
         <thead class="thead-dark">
             <tr>
+            <th scope="col"><i class="fa fa-calendar" ></i>id</th>
                 <th scope="col"><i class="fa fa-picture-o" ></i>Imagem</th>
-                <th scope="col"><i class=" fa fa-edit"></i>Titulo</th>
-                <th scope="col"><i class="fa fa-calendar" aria-hidden="true"></i>Data</th>
-                <th scope="col"><i class="fa fa-question-circle"></i>Descrição</th>
-                <th><i class="fa fa-usd" aria-hidden="true"></i> Preço</th>
-                <th><i class="fa fa-user" aria-hidden="true"></i> Nome</th>
-                <th><i class="fa fa-envelope" aria-hidden="true"></i> E-mail</th>
-                <th scope="col"><i class=" fa fa-phone"></i>Telefone</th>
-                <th scope="col"><i class="fa fa-question-circle"></i>Situação</th>
-                <th scope="col"><i class=" fa fa-remove"></i>Cacelar Anuncio.</th>
+                <th scope="col"><i class=" fa fa-edit"></i>Nome</th>
+                <th scope="col"><i class="fa fa-picture-o" ></i>Nome Científico</th>
+                <th scope="col"><i class="fa fa-calendar" aria-hidden="true"></i>Ações</th>
+                
             </tr>
             <?php
 
-                $sql = "SELECT * FROM anuncio WHERE autorizado = 1 ORDER BY data DESC LIMIT 10";
+                $sql = "SELECT * FROM pragas WHERE aceito = 1 ORDER BY nome";
                 $query = $conexao->query($sql);
                 foreach ($query as $linha) {
             ?>
 
             <tr>
+                <td style="width: 5%"scope="col"><?=$linha["id"];?></td>
                 <?php
-          if($linha["imagem"] != null){
-        ?>
-          <td style="max-width: 100px;"><img src="/img/anuncios/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
-        <?php
-          }else {
-        ?>
-          <td style="max-width: 100px;"><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
-        <?php
-          }
-        ?>
-                <td style="width: 5%"scope="col"><?=$linha["titulo"];?></td>
-                <td style="width: 5%"scope="col"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td style="width: 20%" scope="col"><?=$linha["descricao"];?></td>
-                 <td style="width: 5%" scope="col"><?=$linha["preco"];?></td>
-                  <td style="width: 5%" scope="col"><?=$linha["nome"];?></td>
-                   <td style="width: 2%" scope="col"><?=$linha["email"];?></td>
-                    <td style="width: 5%" scope="col"><?=$linha["fone"];?></td>
-                <td><span class="label label-success label-mini">Aceito</span></td>
-                <td>
-                     
-                      
-                    <a href="/admin/classificados/nao.php?id=<?=$linha['id']?>">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
-                    </td>
+                  if($linha["imagem"] != null){
+                ?>
+                  <td style="max-width: 100px;"><img src="/img/pragas/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
+                <?php
+                  }else {
+                ?>
+                  <td style="max-width: 100px;"><img src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
+                <?php
+                  }
+                ?>
+
+                <td style="width: 20%" scope="col"><?=$linha["nome"];?></td>
+                <td style="width: 5%" scope="col"><?=$linha["nome_cientifico"];?></td>
+                <td>      
+                    <a href="/admin/pragas/nao.php?id=<?=$linha['id']?>">  
+                      <button class="btn btn-danger btn-xs">
+                        <i class="fa fa-trash-o "></i>
+                        Inativar
+                      </button> 
+                    </a>
+                    <a href="/admin/pragas/cadastrarDescricao.php?id=<?=$linha['id']?>">  
+                      <button class="btn btn-success btn-xs">
+                        Adicionar Descrição
+                      </button> 
+                    </a>
+                    <a href="/admin/pragas/cadastrarPlanta.php?id=<?=$linha['id']?>">  
+                      <button class="btn btn-success btn-xs">
+                        Adicionar Planta Hospedeira
+                      </button> 
+                    </a> <br>
+                    <a href="/admin/pragas/cadastrarDistribuicao.php?id=<?=$linha['id']?>">  
+                      <button class="btn btn-success btn-xs">
+                        Adicionar Distribuição Geográfica
+                      </button> 
+                    </a>
+                    
+                    <a href="/admin/pragas/cadastrarDanos.php?id=<?=$linha['id']?>">  
+                      <button class="btn btn-success btn-xs">
+                        Adicionar Danos
+                      </button> 
+                    </a> <br>
+                   
+                    <a href="/admin/pragas/nao.php?id=<?=$linha['id']?>">  
+                      <button class="btn btn-success btn-xs">
+                        Adicionar Amostragem
+                      </button> 
+                    </a>
+                    <a href="/admin/pragas/nao.php?id=<?=$linha['id']?>">  
+                      <button class="btn btn-success btn-xs">
+                        Adicionar Tática de Controle
+                      </button> 
+                    </a>
+                </td>
                
                 </th>
             </tr>
