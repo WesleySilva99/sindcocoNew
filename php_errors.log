@@ -139,3 +139,53 @@ Stack trace:
 [19-Oct-2018 18:03:12 UTC] PHP Fatal error:  require(): Failed opening required '/util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\index.php on line 295
 [19-Oct-2018 18:03:18 UTC] PHP Warning:  require(/util/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\index.php on line 295
 [19-Oct-2018 18:03:18 UTC] PHP Fatal error:  require(): Failed opening required '/util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\index.php on line 295
+[24-Oct-2018 03:10:12 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/php/ext\php_gd2.dll' - %1 n�o � um aplicativo Win32 v�lido.
+ in Unknown on line 0
+[24-Oct-2018 03:10:12 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/php/ext\php_mbstring.dll' - %1 n�o � um aplicativo Win32 v�lido.
+ in Unknown on line 0
+[24-Oct-2018 03:10:12 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/php/ext\php_mysqli.dll' - %1 n�o � um aplicativo Win32 v�lido.
+ in Unknown on line 0
+[24-Oct-2018 03:10:12 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/php/ext\php_pdo_mysql.dll' - %1 n�o � um aplicativo Win32 v�lido.
+ in Unknown on line 0
+[24-Oct-2018 03:10:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 04:31:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 04:36:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 04:37:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 04:37:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 04:41:14 UTC] PHP Warning:  require(..util/conexao.php): failed to open stream: No such file or directory in C:\Users\lucas\sindcoco\index.php on line 302
+[24-Oct-2018 04:41:14 UTC] PHP Fatal error:  require(): Failed opening required '..util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\lucas\sindcoco\index.php on line 302
+[24-Oct-2018 04:42:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 04:52:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 04:54:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 04:55:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
+[24-Oct-2018 20:46:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:304
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 304
