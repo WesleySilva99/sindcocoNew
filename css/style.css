@@ -2184,8 +2184,8 @@ font-weight: 300!important;
 * have a image and a text title.
 */
 .featured-article {
-	width: 482px;
-	height: 350px;
+	max-width: 482px;
+	max-height: 350px;
 	position: relative;
 	margin-bottom: 1em;
 }

@@ -296,12 +296,10 @@
 
 			
 			<div class="container">
+				<center>
 				<div class="row">
 <div class="container">
-<div class="row">
-    <h1>Noticias Recentes</h1>
-    <p>As mais recentes noticias, referentes ao Sindicato Nacional do Coco do Brasil.</p>
-</div>
+
     <div class="row">
 		<div class="col-md-5 col-lg-5">
 			<!-- artigo em destaque -->
@@ -310,7 +308,7 @@
 					<img src="http://placehold.it/482x350" alt="" class="thumb">
 				</a>
 				<div class="block-title">
-					<h2>Titulo da noticia coloca aqui.</h2>
+					<h4>Titulo da noticia coloca aqui.</h4>
 					<p class="by-author"><small>By Sindcoco</small></p>
 				</div>
 			</div>
@@ -348,6 +346,7 @@
 			</ul>
 		</div>
 	</div>
+</center>
 					<?php 
 						require("util/conexao.php");
 						$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 3";
@@ -361,7 +360,7 @@
 							<div class="row">
 								<div class="col-md-2">
 									<div class="feature-icon">
-										<i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7;"></i>
+										<i class="fa fa-file-pdf-o" style="font-size:48px;"></i>
 									</div>
 								</div>
 								<div class="col-md-10">
@@ -369,8 +368,10 @@
 										
 										<h4><?=$linha["titulo"];?></h4>
 										<p></p>
-										 <a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank">
-											Ler mais>>
+										 <a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-primary" style="color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;">
+											Abrir PDF
                     					</a>
 										
 									</div>
