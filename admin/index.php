@@ -65,13 +65,11 @@
                                 <button class="btn btn-success btn-block">Entrar</button>
                             </div>
 
-                            <label> <input type="checkbox" checked="checked"
-                                name="remember"> Lembre-me
-                            </label>
+                            
 
                             <div class="container" style="background-color: #f1f1f1">
-                                <input class="btn btn-danger" type="reset" value="Cancelar">
-                                <span class="psw" >Esqueceu a <a href="#">senha?</a></span>
+                                <!--<input class="btn btn-danger float-right" type="reset" value="Cancelar">-->
+                                <!--<span class="psw" >Esqueceu a <a href="#">senha?</a></span> -->
                             </div>
                             <!-- form-group// -->
                         </form>

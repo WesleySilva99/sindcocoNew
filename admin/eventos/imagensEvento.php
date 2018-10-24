@@ -93,7 +93,7 @@
             ?>
 
             <tr>
-				<td><img src="/img/eventos/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
+				<td><img src="/img/eventos/<?=$linha['imagem'];?>" style="max-width: 23%" class="img-thumbnail"/></td>
                 <td scope="col"><?=$linha["titulo"];?></td>
                 <td scope="col">
                     <a href="/admin/eventos/inativarImagemEvento.php?id=<?=$linha['id'];?>">
