@@ -139,3 +139,29 @@ Stack trace:
 [19-Oct-2018 18:03:12 UTC] PHP Fatal error:  require(): Failed opening required '/util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\index.php on line 295
 [19-Oct-2018 18:03:18 UTC] PHP Warning:  require(/util/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\index.php on line 295
 [19-Oct-2018 18:03:18 UTC] PHP Fatal error:  require(): Failed opening required '/util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\index.php on line 295
+[23-Oct-2018 00:15:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.eventos' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\index.php:372
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\index.php(372): PDO->query('SELECT ei.id, e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 372
+[23-Oct-2018 00:39:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.eventos' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\index.php:372
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\index.php(372): PDO->query('SELECT ei.id, e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 372
+[23-Oct-2018 00:39:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.eventos' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\index.php:372
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\index.php(372): PDO->query('SELECT ei.id, e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 372
+[23-Oct-2018 00:48:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.eventos' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\index.php:372
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\index.php(372): PDO->query('SELECT ei.id, e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\index.php on line 372
+[24-Oct-2018 16:15:39 UTC] PHP Warning:  require(../util/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\index.php on line 308
+[24-Oct-2018 16:15:39 UTC] PHP Fatal error:  require(): Failed opening required '../util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\index.php on line 308
+[24-Oct-2018 16:16:03 UTC] PHP Warning:  require(/util/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\index.php on line 308
+[24-Oct-2018 16:16:03 UTC] PHP Fatal error:  require(): Failed opening required '/util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\index.php on line 308
+[24-Oct-2018 16:16:04 UTC] PHP Warning:  require(/util/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\index.php on line 308
+[24-Oct-2018 16:16:04 UTC] PHP Fatal error:  require(): Failed opening required '/util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\index.php on line 308

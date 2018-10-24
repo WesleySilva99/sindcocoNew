@@ -297,10 +297,60 @@
 			
 			<div class="container">
 				<div class="row">
-
+<div class="container">
+<div class="row">
+    <h1>Noticias Recentes</h1>
+    <p>As mais recentes noticias, referentes ao Sindicato Nacional do Coco do Brasil.</p>
+</div>
+    <div class="row">
+		<div class="col-md-5 col-lg-5">
+			<!-- artigo em destaque -->
+			<div class="featured-article">
+				<a href="#">
+					<img src="http://placehold.it/482x350" alt="" class="thumb">
+				</a>
+				<div class="block-title">
+					<h2>Titulo da noticia coloca aqui.</h2>
+					<p class="by-author"><small>By Sindcoco</small></p>
+				</div>
+			</div>
+			<!-- /.featured-article -->
+		</div>
+		<div class="col-md-7 col-lg-7">
+			<ul class="media-list main-list">
+			  <li class="media">
+			    <a class="pull-left" href="#">
+			      <img class="media-object" src="http://placehold.it/150x90" alt="...">
+			    </a>
+			    <div class="media-body">
+			      <h4 class="media-heading">Titulo da noticia coloca aqui.</h4>
+			      <p class="by-author">By SindCoco</p>
+			    </div>
+			  </li>
+			  <li class="media">
+			    <a class="pull-left" href="#">
+			      <img class="media-object" src="http://placehold.it/150x90" alt="...">
+			    </a>
+			    <div class="media-body">
+			      <h4 class="media-heading">Titulo da noticia coloca aqui.</h4>
+			      <p class="by-author">By SindCoco</p>
+			    </div>
+			  </li>
+			  <li class="media">
+			    <a class="pull-left" href="#">
+			      <img class="media-object" src="http://placehold.it/150x90" alt="...">
+			    </a>
+			    <div class="media-body">
+			      <h4 class="media-heading">Titulo da noticia coloca aqui.</h4>
+			      <p class="by-author">By SindCoco</p>
+			    </div>
+			  </li>
+			</ul>
+		</div>
+	</div>
 					<?php 
 						require("util/conexao.php");
-						$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 6";
+						$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 3";
 						$anuncios = $conexao->query($sql);
 						foreach ($anuncios as $linha) {
 					?>
@@ -368,7 +418,7 @@
 
 				<?php
 
-					$sql = "SELECT ei.id, ei.id_evento, ei.imagem, e.titulo FROM eventos AS e, imagem_evento AS ei WHERE e.id = ei.id_evento and ei.ativo = 1 AND ei.id <> 8 ORDER BY ei.id DESC LIMIT 8";
+					$sql = "SELECT ei.id, ei.id_evento, ei.imagem, e.titulo FROM eventos AS e, imagem_evento AS ei WHERE e.id = ei.id_evento and ei.ativo = 1 AND ei.id <> 8 ORDER BY ei.id DESC LIMIT 7";
 					$query = $conexao->query($sql);
 					foreach ($query as $linha) {
 
@@ -376,7 +426,7 @@
 					
 					<div class="thumb">
 						<a href="#">
-							<img src="/img/eventos/<?=$linha['imagem'];?>"   alt="Feature Image" height="402" width="402"/>
+							<img src="/img/eventos/<?=$linha['imagem'];?>"   alt="Feature Image" style="max-height: 260px;"/>
 						</a>
 						
 						<div class="thumb-rollover">

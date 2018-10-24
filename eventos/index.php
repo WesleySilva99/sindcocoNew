@@ -86,8 +86,9 @@
 								<h4 class="sd1">
 									<?=$linha["titulo"];?>
 								</h4><br>
-								<img src="/img/eventos/<?=$linha['capa'];?>" alt="Blog Image" style="max-width: 90%; max-height: 90%; margin-left: 30px; border-radius: 5px;"/>
-
+								<center>
+								<img src="/img/eventos/<?=$linha['capa'];?>" alt="Blog Image" style="max-width: 90%; max-height: 90%; border-radius: 5px;"/>
+								</center>
 								
 								<div class="blog-info">
 								<ul>
@@ -96,7 +97,9 @@
 								</ul>
 								
 								<div class="btn pull-right">
-									<a href="/eventos/teste.php?id=<?=$linha["id"];?>" class="btn btn-read-54" >
+									<a href="/eventos/teste.php?id=<?=$linha["id"];?>" class="btn btn-primary" style="    color: #fff;
+    background-color: #38b23a;
+    border-color: #38b23a;" >
 										Ler Mais <i class="glyphicon glyphicon-chevron-right"></i> <i class="glyphicon glyphicon-chevron-right"></i>
 									</a>
 								</div>

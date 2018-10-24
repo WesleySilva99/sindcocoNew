@@ -102,7 +102,7 @@
     <td scope="col"><a href="/pdf/informativos/<?=$linha['arquivo'];?>"><span class="label label-primary label-mini">Clique aqui para abrir</span></a></td>
                 <td scope="col">
                     <a href="/admin/informativos/editar.php?id=<?=$linha['id']?>">
-                        <button class="btn btn-sm btn-warning">
+                        <button class="btn btn-sm btn-success">
                             Editar
                         </button>
                     </a>
