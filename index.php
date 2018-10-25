@@ -70,7 +70,7 @@
 									<li><a href="#about">Sobre</a></li>
 									<li><a href="#features">Notícias</a></li>
 									<li><a href="#feature-work">Eventos</a></li>
-									<li><a href="#testimonials">Pragas</a></li>
+									<li><a href="/pragas/">Pragas</a></li>
 									<li><a href="/classificados/">Classificados</a></li>
 									<li><a href="/judiciais/">Ações Judiciais</a></li>
 									<li><a href="#contact-us">Contate-nos</a></li>

@@ -3,22 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Sobre o SINDCOCO</title>
+        <title>Pragas</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<?php
 		
 			require("../util/imports.php");
-			require("../util/conexao.php");
-			$sql = "SELECT titulo FROM eventos WHERE id = ?";
-            $stmt = $conexao->prepare($sql);
-			$stmt->bindValue(1, $_GET['id']);
-			$titulo;
-			$stmt->execute();
-			foreach ($stmt as $linha) {
-				$titulo = $linha['titulo'];
-			}
 		?>
 		<!-- fav icon -->
 
@@ -45,38 +36,62 @@
 		
 		<section class="blog-single">
 			<div class="container">
-				<div class="row" style="margin-top: 100px;">
+				<div class="row" style="margin-top: 50px;">
 					<div class="col-md-8">
-						<div class="eventoDetalhe">
+						<h1 class="font-weight-light  bd bd2" >Pragas de A a Z - Pragas - Amostragem</h1><br>
+                        <?php
 
-						<h3 class="eventoDetalhe1 sd3"><?=$titulo;?></h3>
-						</div>
+                            require "menuPragas.php";
 
-							
+                        ?>
+
 							<br>
-							
+							<br>
 							<?php
 
-								
-								$sql = "SELECT e.titulo, e.descricao, e.data, ei.imagem FROM imagem_evento AS ei INNER JOIN eventos AS e ON e.id = ei.id_evento WHERE ei.id_evento = ? AND ei.ativo = 1";
-                                $stmt = $conexao->prepare($sql);
-                                $stmt->bindValue(1, $_GET['id']);
-                            
-                                $stmt->execute();
+								require("../util/conexao.php");
+								$sql = "SELECT * FROM pragas WHERE id = ?";
+                                $praga = $conexao->prepare($sql);
+                                $praga->bindValue(1, $_GET['id']);
+                                $praga->execute();
 
-									foreach ($stmt as $linha) {	
+									foreach ($praga as $linha) {	
 								?>
-								<div class="sd2">
-								Sindcoco
-								Data:<?=$linha['data'];?>
-								</div>
-								<div>
+								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
+								<h4>
+									<?=$linha["nome"];?><br>
+                                    <?=$linha["nome_cientifico"];?>
+								</h4><br>
+
+								<img src="/img/pragas/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
 								
-								<img src="/img/eventos/<?=$linha['imagem'];?>" alt="Blog Image" width="10%"/>
-								
-								<p class="fontTexto1"><?=$linha['descricao'];?>
-									
-								</p>
+								<div class="blog-info">
+								<ul>
+									<?php
+
+                                        $sql2 = "SELECT * FROM amostragem_praga WHERE id_praga = ?";
+                                        $descPraga = $conexao->prepare($sql2);
+                                        $descPraga->bindValue(1, $_GET['id']);
+                                        $descPraga->execute();
+                                        foreach ($descPraga as $key) {	
+                                    ?>
+                                    <h4>
+                                        Descrição
+                                    </h4>
+                                    <br>
+                                            <?php
+                                            
+                                            $filename = "../img/pragas/".$key['descricao'];
+                                            if(file_exists($filename)){
+                                            ?>
+                                            <p><img src="/img/pragas/<?=$key['descricao'];?>" alt="Blog Image" width="100%"/></p><br>
+                                            <?php
+
+                                                }else{
+                                            ?>
+                                                <p><?=$key['descricao'];?></p><br>
+                                    <?php } }?>
+								</ul>
 								
 								
 								<br>
@@ -90,10 +105,15 @@
 						<?php
 							}
 							?>
-
-							<div class="">
-						<!-- Pagination -->
-						
+							
+						<!-- Pagination 
+						<div id="pagination">
+							<span class="all">Page 1 of 3</span>
+							<span class="current">1</span>
+							<a href="#" class="inactive">2</a>
+							<a href="#" class="inactive">3</a>
+						</div>
+                        -->
 						</div>
 
 						<?php
@@ -140,10 +160,10 @@
 		
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

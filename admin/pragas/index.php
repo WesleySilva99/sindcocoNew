@@ -142,12 +142,12 @@
                       </button> 
                     </a> <br>
                    
-                    <a href="/admin/pragas/nao.php?id=<?=$linha['id']?>">  
+                    <a href="/admin/pragas/cadastrarAmostragem.php?id=<?=$linha['id']?>">  
                       <button class="btn btn-success btn-xs">
                         Adicionar Amostragem
                       </button> 
                     </a>
-                    <a href="/admin/pragas/nao.php?id=<?=$linha['id']?>">  
+                    <a href="/admin/pragas/cadastrarTatica.php?id=<?=$linha['id']?>">  
                       <button class="btn btn-success btn-xs">
                         Adicionar Tática de Controle
                       </button> 
