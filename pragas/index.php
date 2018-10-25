@@ -38,20 +38,20 @@
 			<div class="container">
 				<div class="row" style="margin-top: 50px;">
 					<div class="col-md-8">
-						<h1 class="font-weight-light  bd bd2" >PRAGAS DE A a Z - Introdução</h1>
+						<h1 class="font-weight-light  bd bd2" >PRAGAS DE A a Z -<span style="color: green;">Introdução</span></h1>
 						
 
-							<br>
+							
+							
+							<p class="bd"><b style="color: green;">Créditos:</b> <br>
+							<b>EMBRAPA</b> - Empresa Brasileira de Pesquisa Agropecuária<br>
+							<b>Joana Maria Santos Ferreira</b> - Editora Técnica</p>
 							<br>
 								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
-								<h4>
-                                <b>Créditos:</b>
-                                EMBRAPA - Empresa Brasileira de Pesquisa Agropecuária <br>
-                                Joana Maria Santos Ferreira - Editora Técnica
-								</h4><br>
+								<br>
 								
 								<p>
-                                    A presença de uma praga na lavoura pode representar sérias perdas econômicas em diversas 
+                                      A presença de uma praga na lavoura pode representar sérias perdas econômicas em diversas 
                                     explorações agrícolas e refletir negativamente na rentabilidade de produtor rural. 
                                     A cultura do coqueiro é uma espécie de palmeira rústica, mas bastante sensível à ação de 
                                     diversas pragas. No sistema extrativista ou semi-extrativista em que o coqueiro é cultivado, 

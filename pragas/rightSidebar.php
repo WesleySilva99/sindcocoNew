@@ -6,7 +6,7 @@
 							
 							<div class="widget" style="        border-right: 1px solid #e7e7e7;">
                                 <center>
-								<h4 class="widgetheading">Saiba mais</h4>
+								<h4 class="widgetheading">Pragas</h4>
                                 </center>
                                 <?php
                                 require("../util/conexao.php");
@@ -21,7 +21,7 @@
                                 ?>
                                     
 								<ul class="cat">
-									<li class="estilizando1"><a href="/pragas/descPraga.php?id=<?=$linha['id'];?>" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-arrow-left estilizando3"></i> <?=$linha['nome'];?></a>
+									<li class="estilizando1"><a href="/pragas/descPraga.php?id=<?=$linha['id'];?>" class="textoanav" style="color: #777;"><i class="estilizando3"></i> <?=$linha['nome'];?></a>
                                     </li>
                                     <!--
                                     <li class="estilizando1"><a href="/noticias/teste.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-list-alt estilizando3"></i> noticias</a></li>

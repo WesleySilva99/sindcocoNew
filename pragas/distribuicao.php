@@ -38,14 +38,16 @@
 			<div class="container">
 				<div class="row" style="margin-top: 50px;">
 					<div class="col-md-8">
-						<h1 class="font-weight-light  bd bd2" >Pragas de A a Z - Pragas - Distribuição Geográfica</h1><br>
+						<h1 class="font-weight-light  bd bd2" >Pragas de A a Z -<span style="color: green;"> Pragas - Distribuição Geográfica</span></h1><br>
                         <?php
 
                             require "menuPragas.php";
 
                         ?>
 
-							<br>
+							<p class="bd"><b style="color: green;">Créditos:</b> <br>
+							<b>EMBRAPA</b> - Empresa Brasileira de Pesquisa Agropecuária<br>
+							<b>Joana Maria Santos Ferreira</b> - Editora Técnica</p>
 							<br>
 							<?php
 
@@ -58,13 +60,14 @@
 									foreach ($praga as $linha) {	
 								?>
 								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
+								<center>
 								<h4>
 									<?=$linha["nome"];?><br>
                                     <?=$linha["nome_cientifico"];?>
 								</h4><br>
 
 								<img src="/img/pragas/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
-								
+								</center>
 								<div class="blog-info">
 								<ul>
 									<?php
@@ -81,7 +84,7 @@
                                                 $filename = "../img/pragas/".$key['descricao'];
                                                 if(file_exists($filename)){
                                             ?>
-                                            <p><img src="/img/pragas/<?=$key['descricao'];?>" alt="Blog Image" width="100%"/></p><br>
+                                            <p><center><img src="/img/pragas/<?=$key['descricao'];?>" alt="Blog Image" width="100%"/> </center></p><br>
                                             <?php
 
                                                 }else{
