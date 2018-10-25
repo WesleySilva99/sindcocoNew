@@ -87,7 +87,7 @@
                                             $filename = "../img/pragas/".$key['descricao'];
                                             if(file_exists($filename)){
                                             ?>
-                                            <p><center><img src="/img/pragas/<?=$key['descricao'];?>" alt="Blog Image" width="100%"/> </center></p><br>
+                                            <p><center><img src="/img/pragas/<?=$key['descricao'];?>" alt="Blog Image" style="max-width: 100%; max-height: 100%;" width="100%"/> </center></p><br>
                                             <?php
 
                                                 }else{

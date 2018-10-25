@@ -90,7 +90,7 @@
                   <div class="form-group ">
                     <label for="cemail" class="control-label col-lg-2"><i class="glyphicon glyphicon-calendar"></i>Descricao*:</label>
                     <div class="col-lg-10">
-                      <input class="form-control " id="cuser" type="text" name="descricao" required />
+                      <input class="form-control " id="cuser" type="text" name="descricao" />
                     </div>
                   </div>
                 

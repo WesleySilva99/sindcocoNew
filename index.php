@@ -303,19 +303,47 @@
     <div class="row">
 		<div class="col-md-5 col-lg-5">
 			<!-- artigo em destaque -->
+			<?php
+			require("util/conexao.php");
+			$sql = "SELECT * FROM noticias ORDER BY id DESC LIMIT 1";
+			$noticias = $conexao->query($sql);
+			foreach ($noticias as $linha) {
+
+			?>
 			<div class="featured-article">
 				<a href="#">
-					<img src="http://placehold.it/482x350" alt="" class="thumb">
+					<img src="/img/noticias/<?=$linha['imagem'];?>" alt="" class="thumb">
 				</a>
 				<div class="block-title">
-					<h4>Titulo da noticia coloca aqui.</h4>
-					<p class="by-author"><small>By Sindcoco</small></p>
+					<h4><?=$linha['titulo'];?></h4>
+					<p class="by-author"><small>Fonte: <?=$linha['fonte'];?></small></p>
 				</div>
 			</div>
+
+			<?php } ?>
 			<!-- /.featured-article -->
 		</div>
 		<div class="col-md-7 col-lg-7">
 			<ul class="media-list main-list">
+			<?php
+
+			$sql = "SELECT * FROM noticias ORDER BY id DESC LIMIT 3";
+			$noticias = $conexao->query($sql);
+			foreach ($noticias as $linha) {
+
+			?>
+			  <li class="media">
+			 	 <a href="#">
+					<img src="/img/noticias/<?=$linha['imagem'];?>" height="90" width="150" alt="" class="thumb">
+				</a>
+					<div class="media-body">
+						<h4><?=$linha['titulo'];?></h4>
+						<p class="by-author"><small>Fonte: <?=$linha['fonte'];?></small></p>
+					</div>
+			  </li>
+
+			<?php } ?>
+			<!--
 			  <li class="media">
 			    <a class="pull-left" href="#">
 			      <img class="media-object" src="http://placehold.it/150x90" alt="...">
@@ -334,21 +362,13 @@
 			      <p class="by-author">By SindCoco</p>
 			    </div>
 			  </li>
-			  <li class="media">
-			    <a class="pull-left" href="#">
-			      <img class="media-object" src="http://placehold.it/150x90" alt="...">
-			    </a>
-			    <div class="media-body">
-			      <h4 class="media-heading">Titulo da noticia coloca aqui.</h4>
-			      <p class="by-author">By SindCoco</p>
-			    </div>
-			  </li>
+			  -->
 			</ul>
 		</div>
 	</div>
 </center>
 					<?php 
-						require("util/conexao.php");
+						
 						$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 3";
 						$anuncios = $conexao->query($sql);
 						foreach ($anuncios as $linha) {
