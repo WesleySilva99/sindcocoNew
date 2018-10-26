@@ -312,7 +312,7 @@
 			?>
 			<div class="featured-article">
 				<a href="#">
-					<img src="/img/noticias/<?=$linha['imagem'];?>" alt="" class="thumb">
+					<img src="/img/noticias/<?=$linha['imagem'];?>"  alt="" class="thumb">
 				</a>
 				<div class="block-title">
 					<h4><?=$linha['titulo'];?></h4>
@@ -333,11 +333,11 @@
 
 			?>
 			  <li class="media">
-			 	 <a href="#">
-					<img src="/img/noticias/<?=$linha['imagem'];?>" height="90" width="150" alt="" class="thumb">
+			 	 <a class="pull-left" href="#">
+					<img  class="media-object" src="/img/noticias/<?=$linha['imagem'];?>" width="160px;"  alt="" class="thumb">
 				</a>
 					<div class="media-body">
-						<h4><?=$linha['titulo'];?></h4>
+						<h4 class="media-heading"><?=$linha['titulo'];?></h4>
 						<p class="by-author"><small>Fonte: <?=$linha['fonte'];?></small></p>
 					</div>
 			  </li>
