@@ -10,7 +10,7 @@
                                 </center>
                                 <?php
                                 require("../util/conexao.php");
-								$sql = "SELECT * FROM pragas WHERE aceito = ?";
+								$sql = "SELECT * FROM pragas WHERE aceito = ? ORDER BY nome";
                                 $praga = $conexao->prepare($sql);
                                 $praga->bindValue(1, 1);
                                 $praga->execute();
