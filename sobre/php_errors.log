@@ -55,3 +55,8 @@ Stack trace:
 #2 {main}
   thrown in C:\Users\leandro\Documents\sindcocoNew\sobre\rightSidebar.php on line 33
 >>>>>>> 62df455960df507a9fccbabeeec6b53659d5d305
+[24-Oct-2018 21:38:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\sobre\rightSidebar.php:33
+Stack trace:
+#0 C:\Users\lucas\sindcoco\sobre\index.php(121): require()
+#1 {main}
+  thrown in C:\Users\lucas\sindcoco\sobre\rightSidebar.php on line 33

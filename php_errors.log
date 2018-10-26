@@ -218,3 +218,96 @@ Stack trace:
 [24-Oct-2018 16:16:04 UTC] PHP Warning:  require(/util/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\index.php on line 308
 [24-Oct-2018 16:16:04 UTC] PHP Fatal error:  require(): Failed opening required '/util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\index.php on line 308
 >>>>>>> 62df455960df507a9fccbabeeec6b53659d5d305
+[24-Oct-2018 21:15:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:15:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:17:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:17:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:18:08 UTC] PHP Warning:  require(..util/conexao.php): failed to open stream: No such file or directory in C:\Users\lucas\sindcoco\index.php on line 351
+[24-Oct-2018 21:18:08 UTC] PHP Fatal error:  require(): Failed opening required '..util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\lucas\sindcoco\index.php on line 351
+[24-Oct-2018 21:18:09 UTC] PHP Warning:  require(..util/conexao.php): failed to open stream: No such file or directory in C:\Users\lucas\sindcoco\index.php on line 351
+[24-Oct-2018 21:18:09 UTC] PHP Fatal error:  require(): Failed opening required '..util/conexao.php' (include_path='.;C:\php\pear') in C:\Users\lucas\sindcoco\index.php on line 351
+[24-Oct-2018 21:18:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:22:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:22:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:23:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:23:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:23:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:23:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:24:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:24:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:37:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in C:\Users\lucas\sindcoco\util\conexao.php:5
+Stack trace:
+#0 C:\Users\lucas\sindcoco\index.php(351): require()
+#1 {main}
+  thrown in C:\Users\lucas\sindcoco\util\conexao.php on line 5
+[24-Oct-2018 21:38:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:40:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:40:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:43:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:43:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:45:49 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:45:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353
+[24-Oct-2018 21:46:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\index.php:353
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\index.php on line 353

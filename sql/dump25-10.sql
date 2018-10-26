@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.24, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
 --
--- Host: localhost    Database: sindcoco
+-- Host: 127.0.0.1    Database: sindcoco
 -- ------------------------------------------------------
--- Server version	5.7.24-0ubuntu0.18.04.1
+-- Server version	8.0.13
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+ SET NAMES utf8 ;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `acoes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `acoes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(100) DEFAULT NULL,
@@ -47,13 +47,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `amostragem_praga`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `amostragem_praga` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_praga` int(11) DEFAULT NULL,
   `descricao` char(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `amostragem_praga` (
 
 LOCK TABLES `amostragem_praga` WRITE;
 /*!40000 ALTER TABLE `amostragem_praga` DISABLE KEYS */;
-INSERT INTO `amostragem_praga` VALUES (1,4,'15404894505bd200ea6569e.gif'),(2,5,'15405166435bd26b235d0c4.gif');
+INSERT INTO `amostragem_praga` VALUES (1,4,'15404894505bd200ea6569e.gif'),(2,5,'15405166435bd26b235d0c4.gif'),(3,6,'15405232405bd284e83aad2.gif'),(4,7,'15405235175bd285fda36e1.gif'),(5,8,'15405238435bd28743a727f.gif'),(6,9,'15405243875bd28963b3e67.gif'),(7,10,'15405251085bd28c34a3e4f.gif'),(8,11,'15405254655bd28d995b245.gif'),(9,12,'15405259215bd28f61e3c3a.gif'),(10,13,'15405263345bd290fec08b3.gif'),(11,14,'15405269745bd2937e879e9.gif'),(12,15,'15405272765bd294ace7791.gif'),(13,16,'15405282105bd29852451d8.gif'),(14,17,'15405286205bd299ec4de03.gif'),(15,18,'15405289685bd29b4847740.gif');
 /*!40000 ALTER TABLE `amostragem_praga` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -72,7 +72,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `anuncio`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `anuncio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -113,7 +113,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `arquivo_noticia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `arquivo_noticia` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_noticia` int(11) DEFAULT NULL,
@@ -140,7 +140,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `categoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `categoria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(255) NOT NULL,
@@ -164,14 +164,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `danos_praga`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `danos_praga` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_praga` int(11) DEFAULT NULL,
   `nome` char(80) DEFAULT NULL,
   `descricao` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,7 +180,7 @@ CREATE TABLE `danos_praga` (
 
 LOCK TABLES `danos_praga` WRITE;
 /*!40000 ALTER TABLE `danos_praga` DISABLE KEYS */;
-INSERT INTO `danos_praga` VALUES (1,3,'Coqueiros Jovens','15402461315bce4a73e1265.jpg'),(2,3,'ConsequÃªncias do ataque Ã  planta/plantaÃ§Ã£o.','- Folhas novas necrosadas, curtas e pregueadas. Ã‰ provÃ¡vel que enzimas liberadas pelo Ã¡caro ao se alimentar nos tecidos tenros da folha afetem a absorÃ§Ã£o do boro pela planta. Quase sempre no coqueiro jovem o sintoma do Ã¡caro esta associado Ã  deficiÃªncia desse elemento.  - Atraso na emissÃ£o de novas folhas e, consequentemente, no desenvolvimento da planta.  - Secamento parcial ou total da folha central. A flecha estando seca, devido ao ataque do Ã¡caro, nÃ£o se destaca se for puxada, diferente da flecha danificada pelo agente da doenÃ§a â€œpodridÃ£o-seca-do-olho do coqueiroâ€.  - Perda da planta'),(3,4,'Danos','15404893025bd2005602163.gif'),(4,5,'DescriÃ§Ã£o','15405165975bd26af596831.gif');
+INSERT INTO `danos_praga` VALUES (1,3,'Coqueiros Jovens','15402461315bce4a73e1265.jpg'),(2,3,'ConsequÃªncias do ataque Ã  planta/plantaÃ§Ã£o.','- Folhas novas necrosadas, curtas e pregueadas. Ã‰ provÃ¡vel que enzimas liberadas pelo Ã¡caro ao se alimentar nos tecidos tenros da folha afetem a absorÃ§Ã£o do boro pela planta. Quase sempre no coqueiro jovem o sintoma do Ã¡caro esta associado Ã  deficiÃªncia desse elemento.  - Atraso na emissÃ£o de novas folhas e, consequentemente, no desenvolvimento da planta.  - Secamento parcial ou total da folha central. A flecha estando seca, devido ao ataque do Ã¡caro, nÃ£o se destaca se for puxada, diferente da flecha danificada pelo agente da doenÃ§a â€œpodridÃ£o-seca-do-olho do coqueiroâ€.  - Perda da planta'),(3,4,'Danos','15404893025bd2005602163.gif'),(4,5,'DescriÃ§Ã£o','15405165975bd26af596831.gif'),(5,6,'Danos','15405226885bd282c0d1168.gif'),(6,7,'Descricao','15405235025bd285ee3fd12.gif'),(7,8,'Descricao','15405238065bd2871e9c841.gif'),(8,9,'Descricao','15405243385bd289326f3b7.gif'),(9,10,'Descricao','15405250935bd28c2566ed6.gif'),(10,11,'Descricao','15405254455bd28d85637c0.gif'),(11,12,'Descricao','15405259035bd28f4fd35c0.gif'),(12,13,'Descricao','15405263115bd290e75bf08.gif'),(13,14,'Descricao','15405269465bd293620f760.gif'),(14,15,'Descricao','15405272575bd2949997b8c.gif'),(15,16,'Descricao','15405276775bd2963d0d71e.gif'),(16,16,'Descricao','Descrição'),(17,17,'Descricao','15405286025bd299dac8c51.gif'),(18,18,'Descricao','15405289315bd29b2334b9d.gif');
 /*!40000 ALTER TABLE `danos_praga` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,14 +190,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `descricao_praga`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `descricao_praga` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_praga` int(11) DEFAULT NULL,
   `nome` char(50) DEFAULT NULL,
   `descricao` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -206,7 +206,7 @@ CREATE TABLE `descricao_praga` (
 
 LOCK TABLES `descricao_praga` WRITE;
 /*!40000 ALTER TABLE `descricao_praga` DISABLE KEYS */;
-INSERT INTO `descricao_praga` VALUES (4,3,'Adulto','Tamanho do corpo - a fÃªmea mede 205 - 255 Âµm de comprimento e 36 - 52 Âµm de largura.  ColoraÃ§Ã£o - branco-leitosa ou levemente amarelada e brilhante.  Outras CaractÃ©risticas - EspÃ©cie microscÃ³pica, nÃ£o visÃ­vel a olho nu. Tem o corpo alongado, vermiforme e formado por finos anÃ©is, onde sÃ£o notados esparsos pÃªlos longos, concentrados na regiÃ£o posterior. Possui dois pares de patas na regiÃ£o anterior do corpo, caractÃ©ristica dos eriofÃ­deos. A olho nu a colÃ´nia parece uma camada de pÃ³ branco.'),(6,3,'BIOLOGIA','Um Ã¡caro adulto alcanÃ§a a maturidade em poucas semanas; a fÃªmea pÃµe ovos, globulares e brilhantes, sob as brÃ¡cteas ou perianto dos frutos; destes eclodem as protoninfas (vermiformes) que se desenvolvem em deutoninfas e estas em novos adultos. O ciclo completo de vida da espÃ©cie varia de oito a 11 dias. Praga de grande pontencial reprodutivo. Acredita-se que a reproduÃ§Ã£o de A. guerreronis possa ser, tambÃ©m, partenogenÃ©tica, ou seja, um sÃ³ indÃ­viduo sendo capaz de formar grandes colÃ´nias.'),(7,4,'DescriÃ§Ã£o','15404884475bd1fcff386c9.gif'),(8,5,'DescriÃ§Ã£o','15405161835bd26957f24a6.gif');
+INSERT INTO `descricao_praga` VALUES (4,3,'Adulto','Tamanho do corpo - a fÃªmea mede 205 - 255 Âµm de comprimento e 36 - 52 Âµm de largura.  ColoraÃ§Ã£o - branco-leitosa ou levemente amarelada e brilhante.  Outras CaractÃ©risticas - EspÃ©cie microscÃ³pica, nÃ£o visÃ­vel a olho nu. Tem o corpo alongado, vermiforme e formado por finos anÃ©is, onde sÃ£o notados esparsos pÃªlos longos, concentrados na regiÃ£o posterior. Possui dois pares de patas na regiÃ£o anterior do corpo, caractÃ©ristica dos eriofÃ­deos. A olho nu a colÃ´nia parece uma camada de pÃ³ branco.'),(6,3,'BIOLOGIA','Um Ã¡caro adulto alcanÃ§a a maturidade em poucas semanas; a fÃªmea pÃµe ovos, globulares e brilhantes, sob as brÃ¡cteas ou perianto dos frutos; destes eclodem as protoninfas (vermiformes) que se desenvolvem em deutoninfas e estas em novos adultos. O ciclo completo de vida da espÃ©cie varia de oito a 11 dias. Praga de grande pontencial reprodutivo. Acredita-se que a reproduÃ§Ã£o de A. guerreronis possa ser, tambÃ©m, partenogenÃ©tica, ou seja, um sÃ³ indÃ­viduo sendo capaz de formar grandes colÃ´nias.'),(7,4,'DescriÃ§Ã£o','15404884475bd1fcff386c9.gif'),(8,5,'DescriÃ§Ã£o','15405161835bd26957f24a6.gif'),(9,6,'Descrição','15405223945bd2819a0432d.gif'),(10,7,'Descrição','15405233575bd2855da9ccd.gif'),(11,8,'Descrição','15405236665bd28692aa4c0.gif'),(12,9,'Descrição','15405240725bd288282e2d6.gif'),(13,10,'Descrição','15405250395bd28befdedbc.gif'),(14,11,'Descrição','15405253645bd28d34eecc9.gif'),(15,12,'Descrição','15405258355bd28f0bd9d55.gif'),(16,13,'Descrição','15405262395bd2909f59895.gif'),(17,14,'Descrição','15405268135bd292ddc3e12.gif'),(18,15,'Descrição','15405271665bd2943e3668b.gif'),(19,16,'Descrição','15405276015bd295f1bf385.gif'),(20,17,'Descrição','15405285105bd2997e553b2.gif'),(21,18,'Descrição','15405288315bd29abf1def6.gif');
 /*!40000 ALTER TABLE `descricao_praga` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -216,14 +216,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `distribuicao_praga`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `distribuicao_praga` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_praga` int(11) DEFAULT NULL,
   `descricao` char(255) DEFAULT NULL,
   `nome` char(80) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -232,7 +232,7 @@ CREATE TABLE `distribuicao_praga` (
 
 LOCK TABLES `distribuicao_praga` WRITE;
 /*!40000 ALTER TABLE `distribuicao_praga` DISABLE KEYS */;
-INSERT INTO `distribuicao_praga` VALUES (1,3,'- Brasil - Todos os Estados exceto Rio Grande do Sul e Santa Catarina  - MÃ©xico, Estado de Guerrero  - VÃ¡rios paÃ­ses da AmÃ©rica  - Ãfrica  - Ãsia  - Cuba  - EUA  - Venezuela','Praga comumente encontrada nos seguintes paises/locais:'),(2,3,'15402451705bce46b230303.jpg','Descricao'),(3,4,'15404885425bd1fd5e8a494.gif','imagem'),(4,5,'15405163535bd26a01cde1c.gif','DescriÃ§Ã£o');
+INSERT INTO `distribuicao_praga` VALUES (1,3,'- Brasil - Todos os Estados exceto Rio Grande do Sul e Santa Catarina  - MÃ©xico, Estado de Guerrero  - VÃ¡rios paÃ­ses da AmÃ©rica  - Ãfrica  - Ãsia  - Cuba  - EUA  - Venezuela','Praga comumente encontrada nos seguintes paises/locais:'),(2,3,'15402451705bce46b230303.jpg','Descricao'),(3,4,'15404885425bd1fd5e8a494.gif','imagem'),(4,5,'15405163535bd26a01cde1c.gif','DescriÃ§Ã£o'),(5,6,'15405224975bd28201b0e58.gif','Imagem'),(6,7,'15405234555bd285bf97755.gif','Imagem'),(7,8,'15405237625bd286f2842c5.gif','Imagem'),(8,7,'15405241895bd2889d2a201.gif','Imagem'),(9,9,'15405243065bd2891249883.gif','Imagem'),(10,10,'15405250795bd28c17ad673.gif','Imagem'),(11,11,'15405254245bd28d70afc70.gif','Descricao'),(12,12,'15405258875bd28f3f84b68.gif','Imagem'),(13,13,'15405262865bd290ce221a1.gif','Imagem'),(14,14,'15405268565bd2930897da5.gif','Imagem'),(15,15,'15405272275bd2947b3917a.gif','Imagem'),(16,16,'15405276475bd2961ff1ece.gif','Imagem'),(17,17,'15405285795bd299c3646fc.gif','Imagem'),(18,18,'15405289125bd29b105ccf0.gif','Imagem');
 /*!40000 ALTER TABLE `distribuicao_praga` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -242,7 +242,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `eventos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `eventos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(255) NOT NULL,
@@ -270,7 +270,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `imagem_evento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `imagem_evento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_evento` int(11) DEFAULT NULL,
@@ -296,7 +296,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `imagens_praga`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `imagens_praga` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_praga` int(11) DEFAULT NULL,
@@ -322,7 +322,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `informativos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `informativos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(255) NOT NULL,
@@ -349,18 +349,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `noticias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `noticias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(255) COLLATE latin1_general_ci NOT NULL,
-  `data` varchar(40) COLLATE latin1_general_ci NOT NULL,
-  `chamada` text COLLATE latin1_general_ci,
-  `texto` text COLLATE latin1_general_ci,
+  `titulo` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `data` varchar(40) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `chamada` text CHARACTER SET latin1 COLLATE latin1_general_ci,
+  `texto` text CHARACTER SET latin1 COLLATE latin1_general_ci,
   `autorizada` int(1) NOT NULL DEFAULT '1',
   `idCategoria` int(11) NOT NULL,
-  `fonte` varchar(255) COLLATE latin1_general_ci NOT NULL,
-  `imagem` varchar(100) COLLATE latin1_general_ci DEFAULT NULL,
-  `arquivo` varchar(100) COLLATE latin1_general_ci DEFAULT NULL,
+  `fonte` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `imagem` varchar(100) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `arquivo` varchar(100) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -381,13 +381,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `plantas_praga`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `plantas_praga` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_praga` int(11) DEFAULT NULL,
   `descricao` char(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -396,7 +396,7 @@ CREATE TABLE `plantas_praga` (
 
 LOCK TABLES `plantas_praga` WRITE;
 /*!40000 ALTER TABLE `plantas_praga` DISABLE KEYS */;
-INSERT INTO `plantas_praga` VALUES (1,3,'15402438745bce41a2b4037.jpg'),(2,4,'15404885015bd1fd35a929e.jpg'),(3,5,'15405162905bd269c261fcf.gif');
+INSERT INTO `plantas_praga` VALUES (1,3,'15402438745bce41a2b4037.jpg'),(2,4,'15404885015bd1fd35a929e.jpg'),(3,5,'15405162905bd269c261fcf.gif'),(4,6,'15405231245bd28474d5d1b.gif'),(5,7,'15405234125bd2859420fb4.gif'),(6,8,'15405237385bd286dae1c70.gif'),(7,7,'15405241115bd2884f78e42.gif'),(8,9,'15405242835bd288fb6e041.gif'),(9,10,'15405250545bd28bfe57be0.gif'),(10,11,'15405254035bd28d5b8d4d1.gif'),(11,12,'15405258645bd28f28af0b7.gif'),(12,13,'15405262595bd290b341064.gif'),(13,14,'15405268285bd292eccdd4d.gif'),(14,15,'15405272045bd2946424b24.gif'),(15,16,'15405276225bd296064503c.gif'),(16,13,'Descrição'),(17,17,'15405285595bd299af1bd2b.gif'),(18,18,'15405288955bd29aff77115.gif');
 /*!40000 ALTER TABLE `plantas_praga` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -406,7 +406,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `pragas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `pragas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `imagem` char(100) DEFAULT NULL,
@@ -414,7 +414,7 @@ CREATE TABLE `pragas` (
   `nome_cientifico` char(100) DEFAULT NULL,
   `aceito` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -423,7 +423,7 @@ CREATE TABLE `pragas` (
 
 LOCK TABLES `pragas` WRITE;
 /*!40000 ALTER TABLE `pragas` DISABLE KEYS */;
-INSERT INTO `pragas` VALUES (3,'15402404095bce34196e034.jpg','ÃCARO DA NECROSE DO COQUEIRO','(Aceria guerreronis Keifer) (Aceri: Eriophydae)',1),(4,'15404883395bd1fc93d474e.jpg','BROCA-DA-RÃQUIS-FOLIAR','(Amerrhinus ynca Sahlberg) (Coleoptera: Curculionidae)',1),(5,'15405160825bd268f2ac55c.jpg','ÃCARO DA MANCHA ANELAR DO COQUEIRO','(Amrineus cocofolious Flechtmann) (Acari: Eriophydae)',1);
+INSERT INTO `pragas` VALUES (3,'15402404095bce34196e034.jpg','ÃCARO DA NECROSE DO COQUEIRO','(Aceria guerreronis Keifer) (Aceri: Eriophydae)',1),(4,'15404883395bd1fc93d474e.jpg','BROCA-DA-RÃQUIS-FOLIAR','(Amerrhinus ynca Sahlberg) (Coleoptera: Curculionidae)',1),(5,'15405160825bd268f2ac55c.jpg','ÃCARO DA MANCHA ANELAR DO COQUEIRO','(Amrineus cocofolious Flechtmann) (Acari: Eriophydae)',1),(6,'15405223515bd2816faca9d.jpg','COCHONILHA TRANSPARENTE DO COQUEIRO','(Aspidiotus destructor Signoret) (Homoptera Diaspidae)',1),(7,'15405233295bd28541d675c.jpg','LAGARTA VERDE URTICANTE','(Automeris cinctistriga Felder) (Lepidoptera: Attacidae)',1),(8,'15405236305bd2866e5ffe0.jpg','LAGARTA DAS FOLHAS DO COQUEIRO OU LAGARTA DAS PALMEIRAS','(Brassolis sophorae Linnaeus) (Lepidoptera: Nymphalidae)',1),(9,'15405240385bd28806d0019.jpg','PULGÃO-PRETO-DO-COQUEIRO','(Cerataphis lataniae Boisduval) (Homoptera: Aphididae)',1),(10,'15405246305bd28a561dd1e.jpg','BARATA-DO-COQUEIRO OU FALSA-BARATA-DO-COQUEIRO','(Coraliomela brunnea Thumberg) (Coleoptera: Chrysomelidae)',1),(11,'15405253515bd28d276936c.jpg','RASPADOR DO FOLÍOLO DO COQUEIRO','(Delocrania cossyphoides Guérin) (Coleoptera: Chrysomelidae)',1),(12,'15405258105bd28ef2cddc3.jpg','BROCA DA COROA FOLIAR DO COQUEIRO OU BROCA DO DENDEZEIRO','(Eupalamides dedalus Cramer) (Lepidoptera: Castinidae)',1),(13,'15405260985bd29012322b8.jpg','CUPINS','(Heterotermes tenuis Hagen) (Nasutitermes rippertii Rambur) (Isoptera: Termididae, Rhinotermitidae)',1),(14,'15405267895bd292c54dd5f.jpg','INSETO RODILHA DO COQUEIRO','(Haemisphaerota tristis Boheman) (Coleoptera: Chrysomelidae)',1),(15,'15405271515bd2942f13327.jpg','VAQUINHA DO FRUTO DO COQUEIRO','(Himatidium neivai Bondar) (Coleoptera: Chrysomelidae)',1),(16,'15405275425bd295b669208.jpg','BROCA DO PEDÚNCULO FLORAL','(Homalinotus coriaceus Gyllenhal) (Coleoptera: Curculionidae)',1),(17,'15405284955bd2996f9ac10.jpg','TRAÇA DOS COCOS NOVOS E FLORES','(Hyalospila ptychis Dyar) (Lepidoptera: Pyralidae)',1),(18,'15405288195bd29ab37102c.jpg','BARATA DO COQUEIRO OU FALSA BARATA DO COQUEIRO','(Mecistomela marginata Thumberg)',1);
 /*!40000 ALTER TABLE `pragas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -433,13 +433,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tatica_praga`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `tatica_praga` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_praga` int(11) DEFAULT NULL,
   `descricao` char(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -448,7 +448,7 @@ CREATE TABLE `tatica_praga` (
 
 LOCK TABLES `tatica_praga` WRITE;
 /*!40000 ALTER TABLE `tatica_praga` DISABLE KEYS */;
-INSERT INTO `tatica_praga` VALUES (1,3,'15404423685bd14900c05a9.gif'),(2,4,'15404894655bd200f947ce8.gif'),(3,5,'15405166595bd26b33964fb.gif');
+INSERT INTO `tatica_praga` VALUES (1,3,'15404423685bd14900c05a9.gif'),(2,4,'15404894655bd200f947ce8.gif'),(3,5,'15405166595bd26b33964fb.gif'),(4,6,'15405232695bd28505b7671.gif'),(5,7,'15405235275bd2860737de0.gif'),(6,8,'15405238905bd287729796b.gif'),(7,9,'15405244135bd2897d40969.gif'),(8,10,'15405251245bd28c441b474.gif'),(9,11,'15405254905bd28db2aa1de.gif'),(10,12,'15405259495bd28f7d8131a.gif'),(11,13,'15405263525bd291109c47f.gif'),(12,14,'15405269965bd29394b25c8.gif'),(13,15,'15405273005bd294c432009.gif'),(14,16,'15405282375bd2986d42880.gif'),(15,17,'15405286535bd29a0dc1d55.gif'),(16,18,'15405289885bd29b5ceb033.gif');
 /*!40000 ALTER TABLE `tatica_praga` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -458,7 +458,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) DEFAULT NULL,
@@ -488,4 +488,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-25 22:57:01
+-- Dump completed on 2018-10-26  1:46:02

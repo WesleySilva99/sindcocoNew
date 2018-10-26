@@ -167,3 +167,7 @@ Stack trace:
 #0 {main}
   thrown in C:\Users\leandro\Documents\sindcocoNew\admin\basic_table.php on line 101
 [04-Oct-2018 19:09:11 UTC] PHP Parse error:  syntax error, unexpected 'require' (T_REQUIRE) in C:\Users\leandro\Documents\sindcocoNew\admin\basic_table.php on line 28
+[24-Oct-2018 21:45:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\lucas\sindcoco\admin\verificaLogin.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\admin\verificaLogin.php on line 13

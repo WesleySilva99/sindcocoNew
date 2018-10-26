@@ -10,3 +10,15 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\lucas\sindcoco\classificados\index.php on line 50
+[24-Oct-2018 21:15:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\classificados\index.php:50
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\classificados\index.php on line 50
+[24-Oct-2018 21:22:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\classificados\index.php:50
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\classificados\index.php on line 50
+[24-Oct-2018 21:40:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\lucas\sindcoco\classificados\index.php:50
+Stack trace:
+#0 {main}
+  thrown in C:\Users\lucas\sindcoco\classificados\index.php on line 50
