@@ -480,7 +480,7 @@ img {
                 ?>
   <figure>
     <img src="/img/eventos/<?=$linha['imagem'];?>" alt="" />
-    <figcaption>Daytona Beach <small>United States</small></figcaption>
+    <figcaption>Sindcoco<small>Data:<?=$linha['data'];?></small></figcaption>
   </figure>
   <?php
               }
