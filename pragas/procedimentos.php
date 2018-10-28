@@ -69,7 +69,15 @@
 								<p>A entrada no monitor na parcela será feita a partir de um de seus vértices. A orientação do caminhamento dentro das parcelas é demonstrada, a seguir em três tamanhos das parcelas propostas:</p>
 								<br>
 								<center>
-								<img src="/img/monitoramento/tbl-praga-frequencia.gif" style="max-width: 100%; max-height: 100%">
+								<img src="/img/monitoramento/tbl-praga-frequencia.gif" usemap="#map" style="max-width: 100%; max-height: 100%">
+								<map name="Map">
+                    <area shape="rect" coords="1,35,130,57" href="img/monitoramento/procedimento-001.gif" rel="lightbox">
+                    <area shape="rect" coords="0,68,136,94" href="imgs/procedimento-002.gif" rel="lightbox">
+                    <area shape="rect" coords="168,32,304,60" href="imgs/procedimento-003.gif" rel="lightbox">
+                    <area shape="rect" coords="170,72,306,98" href="imgs/procedimento-004.gif" rel="lightbox">
+                    <area shape="rect" coords="339,32,479,63" href="imgs/procedimento-005.gif" rel="lightbox">
+                    <area shape="rect" coords="343,69,475,95" href="imgs/procedimento-006.gif" rel="lightbox">
+                  </map>
 								</center>
 								<br>
 
