@@ -20,7 +20,7 @@
 									foreach ($praga as $linha){
                                 ?>
                                     
-								<ul class="cat">
+								<ul class="">
 									<li class="estilizando1"><a href="/pragas/descPraga.php?id=<?=$linha['id'];?>" class="textoanav" style="color: #777;"><i class="estilizando3"></i> <?=$linha['nome'];?></a>
                                     </li>
                                     <!--

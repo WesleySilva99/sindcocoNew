@@ -12,6 +12,11 @@
 .videoEvento{
 	padding-bottom: 50%;
 }
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}
      </style>
 		<?php
 		
@@ -73,47 +78,34 @@
 							
 						</div>
 							
-							
-							<?php
+						<h1 class="font-weight-light  bd bd2" >Fotos</h1>
+	<div class="row">
+		<div class='list-group gallery'>
+			 <?php
 
-								require("../util/conexao.php");
-								$sql = "SELECT * FROM eventos WHERE ativo = 1 order by id desc";
-								$eventos = $conexao->query($sql);
+                require("../util/conexao.php");
+                $sql = "SELECT * FROM eventos WHERE ativo = 1 order by id desc";
+                $eventos = $conexao->query($sql);
 
-									foreach ($eventos as $linha) {	
-								?>
-								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
-								<h4 class="sd1">
-									<?=$linha["titulo"];?>
-								</h4><br>
-								<center>
-								<img src="/img/eventos/<?=$linha['capa'];?>" alt="Blog Image" style="max-width: 90%; max-height: 90%; border-radius: 5px;"/>
-								</center>
-								
-								<div class="blog-info">
-								<ul>
-									<li class="sd2">Data: <?=$linha['data'];?></li>
-									
-								</ul>
-								
-								<div class="btn pull-right">
-									<a href="/eventos/teste.php?id=<?=$linha["id"];?>" class="btn btn-primary" style="    color: #fff;
-    background-color: #38b23a;
-    border-color: #38b23a;" >
-										Ler Mais <i class="glyphicon glyphicon-chevron-right"></i> <i class="glyphicon glyphicon-chevron-right"></i>
-									</a>
-								</div>
-								<br>
-								
-							</div>
-							
-
-							
-						</div>
-						
-						<?php
-							}
-							?>
+                  foreach ($eventos as $linha) {  
+                ?>
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-4'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="/eventos/teste.php?id=<?=$linha["id"];?>" style="    width: 90%;">
+                    <img class="img-responsive" alt="" src="/img/eventos/<?=$linha['capa'];?>" style="" />
+                    <div class='text-right'>
+                        <h5 style="    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; color: green; margin-top: 5px;
+     margin-bottom: 5px;"><?=$linha["titulo"];?></h5>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->	
+            <?php
+        }
+        ?>
+           
+        </div> <!-- list-group / end -->
+	</div> <!-- row / end -->
 							
 						<!-- Pagination -->
 						<div id="pagination">
@@ -181,6 +173,17 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+
+            $(document).ready(function(){
+    //FANCYBOX
+    //https://github.com/fancyapps/fancyBox
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});
+   
+  
         </script>
     </body>
 </html>
