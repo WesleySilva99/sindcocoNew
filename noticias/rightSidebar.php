@@ -6,13 +6,13 @@
 							
 							<div class="widget" style="        border-right: 1px solid #e7e7e7;">
                                 <center>
-								<h4 class="widgetheading">Saiba mais</h4>
+								<h4 class="widgetheading"><i class="fa fa-folder-open" style="color: #4ad1e5; margin-top: 5px;"></i>Saiba mais</h4>
                                 </center>
 								<ul class="cat">
-									<li class="estilizando1"><a href="/noticias/informativos.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-arrow-left estilizando3"></i> Informativos</a>
+									<li class="estilizando1 text3"><a href="/noticias/informativos.php" class="textoanav text2" ><i class="glyphicon glyphicon-arrow-left estilizando3"></i> Informativos</a>
                                     </li>
-                                    <li class="estilizando1"><a href="/noticias/teste.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-list-alt estilizando3"></i> noticias</a></li>
-                                    <li class="estilizando1"><a href="/noticias/midia.php" class="textoanav" style="color: #777;"><i class="fa fa-newspaper-o estilizando3"></i> Sindcoco na midia</a>
+                                    <li class="estilizando1 text3"><a href="/noticias/teste.php" class="textoanav text2" ><i class="glyphicon glyphicon-list-alt estilizando3"></i> noticias</a></li>
+                                    <li class="estilizando1 text3"><a href="/noticias/midia.php" class="textoanav text2" ><i class="fa fa-newspaper-o estilizando3"></i> Sindcoco na midia</a>
                                     </li>
 								</ul>
                             </div>
@@ -37,9 +37,9 @@
                 <div class="cardheader">
 
                 </div>
-                <div class="avatar">
+               <!-- <div class="avatar">
                     <img alt="" src="../img/protfolio5.jpg">
-                </div>
+                </div>-->
                 <div class="info">
                     <div class="title">
                         <a target="_blank" href="https://scripteden.com/">Francisco Porto</a>

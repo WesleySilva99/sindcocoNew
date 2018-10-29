@@ -61,7 +61,7 @@
 								?>
 								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
 									<center>
-								<h4>
+								<h4 style="margin-top: 10px;">
 									<?=$linha["nome"];?><br>
                                     <?=$linha["nome_cientifico"];?>
 								</h4><br>

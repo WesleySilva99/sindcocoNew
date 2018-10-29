@@ -8,16 +8,16 @@
 							</div>
 							<div class="widget">
 								<center>
-								<h4 class="widgetheading">Saiba mais</h4>
+								<h4 class="widgetheading text3"><i class="fa fa-folder-open" style="color: #4ad1e5; margin-top: 5px;"></i>Saiba mais</h4>
 								</center>
 								<ul class="cat">
-									<li class="estilizando1"><a href="/sobre/index.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-arrow-left estilizando3"></i> Institucional</a>
+									<li class="estilizando1 text3"><a href="/sobre/index.php" class="textoanav text2"><i class="glyphicon glyphicon-arrow-left estilizando3"></i> Institucional</a>
                                     </li>
-                                    <li class="estilizando1"><a href="/sobre/sdc.php" class="textoanav" style="color: #777;"><i class=" 	
+                                    <li class="estilizando1 text3"><a href="/sobre/sdc.php" class="textoanav text2" ><i class=" 	
                                     	fa fa-lock estilizando3"></i> Serviços de Defesa Comercial</a></li>
-                                    <li class="estilizando1"><a href="/sobre/certidao.php" class="textoanav" style="color: #777;"><i class="fa fa-file-photo-o estilizando3"></i> Centidão Sindical</a>
+                                    <li class="estilizando1 text3"><a href="/sobre/certidao.php" class="textoanav text2" ><i class="fa fa-file-photo-o estilizando3"></i> Centidão Sindical</a>
                                     </li>
-                                    <li class="estilizando1"><a href="/sobre/pragas.php" class="textoanav" style="color: #777;"><i class="fa fa-newspaper-o estilizando3"></i> Pragas e Soluções</a>
+                                    <li class="estilizando1 text3"><a href="/sobre/pragas.php" class="textoanav text2"><i class="fa fa-newspaper-o estilizando3"></i> Pragas e Soluções</a>
                                     </li>
 																	
 								</ul>

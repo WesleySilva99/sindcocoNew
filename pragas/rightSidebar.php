@@ -6,7 +6,7 @@
 							
 							<div class="widget" style="        border-right: 1px solid #e7e7e7;">
                                 <center>
-								<h4 class="widgetheading">Pragas</h4>
+								<h5 class="widgetheading"><i class="fa fa-bug" style="color: #4ad1e5; margin-top: 5px; font-size: 1.4em;"></i> Pragas</h5>
                                 </center>
                                 <?php
                                 require("../util/conexao.php");
@@ -21,7 +21,7 @@
                                 ?>
                                     
 								<ul class="">
-									<li class="estilizando1"><a href="/pragas/descPraga.php?id=<?=$linha['id'];?>" class="textoanav" style="color: #777;"><i class="estilizando3"></i> <?=$linha['nome'];?></a>
+									<li class="estilizando1 text3"><a href="/pragas/descPraga.php?id=<?=$linha['id'];?>" class="textoanav text2"><i class="estilizando3"></i> <?=$linha['nome'];?></a>
                                     </li>
                                     <!--
                                     <li class="estilizando1"><a href="/noticias/teste.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-list-alt estilizando3"></i> noticias</a></li>
@@ -52,9 +52,7 @@
                 <div class="cardheader">
 
                 </div>
-                <div class="avatar">
-                    <img alt="" src="../img/protfolio5.jpg">
-                </div>
+               
                 <div class="info">
                     <div class="title">
                         <a target="_blank" href="https://scripteden.com/">Francisco Porto</a>

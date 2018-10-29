@@ -6,20 +6,20 @@
 							
 							<div class="widget" style="        border-right: 1px solid #e7e7e7;">
                                 <center>
-								<h4 class="widgetheading">Pragas</h4>
+								<h4 class="widgetheading"><i class="    fa fa-tasks" style="color: #4ad1e5; margin-top: 5px;"></i> Monitoramento</h4>
                                 </center>
                                 
                                     
 								<ul class="">
-									<li class="estilizando1"><a href="/pragas/pragaPlanta.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>praga/planta </a>
-                                        <li class="estilizando1"><a href="/pragas/fiscalizacao.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>Fiscalização </a>
-                                        <li class="estilizando1"><a href="/pragas/parcelas.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>Parcelas </a>
-                                        <li class="estilizando1"><a href="/pragas/procedimentos.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>Procedimentos </a>
-                                        <li class="estilizando1"><a href="/pragas/frequencia.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>Frequencia </a>
-                                        <li class="estilizando1"><a href="/pragas/amostragem1.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>Amostragem </a>
-                                        <li class="estilizando1"><a href="/pragas/memoria.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>Memória </a>
-                                        <li class="estilizando1"><a href="/pragas/equipe.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>Equipe </a>
-                                            <li class="estilizando1"><a href="/pragas/tomada.php" class="textoanav" style="color: #777;"><i class="estilizando3"></i>Tomada de Decisão </a>
+									<li class="estilizando1 text3"><a href="/pragas/pragaPlanta.php" class="textoanav textoN text2"><i class="estilizando3"></i>praga/planta </a>
+                                        <li class="estilizando1 text3"><a href="/pragas/fiscalizacao.php" class="textoanav textoN text2"><i class="estilizando3"></i>Fiscalização </a>
+                                        <li class="estilizando1 text3"><a href="/pragas/parcelas.php" class="textoanav textoN text2"><i class="estilizando3"></i>Parcelas </a>
+                                        <li class="estilizando1 text3"><a href="/pragas/procedimentos.php" class="textoanav textoN text2"><i class="estilizando3"></i>Procedimentos </a>
+                                        <li class="estilizando1 text3"><a href="/pragas/frequencia.php" class="textoanav textoN text2"><i class="estilizando3"></i>Frequencia </a>
+                                        <li class="estilizando1 text3"><a href="/pragas/amostragem1.php" class="textoanav textoN text2"><i class="estilizando3"></i>Amostragem </a>
+                                        <li class="estilizando1 text3"><a href="/pragas/memoria.php" class="textoanav textoN text2"><i class="estilizando3"></i>Memória </a>
+                                        <li class="estilizando1 text3"><a href="/pragas/equipe.php" class="textoanav textoN text2"><i class="estilizando3"></i>Equipe </a>
+                                            <li class="estilizando1 text3"><a href="/pragas/tomada.php" class="textoanav textoN text2"><i class="estilizando3"></i>Tomada de Decisão </a>
                                     </li>
                                     <!--
                                     <li class="estilizando1"><a href="/noticias/teste.php" class="textoanav" style="color: #777;"><i class="glyphicon glyphicon-list-alt estilizando3"></i> noticias</a></li>
@@ -50,9 +50,7 @@
                 <div class="cardheader">
 
                 </div>
-                <div class="avatar">
-                    <img alt="" src="../img/protfolio5.jpg">
-                </div>
+                
                 <div class="info">
                     <div class="title">
                         <a target="_blank" href="https://scripteden.com/">Francisco Porto</a>
