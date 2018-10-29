@@ -102,11 +102,10 @@ img {
           animation: poppy 500ms linear both;
 }
 .popup figure img {
-  position: center;
+  position: relative;
   z-index: 2;
   border-radius: 15px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 6px 30px rgba(0, 0, 0, 0.4);
-
 }
 .popup figure figcaption {
   position: absolute;
@@ -472,7 +471,7 @@ img {
                 ?>
   <figure>
     <img src="/img/eventos/<?=$linha['imagem'];?>" alt="" />
-    
+    <figcaption>Sindcoco<small>Data:<?=$linha['data'];?></small></figcaption>
   </figure>
   <?php
               }
