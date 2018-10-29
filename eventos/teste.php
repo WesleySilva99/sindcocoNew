@@ -28,11 +28,9 @@
 *::after {
   box-sizing: border-box;
 }
-
 img {
   display: block;
 }
-
 .gallery {
   position: relative;
   z-index: 2;
@@ -69,7 +67,6 @@ img {
 .gallery figure figcaption {
   display: none;
 }
-
 .popup {
   position: fixed;
   z-index: 2;
@@ -105,10 +102,11 @@ img {
           animation: poppy 500ms linear both;
 }
 .popup figure img {
-  position: relative;
+  position: center;
   z-index: 2;
   border-radius: 15px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 6px 30px rgba(0, 0, 0, 0.4);
+
 }
 .popup figure figcaption {
   position: absolute;
@@ -162,7 +160,6 @@ img {
   width: 100%;
   height: 100%;
 }
-
 @-webkit-keyframes poppy {
   0% {
     -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -301,7 +298,6 @@ img {
             transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, -225, 0, 1);
   }
 }
-
 @keyframes poppy {
   0% {
     -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -451,9 +447,7 @@ img {
 		<header>
 			
 			<?php
-
 				include("nav.php");
-
 			?>
 		
 
@@ -467,58 +461,23 @@ img {
 						<h1 class="font-weight-light  bd bd2" ><?=$titulo;?></h1>
 
 <div class="gallery">
+	<?php
+                
+                $sql = "SELECT e.titulo, e.descricao, e.data, ei.imagem FROM imagem_evento AS ei INNER JOIN eventos AS e ON e.id = ei.id_evento WHERE ei.id_evento = ? AND ei.ativo = 1";
+                                $stmt = $conexao->prepare($sql);
+                                $stmt->bindValue(1, $_GET['id']);
+                            
+                                $stmt->execute();
+                  foreach ($stmt as $linha) { 
+                ?>
   <figure>
-    <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Daytona Beach <small>United States</small></figcaption>
+    <img src="/img/eventos/<?=$linha['imagem'];?>" alt="" />
+    
   </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Териберка, gorod Severomorsk <small>Russia</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>
-      Bad Pyrmont <small>Deutschland</small>
-    </figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1439798060585-62ab242d7724?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Yellowstone National Park <small>United States</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Highlands <small>United States</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Daytona Beach <small>United States</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Териберка, gorod Severomorsk <small>Russia</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>
-      Bad Pyrmont <small>Deutschland</small>
-    </figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1439798060585-62ab242d7724?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Yellowstone National Park <small>United States</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Highlands <small>United States</small></figcaption>
-  </figure>
+  <?php
+              }
+              ?>
+ 
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
@@ -564,9 +523,7 @@ img {
     }, 100);
   }
 }
-
 popup.init()
-
 //# sourceURL=pen.js
 </script>
 										
@@ -617,9 +574,7 @@ popup.init()
 		
 		<!-- Footer -->
 		<?php
-
 			require("footer.php");
-
 		?>
 		
 		
