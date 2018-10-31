@@ -136,11 +136,10 @@
 									<b>Medidas Proibitivas</b><br>
 
 									<p>- Corte de folhas verdes em coqueiro. Durante o processo de senescência da folha, os nutrientes são naturalmente carreados para as folhas mais novas. Cortar a folha ainda verde é interferir no processo de translocação e de reaproveitamento dos nutrientes pela planta, e em sua produção, em virtude da redução da área foliar. Vale ressaltar que, pela lesão feita nos tecidos da base da folha são liberados constituintes químicos (cairomones) que atraem pragas, como a broca-do-olho Rhynchophorus palmarum, cujo adulto é responsável por perdas na plantação por transmitir o nematoide causador da doença letal anel-vermelho.</p>
-									<?php
-						require("modal.php");
-							?>
+										
+										
 								</div>
-
+								
 								<div class="blog-info">
 								
 								
@@ -168,7 +167,9 @@
 						require("rightMonitoramento.php");
 							?>
 						
-						
+						<?php
+						require("modal.php");
+							?>
 						<!--<div class="single-blog">
 							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
 							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>

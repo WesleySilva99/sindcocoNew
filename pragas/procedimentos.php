@@ -81,9 +81,7 @@
 								</center>
 								<br>
 
-								<?php
-						require("modal.php");
-							?>
+								
 								</div>
 
 								<div class="blog-info">
@@ -113,7 +111,9 @@
 						require("rightMonitoramento.php");
 							?>
 						
-						
+						<?php
+						require("modal.php");
+							?>
 						<!--<div class="single-blog">
 							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
 							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>

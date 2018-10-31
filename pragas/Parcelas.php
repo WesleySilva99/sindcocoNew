@@ -79,9 +79,7 @@
 								<p><b>Parcela de 2000 plantas</b> – Para áreas de 60 a 99 hectares realizar amostragem em 300 plantas distribuídas em dez fileiras (F1, F2 ... F10) de 30 plantas sucessivas. A primeira fileira deverá ser sorteada entre as sete primeiras fileiras das parcelas e as demais espaçadas entre si a cada sete fileiras.</p>
 
 								<p><b>Parcela de 4000 plantas</b> – Para áreas de 100 hectares realizar amostragem em 390 plantas distribuídas em treze fileiras (F1, F2 ... F13) de 30 plantas sucessivas. A primeira fileira deverá ser sorteada entre as dez primeiras fileiras das parcelas e as demais espaçadas entre si a cada dez fileiras <a data-toggle="modal" data-target="#parcelas3" href="#" ><strong>(demonstração).</strong></a></p>
-								<?php
-						require("modal.php");
-							?>
+								
 								</div>
 
 								<div class="blog-info">
@@ -111,7 +109,9 @@
 						require("rightMonitoramento.php");
 							?>
 						
-						
+						<?php
+						require("modal.php");
+							?>
 						<!--<div class="single-blog">
 							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
 							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>
