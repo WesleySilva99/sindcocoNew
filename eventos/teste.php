@@ -31,6 +31,10 @@
 img {
   display: block;
 }
+.imgteste{
+  max-height: 500px;
+  max-width: 500px;
+}
 .gallery {
   position: relative;
   z-index: 2;
@@ -470,7 +474,7 @@ img {
                   foreach ($stmt as $linha) { 
                 ?>
   <figure>
-    <img src="/img/eventos/<?=$linha['imagem'];?>" alt="" />
+    <img class="imgteste" src="/img/eventos/<?=$linha['imagem'];?>" alt="" />
     <figcaption>Sindcoco<small>Data:<?=$linha['data'];?></small></figcaption>
   </figure>
   <?php
