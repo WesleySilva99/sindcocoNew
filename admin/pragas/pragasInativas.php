@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Eventos</title>
+  <title>Pragas</title>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
@@ -69,7 +69,7 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <h4><i class="fa fa-angle-right"></i> Eventos Inativos.</h4>
+        <h4><i class="fa fa-angle-right"></i> Pragas Inativas.</h4>
       <?php
 
         if($_GET["msg"] != null){
@@ -83,25 +83,24 @@
         <table class="table ">
         <thead class="thead-dark">
             <tr>
-                <th scope="col"><i class="fa fa-picture-o"></i>Capa</th>
-                <th scope="col"><i class=" fa fa-edit"></i>Titulo</th>
-                <th scope="col"><i class="fa fa-calendar"></i>Data</th>
-                <th scope="col"><i class=" fa fa-edit">Descrição</th>
+                <th scope="col"><i class="fa fa-picture-o"></i>Imagem</th>
+                <th scope="col"><i class=" fa fa-edit"></i>Nome</th>
+                <th scope="col"><i class="fa fa-calendar"></i>Nome Científico</th>
                 <th scope="col"><i class="fa fa-question-circle"></i>Situação</th>
                 <th scope="col">Ações</th>
             </tr>
             <?php
 
-                $sql = "SELECT * FROM eventos WHERE ativo = 0 ORDER BY data DESC";
+                $sql = "SELECT * FROM pragas WHERE aceito = 0 ORDER BY nome DESC";
                 $query = $conexao->query($sql);
 				foreach ($query as $linha) {
             ?>
 
             <tr>
                 <?php
-					if($linha["capa"] != null){
+					if($linha["imagem"] != null){
 				?>
-					<td><img style="max-width: 200px;" src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
+					<td><img style="max-width: 200px;" src="/img/pragas/<?=$linha['imagem'];?>"  class="img-thumbnail"/></td>
 				<?php
 					}else {
 				?>
@@ -109,14 +108,13 @@
 				<?php
 					}
 				?>
-                <td scope="col" style="width: 200px;"><?=$linha["titulo"];?></td>
-                <td scope="col" style="width: 100px;"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col" style="width: 600px;"><?=$linha["descricao"];?></td>
+                <td scope="col" style="width: 200px;"><?=$linha["nome"];?></td>
+                <td scope="col" style="width: 600px;"><?=$linha["nome_cientifico"];?></td>
                 <td scope="col" style="width: "><span class="label label-warning">Inativo</span></td>
                 <td>
-                     <a href="/admin/eventos/reativarEvento.php?id=<?=$linha['id']?>"> <button  class="btn btn-primary btn-xs"><i class="fa fa-check"></i></button> </a>
+                     <a href="/admin/pragas/ReativaPraga.php?id=<?=$linha['id']?>"> <button  class="btn btn-primary btn-xs"><i class="fa fa-check"></i></button> </a>
                       
-                    <a href="/admin/eventos/delete.php?id=<?=$linha['id']?>">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
+                    <a href="/admin/pragas/deletarPraga.php?id=<?=$linha['id']?>">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
                     </td>
                
             </tr>

@@ -5,7 +5,7 @@ require("../../util/conexao.php");
 
 $id = $_POST["id"];
 $nome = $_POST["nome"];
-$nomeC = $_POST["nomeCientifico"];
+$nomeC = $_POST["nome_cientifico"];
 
 
 try {

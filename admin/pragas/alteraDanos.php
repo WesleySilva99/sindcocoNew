@@ -14,7 +14,7 @@ try {
     
     $stmt = $conexao->prepare($sql);
     $stmt->bindValue(1, $nome);
-    $stmt->bindValue(2, $nomeC);
+    $stmt->bindValue(2, $descricao);
     $stmt->bindValue(3, $id);
 
     $stmt->execute();

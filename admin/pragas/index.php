@@ -83,11 +83,11 @@
         <table class="table">
         <thead class="thead-dark">
             <tr>
-            <th scope="col"><i class="fa fa-calendar" ></i>id</th>
+            <th scope="col">id</th>
                 <th scope="col"><i class="fa fa-picture-o" ></i>Imagem</th>
                 <th scope="col"><i class=" fa fa-edit"></i>Nome</th>
                 <th scope="col"><i class="fa fa-picture-o" ></i>Nome Científico</th>
-                <th scope="col"><i class="fa fa-calendar" aria-hidden="true"></i>Ações</th>
+                <th scope="col" align="center">Ações</th>
                 
             </tr>
             <?php
@@ -113,13 +113,16 @@
 
                 <td style="width: 20%" scope="col"><?=$linha["nome"];?></td>
                 <td style="width: 5%" scope="col"><?=$linha["nome_cientifico"];?></td>
-                <td>      
-                    <a href="/admin/pragas/nao.php?id=<?=$linha['id']?>">  
+                  <td>
+                <a href="/admin/pragas/inativaPraga.php?id=<?=$linha['id']?>">  
                       <button class="btn btn-danger btn-xs">
                         <i class="fa fa-trash-o "></i>
                         Inativar
                       </button> 
                     </a>
+                    </td>
+                <td>      
+                    
                     <a href="/admin/pragas/cadastrarDescricao.php?id=<?=$linha['id']?>">  
                       <button class="btn btn-success btn-xs">
                         Adicionar Descrição
@@ -150,6 +153,13 @@
                     <a href="/admin/pragas/cadastrarTatica.php?id=<?=$linha['id']?>">  
                       <button class="btn btn-success btn-xs">
                         Adicionar Tática de Controle
+                      </button> 
+                    </a>
+                </td>
+                <td>
+                  <a href="/admin/pragas/alterarPraga.php?id=<?=$linha['id']?>">  
+                      <button class="btn btn-warning btn-xs">
+                        Alterar Praga
                       </button> 
                     </a>
                 </td>

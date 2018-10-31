@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Eventos</title>
+  <title>Pragas</title>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
@@ -69,68 +69,37 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <h4><i class="fa fa-angle-right"></i> Eventos Inativos.</h4>
-      <?php
+          <?php
 
-        if($_GET["msg"] != null){
+            $sql = "SELECT * FROM descricao_praga WHERE id = ?";
+            
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(1, $_GET['id']);
 
-      ?>
+            $stmt->execute();
+			foreach ($stmt as $linha) {
 
-        <h3><?=$_GET["msg"];?></h3>
+          ?>
+       
+       <form action="alteraDesc.php" class="form" method="POST">
+       <input type="hidden" value="<?=$_GET['id'];?>" name="id"/>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Descrição: </label>
+            <div class="col-10">
+                <input class="form-control" required="required" value="<?=$linha['nome'];?>" type="text" name="nome" required="required" id="example-search-input">
+            </div>
+            </div>    
+            <button class="btn btn-success" type="submit"> Enviar </button>
+        </form>
+        <?php
 
-        <?php } ?>
-
-        <table class="table ">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col"><i class="fa fa-picture-o"></i>Capa</th>
-                <th scope="col"><i class=" fa fa-edit"></i>Titulo</th>
-                <th scope="col"><i class="fa fa-calendar"></i>Data</th>
-                <th scope="col"><i class=" fa fa-edit">Descrição</th>
-                <th scope="col"><i class="fa fa-question-circle"></i>Situação</th>
-                <th scope="col">Ações</th>
-            </tr>
-            <?php
-
-                $sql = "SELECT * FROM eventos WHERE ativo = 0 ORDER BY data DESC";
-                $query = $conexao->query($sql);
-				foreach ($query as $linha) {
-            ?>
-
-            <tr>
-                <?php
-					if($linha["capa"] != null){
-				?>
-					<td><img style="max-width: 200px;" src="/img/eventos/<?=$linha['capa'];?>"  class="img-thumbnail"/></td>
-				<?php
-					}else {
-				?>
-					<td><img style="max-width: 200px;" src="/img/anuncios/off.jpg" class="img-thumbnail"/></td>
-				<?php
-					}
-				?>
-                <td scope="col" style="width: 200px;"><?=$linha["titulo"];?></td>
-                <td scope="col" style="width: 100px;"><?=date('d/m/Y', strtotime($linha['data']));?></td>
-                <td scope="col" style="width: 600px;"><?=$linha["descricao"];?></td>
-                <td scope="col" style="width: "><span class="label label-warning">Inativo</span></td>
-                <td>
-                     <a href="/admin/eventos/reativarEvento.php?id=<?=$linha['id']?>"> <button  class="btn btn-primary btn-xs"><i class="fa fa-check"></i></button> </a>
-                      
-                    <a href="/admin/eventos/delete.php?id=<?=$linha['id']?>">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
-                    </td>
-               
-            </tr>
-
-            <?php
-                }
-            ?>
-
-        </table>
+            }
+        ?>
       </section>
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer" style="margin-top: 35%">
+    <footer class="site-footer">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved

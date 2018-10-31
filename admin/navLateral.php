@@ -81,7 +81,7 @@
             <ul class="sub">
               <li><a href="/admin/pragas/cadastrar.php">Cadastrar Praga</a></li>
               <li><a href="/admin/pragas/">Consultar Pragas</a></li>
-              <li><a href="/admin/pragas/autorizar.php">Autorizar</a></li>
+              <li><a href="/admin/pragas/pragasInativas.php">Autorizar</a></li>
             </ul>
           </li>
           <?php
