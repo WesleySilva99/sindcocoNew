@@ -62,11 +62,11 @@
 
 							<p><b>Ficha de amostragem ou anotações de campo</b><br>
 
-							Ferramenta utilizada nas Inspeções de rotina <a href="../img/monitoramento/memoria-001.gif"><strong>(demonstração)</strong></a> e especial <a href="../img/monitoramento/memoria-002.gif"><strong>(demonstração)</strong></a><br>
+							Ferramenta utilizada nas Inspeções de rotina <a data-toggle="modal" data-target="#memoria1" href="#"><strong>(demonstração)</strong></a> e especial <a data-toggle="modal" data-target="#memoria2"  href="#"><strong>(demonstração)</strong></a><br>
 
 							<b>Ficha de amostragem para a broca-do-olho</b><br>
 
-							Ferramenta utilizada para avaliar a atividade mensal da broca-do-olho (Rhyncophorus palmarum) <a href="../img/monitoramento/memoria-003.gif"><strong>(demonstração)</strong></a></p><br>
+							Ferramenta utilizada para avaliar a atividade mensal da broca-do-olho (Rhyncophorus palmarum) <a data-toggle="modal" data-target="#memoria3" href="#"><strong>(demonstração)</strong></a></p><br>
 
 							<p><b>Caderno de campo</b><br>
 
@@ -74,7 +74,10 @@
 
 							<p>Cada parcela deve ter seu caderno específico e tantos quantos forem necessários para o registro das ocorrências e das ações realizadas. Todos os cadernos atualizados devem permanecer sempre na propriedade; não devem conter rasuras (caso haja rasura, esta deve ser justificada no Anexo do Caderno); devem ser assinados pelo responsável da plantação (Gerente ou Manejador) e, em seguida, armazenados em bancos de dados.</p>
 
-							<p>A síntese das inspeções e tomada de decisão, <a href="../img/monitoramento/memoria-004.gif"><strong>(demonstração)</strong></a> bem como a ficha de registro <a href="../img/monitoramento/memoria-005.gif"><strong>(demonstração)</strong></a> das ações anuais realizadas na propriedade, constantes no caderno de campo, são demonstradas em tabelas.</p>
+							<p>A síntese das inspeções e tomada de decisão, <a data-toggle="modal" data-target="#memoria4" href="#"><strong>(demonstração)</strong></a> bem como a ficha de registro <a data-toggle="modal" data-target="#memoria5" href="#"><strong>(demonstração)</strong></a> das ações anuais realizadas na propriedade, constantes no caderno de campo, são demonstradas em tabelas.</p>
+							<?php
+						require("modal.php");
+							?>
 								</div>
 
 								<div class="blog-info">

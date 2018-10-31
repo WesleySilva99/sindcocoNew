@@ -68,17 +68,20 @@
 								<br>
 								<b>INSPEÇÃO DE ROTINA</b>
 
-								<p><b>Parcela de 100 plantas</b> – Para áreas de 1 a 4 hectares realizar amostragem em 30 plantas distribuídas em três fileiras (F1, F2 e F3) de 10 plantas sucessivas. A primeira fileira deverá ser sorteada entre as três primeiras fileiras das parcelas e as demais espaçadas entre si a cada três fileiras <a href="../img/monitoramento/parcela-001.gif"><strong>(demonstração).</strong></a></p>
+								<p><b>Parcela de 100 plantas</b> – Para áreas de 1 a 4 hectares realizar amostragem em 30 plantas distribuídas em três fileiras (F1, F2 e F3) de 10 plantas sucessivas. A primeira fileira deverá ser sorteada entre as três primeiras fileiras das parcelas e as demais espaçadas entre si a cada três fileiras <a data-toggle="modal" data-target="#parcelas1" href="#" ><strong>(demonstração).</strong></a></p>
 
 								<p><b>Parcela de 200 plantas</b> - Para áreas de 5 a 9 hectares realizar amostragem em 60 plantas distribuídas em seis fileiras (F1, F2, ... F6) de 10 plantas sucessivas. A primeira fileira deverá ser sorteada entre as três primeiras fileiras das parcelas e as demais espaçadas entre si a cada três fileiras.</p>
 
 								<p><b>Parcela de 800 plantas</b> – Para áreas de 10 a 29 hectares realizar amostragem em 120 plantas distribuídas em quatro fileiras (F1, F2 ... F4) de 30 plantas sucessivas. A primeira fileira deverá ser sorteada entre as sete primeiras fileiras das parcelas e as demais espaçadas entre si a cada sete fileiras.</p>
 
-								<p><b>Parcelas de 1600 plantas</b> – Para áreas de 30 a 59 hectares realizar amostragem em 240 plantas distribuídas em oito fileiras (F1, F2 ... F8) de 30 plantas sucessivas. A primeira fileira deverá ser sorteada entre as sete primeiras fileiras das parcelas e as demais espaçadas entre si a cada sete fileiras <a href="../img/monitoramento/parcela-002.gif"><strong>(demonstração).</strong></a></p>
+								<p><b>Parcelas de 1600 plantas</b> – Para áreas de 30 a 59 hectares realizar amostragem em 240 plantas distribuídas em oito fileiras (F1, F2 ... F8) de 30 plantas sucessivas. A primeira fileira deverá ser sorteada entre as sete primeiras fileiras das parcelas e as demais espaçadas entre si a cada sete fileiras <a data-toggle="modal" data-target="#parcelas2" href="#"><strong>(demonstração).</strong></a></p>
 
 								<p><b>Parcela de 2000 plantas</b> – Para áreas de 60 a 99 hectares realizar amostragem em 300 plantas distribuídas em dez fileiras (F1, F2 ... F10) de 30 plantas sucessivas. A primeira fileira deverá ser sorteada entre as sete primeiras fileiras das parcelas e as demais espaçadas entre si a cada sete fileiras.</p>
 
-								<p><b>Parcela de 4000 plantas</b> – Para áreas de 100 hectares realizar amostragem em 390 plantas distribuídas em treze fileiras (F1, F2 ... F13) de 30 plantas sucessivas. A primeira fileira deverá ser sorteada entre as dez primeiras fileiras das parcelas e as demais espaçadas entre si a cada dez fileiras <a href="../img/monitoramento/parcela-003.gif"><strong>(demonstração).</strong></a></p>
+								<p><b>Parcela de 4000 plantas</b> – Para áreas de 100 hectares realizar amostragem em 390 plantas distribuídas em treze fileiras (F1, F2 ... F13) de 30 plantas sucessivas. A primeira fileira deverá ser sorteada entre as dez primeiras fileiras das parcelas e as demais espaçadas entre si a cada dez fileiras <a data-toggle="modal" data-target="#parcelas3" href="#" ><strong>(demonstração).</strong></a></p>
+								<?php
+						require("modal.php");
+							?>
 								</div>
 
 								<div class="blog-info">

@@ -2252,3 +2252,8 @@ font-size: 14px;
     font-size: 14px;
     color: black;
 }
+
+.imgModal{
+	max-width: 500px;
+	max-height: 500px;
+}

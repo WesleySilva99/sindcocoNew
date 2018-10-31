@@ -71,16 +71,19 @@
 								<center>
 								<img src="/img/monitoramento/tbl-praga-frequencia.gif" usemap="#map" style="max-width: 100%; max-height: 100%">
 								<map name="Map">
-                    <area shape="rect" coords="1,35,130,57" href="../img/monitoramento/procedimento-001.gif" rel="lightbox">
-                    <area shape="rect" coords="0,68,136,94" href="../img/monitoramento/procedimento-002.gif" rel="lightbox">
-                    <area shape="rect" coords="168,32,304,60" href="../img/monitoramento/procedimento-003.gif" rel="lightbox">
-                    <area shape="rect" coords="170,72,306,98" href="../img/monitoramento/procedimento-004.gif" rel="lightbox">
-                    <area shape="rect" coords="339,32,479,63" href="../img/monitoramento/procedimento-005.gif" rel="lightbox">
-                    <area shape="rect" coords="343,69,475,95" href="../img/monitoramento/procedimento-006.gif" rel="lightbox">
+                    <area shape="rect" coords="1,35,130,57" data-toggle="modal" data-target="#myModal1"  >
+                    <area shape="rect" coords="0,68,136,94" data-toggle="modal" data-target="#myModal2" >
+                    <area shape="rect" coords="168,32,304,60" data-toggle="modal" data-target="#myModal3" >
+                    <area shape="rect" coords="170,72,306,98" data-toggle="modal" data-target="#myModal4">
+                    <area shape="rect" coords="339,32,479,63" data-toggle="modal" data-target="#myModal5">
+                    <area shape="rect" coords="343,69,475,95" data-toggle="modal" data-target="#myModal6" >
                   </map>
 								</center>
 								<br>
 
+								<?php
+						require("modal.php");
+							?>
 								</div>
 
 								<div class="blog-info">
