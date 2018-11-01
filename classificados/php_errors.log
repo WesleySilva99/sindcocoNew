@@ -22,3 +22,102 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\lucas\sindcoco\classificados\index.php on line 50
+[01-Nov-2018 13:16:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:19:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:19:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:19:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:25:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.estado' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\classificados\index.php(144): PDO->query('select * from e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:25:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.estado' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\classificados\index.php(144): PDO->query('select * from e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:25:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.estado' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\classificados\index.php(144): PDO->query('select * from e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:25:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.estado' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\classificados\index.php(144): PDO->query('select * from e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:25:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.estado' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\classificados\index.php(144): PDO->query('select * from e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:25:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.estado' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\classificados\index.php(144): PDO->query('select * from e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:25:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.estado' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\classificados\index.php(144): PDO->query('select * from e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 13:25:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sindcoco.estado' doesn't exist in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:144
+Stack trace:
+#0 C:\Users\leandro\Documents\sindcocoNew\classificados\index.php(144): PDO->query('select * from e...')
+#1 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 144
+[01-Nov-2018 14:51:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:227
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 227
+[01-Nov-2018 14:57:02 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 373
+[01-Nov-2018 14:57:03 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 373
+[01-Nov-2018 14:57:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:227
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 227
+[01-Nov-2018 14:57:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:227
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 227
+[01-Nov-2018 14:57:49 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:227
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 227
+[01-Nov-2018 14:57:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:227
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 227
+[01-Nov-2018 14:57:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php:227
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 227
+[01-Nov-2018 15:08:24 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 224
+[01-Nov-2018 15:13:06 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 290
+[01-Nov-2018 15:13:07 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 290
+[01-Nov-2018 15:13:15 UTC] PHP Warning:  require(configs/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 52
+[01-Nov-2018 15:13:15 UTC] PHP Fatal error:  require(): Failed opening required 'configs/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 52
+[01-Nov-2018 15:13:28 UTC] PHP Warning:  require(configs/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 52
+[01-Nov-2018 15:13:28 UTC] PHP Fatal error:  require(): Failed opening required 'configs/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 52
+[01-Nov-2018 15:13:29 UTC] PHP Warning:  require(configs/conexao.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 52
+[01-Nov-2018 15:13:29 UTC] PHP Fatal error:  require(): Failed opening required 'configs/conexao.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 52
+[01-Nov-2018 15:18:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php:69
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 69
+[01-Nov-2018 15:20:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php:112
+Stack trace:
+#0 {main}
+  thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 112

@@ -9,13 +9,13 @@
     $titulo = $_POST["titulo"];
     $descricao = $_POST["descricao"];
     $preco = $_POST["preco"];
-    $foto = $novoNome;
-    $telefone = $_POST["telefone"];
-    $valido = 0;
+    $imagem = $novoNome;
+    $fone = $_POST["telefone"];
+    $ativo = 0;
 
     try {
 
-        $sql = "INSERT INTO anuncio (nome, email, titulo,descricao, preco, foto, telefone, valido) VALUES (?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO anuncio (nome, email, titulo, descricao, preco, imagem, fone, ativo) VALUES (?,?,?,?,?,?,?,?)";
         
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(1, $nome);
@@ -23,9 +23,9 @@
         $stmt->bindValue(3, $titulo);
         $stmt->bindValue(4, $descricao);
         $stmt->bindValue(5, $preco);
-        $stmt->bindValue(6, $foto);
-        $stmt->bindValue(7, $telefone);
-        $stmt->bindValue(8, $valido);
+        $stmt->bindValue(6, $imagem);
+        $stmt->bindValue(7, $fone);
+        $stmt->bindValue(8, $ativo);
 
         $stmt->execute();
 

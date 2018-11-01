@@ -39,178 +39,45 @@
 		
 		
 		<section class="blog-single b" style="margin-top: -50px;">
-			<div class="container">
-    <div class="row">
-    <div class="col-md-6">
-      <div class="card-counter primary">
-        <i class="glyphicon glyphicon-bullhorn"></i>
-         <?php
-
-               $query = "select count(id) as id from anuncio where autorizado = 1";
-               $resultado = $conexao->query($query);
-                foreach ($resultado as $linha) {
-                  $quantidade = $linha["id"];
-               
-            ?>
-            
-            
-        <span class="count-numbers"><?=$quantidade;?></span>
-        <?php
-                }
-            ?>
-        <span class="count-name">Total de anuncios.</span>
-      </div>
-    </div>
-
-
-
-    <div class="col-md-6" data-toggle="modal" data-target="#exampleModalLong">
-      <div class="card-counter info">
-        <i class="glyphicon glyphicon-new-window"></i>
-        <span class="count-numbers">Anuncie</span>
-        <span class="count-name">Clique aqui para fazer seu anuncio.</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 			
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Anuncie aqui.</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-<!------ Include the above in your HEAD tag ---------->
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<div class="container" >
-    
-	<div class="row justify-content-center">
-		<div class="col-12 col-md-8 col-lg-6 pb-5">
-
-
-                    <!--Form with header-->
-
-                    <form action="../classificados/inserirClassificado.php" method="post">
-                        <div class="card border-primary rounded-0">
-                            <div class="card-header p-0">
-                                <div class="bg-info text-white text-center py-2" >
-                                    <h3><i class="fa fa-envelope"></i> Anuncio</h3>
-                                    <p class="m-0">Preencha todos os campos corretamente.</p>
-                                </div>
-                            </div>
-                            <div class="card-body p-3">
-
-                                <!--Body-->
-                                <div class="form-group">
-                                    <div >
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
-                                        </div>
-                                        <input type="text" class="form-control" id="nombre" name="nome" placeholder="Nome Completo" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div >
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
-                                        </div>
-                                        <input type="email"  class="form-control" id="nombre" name="email" placeholder="Email ex: exemplo@gmail.com" required>
-                                    </div>
-                                </div>
-                                 <div class="form-group">
-                                    <div >
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="	glyphicon glyphicon-earphone " style="color: #31708f;"></i></div>
-                                        </div>
-                                        <input type="text"  class="form-control" id="nombre" name="telefone" placeholder="Seu Telefone" required>
-                                    </div>
-                                </div>
-                                
-                                 <div class="form-group">
-                                    <div >
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="glyphicon glyphicon-pencil" style="color: #31708f;"></i></div>
-                                        </div>
-                                        <input type="text"  class="form-control" id="nombre" name="titulo" placeholder="Titulo do anuncio." required>
-                                    </div>
-                                </div>
-                                 <div class="form-group">
-                                    <div>
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="glyphicon glyphicon-usd" style="color: #31708f;"></i></div>
-                                        </div>
-                                        <input type="text"  class="form-control" id="nombre" name="preco"   placeholder="Preço ex: 00,00. " required>
-                                    </div>
-                                </div>
-                                 <div class="form-group">
-                                    <div >
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="	glyphicon glyphicon-open-file" style="color: #31708f;"></i></div>
-                                        </div>
-                                        <input type="file"  class="form-control"   required>
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <div >
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
-                                        </div>
-                                        <textarea class="form-control" name="descricao"  placeholder="Descricão." required></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="text-center">
-                                    <input type="submit" value="Enviar"  class="btn btn-info btn-block rounded-0 py-2">
-                                </div>
-                            </div>
-
-                        </div>
-                    </form>
-                    <!--Form with header-->
-
-
-                </div>
-	</div>
-</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
- 			
- 		</div>
- 		<br>
- 		<br>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
 						<div class="container">
 	<div class="row">
-		
+
 		<?php
-								$sql = "SELECT * FROM anuncio  WHERE autorizado = 1 ORDER BY data DESC LIMIT 30";
-								$anuncios = $conexao->query($sql);
-								foreach ($anuncios as $linha) {
-									$id = $linha["id"];
-							?>
-		<div class="col-md-3" style="margin-bottom: 30px;">
+ 
+# inclui o arquivo config(arquivo de conexão com o banco de dados)
+require("../util/conexao.php");
+ 
+# Limita o número de registros a serem mostrados por página
+$limite = 32;
+ 
+# Se pg não existe atribui 1 a variável pg
+$pg = (isset($_GET['pg'])) ? (int)$_GET['pg'] : 1;
+ 
+# Atribui a variável inicio o inicio de onde os registros vão ser
+# mostrados por página, exemplo 0 à 10, 11 à 20 e assim por diante
+$inicio = ($pg * $limite) - $limite;
+ 
+# seleciona os registros do banco de dados pelo inicio e limitando pelo limite da variável limite
+$sql = "SELECT * FROM anuncio  WHERE autorizado = 1 ORDER BY data DESC LIMIT ".$inicio. ", ". $limite;
+ 
+try {
+       
+        $query = $conexao->prepare($sql);
+        $query->execute();
+ 
+        } catch (PDOexception $error_sql){
+ 
+                echo 'Erro ao retornar os Dados.'.$error_sql->getMessage();
+ 
+}
+ 
+while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
+     
+      <div class="col-md-3" style="margin-bottom: 30px;">
 <div class="card card1" >
 	<?php
 								if($linha["imagem"] != null){
@@ -230,7 +97,8 @@
   </div>
 </div>
 
-</div>
+</div>   
+
 <!-- Button trigger modal -->
 
 
@@ -284,15 +152,68 @@
       </div>
     </div>
   </div>
-</div>
-<?php
-                }
-              ?>
+</div>      
 
-</div>
+
+
+
+<?php }
  
- 	
+# seleciona o total de registros  
+$sql_Total = ' SELECT nome FROM anuncio WHERE autorizado = 1';
+ 
+try {
+       
+        $query_Total = $conexao->prepare($sql_Total);
+        $query_Total->execute();
+ 
+        $query_result = $query_Total->fetchAll(PDO::FETCH_ASSOC);
+ 
+        # conta quantos registros tem no banco de dados
+        $query_count =  $query_Total->rowCount(PDO::FETCH_ASSOC);
+ 
+        # calcula o total de paginas a serem exibidas
+        $qtdPag = ceil($query_count/$limite);
+ 
+        } catch (PDOexception $error_Total){
+       
+                echo 'Erro ao retornar os Dados. '.$error_Total->getMessage();
+ 
+        }
+ 
+        
+        # echo '<a href="busca?pg=1">PRIMEIRA PÁGINA</a>&nbsp;';
+        echo '<ul class="pagination">';
+    echo '<li><a  href="teste.php?pg=1">Principal</a></li>';
+       
+        if($qtdPag > 1 && $pg <= $qtdPag){
+               
+                for($i = 1; $i <= $qtdPag; $i++){
+ 
+                        if($i == $pg){
+ 
+                                echo "<li><a class='active'>".$i."</a></li>";
+ 
+                        } else {
+ 
+                                echo "<li><a href='teste.php?pg=$i'>".$i."</a></li>";
+                               
+                        }
+ 
+                }
+ 
+        }
+ 
+        echo "<li><a  href='teste.php?pg=$qtdPag'>Ultima</a></li>";
+ 
+?>
+		
+	
+		
 
+
+
+</div>
 </div>
 						
 						
