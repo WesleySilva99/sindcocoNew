@@ -3,7 +3,7 @@
       
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="img/7.png" class="img-circle" width="80"></a></p>
+          <p class="centered"><a ><img src="../img/7.png" class="img-circle" width="80"></a></p>
           <h5 class="centered"><?=$_SESSION["nome"];?></h5>
           <li class="mt">
             <a class="active" href="/admin/indexLogin.php">

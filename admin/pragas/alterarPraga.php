@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Pragas</title>
+  <title>Alterar Pragas</title>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
@@ -42,7 +42,7 @@
 </head>
 
 <body>
-  <section>
+  <section id="container">
     <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
         *********************************************************************************************************************************************************** -->
@@ -67,8 +67,8 @@
         MAIN CONTENT
         *********************************************************************************************************************************************************** -->
     <!--main content start-->
-    <section >
-      <section >
+    <section id="main-content" >
+      <section class="wrapper">
           <?php
 
             $sql = "SELECT * FROM pragas WHERE id = ?";

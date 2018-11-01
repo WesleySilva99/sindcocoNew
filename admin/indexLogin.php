@@ -19,7 +19,7 @@
   <title>SindCoco</title>
 
   <!-- Favicons -->
-  <link href="/admin/img/favicon.png" rel="icon">
+  <link href="../img/logoMini.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   

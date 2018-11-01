@@ -16,8 +16,9 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Informativos</title>
+  <title>Cadastrar Ações</title>
 <link rel="stylesheet" type="text/css" href="../lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+<link href="../img/logoMini.png" rel="icon">
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -150,8 +151,7 @@
   <script class="include" type="text/javascript" src="../lib/jquery.dcjqaccordion.2.7.js"></script>
   <script src="../lib/jquery.scrollTo.min.js"></script>
   <script src="../lib/jquery.nicescroll.js" type="text/javascript"></script>
-  <!--common script for all pages-->
-  <script src="../lib/common-scripts.js"></script>
+
   <!--script for this page-->
   <script src="../lib/jquery-ui-1.9.2.custom.min.js"></script>
   <script type="text/javascript" src="../lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>

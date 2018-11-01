@@ -16,12 +16,12 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Eventos</title>
+  <title>Cadastrar Eventos</title>
 
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
---><link href="../img/favicon.png" rel="icon">
+--><link href="../img/logoMini.png" rel="icon">
   <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap core CSS -->

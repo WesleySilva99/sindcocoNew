@@ -16,8 +16,8 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Noticias</title>
-
+  <title>Consultar Noticias</title>
+<link href="../img/logoMini.png" rel="icon">
 </style>
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
