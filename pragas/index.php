@@ -100,10 +100,10 @@
                                 </p>
 								<div class="blog-info">
 								
+                                Se ouver nescessidade de mais pesquisa acesse o arquivo da embrapa que está disponível em nosso site.
+                                <a href="/pdf/pdfEmrapa.pdf"><span class="label label-info span1">Maiores Detalhes</span></a>
 								
-								<br>
-								
-							</div>
+							    </div>
 							
 
 							

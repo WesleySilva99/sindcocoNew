@@ -11,13 +11,15 @@
 		
 			require("../util/imports.php");
 			require("../util/conexao.php");
-			$sql = "SELECT titulo FROM eventos WHERE id = ?";
+			$sql = "SELECT titulo, descricao FROM eventos WHERE id = ?";
             $stmt = $conexao->prepare($sql);
 			$stmt->bindValue(1, $_GET['id']);
-			$titulo;
+      $titulo;
+      $descricao;
 			$stmt->execute();
 			foreach ($stmt as $linha) {
-				$titulo = $linha['titulo'];
+        $titulo = $linha['titulo'];
+        $descricao = $linha['descricao'];
 			}
 		?>
 		<!-- fav icon -->
@@ -458,6 +460,7 @@ img {
 				<div class="row" style="margin-top: 20px;">
 					<div class="col-md-8">
 						<h1 class="font-weight-light  bd bd2" ><?=$titulo;?></h1>
+            <p> <?=$descricao;?> </p>
 
 <div class="gallery">
 	<?php
@@ -529,15 +532,16 @@ popup.init()
 						
 
 							
-						<!-- Pagination -->
+						<!-- Pagination 
 						<div id="pagination">
 							<span class="all">Page 1 of 3</span>
 							<span class="current">1</span>
 							<a href="#" class="inactive">2</a>
 							<a href="#" class="inactive">3</a>
 						</div>
+            -->
 						</div>
-
+            
 						<?php
 						require("rightSidebar.php");
 							?>

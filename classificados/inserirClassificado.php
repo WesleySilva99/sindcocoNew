@@ -15,7 +15,7 @@
 
     try {
 
-        $sql = "INSERT INTO anuncio (nome, email, titulo,descricao, preco, foto, telefone, valido) VALUES (?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO anuncio (nome, email, titulo, descricao, preco, foto, telefone, valido) VALUES (?,?,?,?,?,?,?,?)";
         
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(1, $nome);
