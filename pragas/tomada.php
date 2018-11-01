@@ -68,7 +68,7 @@
 
 									<b>Medidas Profiláticas</b><br>
 
-									<p>- O uso de mudas vigorosas, isentas de pragas e doenças <ins>(clique aqui)</ins>, adquiridas de viveirista idôneo e com legitimidade, assegura seu maior pegamento após o plantio, bem como o pleno desenvolvimento da planta no campo e sua entrada mais cedo em produção.</p>
+									<p>- O uso de mudas vigorosas, isentas de pragas e doenças <a data-toggle="modal" data-target="#tomada1" href="#"><strong>(clique aqui)</strong></a>, adquiridas de viveirista idôneo e com legitimidade, assegura seu maior pegamento após o plantio, bem como o pleno desenvolvimento da planta no campo e sua entrada mais cedo em produção.</p>
 
 									<p>- Sementes provenientes de plantios de coqueiro-híbrido não servem para reprodução e são impróprias para o comércio de mudas. Quando esse tipo de material é plantado no campo, observa-se a desagregação dos genes, o que culmina em plantações desuniformes tanto em desenvolvimento quanto em produção.</p>
 
@@ -88,9 +88,9 @@
 
 									<b>Medidas Mecânicas</b><br>
 
-									<p>- Rede entomológica <ins>(clique aqui)</ins> e armadilhas atrativas<ins>(clique aqui)</ins> são meios alternativos utilizados na plantação, que permitem a eliminação direta de adultos, larvas, lagartas e de pupas ou crisálidas de pragas presentes na plantação. Servem tanto para monitorar a presença da praga quanto reduzir sua população, no campo. Operações como catação manual e poda de folhas secas infestadas também podem ser utilizadas visando a redução da população de pragas na plantação.</p>
+									<p>- Rede entomológica <a data-toggle="modal" data-target="#tomada2" href="#"><strong>(clique aqui)</strong></a> e armadilhas atrativas<a data-toggle="modal" data-target="#tomada3" href="#"><strong>(clique aqui)</strong></a> são meios alternativos utilizados na plantação, que permitem a eliminação direta de adultos, larvas, lagartas e de pupas ou crisálidas de pragas presentes na plantação. Servem tanto para monitorar a presença da praga quanto reduzir sua população, no campo. Operações como catação manual e poda de folhas secas infestadas também podem ser utilizadas visando a redução da população de pragas na plantação.</p>
 
-									<p>- O fogo <ins>(clique aqui)</ins> e o enterramento de tecidos broqueados (troncos, pedúnculos, ráquis, frutos e flores caídos e abortados) impedem a formação de focos de multiplicação de pragas.</p>
+									<p>- O fogo <a data-toggle="modal" data-target="#tomada4" href="#"><strong>(clique aqui)</strong></a> e o enterramento de tecidos broqueados (troncos, pedúnculos, ráquis, frutos e flores caídos e abortados) impedem a formação de focos de multiplicação de pragas.</p>
 									 
 
 									<b>Medidas Comportamentais</b><br>
@@ -107,9 +107,9 @@
 
 									<p>- Poucos são os produtos registrados no Ministério da Agricultura, Pecuária e Abastecimento (MAPA) para uso na cultura do coqueiro (ver Grade de Agroquímicos). O clorofosforado triclorfon registrado no MAPA para controle de lagarta-desfolhadora, Brassolis sophorae foi retirado do mercado e não tem substituto. Os piretróides, apesar de eficientes no controle de algumas pragas de coqueiro, não são seletivos, não são registrados e podem destruir tanto insetos benéficos como inimigos naturais, motivo pelo qual recomenda-se certa cautela em seu uso e a orientação obrigatória de um especialista. Os carbamatos apresentam certa seletividade e eficiência, sendo o carbosulfan o único princípio ativo com registro no MAPA para a cultura do coqueiro.</p>
 
-									<p>- Produtos que agem por contato e ingestão são aplicados via pulverização terrestre ou aérea. O conhecimento do hábito da praga é importante para a aplicação adequada do produto e garantia de maior eficiência. O mesmo é válido para o uso do equipamento adequado, que pode variar de um simples pulverizador costal <ins>(clique aqui)</ins>, um costal motorizado <ins>(clique aqui)</ins> um tanque tratorizado com pistolas de alta pressão e plataforma <ins>(clique aqui)</ins> até um sofisticado avião <ins>(clique aqui)</ins>, cuja escolha é condicionada pelo tamanho e pelo relevo da propriedade, pelo porte das plantas e pela natureza e nível de infestação da praga.</p>
+									<p>- Produtos que agem por contato e ingestão são aplicados via pulverização terrestre ou aérea. O conhecimento do hábito da praga é importante para a aplicação adequada do produto e garantia de maior eficiência. O mesmo é válido para o uso do equipamento adequado, que pode variar de um simples pulverizador costal <a data-toggle="modal" data-target="#tomada5" href="#"><strong>(clique aqui)</strong></a>, um costal motorizado <a data-toggle="modal" data-target="#tomada6" href="#"><strong>(clique aqui)</strong></a> um tanque tratorizado com pistolas de alta pressão e plataforma <a data-toggle="modal" data-target="#tomada7" href="#"><strong>(clique aqui)</strong></a> até um sofisticado avião <a data-toggle="modal" data-target="#tomada8" href="#"><strong>(clique aqui)</strong></a>, cuja escolha é condicionada pelo tamanho e pelo relevo da propriedade, pelo porte das plantas e pela natureza e nível de infestação da praga.</p>
 
-									<p>- Produtos de ação sistêmica podem ser aplicados via pulverização ou via injeção no caule <ins>(clique aqui)</ins> ou na raiz <ins>(clique aqui)</ins>. A grande vantagem da técnica de injeção é a proteção que oferece ao meio ambiente, por preservar inimigos naturais e evitar contaminação no lençol freático, lagoas e rios, pelo fato do produto não ser depositado diretamente no solo. A grande desvantagem do uso de produtos sistêmicos em coqueiro são os resíduos que deixa no fruto (no albúmen sólido e na água de coco). Uma carência mínima de 90 dias é necessária após o tratamento da planta via raiz e de 30 dias após a útima pulverização aérea, como garantia de que os componentes do fruto estejam livres de resíduos químicos.</p>
+									<p>- Produtos de ação sistêmica podem ser aplicados via pulverização ou via injeção no caule <a data-toggle="modal" data-target="#tomada9" href="#"><strong>(clique aqui)</strong></a> ou na raiz <a data-toggle="modal" data-target="#tomada10" href="#"><strong>(clique aqui)</strong></a>. A grande vantagem da técnica de injeção é a proteção que oferece ao meio ambiente, por preservar inimigos naturais e evitar contaminação no lençol freático, lagoas e rios, pelo fato do produto não ser depositado diretamente no solo. A grande desvantagem do uso de produtos sistêmicos em coqueiro são os resíduos que deixa no fruto (no albúmen sólido e na água de coco). Uma carência mínima de 90 dias é necessária após o tratamento da planta via raiz e de 30 dias após a útima pulverização aérea, como garantia de que os componentes do fruto estejam livres de resíduos químicos.</p>
 
 									<p>- O melhor horário para fazer a pulverização é pela manhã e no final da tarde, sempre nas horas amenas do dia.</p>
 
@@ -123,7 +123,7 @@
 
 									<p>- Preservação de plantas silvestres nas entrelinhas de plantio do coqueiro. Estas, por sua diversidade, oferecem massa vegetal, néctar e pólen em quantidade suficiente para atrair, manter e alimentar os insetos entomófagos (predadores e parasitóides) que regulam, no ambiente, a população de insetos fitófatos e ajudam a manter essas populações em equilíbrio. O uso constante de tratos culturais na plantação, como a aplicação de herbicidas e a realização de campinas, concorre para a eliminação da fonte de ferrogeamento natural dessas espécies, levando muitos parasitoides e predadores a procurar outros sítios para se alimentar e multiplicar. Da mesma forma, o uso indiscriminado e inadequado de agrotóxicos provoca a redução/eliminação da população da fauna benéfica, favorecendo o aumento da população da praga.</p>
 
-									<p>- Reconhecimento dos inimigos naturais (predadores, parasitoides e patógenos) das pragas que causam danos econômicos à plantação. A entomofauna da cultura do coqueiro é rica em inimigos naturais <ins>(veja tabela)</ins>.</p>
+									<p>- Reconhecimento dos inimigos naturais (predadores, parasitoides e patógenos) das pragas que causam danos econômicos à plantação. A entomofauna da cultura do coqueiro é rica em inimigos naturais <a data-toggle="modal" data-target="#tomada11" href="#"><strong>(veja tabela)</strong></a>.</p>
 
 									<p>- Produção em grande quantidade e com custo reduzido de inimigos naturais com potencial de uso e de mercado.</p>
 
@@ -136,8 +136,10 @@
 									<b>Medidas Proibitivas</b><br>
 
 									<p>- Corte de folhas verdes em coqueiro. Durante o processo de senescência da folha, os nutrientes são naturalmente carreados para as folhas mais novas. Cortar a folha ainda verde é interferir no processo de translocação e de reaproveitamento dos nutrientes pela planta, e em sua produção, em virtude da redução da área foliar. Vale ressaltar que, pela lesão feita nos tecidos da base da folha são liberados constituintes químicos (cairomones) que atraem pragas, como a broca-do-olho Rhynchophorus palmarum, cujo adulto é responsável por perdas na plantação por transmitir o nematoide causador da doença letal anel-vermelho.</p>
+										
+										
 								</div>
-
+								
 								<div class="blog-info">
 								
 								
@@ -165,7 +167,9 @@
 						require("rightMonitoramento.php");
 							?>
 						
-						
+						<?php
+						require("modal.php");
+							?>
 						<!--<div class="single-blog">
 							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
 							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>

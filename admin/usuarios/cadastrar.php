@@ -16,9 +16,9 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Informativos</title>
+  <title>Cadastro Usuário</title>
   
-
+<link href="../img/logoMini.png" rel="icon">
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">

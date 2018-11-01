@@ -5,17 +5,15 @@ require("../../util/conexao.php");
 
 $id = $_POST["id"];
 $nome = $_POST["nome"];
-$descricao = $_POST["descricao"];
 
 
 try {
 
-    $sql = "UPDATE descricao_praga SET nome = ?, descricao = ? where id = ?";
+    $sql = "UPDATE descricao_praga SET nome = ? where id = ?";
     
     $stmt = $conexao->prepare($sql);
     $stmt->bindValue(1, $nome);
-    $stmt->bindValue(2, $descricao);
-    $stmt->bindValue(3, $id);
+    $stmt->bindValue(2, $id);
 
     $stmt->execute();
 

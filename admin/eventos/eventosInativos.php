@@ -16,8 +16,8 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Eventos</title>
-
+  <title>Eventos Inativos</title>
+<link href="../img/logoMini.png" rel="icon">
   <!-- Favicons
   <link href="/admin/img/favicon.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -112,7 +112,7 @@
                 <td scope="col" style="width: 200px;"><?=$linha["titulo"];?></td>
                 <td scope="col" style="width: 100px;"><?=date('d/m/Y', strtotime($linha['data']));?></td>
                 <td scope="col" style="width: 600px;"><?=$linha["descricao"];?></td>
-                <td scope="col" style="width: "><span class="label label-warning">Imativo</span></td>
+                <td scope="col" style="width: "><span class="label label-warning">Inativo</span></td>
                 <td>
                      <a href="/admin/eventos/reativarEvento.php?id=<?=$linha['id']?>"> <button  class="btn btn-primary btn-xs"><i class="fa fa-check"></i></button> </a>
                       

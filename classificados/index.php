@@ -101,7 +101,7 @@
 
                     <!--Form with header-->
 
-                    <form action="mail.php" method="post">
+                    <form action="../classificados/inserirClassificado.php" method="post">
                         <div class="card border-primary rounded-0">
                             <div class="card-header p-0">
                                 <div class="bg-info text-white text-center py-2" >
@@ -117,7 +117,7 @@
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
                                         </div>
-                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nome Completo" required>
+                                        <input type="text" class="form-control" id="nombre" name="nome" placeholder="Nome Completo" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -133,15 +133,16 @@
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="	glyphicon glyphicon-earphone " style="color: #31708f;"></i></div>
                                         </div>
-                                        <input type="text"  class="form-control" id="nombre" name="nombre" placeholder="Seu Telefone" required>
+                                        <input type="text"  class="form-control" id="nombre" name="telefone" placeholder="Seu Telefone" required>
                                     </div>
                                 </div>
+                                
                                  <div class="form-group">
                                     <div >
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="glyphicon glyphicon-pencil" style="color: #31708f;"></i></div>
                                         </div>
-                                        <input type="text"  class="form-control" id="nombre" name="nombre" placeholder="Titulo do anuncio." required>
+                                        <input type="text"  class="form-control" id="nombre" name="titulo" placeholder="Titulo do anuncio." required>
                                     </div>
                                 </div>
                                  <div class="form-group">
@@ -149,7 +150,7 @@
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="glyphicon glyphicon-usd" style="color: #31708f;"></i></div>
                                         </div>
-                                        <input type="text"  class="form-control" id="nombre" name="nombre"   placeholder="Preço ex: 00,00. " required>
+                                        <input type="text"  class="form-control" id="nombre" name="preco"   placeholder="Preço ex: 00,00. " required>
                                     </div>
                                 </div>
                                  <div class="form-group">
@@ -167,7 +168,7 @@
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                                         </div>
-                                        <textarea class="form-control"  placeholder="Descricão." required></textarea>
+                                        <textarea class="form-control" name="descricao"  placeholder="Descricão." required></textarea>
                                     </div>
                                 </div>
 

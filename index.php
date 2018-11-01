@@ -435,11 +435,16 @@
 			
 			<div class="featured-list">
 				<div id="grid" class="clearfix">
-
-
+					<center>
+					<div class="teste" style="width: 50%; ">
+								<div class="embed-responsive embed-responsive-16" style="padding-bottom: 50%">
+								  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aAHD4ET5Xes"></iframe>
+								</div>
+								</div>
+							</center>
 				<?php
 
-					$sql = "SELECT ei.id, ei.id_evento, ei.imagem, e.titulo FROM eventos AS e, imagem_evento AS ei WHERE e.id = ei.id_evento and ei.ativo = 1 AND ei.id <> 8 ORDER BY ei.id DESC LIMIT 7";
+					$sql = "SELECT ei.id, ei.id_evento, ei.imagem, e.titulo FROM eventos AS e, imagem_evento AS ei WHERE e.id = ei.id_evento and ei.ativo = 1 AND ei.id <> 8 ORDER BY ei.id DESC LIMIT 8";
 					$query = $conexao->query($sql);
 					foreach ($query as $linha) {
 
@@ -447,7 +452,7 @@
 					
 					<div class="thumb">
 						<a href="#">
-							<img src="/img/eventos/<?=$linha['imagem'];?>"   alt="Feature Image" style="max-height: 260px;"/>
+							<img src="/img/eventos/<?=$linha['imagem'];?>"   alt="Feature Image" style="max-height: 235px;"/>
 						</a>
 						
 						<div class="thumb-rollover">
@@ -461,13 +466,7 @@
 				
 				<?php } ?>
 						
-						<div class="thumb">
-						<div class="embed-responsive embed-responsive-16">
-								  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aAHD4ET5Xes"></iframe>
-								</div>
-						
-						
-					</div>
+					
 					<!-- 4:3 aspect ratio -->
 							
 					<!--
