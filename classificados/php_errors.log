@@ -121,3 +121,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\leandro\Documents\sindcocoNew\classificados\teste.php on line 112
+[01-Nov-2018 21:22:54 UTC] PHP Warning:  require(../paginaModal.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 247
+[01-Nov-2018 21:22:54 UTC] PHP Fatal error:  require(): Failed opening required '../paginaModal.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 247
+[01-Nov-2018 21:23:01 UTC] PHP Warning:  require(../paginaModal.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 247
+[01-Nov-2018 21:23:01 UTC] PHP Fatal error:  require(): Failed opening required '../paginaModal.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\classificados\index.php on line 247

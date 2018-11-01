@@ -93,66 +93,47 @@ while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
   <div class="card-body card3" >
     <h5 class="card-title card4" ><?=$linha['titulo'];?></h5>
     <p class="card-text card5" ><?=$linha['descricao'];?></p>
-    <a href="#" class="btn btn-primary card6" class="btn btn-primary" data-toggle="modal" data-target="#example1">Detalhes</a>
+    <a href="#" class="btn btn-primary card6" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="<?=$linha['titulo'];?>" data-whateverdescricao="<?=$linha['descricao'];?>" data-whateverpreco="<?=$linha['preco'];?>" data-whatevernome="<?=$linha['nome'];?>" data-whatevertelefone="<?=$linha['telefone'];?>" data-whateveremail="<?=$linha['email'];?>" data-whateverestado="<?=$linha['estado'];?>" data-whatevercidade="<?=$linha['cidade'];?>">Detalhes</a>
   </div>
 </div>
 
 </div>   
 
-<!-- Button trigger modal -->
 
 
-<div class="modal fade" id="example1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLongTitle"><?=$linha['titulo'];?></h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel"></h4>
       </div>
       <div class="modal-body">
-        <center>
-        <?php
-                if($linha["imagem"] != null){
-              ?>
-  <img class="card-img-top"  style="height: 350px;" src="/img/anuncios/<?=$linha['imagem'];?>" alt="Card image cap">
-  <?php
-              }else {
-                ?>
-                <img src="/img/anuncios/off.jpg" class="card2" />
-              <?php
-                }
-              ?>
+       <center>
+       
+  <img src="/img/anuncios/off.jpg" class="card2" />
+ 
        </center>
-    <p class="card-text" ><i class="glyphicon glyphicon-edit sd2"> Descrição:</i> <?=$linha['descricao'];?></p>
-    <h5 class="card-title" style="    color: #ab9812;" >Preço R$: <?php if($linha["preco"] != null){
-                                      ?>
-                                      <?=$linha['preco'];?>
-                                        <?php
-                                      }else{
-                                        ?>
-                                        Valor a combinar.
-                                        <?php
-                                         }
-                                         ?></h5>
+   <i class="glyphicon glyphicon-edit sd2"> Descrição:</i><p class="card-text" id="descricao" > </p>
+    <h5 class="card-title" id="preco" style="    color: #ab9812;" >Preço R$: Valor a combinar.</h5>
     <br>
     <h4 class="card-title" >Dados do usuario.</h4>
-    <p class="col-md-6" ><i class=" glyphicon glyphicon-user sd2"> Nome:</i> <?=$linha['nome'];?></p>
-    <p class="col-md-5" ><i class="glyphicon glyphicon-earphone sd2"> Tefone:</i> <?=$linha['telefone'];?></p>
-    <p class="col-md-6" > <i class="glyphicon glyphicon-envelope sd2"> E-mail:</i> <?=$linha['email'];?></p>
-    <p class="col-md-5" ><i class="glyphicon glyphicon-road sd2"> Estado:</i> <?=$linha['estado'];?></p>
-    <p class="col-md-4" ><i class="glyphicon glyphicon-home sd2"> Cidade:</i> <?=$linha['cidade'];?></p>
-
+   <i class=" glyphicon glyphicon-user sd2"> Nome:</i> <p  id="nome" > </p>
+   <i class="glyphicon glyphicon-earphone sd2"> Tefone:</i> <p  id="telefone" > </p>
+   <i class="glyphicon glyphicon-envelope sd2"> E-mail:</i> <p  id="email" >  </p>
+   <i class="glyphicon glyphicon-road sd2"> Estado:</i> <p  id="estado" > </p>
+   <i class="glyphicon glyphicon-home sd2"> Cidade:</i> <p  id="cidade" ></p>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
   </div>
-</div>      
+</div>
+
 
 
 
@@ -353,6 +334,32 @@ try {
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+
+        <script type="text/javascript">
+        	$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever')
+  var descricao = button.data('whateverdescricao')
+  var preco = button.data('whateverpreco')
+  var nome = button.data('whatevernome')
+  var telefone = button.data('whatevertelefone')
+  var email = button.data('whateveremail')
+  var estado = button.data('whateverestado')
+  var cidade = button.data('whatevercidade') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text(recipient)
+  modal.find('#descricao').text('Descricao: '+descricao)
+  modal.find('#preco').text('Preço R$: '+ preco)
+  modal.find('#nome').text('Nome: '+nome)
+  modal.find('#telefone').text('Telefone: '+telefone)
+  modal.find('#email').text('E-mail: '+email)
+  modal.find('#estado').text('Estado: '+estado)
+  modal.find('#cidade').text('Cidade: '+cidade)
+  
+})
         </script>
     </body>
 </html>
