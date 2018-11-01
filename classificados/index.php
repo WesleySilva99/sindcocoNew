@@ -101,7 +101,7 @@
 
                     <!--Form with header-->
 
-                    <form action="../classificados/inserirClassificado.php" method="post">
+                    <form action="../classificados/inserirClassificado.php" method="post" enctype="multipart/form-data">
                         <div class="card border-primary rounded-0">
                             <div class="card-header p-0">
                                 <div class="bg-info text-white text-center py-2" >
@@ -153,12 +153,43 @@
                                         <input type="text"  class="form-control" id="nombre" name="preco"   placeholder="Preço ex: 00,00. " required>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div>
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="glyphicon glyphicon-pencil" style="color: #31708f;"></i></div>
+                                        </div>
+                                        <input type="text"  class="form-control" id="nombre" name="cidade"   placeholder="Cidade. Ex: Jaboatão dos Guararapes" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div>
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Estado: </div>
+                                        </div>
+                                        <select name="estado" required="required">
+                                          <option value="">Selecione uma Opção:</option>
+                                          <?php
+
+                                            $query2 = "SELECT id, nome FROM estado";
+                                            $resultado2 = $conexao->query($query2);
+                                            foreach ($resultado2 as $linha2) {
+                                          ?>
+                                            <option value="<?=$linha2['id'];?>"><?=$linha2['nome'];?></option>
+
+                                          <?php
+
+                                            }
+
+                                          ?>
+                                        </select>
+                                    </div>
+                                </div>
                                  <div class="form-group">
                                     <div >
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="	glyphicon glyphicon-open-file" style="color: #31708f;"></i></div>
                                         </div>
-                                        <input type="file"  class="form-control"   required>
+                                        <input type="file"  class="form-control"  name="imagem" required>
                                     </div>
                                 </div>
 
@@ -169,6 +200,15 @@
                                             <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                                         </div>
                                         <textarea class="form-control" name="descricao"  placeholder="Descricão." required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div >
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                        </div>
+                                        <textarea class="form-control" name="obs"  placeholder="Observações." required></textarea>
                                     </div>
                                 </div>
 
