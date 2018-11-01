@@ -266,7 +266,7 @@
   <div class="card-body card3" >
     <h5 class="card-title card4" ><?=$linha['titulo'];?></h5>
     <p class="card-text card5" ><?=$linha['descricao'];?></p>
-    <a href="#" class="btn btn-primary card6" class="btn btn-primary" data-toggle="modal" data-target="#example1">Detalhes</a>
+    <a href="" class="btn btn-primary card6" class="btn btn-primary" data-toggle="modal" data-target="#example1">Detalhes</a>
   </div>
 </div>
 
@@ -286,6 +286,7 @@
       <div class="modal-body">
         <center>
         <?php
+
                 if($linha["imagem"] != null){
               ?>
   <img class="card-img-top"  style="height: 350px;" src="/img/anuncios/<?=$linha['imagem'];?>" alt="Card image cap">

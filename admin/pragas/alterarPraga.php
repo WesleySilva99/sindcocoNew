@@ -86,13 +86,13 @@
             <div class="form-group row">
                 <label for="example-text-input" class="col-2 col-form-label">Nome: </label>
             <div class="col-10">
-                <input required="required" value="<?=$linha['nome'];?>" type="text" name="nome">
+                <input class="form-control" required="required" value="<?=$linha['nome'];?>" type="text" name="nome">
             </div>
             </div>
             <div class="form-group row">
             <label for="example-search-input" class="col-2 col-form-label">Nome Científico:</label>
             <div class="col-10">
-                <input  value="<?=$linha['nome_cientifico'];?>" type="text" name="nome_cientifico" required="required">
+                <input  class="form-control" value="<?=$linha['nome_cientifico'];?>" type="text" name="nome_cientifico" required="required">
             </div>
             </div>     
             <button class="btn btn-success" type="submit"> Enviar </button>
