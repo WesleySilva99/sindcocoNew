@@ -35,7 +35,7 @@ img {
 }
 .imgteste{
   max-height: 500px;
-  max-width: 500px;
+  max-width: 800px;
 }
 .gallery {
   position: relative;
@@ -51,6 +51,8 @@ img {
           justify-content: space-between;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+    display: flex;
+	justify-content: flex-start;
 }
 .gallery.pop {
   -webkit-filter: blur(10px);
