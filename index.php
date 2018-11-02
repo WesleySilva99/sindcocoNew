@@ -620,65 +620,11 @@
                     <div class="card-desc">
                         <h3><?=$linha['titulo'];?></h3>
                         <p class="ppTexto"><?=$linha['descricao'];?></p>
-                            <a href="#" class="btn-card" data-toggle="modal" data-target="#example1">Detalhes</a>   
+                            <a href="/classificados/detalhes.php?id=<?=$linha['id'];?>" class="btn-card" data-toggle="modal" >Detalhes</a>   
                     </div>
                 </div>
             </div>
-            <!-- Modal -->
-<div class="modal fade" id="example1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLongTitle"><?=$linha['titulo'];?></h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      	<center>
-      	<?php
-								if($linha["imagem"] != null){
-							?>
-  <img class="card-img-top"  style="max-height: 350px;" src="/img/anuncios/<?=$linha['imagem'];?>" alt="Card image cap">
-  <?php
-							}else {
-								?>
-								<img src="/img/anuncios/off.jpg" class="card2" />
-							<?php
-								}
-							?>
-       </center>
-    <p class="card-text" ><i class="glyphicon glyphicon-edit sd2"> Descrição:</i> <?=$linha['descricao'];?></p>
-    <h5 class="card-title" style="    color: #ab9812;" >Preço R$:
-
-    																<?php if($linha["preco"] != null){
-    																	?>
-    																  <?=$linha['preco'];?>
-    																  	<?php
-    																  }else{
-    																  	?>
-    																  	Valor a combinar.
-    																  	<?php
-    																  	 }
-    																  	 ?>
-    																  </h5>
-    <br>
-    <h4 class="card-title" >Dados do usuario.</h4>
-    <p class="col-md-6" ><i class="	glyphicon glyphicon-user sd2"> Nome:</i> <?=$linha['nome'];?></p>
-    <p class="col-md-5" ><i class="glyphicon glyphicon-earphone sd2"> Tefone:</i> <?=$linha['telefone'];?></p>
-    <p class="col-md-6" > <i class="glyphicon glyphicon-envelope sd2"> E-mail:</i> <?=$linha['email'];?></p>
-    <p class="col-md-5" ><i class="glyphicon glyphicon-road sd2"> Estado:</i> <?=$linha['estado'];?></p>
-    <p class="col-md-4" ><i class="glyphicon glyphicon-home sd2"> Cidade:</i> <?=$linha['cidade'];?></p>
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        
-      </div>
-    </div>
-  </div>
-</div>
+            
 <?php
 								}
 							?>
