@@ -114,66 +114,79 @@
         }
         ?>
 
-        <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
-
-         <aside class="right-sidebar">
+                        <aside class="right-sidebar">
+                            
                             <div class="widget">
-                                <form class="form-search">
-                                    <input class="form-control" type="text" placeholder="Search..">
-                                </form>
-                            </div>
-                            <div class="widget">
-
-                                <h4 class="widgetheading">Saiba mais</h4>
+                                <center>
+                                <h4 class="widgetheading"><i class="fa fa-folder-open" style="color: #4ad1e5; margin-top: 5px;"></i>Saiba mais</h4>
+                                </center>
                                 <ul class="cat">
-                                    <li><i class="icon-angle-right"></i><a href="/noticias/informativos.php" class="btn  btn-sm">Informativos</a></li>
-                                    <li><i class="icon-angle-right"></i><a href="/noticias/teste.php" class="btn  btn-sm">Notícias</a></li>
-                                    <li><i class="icon-angle-right"></i><a href="/noticias/midia.php" class="btn  btn-sm">Sindcoco na mídia</a></li>
+                                    <li class="estilizando1 text3"><a href="/noticias/informativos.php" class="textoanav text2" ><i class="glyphicon glyphicon-arrow-left estilizando3"></i> Informativos</a>
+                                        <li class="estilizando1 text3"><a href="/noticias/teste.php" class="textoanav text2" ><i class="glyphicon glyphicon-arrow-left estilizando3"></i> Notícias</a>
+                                            <li class="estilizando1 text3"><a href="/noticias/midia.php" class="textoanav text2" ><i class="glyphicon glyphicon-arrow-left estilizando3"></i>Sindcoco na mídia</a>
+                                    </li>
+                                    
+                                    
                                 </ul>
                             </div>
 
                            
                             <!-- Informativos -->
                             <div class="widget">
+                                <center>
                                 <h4 class="widgetheading" >Informativos</h4>
-                                <ul class="recent">
-                                    <?php
+                            </center>
+                                <?php
+                            require "../util/conexao.php";
+                            $sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
+                            $anuncios = $conexao->query($sql);
+                            foreach ($anuncios as $linha) {
+                          ?>
+                                                <div class="card informativo1">
+                      <h5 class="card-header informativo2">Boletim Informativo</h5>
+                      <div class="card-body informativo3">
+                        <?php
+                        if($linha["data"] != null){
+                        ?>
+                        <h5 class="card-title" style="color: #999;">Data: <?=$linha["data"];?></h5>
 
-                                        require("../util/conexao.php");
-                                        $sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
-                                        $anuncios = $conexao->query($sql);
-                                        foreach ($anuncios as $linha) {
+                            <?php
+                            }else{
+                            ?>
+                            <h5 class="card-title" style="color: #999;">Data: Não informada</h5>
 
-                                    ?>
-                                        <li>
-                                            <center>
-                                                <i class="fa fa-file-pdf-o" style="font-size:48px;color: #337ab7"></i>
-                                            </center>
-                                            <h6><?=$linha["titulo"];?></h6>
-                                                <p></p>
-                                                <center>
-                                                    <a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-read-more" target="_blank" style="background: #37b49c; color: white;">
-                                                        Ler mais <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span>
-                                                    </a>
-                                                </center>
-                                        </li>
-                                    <?php
-                                        }
-                                    ?>
-                                    
+                            <?php
+                                }
+                            ?>
+                       
+                        <p class="card-text"><?=$linha["titulo"];?></p>
+                        <a href="/pdf/informativos/<?=$linha['arquivo'];?>" class="btn btn-primary" style="color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;" >Abrir PDF</a>
+                      </div>
+                    </div>
+                     <?php
+                }
+              ?>
+                            </div>
+
+                            <!--<div class="widget">
+                                <h5 class="widgetheading">Popular tags</h5>
+                                <ul class="tags">
+                                    <li><a href="#">Web design</a></li>
+                                    <li><a href="#">Trends</a></li>
+                                    <li><a href="#">Technology</a></li>
+                                    <li><a href="#">Internet</a></li>
+                                    <li><a href="#">Tutorial</a></li>
+                                    <li><a href="#">Development</a></li>
                                 </ul>
-          </div>
-
-          
-
-        </div>
-
-      </div>
-      <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
+                            </div>-->
+                            </aside>
+                    </div>
+                </div>
+<!-- Fim Rigght Sidebar -->
+       
 
            
 		</section>

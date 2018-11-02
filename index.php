@@ -311,7 +311,7 @@
 
 			?>
 			<div class="featured-article">
-				<a href="#">
+				<a href="/noticias/lerMais.php?id=<?=$linha['id'];?>">
 					<img src="/img/noticias/<?=$linha['imagem'];?>"  alt="" class="thumb">
 				</a>
 				<div class="block-title">
@@ -333,7 +333,7 @@
 
 			?>
 			  <li class="media">
-			 	 <a class="pull-left" href="#">
+			 	 <a class="pull-left" href="/noticias/lerMais.php?id=<?=$linha['id'];?>">
 					<img  class="media-object" src="/img/noticias/<?=$linha['imagem'];?>" width="160px;"  alt="" class="thumb">
 				</a>
 					<div class="media-body">
