@@ -6,7 +6,7 @@
         <title>Classificados</title>
         <meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+		 
 		<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
 
 		<?php
@@ -17,7 +17,11 @@
 		?>
 		
     </head>
-
+    <style type="text/css">
+      .imagemanuncio{
+        width: 50%;
+      }
+    </style>
     <body class="blog">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -291,7 +295,7 @@ while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
   <div class="card-body card3" >
     <h5 class="card-title card4" ><?=$linha['titulo'];?></h5>
     <p class="card-text card5" ><?=$linha['descricao'];?></p>
-    <a href="" class="btn btn-primary card6" class="btn btn-primary" data-toggle="modal" data-target="#example1">Detalhes</a>
+    <a href="/classificados/detalhes.php?id=<?=$linha['id'];?>" class="btn btn-primary card6" class="btn btn-primary" data-toggle="modal" >Detalhes</a>
   </div>
 </div>
 
@@ -318,7 +322,7 @@ while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
   <?php
               }else {
                 ?>
-                <img src="/img/anuncios/off.jpg" class="card2" />
+                <img src="/img/anuncios/off.jpg"  class="card2" />
               <?php
                 }
               ?>

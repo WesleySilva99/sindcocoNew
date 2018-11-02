@@ -19,7 +19,7 @@
             </div>
             <div class="modal-body">                              
                 <?php  
-                    $sql = mysqli_query ($conexao, "SELECT * FROM anuncio  WHERE autorizado = 1 ORDER BY data");   
+                    $sql = mysqli_query ($conexao, "SELECT titulo FROM anuncio WHERE id like '%".$ID."%' ");   
                     $resp = mysqli_fetch_array($sql);   
                     $titulo = $resp['titulo'];    
                 ?>
@@ -37,11 +37,3 @@
     </div>    
 </div>
 
-<script>
-    $('.modalDetalhesUsuario').click(function(){
-      var ID = $(this).attr("data-a");
-      $.ajax({url:"paginaModal.php?ID="+ID,cache:false,success:function(result){    
-        $(".modal-content").html(result);
-      }});
-    });
-  </script>
