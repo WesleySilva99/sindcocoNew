@@ -18,7 +18,7 @@
 								<ul class="nav navbar-nav navbar-right">
 								<li><a href="/index.php">Início</a></li>
 									<li><a href="/noticias/informativos.php">Informativos</a></li>
-									<li><a href="/noticias/teste.php">Notícias</a></li>
+									<li><a href="/noticias/index.php">Notícias</a></li>
 									<li><a href="/noticias/midia.php">SINDCOCO na mídia</a></li>
 									<li><a href="/classificados/">classificados</a></li>
 									<li><a href="/index.php#contact-us">Contate-nos</a></li>

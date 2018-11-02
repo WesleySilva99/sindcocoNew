@@ -286,7 +286,7 @@
 							<h3>Notícias e <span>Informativos</span></h3>
 							
 							<center>
-								<a href="/noticias/teste.php" class="btn btn-read-more"> Ver Todas Notícias >> </a>
+								<a href="/noticias/index.php" class="btn btn-read-more"> Ver Todas Notícias >> </a>
 							</center>
 						</div>
 					</div>
