@@ -16,7 +16,7 @@
 							
 							<div class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
-								<li><a href="/index.php">Início</a></li>
+									<li><a href="/index.php">Início</a></li>
 									<li><a href="/pragas/">Introdução</a></li>
 									<li><a href="/pragas/monitoramento.php">Monitoramento</a></li>
 									<li><a href="/pragas/descPraga.php?id=3">Pragas de A a Z</a></li>

@@ -16,7 +16,7 @@
 							
 							<div class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
-								<li><a href="/index.php">Início</a></li>
+									<li><a href="/index.php">Início</a></li>
 									<li><a href="/noticias/informativos.php">Informativos</a></li>
 									<li><a href="/noticias/index.php">Notícias</a></li>
 									<li><a href="/noticias/midia.php">SINDCOCO na mídia</a></li>

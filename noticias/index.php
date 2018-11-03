@@ -125,7 +125,7 @@ try {
         
         # echo '<a href="busca?pg=1">PRIMEIRA PÁGINA</a>&nbsp;';
         echo '<ul class="pagination">';
-    echo '<li><a  href="teste.php?pg=1">Principal</a></li>';
+    echo '<li><a  href="index.php?pg=1">Principal</a></li>';
        
         if($qtdPag > 1 && $pg <= $qtdPag){
                
@@ -137,7 +137,7 @@ try {
  
                         } else {
  
-                                echo "<li><a href='teste.php?pg=$i'>".$i."</a></li>";
+                                echo "<li><a href='index.php?pg=$i'>".$i."</a></li>";
                                
                         }
  
@@ -145,7 +145,7 @@ try {
  
         }
  
-        echo "<li><a  href='teste.php?pg=$qtdPag'>Ultima</a></li>";
+        echo "<li><a  href='index.php?pg=$qtdPag'>Ultima</a></li>";
  
 ?>
 
