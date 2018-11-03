@@ -102,7 +102,7 @@
 							<div class="carousel-caption">
 								<h1 class="wow fadeInLeft">O coqueiro, é a única espécie classificada no gênero Cocos. É uma planta que pode crescer até 30 m de altura</h1>
 								<div class="slider-btn wow fadeIn">
-									<a href="#" class="btn btn-learn">Leia Mais</a>
+									<a href="https://pt.wikipedia.org/wiki/Coqueiro" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
 							</div>
 						</div>
@@ -111,7 +111,7 @@
 							<div class="carousel-caption">
 								<h1 class="wow fadeInLeft">O azeite de dendê, É produzido a partir do fruto da palmeira conhecida como dendezeiro </h1>
 								<div class="slider-btn wow fadeIn">
-									<a href="#" class="btn btn-learn">Leia Mais</a>
+									<a href="https://pt.wikipedia.org/wiki/Azeite_de_dend%C3%AA" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
 							</div>
 						</div>
@@ -120,7 +120,7 @@
 							<div class="carousel-caption">
 								<h1 class="wow fadeInLeft">Palmeira muito comum no Maranhão e Tocantins de coco duro e semente oleaginosa, do qual se extrai o óleo babaçu.</h1>
 								<div class="slider-btn wow fadeIn">
-									<a href="#" class="btn btn-learn">Leia Mais</a>
+									<a href="https://pt.wikipedia.org/wiki/Baba%C3%A7u" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
 							</div>
 						</div>
@@ -129,7 +129,7 @@
 							<div class="carousel-caption">
 								<h1 class="wow fadeInLeft">Suas fibras industriais, destacando-se a fabricação de vassouras, cordoaria e escovões.</h1>
 								<div class="slider-btn wow fadeIn">
-									<a href="#" class="btn btn-learn">Leia Mais</a>
+									<a href="https://pt.wikipedia.org/wiki/Pia%C3%A7ava" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
 							</div>
 						</div>
@@ -138,16 +138,16 @@
 							<div class="carousel-caption">
 								<h1 class="wow fadeInLeft">Nativa do Brasil,cuja medula se produz farinha, folhas penatífidas, que servem para extração de fibras.</h1>
 								<div class="slider-btn wow fadeIn">
-									<a href="#" class="btn btn-learn">Leia Mais</a>
+									<a href="https://pt.wikipedia.org/wiki/Syagrus_coronata" class="btn btn-learn" target="_blank" >Leia Mais</a>
 								</div>
 							</div>
 						</div>
 						<div class="item">
 							<img src="img/bn/006.jpg" alt="Sider Big Image" width="100%" height="100%">
 							<div class="carousel-caption">
-								<h1 class="wow fadeInLeft">Seus frutos são ricas em vitamina A e betacaroteno e podem ser usadas para fazer suco, sorvete, bolos, pães e doces.</h1>
+								<h1 class="wow fadeInLeft">Seus frutos são ricos em vitamina A e betacaroteno e podem ser usadas para fazer suco, sorvete, bolos, pães e doces.</h1>
 								<div class="slider-btn wow fadeIn">
-									<a href="#" class="btn btn-learn">Leia Mais</a>
+									<a href="https://pt.wikipedia.org/wiki/Coco-de-espinho" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
 							</div>
 						</div>
@@ -156,7 +156,7 @@
 							<div class="carousel-caption">
 								<h1 class="wow fadeInLeft">O buriti fornece palmito comestível. O óleo da polpa é usado para frituras e sua polpa, depois de fermentada, se transforma em vinho.</h1>
 								<div class="slider-btn wow fadeIn">
-									<a href="#" class="btn btn-learn">Leia Mais</a>
+									<a href="https://pt.wikipedia.org/wiki/Buriti" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
 							</div>
 						</div>
@@ -165,7 +165,7 @@
 							<div class="carousel-caption">
 								<h1 class="wow fadeInLeft">O butiá é considerado uma importante fonte de fibras e vitamina C e, como alimento “laranja”, é um fortalecedor do sistema imunológico.</h1>
 								<div class="slider-btn wow fadeIn">
-									<a href="#" class="btn btn-learn">Leia Mais</a>
+									<a href="https://pt.wikipedia.org/wiki/Buti%C3%A1" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
 							</div>
 						</div>
