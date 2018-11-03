@@ -48,7 +48,7 @@
     <section class="blog-single cardn1"  >
              <?php
 
-                $sql = "SELECT * FROM anuncio WHERE id = ?";
+                $sql = "SELECT a.*, e.nome AS nome_estado FROM anuncio AS a, estado AS e WHERE a.id = ? AND a.estado = e.id";
 
                 $stmt = $conexao->prepare($sql);
                 $stmt->bindValue(1, $_GET['id']);
@@ -119,7 +119,7 @@
    }
    ?></p>
     <p class="col-md-6" > <i class="glyphicon glyphicon-envelope anunciotexto"><strong> E-mail:</strong></i> <?=$linha['email'];?></p>
-    <p class="col-md-5" ><i class="glyphicon glyphicon-road anunciotexto"><strong> Estado:</strong></i> <?=$linha['estado'];?></p>
+    <p class="col-md-5" ><i class="glyphicon glyphicon-road anunciotexto"><strong> Estado:</strong></i> <?=$linha['nome_estado'];?></p>
     <p class="col-md-5" ><i class="glyphicon glyphicon-home anunciotexto"><strong> Cidade:</strong></i> <?php if($linha["telefone"] != null){
     ?>
      <?=$linha['cidade'];?>

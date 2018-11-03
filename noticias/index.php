@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Notícias do SINDCOCO</title>
+        <title>Noticias do SINDCOCO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -34,136 +34,149 @@
 		
 		
 		
-		<section class="blog-single">
+		<section class="blog-single cardn1" >
 
-			<div class="container">
-				<div class="row" style="margin-top: 100px;">
-					<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-					<div class="col-md-8">
-						<h1>Noticias.</h1>
-						
+            <center
+			<div class="container bg-light cardn2">
+        
+        <!-- cards -->
+        <div id="cards" class="bg-light cardn3" >
 
-							
-							<br>
-							
-							<?php
+            <h1 class="font-weight-light text-center my-3 cardn4" >Notícias</h1>
+            <br>
 
-								require("../util/conexao.php");
-								$sql = "SELECT * FROM noticias WHERE autorizada = 1 AND idCategoria = 3 order by id desc";
-								$noticia = $conexao->query($sql);
+          
+                <div class="container">
+      <div class="row">
+        <?php
+ 
+# inclui o arquivo config(arquivo de conexão com o banco de dados)
+require("../util/conexao.php");
+ 
+# Limita o número de registros a serem mostrados por página
+$limite = 20;
+ 
+# Se pg não existe atribui 1 a variável pg
+$pg = (isset($_GET['pg'])) ? (int)$_GET['pg'] : 1;
+ 
+# Atribui a variável inicio o inicio de onde os registros vão ser
+# mostrados por página, exemplo 0 à 10, 11 à 20 e assim por diante
+$inicio = ($pg * $limite) - $limite;
+ 
+# seleciona os registros do banco de dados pelo inicio e limitando pelo limite da variável limite
+$sql = "SELECT * FROM noticias  WHERE autorizada = 1 AND idCategoria = 3 ORDER BY id DESC LIMIT ".$inicio. ", ". $limite;
+ 
+try {
+       
+        $query = $conexao->prepare($sql);
+        $query->execute();
+ 
+        } catch (PDOexception $error_sql){
+ 
+                echo 'Erro ao retornar os Dados.'.$error_sql->getMessage();
+ 
+}
+ 
+while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
+       
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="/img/noticias/<?=$linha['imagem'];?>" style="    max-width: 850px; max-height: 160px;">
+            <span class="cardn15" ><h6 style="font-size: 8px;">novo</h6></span>
+              <div class="caption">
+                <h4 style="max-width: 80ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;"><?=$linha["titulo"];?></h4>
+                <p ></p>
+                <a href="/noticias/lerMais.php?id=<?=$linha['id'];?>" class="btn btn-info btn-xs" role="button">Detalhes</a> <a  class="btn btn-default btn-xs pull-right" role="">data: <?=$linha['data'];?></a>
+            </div>
+          </div>
 
-									foreach ($noticia as $linha) {	
-								?>
-								<div class="single-blog" style="border: 1px solid rgba(0,0,0,.125);">
-								<h4>
-									<?=$linha["titulo"];?>
-								</h4><br>
-								<img src="/img/noticias/<?=$linha['imagem'];?>" alt="Blog Image" width="100%"/>
-								
-								<div class="blog-info">
-								<ul>
-									<li><a href="">Data: <?=$linha['data'];?></a></li>
-									
-								</ul>
-								
-								<div class="read-more pull-right">
-								<a href="/noticias/lerMais.php?id=<?=$linha['id'];?>"  class="btn  btn-sm" style="  color: white;  background-color: #1997f6; " >
-									Contiue Lendo<span class="glyphicon glyphicon-chevron-right"></span>
-								</a>
-								</div>
-								<br>
-								
-							</div>
-							
 
-							
-						</div>
-						
-						<?php
-							}
-							?>
-							
-						<!-- Pagination -->
-						<div id="pagination">
-							<span class="all">Page 1 of 3</span>
-							<span class="current">1</span>
-							<a href="#" class="inactive">2</a>
-							<a href="#" class="inactive">3</a>
-						</div>
-						</div>
 
-						<?php
-						require("rightSidebar.php");
-							?>
-						
-						
-						<!--<div class="single-blog">
-							<a href="#"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
-							<iframe width="100%" height="450" src="https://www.youtube.com/embed/AASd5ewKNSw" frameborder="0" allowfullscreen></iframe>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-							<div class="blog-info">
-								<ul>
-									<li><a href="">Date: June 05, 2016</a></li>
-									<li><a href="">Author Name</a></li>
-									<li><a href="">Category</a></li>
-									<li><a href="">10 Comments</a></li>
-								</ul>
-								
-								<div class="read-more pull-right">
-									<a href="#" class="btn btn-readmore">Continue Reading</a>
-								</div>
-								
-							</div>
-							
-						</div> -->
-						
-						
-						<!-- Pagination -->
+        </div>
+        
+      <?php }
+ 
+# seleciona o total de registros  
+$sql_Total = ' SELECT titulo FROM noticias WHERE autorizada = 1';
+ 
+try {
+       
+        $query_Total = $conexao->prepare($sql_Total);
+        $query_Total->execute();
+ 
+        $query_result = $query_Total->fetchAll(PDO::FETCH_ASSOC);
+ 
+        # conta quantos registros tem no banco de dados
+        $query_count =  $query_Total->rowCount(PDO::FETCH_ASSOC);
+ 
+        # calcula o total de paginas a serem exibidas
+        $qtdPag = ceil($query_count/$limite);
+ 
+        } catch (PDOexception $error_Total){
+       
+                echo 'Erro ao retornar os Dados. '.$error_Total->getMessage();
+ 
+        }
+ 
+        
+        # echo '<a href="busca?pg=1">PRIMEIRA PÁGINA</a>&nbsp;';
+        echo '<ul class="pagination">';
+    echo '<li><a  href="index.php?pg=1">Principal</a></li>';
+       
+        if($qtdPag > 1 && $pg <= $qtdPag){
+               
+                for($i = 1; $i <= $qtdPag; $i++){
+ 
+                        if($i == $pg){
+ 
+                                echo "<li><a class='active'>".$i."</a></li>";
+ 
+                        } else {
+ 
+                                echo "<li><a href='index.php?pg=$i'>".$i."</a></li>";
+                               
+                        }
+ 
+                }
+ 
+        }
+ 
+        echo "<li><a  href='index.php?pg=$qtdPag'>Ultima</a></li>";
+ 
+?>
+
+
+       <!--fim --> 
+  </div><!--/row-->
+</div><!--/container -->
+          
+
+    </div>  
+</center>
 					
-			</div>
 		</section>
 		
 		
-		
 		<!-- Footer -->
-		<?php
+        <?php
 
-			require("footer.php");
+            require("footer.php");
 
-		?>
+        ?>
+        
 		
 		
 		
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
