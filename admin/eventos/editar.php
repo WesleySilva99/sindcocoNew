@@ -69,7 +69,21 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-          <?php
+         
+
+
+        <h4><i class="fa fa-angle-right"></i> Editar Evento.</h4>
+       <div class="row mt">
+          <div class="col-lg-6" style="margin-left: 20%">
+           
+            <div class="form-panel" style="border-radius: 10px;">
+              <h4><i class="fa fa-angle-right"></i> Preencha todos os campos.</h4>
+
+              <div class=" form">
+                <form class="cmxform form-horizontal style-form" id="commentForm" action="editarEvento.php" method="POST" enctype="multipart/form-data">
+                  <input type="hidden" name="id" value="<?=$_GET['id'];?>">
+                  <br>
+                   <?php
 
             $sql = "SELECT * FROM eventos WHERE id = ?";
             
@@ -77,42 +91,54 @@
             $stmt->bindValue(1, $_GET['id']);
 
             $stmt->execute();
-			foreach ($stmt as $linha) {
+      foreach ($stmt as $linha) {
 
           ?>
-       
-       <form action="editarEvento.php" class="form" method="POST">
-       <input type="hidden" value="<?=$_GET['id'];?>" name="id"/>
-            <div class="form-group row">
-                <label for="example-text-input" class="col-2 col-form-label">Titulo: </label>
-            <div class="col-10">
-                <input class="form-control" required="required" value="<?=$linha['titulo'];?>" type="text" name="titulo" required="required" id="example-search-input">
+                  <div >
+                   
+                    <div class="col-lg-6">
+                      <label for="cname" ><i class="glyphicon glyphicon-pencil"></i> Titulo*:</label>
+                      <input class=" form-control" id="cname"  value="<?=$linha['titulo'];?>" name="titulo" minlength="2" type="text" required />
+                    </div>
+                  </div>
+                  <div >
+                    
+                    <div class="col-lg-4">
+                       <label for="cemail" ><i class="glyphicon glyphicon-calendar"></i>Data*:</label>
+                      <input class="form-control " id="cuser" value="<?=$linha['data'];?>" type="date" name="data" required />
+                    </div>
+                  </div>
+                  <div >
+                    
+                   
+                    <div class="col-lg-12">
+                      <br>
+                      <label for="curl" ><i class="glyphicon glyphicon-text-size"></i> Texto*:</label>
+                      <textarea  class="form-control" type="text" name="descricao" rows="5" ><?=$linha['descricao'];?></textarea>
+                    </div>
+                  </div>
+                  
+                
+      
+                  
+                 
+                  <div class="form-group">
+                    <div class="col-lg-offset-8 col-lg-4">
+                      <br>
+                      <button class="btn btn-theme" type="submit">Alterar</button>
+                      
+                      <button class="btn btn-danger" type="reset">Cancelar</button>
+                    </div>
+                  </div>
+               <?php } ?>
+                </form>
+              </div>
             </div>
-            </div>
-            <div class="form-group row">
-            <label for="example-search-input" class="col-2 col-form-label">Data:</label>
-            <div class="col-10">
-                <input class="form-control" required="required" value="<?=$linha['data'];?>" type="date" name="data" required="required" id="example-search-input">
-            </div>
-            </div>
-            <div class="form-group row">
-            <label for="comment">Descrição: </label>
-            <div class="col-10">
-                <input class="form-control" name="descricao" value="<?=$linha['descricao'];?>" required="required"/>
-            </div>
-            </div>          
-            
-            <button class="btn btn-success" type="submit"> Enviar </button>
-        </form>
-        <?php
-
-            }
-        ?>
       </section>
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 165px;">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved

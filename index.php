@@ -1,9 +1,11 @@
 <!doctype html>
 <html class="no-js" lang="">
+
     <head>
         
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>SINDCOCO</title>
+        <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1003,11 +1005,11 @@
 		
 		<footer>
 			<div class="container">
-				<center>
+				
 				<div class="row">
 					
 					<!-- Single Footer -->
-					<div class="col-sm-3">
+					<div class="col-sm-4">
 						<div class="single-footer">
 							<div class="footer-logo">
 								<img src="/img/logoMini.png" alt="Footer Logo" />
@@ -1026,12 +1028,12 @@
 					
 					
 					<!-- Single Footer -->
-					<div class="col-sm-3">
+					<div class="col-sm-3 ">
 						<div class="single-footer">
 							<h4>Recent Projects</h4>
 							<ul class="projects">
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
+								<li><img src="/img/parceiros/002.jpg" alt="Reccent Project" /></li>
+								<li><img src="/img/parceiros/parceiro03.jpg" alt="Reccent Project" /></li>
 								<li><img src="/img/project.png" alt="Reccent Project" /></li>
 								<li><img src="/img/project.png" alt="Reccent Project" /></li>
 								<li><img src="/img/project.png" alt="Reccent Project" /></li>
@@ -1042,7 +1044,7 @@
 					<!-- Single Footer -->
 					
 				</div>
-				</center>
+			
 			</div>
 			
 		</footer>

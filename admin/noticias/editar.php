@@ -135,7 +135,7 @@
                     <div class="col-lg-12">
                       <br>
                       <label for="curl" ><i class="glyphicon glyphicon-text-size"></i> Texto*:</label>
-                      <textarea class="form-control" name="texto" id="contact-message" value="<?=$linha['texto'];?>"  rows="5" data-rule="required" data-msg="po"></textarea>
+                      <textarea  class="form-control" type="text" name="texto" rows="5" ><?=$linha['texto'];?></textarea>
                     </div>
                   </div>
                   

@@ -187,7 +187,7 @@ else{
                         <br>
                         <br>
                             <a  href="/admin/noticias/imagens.php?id=<?=$linha['id']?>" class="btn-card" >Adc. Arquivo</a>
-                             <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #ec9c18;">Editar</a>
+                             <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>" class="btn-card"  style="background-color: #ec9c18;">Editar</a>
                               <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #e14c25;">Revogar</a>
 
                     </div>

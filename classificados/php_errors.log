@@ -251,3 +251,6 @@ Stack trace:
 [02-Nov-2018 03:16:42 UTC] PHP Fatal error:  require(): Failed opening required 'footer.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\classificados\detalhes.php on line 189
 [02-Nov-2018 03:18:43 UTC] PHP Warning:  require(footer.php): failed to open stream: No such file or directory in C:\Users\leandro\Documents\sindcocoNew\classificados\detalhes.php on line 198
 [02-Nov-2018 03:18:43 UTC] PHP Fatal error:  require(): Failed opening required 'footer.php' (include_path='.;C:\php\pear') in C:\Users\leandro\Documents\sindcocoNew\classificados\detalhes.php on line 198
+[02-Nov-2018 16:50:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in C:\Users\leandro\Documents\sindcocoNew\classificados\paginaModal.php on line 23
+[02-Nov-2018 16:50:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in C:\Users\leandro\Documents\sindcocoNew\classificados\paginaModal.php on line 23
+[02-Nov-2018 16:51:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in C:\Users\leandro\Documents\sindcocoNew\classificados\paginaModal.php on line 23
