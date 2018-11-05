@@ -102,7 +102,7 @@
 						<div class="item active">
 							<img src="img/bn/001.jpg" alt="Sider Big Image" width="100%" height="100%">
 							<div class="carousel-caption">
-								<h1 class="wow fadeInLeft">O coqueiro, é a única espécie classificada no gênero Cocos. É uma planta que pode crescer até 30 m de altura</h1>
+								<h1 class="wow fadeInLeft">O coqueiro, é a única espécie classificada no gênero Cocos. </h1>
 								<div class="slider-btn wow fadeIn">
 									<a href="https://pt.wikipedia.org/wiki/Coqueiro" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
@@ -371,7 +371,7 @@
 </center>
 					<?php 
 						
-						$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 3";
+						$sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
 						$anuncios = $conexao->query($sql);
 						foreach ($anuncios as $linha) {
 					?>
