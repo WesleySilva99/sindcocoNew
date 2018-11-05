@@ -1008,7 +1008,7 @@
 				<div class="row">
 					
 					<!-- Single Footer -->
-					<div class="col-sm-3">
+					<div class="col-sm-4">
 						<div class="single-footer">
 							<div class="footer-logo">
 								<img src="/img/logoMini.png" alt="Footer Logo" />

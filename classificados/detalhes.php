@@ -108,9 +108,9 @@
           <br>
     <h4 class="card-title" >Dados do usuario.</h4>
     <p class="col-md-6" ><i class=" glyphicon glyphicon-user anunciotexto"><strong> Nome:</strong></i> <?=$linha['nome'];?></p>
-    <p class="col-md-5" ><i class="glyphicon glyphicon-earphone anunciotexto"> <strong>Tefone:</strong> </i> <?php if($linha["telefone"] != null){
+    <p class="col-md-5" ><i class="glyphicon glyphicon-earphone anunciotexto"> <strong>Tefone:</strong> </i> <?php if($linha["fone"] != null){
     ?>
-     <?=$linha['telefone'];?>
+     <?=$linha['fone'];?>
      <?php
    }else{
     ?>
@@ -120,7 +120,7 @@
    ?></p>
     <p class="col-md-6" > <i class="glyphicon glyphicon-envelope anunciotexto"><strong> E-mail:</strong></i> <?=$linha['email'];?></p>
     <p class="col-md-5" ><i class="glyphicon glyphicon-road anunciotexto"><strong> Estado:</strong></i> <?=$linha['nome_estado'];?></p>
-    <p class="col-md-5" ><i class="glyphicon glyphicon-home anunciotexto"><strong> Cidade:</strong></i> <?php if($linha["telefone"] != null){
+    <p class="col-md-5" ><i class="glyphicon glyphicon-home anunciotexto"><strong> Cidade:</strong></i> <?php if($linha["cidade"] != null){
     ?>
      <?=$linha['cidade'];?>
      <?php
