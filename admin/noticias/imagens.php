@@ -24,7 +24,7 @@
 -->
 
 
-  <<?php
+  <?php
 		
 			
 			
@@ -79,28 +79,43 @@
         <form method="POST" class="form" enctype="multipart/form-data" action="/admin/noticias/inserirImagem.php">
         <input type="hidden" name="idEvento" require="require" value="<?=$_GET['id'];?>" />
         <div class="form-group row">
+
+
+
+
+
+
+
         <label for="example-text-input" class="col-2 col-form-label">Imagem: </label>
-        <div class="col-10">
+        <div class="col-8">
             <input class="form-control" require="require" type="file" name="imagem" id="example-text-input">
         </div>
-        <div class="col-10">
-            <h3>Imagem:</h3><br>
-            <h4>Sim: </h4>
-            <input class="radio" require="require" type="radio" value="1" name="tipo" id="example-text-input">
-            <h3>Não: </h3>
-            <input class="radio" require="require" type="radio" value="0" name="tipo" id="example-text-input">
-        </div>
+        <div class="well well-sm text-center">
+      <h3>Imagem:</h3>
+      <div class="dlk-radio btn-group">
+      <label class="btn btn-success">
+          <input class="form-control" required="required" value="1" name="tipo" type="radio">
+          <i class="fa fa-check glyphicon glyphicon-ok">Sim</i>
+     </label>
+    
+           <label class="btn btn-danger">
+         <input  class="form-control" required="required" value="0" name="tipo" type="radio">
+         <i class="fa fa-check glyphicon glyphicon-remove">não</i>
+       </label>
+    </div>
+        
         </div>                    
-            
-            <button type="submit" class="btn btn-sm btn-success">
+            <center>
+            <button type="submit" class="btn btn-sm btn-primary">
                 Enviar
             </button>
+          </center>
         </form>
       </section>
     </section>
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 360px;">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved

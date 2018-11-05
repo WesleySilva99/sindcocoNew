@@ -1,9 +1,11 @@
 <!doctype html>
 <html class="no-js" lang="">
+
     <head>
         
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>SINDCOCO</title>
+        <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1027,7 +1029,7 @@
 					
 					
 					<!-- Single Footer -->
-					<div class="col-sm-3">
+					<div class="col-sm-3 ">
 						<div class="single-footer">
 							<h4>Recent Projects</h4>
 							<ul class="projects">
