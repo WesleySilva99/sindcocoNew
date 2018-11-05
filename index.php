@@ -1004,7 +1004,7 @@
 		
 		<footer>
 			<div class="container">
-				<center>
+				
 				<div class="row">
 					
 					<!-- Single Footer -->
@@ -1031,8 +1031,8 @@
 						<div class="single-footer">
 							<h4>Recent Projects</h4>
 							<ul class="projects">
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
+								<li><img src="/img/parceiros/002.jpg" alt="Reccent Project" /></li>
+								<li><img src="/img/parceiros/parceiro03.jpg" alt="Reccent Project" /></li>
 								<li><img src="/img/project.png" alt="Reccent Project" /></li>
 								<li><img src="/img/project.png" alt="Reccent Project" /></li>
 								<li><img src="/img/project.png" alt="Reccent Project" /></li>
@@ -1043,7 +1043,7 @@
 					<!-- Single Footer -->
 					
 				</div>
-				</center>
+			
 			</div>
 			
 		</footer>
