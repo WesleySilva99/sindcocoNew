@@ -927,9 +927,50 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
+						<center>
 						<div class="title">
 							<h3>Fale com o <span>presidente!</span></h3>
 						</div>
+						<div class="card hovercard">
+                <div class="cardheader">
+
+                </div>
+               <!-- <div class="avatar">
+                    <img alt="" src="../img/protfolio5.jpg">
+                </div>-->
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank" href="https://scripteden.com/">Francisco Porto</a>
+                    </div>
+                    <div style=" font-size: 10px;
+    background: #e91e63;
+    color: #fff;
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: 10px;" class="desc">Presidente</div>
+                    <div class="desc">Fale diretamente com o Presidente.</div>
+                    
+                </div>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://plus.google.com/+ahmshahnuralam">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+						</center>
 					</div>
 				</div>
 			</div>
