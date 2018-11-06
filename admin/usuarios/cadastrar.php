@@ -149,5 +149,6 @@
   </section>
   
 </body>
-
+ <!--common script for all pages-->
+  <script src="/admin/lib/common-scripts.js"></script>
 </html>
