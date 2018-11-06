@@ -64,17 +64,6 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-th"></i>
-              <span>Ações judiciais</span>
-              </a>
-            <ul class="sub">
-              <li><a href="/admin/acoes/cadastrar.php">Cadastrar Ação</a></li>
-              <li><a href="/admin/acoes/">Consultar Ações</a></li>
-              
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
               <i class="fa fa-cogs"></i>
               <span>Pragas</span>
               </a>

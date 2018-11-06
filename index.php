@@ -74,7 +74,6 @@
 									<li><a href="#feature-work">Eventos</a></li>
 									<li><a href="/pragas/">Pragas</a></li>
 									<li><a href="/classificados/">Classificados</a></li>
-									<li><a href="/judiciais/">Ações Judiciais</a></li>
 									<li><a href="#contact-us">Contate-nos</a></li>
 								</ul>
 							</div>
@@ -102,7 +101,7 @@
 						<div class="item active">
 							<img src="img/bn/001.jpg" alt="Sider Big Image" width="100%" height="100%">
 							<div class="carousel-caption">
-								<h1 class="wow fadeInLeft">O coqueiro, é a única espécie classificada no gênero Cocos. É uma planta que pode crescer até 30 m de altura</h1>
+								<h1 class="wow fadeInLeft">O coqueiro, é a única espécie classificada no gênero Cocos. </h1>
 								<div class="slider-btn wow fadeIn">
 									<a href="https://pt.wikipedia.org/wiki/Coqueiro" class="btn btn-learn" target="_blank">Leia Mais</a>
 								</div>
@@ -371,7 +370,7 @@
 </center>
 					<?php 
 						
-						$sql = "SELECT * FROM informativos ORDER BY id DESC LIMIT 3";
+						$sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT 3";
 						$anuncios = $conexao->query($sql);
 						foreach ($anuncios as $linha) {
 					?>
@@ -928,9 +927,50 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
+						<center>
 						<div class="title">
 							<h3>Fale com o <span>presidente!</span></h3>
 						</div>
+						<div class="card hovercard">
+                <div class="cardheader">
+
+                </div>
+               <!-- <div class="avatar">
+                    <img alt="" src="../img/protfolio5.jpg">
+                </div>-->
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank" href="https://scripteden.com/">Francisco Porto</a>
+                    </div>
+                    <div style=" font-size: 10px;
+    background: #e91e63;
+    color: #fff;
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: 10px;" class="desc">Presidente</div>
+                    <div class="desc">Fale diretamente com o Presidente.</div>
+                    
+                </div>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://plus.google.com/+ahmshahnuralam">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+						</center>
 					</div>
 				</div>
 			</div>
