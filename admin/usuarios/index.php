@@ -176,5 +176,5 @@
   </section>
   
 </body>
-
+ <script src="/admin/lib/common-scripts.js"></script>
 </html>

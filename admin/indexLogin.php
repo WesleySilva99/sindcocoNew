@@ -22,6 +22,7 @@
   <link href="../img/logoMini.png" rel="icon">
   <link href="/admin/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+
   
   <?php
 		
@@ -256,5 +257,9 @@
   </section>
   
 </body>
-
+ 
+  <!--common script for all pages-->
+  <script src="lib/common-scripts.js"></script>
+  <!--script for this page-->
+  
 </html>

@@ -2076,14 +2076,22 @@ form#commentform textarea {
     position: relative;
     padding-top: 0;
     overflow: hidden;
+    width: 30%;
     text-align: center;
     background-color: rgba(214, 224, 226, 0.2);
+}
+
+@media (max-width: 450px){
+.card.hovercard{
+	width: 100%
+}
 }
 
 .card.hovercard .cardheader {
      background-image: url("../img/francisco.jpg");
     background-size: cover;
     height: 135px;
+    background-position: 20% 34%;
 }
 
 .card.hovercard .avatar {

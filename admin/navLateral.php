@@ -32,7 +32,7 @@
               <span>Notícias</span>
               </a>
             <ul class="sub">
-              <li><a href="grids.html">Cadastrar Categoria</a></li>
+              
               <li><a href="/admin/noticias/cadastrar.php">Cadastrar Notícias</a></li>
               <li><a href="/admin/noticias/">Consultar Notícias</a></li>
               <li><a href="/admin/noticias/autorizar.php">Autorizar</a></li>

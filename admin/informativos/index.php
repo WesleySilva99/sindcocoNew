@@ -89,12 +89,39 @@
                 <th scope="col"><i class="fa fa-file"></i>Arquivo</th>
                 <th scope="col"><i class="fa fa-question-circle"></i>Ações</th>
             </tr>
-            <?php
+                <?php
+ 
+# inclui o arquivo config(arquivo de conexão com o banco de dados)
+require("../../util/conexao.php");
+ 
+# Limita o número de registros a serem mostrados por página
+$limite = 10;
+ 
+# Se pg não existe atribui 1 a variável pg
+$pg = (isset($_GET['pg'])) ? (int)$_GET['pg'] : 1;
+ 
+# Atribui a variável inicio o inicio de onde os registros vão ser
+# mostrados por página, exemplo 0 à 10, 11 à 20 e assim por diante
+$inicio = ($pg * $limite) - $limite;
+ 
+# seleciona os registros do banco de dados pelo inicio e limitando pelo limite da variável limite
+$sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC LIMIT ".$inicio. ", ". $limite;
+ 
+try {
+       
+        $query = $conexao->prepare($sql);
+        $query->execute();
+ 
+        } catch (PDOexception $error_sql){
+ 
+                echo 'Erro ao retornar os Dados.'.$error_sql->getMessage();
+ 
+}
+ 
+while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
 
-                $sql = "SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id DESC";
-                $anuncios = $conexao->query($sql);
-                foreach ($anuncios as $linha) {
-            ?>
+
+
 
             <tr>
                 <td scope="col"><?=$linha["titulo"];?></td>
@@ -119,9 +146,56 @@
                 </th>
             </tr>
 
-            <?php
+             <?php }
+ 
+# seleciona o total de registros  
+$sql_Total = ' SELECT * FROM informativos WHERE autorizado = 1 ORDER BY id';
+ 
+try {
+       
+        $query_Total = $conexao->prepare($sql_Total);
+        $query_Total->execute();
+ 
+        $query_result = $query_Total->fetchAll(PDO::FETCH_ASSOC);
+ 
+        # conta quantos registros tem no banco de dados
+        $query_count =  $query_Total->rowCount(PDO::FETCH_ASSOC);
+ 
+        # calcula o total de paginas a serem exibidas
+        $qtdPag = ceil($query_count/$limite);
+ 
+        } catch (PDOexception $error_Total){
+       
+                echo 'Erro ao retornar os Dados. '.$error_Total->getMessage();
+ 
+        }
+ 
+        
+        # echo '<a href="busca?pg=1">PRIMEIRA PÁGINA</a>&nbsp;';
+        echo '<ul class="pagination">';
+    echo '<li><a  href="index.php?pg=1">Principal</a></li>';
+       
+        if($qtdPag > 1 && $pg <= $qtdPag){
+               
+                for($i = 1; $i <= $qtdPag; $i++){
+ 
+                        if($i == $pg){
+ 
+                                echo "<li><a class='active'>".$i."</a></li>";
+ 
+                        } else {
+ 
+                                echo "<li><a href='index.php?pg=$i'>".$i."</a></li>";
+                               
+                        }
+ 
                 }
-            ?>
+ 
+        }
+ 
+        echo "<li><a  href='index.php?pg=$qtdPag'>Ultima</a></li>";
+ 
+?>
 
         </table>
       </section>
