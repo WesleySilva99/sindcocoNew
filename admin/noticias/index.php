@@ -155,12 +155,39 @@ else{
              <?php } ?>
                 <div class="container" style="margin-top: 50px;">
                 <div class="row">
-            <?php
 
-                $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and id <> 8 ORDER BY idCategoria";
-                  $query = $conexao->query($sql);
-                    foreach ($query as $linha) {
-                            ?>
+                   <?php
+ 
+# inclui o arquivo config(arquivo de conexão com o banco de dados)
+require("../../util/conexao.php");
+ 
+# Limita o número de registros a serem mostrados por página
+$limite = 21;
+ 
+# Se pg não existe atribui 1 a variável pg
+$pg = (isset($_GET['pg'])) ? (int)$_GET['pg'] : 1;
+ 
+# Atribui a variável inicio o inicio de onde os registros vão ser
+# mostrados por página, exemplo 0 à 10, 11 à 20 e assim por diante
+$inicio = ($pg * $limite) - $limite;
+ 
+# seleciona os registros do banco de dados pelo inicio e limitando pelo limite da variável limite
+$sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and id <> 8 ORDER BY idCategoria DESC LIMIT ".$inicio. ", ". $limite;
+ 
+try {
+       
+        $query = $conexao->prepare($sql);
+        $query->execute();
+ 
+        } catch (PDOexception $error_sql){
+ 
+                echo 'Erro ao retornar os Dados.'.$error_sql->getMessage();
+ 
+}
+ 
+while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
+
+
 
             <div class="col-md-4" style="margin-top: 15px;">
                 <div class="card-content">
@@ -194,66 +221,60 @@ else{
                 </div>
 
             </div>
-            <?php
-                }
-            ?>
-        </div>
-    </div>
-
-<h4><i class="fa fa-angle-right"></i> Eventos.</h4>
-                  <?php
-
-                if($_GET["msg"] != null){
-
-                      ?>
-           <h4><i class="fa fa-angle-right"></i> <?=$_GET["msg"];?></h4>
+               <?php }
+ 
+# seleciona o total de registros  
+$sql_Total = ' SELECT titulo FROM noticias WHERE autorizada = 1 and id <> 8';
+ 
+try {
+       
+        $query_Total = $conexao->prepare($sql_Total);
+        $query_Total->execute();
+ 
+        $query_result = $query_Total->fetchAll(PDO::FETCH_ASSOC);
+ 
+        # conta quantos registros tem no banco de dados
+        $query_count =  $query_Total->rowCount(PDO::FETCH_ASSOC);
+ 
+        # calcula o total de paginas a serem exibidas
+        $qtdPag = ceil($query_count/$limite);
+ 
+        } catch (PDOexception $error_Total){
+       
+                echo 'Erro ao retornar os Dados. '.$error_Total->getMessage();
+ 
+        }
+ 
         
-
-             <?php } ?>
-                <div class="container" style="margin-top: 50px; ">
-                <div class="row" style="    margin-right: 20px;">
-           <?php
-
-                $sql = "SELECT * FROM noticias as n WHERE autorizada = 1 and idCategoria = 3 ORDER BY id DESC";
-                  $query = $conexao->query($sql);
-                    foreach ($query as $linha) {
-                            ?>
-
-            <div class="col-md-4" style="margin-top: 15px;  ">
-                <div class="card-content">
-                    <div class="card-img">
-                      <?php
-                    if($linha["imagem"] != null){
-                            ?>
-                    <img src="/img/eventos/<?=$linha['imagem'];?>"  class="cd1"/>
-                      <?php
-                        }else {
-                            ?>
-                    <img src="/img/anuncios/off.jpg" class="cd1"/>
-                        <?php
-                          }
-                            ?> 
-                        <span>novo</span>
-                    </div>
-                    <div class="card-desc">
-                        <h3 class="cd3"><?=$linha["titulo"];?></h3>
-                        <p class="pTexto"><?=$linha["descricao"];?></p>
-
-                        <a ><?=date('d/m/Y', strtotime($linha['data']));?></a>
-                        <br>
-                        <br>
-                            <a href="/admin/noticias/imagens.php?id=<?=$linha['id']?>" class="btn-card">Adc.Fotos</a>
-                             <a href="/admin/noticias/editar.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #ec9c18;">Editar</a>
-                              <a href="/admin/noticias/nao.php?id=<?=$linha['id']?>" class="btn-card" style="background-color: #e14c25;">Inativar</a>
-
-                    </div>
-                </div>
-            </div>
-            <?php
+        # echo '<a href="busca?pg=1">PRIMEIRA PÁGINA</a>&nbsp;';
+        echo '<ul class="pagination">';
+    echo '<li><a  href="index.php?pg=1">Principal</a></li>';
+       
+        if($qtdPag > 1 && $pg <= $qtdPag){
+               
+                for($i = 1; $i <= $qtdPag; $i++){
+ 
+                        if($i == $pg){
+ 
+                                echo "<li><a class='active'>".$i."</a></li>";
+ 
+                        } else {
+ 
+                                echo "<li><a href='index.php?pg=$i'>".$i."</a></li>";
+                               
+                        }
+ 
                 }
-            ?>
+ 
+        }
+ 
+        echo "<li><a  href='index.php?pg=$qtdPag'>Ultima</a></li>";
+ 
+?>
         </div>
     </div>
+
+
       </section>
     </section>
     <!--main content end-->
