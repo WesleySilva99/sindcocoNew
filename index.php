@@ -1,10 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
 
     <head>
         
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>SINDCOCO</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         <meta name="description" content="">
@@ -43,6 +44,7 @@
 		
     </head>
     <body>
+
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
