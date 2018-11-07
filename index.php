@@ -931,6 +931,17 @@
 						<div class="title">
 							<h3>Fale com o <span>presidente!</span></h3>
 						</div>
+						
+						</center>
+					</div>
+				</div>
+			</div>
+		
+		<div class="container">
+				<div class="row">
+					<center>
+					<div>
+						
 						<div class="card hovercard">
                 <div class="cardheader">
 
@@ -970,8 +981,10 @@
             </div>
 
         </div>
-						</center>
+
+
 					</div>
+					</center>
 				</div>
 			</div>
 		
