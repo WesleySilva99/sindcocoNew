@@ -202,6 +202,31 @@
 			</div>
 		</section>
 		<!-- About Section -->
+
+		<!-- Seção da "Mensagem do Presidente" -->
+		<section id="about" class="site-padding">              
+               <div class="container" >
+				<div class="row">
+						<div class="about-text wow fadeInRight" >
+							<h2 style="text-align: center;">MENSAGEM DO PRESIDENTE</h2> <br>
+<p>Tendo em vista que os senhores são participantes deste Sindicato, na condição de produtores, comerciantes e industriais, viemos fazer um apelo para que haja algum tipo de participação financeira em favor desta entidade. Como os senhores sabem as Contribuições Sindicais deixaram de ser obrigatórias, embora nunca este Sindicato, tenha recebido qualquer tipo de contribuição. Assim apelamos para aqueles que de alguma forma, foram beneficiados por este Sindicato, venham contribuir para a sobrevivência do mesmo.</p><br>
+
+ 
+
+<p>Aproveitando chamamos atenção de que a CNA – Confederação Nacional da Agricultura e as Federações estaduais foram beneficiadas pelo DECRETO Nº9.274 de fevereiro de 2018, retirando recursos do serviço nacional de aprendizagem e alocando em favor destas entidades. Este fato contraria todos os princípios lógicos e éticos, já que estes recursos são destinados ao aprendizado dos trabalhadores rurais. E mais, lembramos que as entidades de federação e confederação são entidades criadas por sindicatos. Com isso se reverte o processo de criação em favor de instituições que só tem trazido benefícios para determinados grupos e não em favor dos seus criadores, ou seja, os Sindicatos.</p><br>
+
+ 
+
+ 
+
+<p>FRANCISCO DE PAULA DOMINGUES PORTO</p>
+
+<p>Diretor Presidente</p>
+						</div>
+				</div>
+			</div>
+		</section>
+		
 		
 		
 		<!-- Award Winning Section -->
