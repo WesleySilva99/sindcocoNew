@@ -33,7 +33,7 @@
 	<div class="row">
 		<div class="col-lg-12 col-sm-6">
 
-            <div class="card hovercard">
+            <div class="card hovercard" style="width: 100%;">
                 <div class="cardheader">
 
                 </div>

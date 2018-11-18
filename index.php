@@ -200,12 +200,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- About Section -->
-
-		<!-- Seção da "Mensagem do Presidente" -->
-		<section id="about" class="site-padding">              
-               <div class="container" >
+			 <div class="container" style="margin-top: 10px;" >
 				<div class="row">
 						<div class="about-text wow fadeInRight" >
 							<h2 style="text-align: center;">MENSAGEM DO PRESIDENTE</h2> <br>
@@ -219,13 +214,16 @@
 
  
 
-<p>FRANCISCO DE PAULA DOMINGUES PORTO</p>
+<p><strong>FRANCISCO DE PAULA DOMINGUES PORTO</strong></p>
 
-<p>Diretor Presidente</p>
+<p><strong>Diretor Presidente</strong></p>
 						</div>
 				</div>
 			</div>
 		</section>
+		<!-- About Section -->
+
+		
 		
 		
 		
@@ -1111,14 +1109,14 @@
 					<!-- Single Footer -->
 					<div class="col-sm-3 ">
 						<div class="single-footer">
-							<h4>Recent Projects</h4>
+							<h4>Parceiros</h4>
 							<ul class="projects">
 								<li><img src="/img/parceiros/002.jpg" alt="Reccent Project" /></li>
 								<li><img src="/img/parceiros/parceiro03.jpg" alt="Reccent Project" /></li>
+								<!--<li><img src="/img/project.png" alt="Reccent Project" /></li>
 								<li><img src="/img/project.png" alt="Reccent Project" /></li>
 								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
-								<li><img src="/img/project.png" alt="Reccent Project" /></li>
+								<li><img src="/img/project.png" alt="Reccent Project" /></li>-->
 							</ul>
 						</div>
 					</div>

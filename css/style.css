@@ -2081,6 +2081,8 @@ form#commentform textarea {
     background-color: rgba(214, 224, 226, 0.2);
 }
 
+
+
 @media (max-width: 450px){
 .card.hovercard{
 	width: 100%
