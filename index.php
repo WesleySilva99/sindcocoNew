@@ -1,6 +1,12 @@
 <!doctype html>
 <html>
 
+<? 
+
+include "util/conexao.php";
+
+?>
+
     <head>
         
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,13 +29,13 @@
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- icone PDF -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/animate.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/responsive.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<link rel="shortcut icon" type="image/png" href="/img/logoMini.png"/>
 
@@ -1022,12 +1028,12 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<h4>Por favor, entre em contato conosco para qualquer tipo de informação.</strong></h4>
-							<form id="contactform" action="" method="post" class="validateform" name="send-contact" onsubmit="return validaForm(this);">
+							<form id="contactform" action="mail.php" method="post" class="validateform" name="send-contact" onsubmit="return validaForm(this);">
 								<div class="row">
 									
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="nome" id="csnome" placeholder="* Nome Completo" pattern="[a-z\s]+$" oninvalid="setCustomValidity('Preencha corretamente!')" onchange="try{setCustomValidity('')}catch(e){}" />
+										<input type="text" name="nome" id="csnome" placeholder="* Nome Completo" pattern="[A-Z\s a-z\s]+$" oninvalid="setCustomValidity('Preencha corretamente!')" onchange="try{setCustomValidity('')}catch(e){}" />
 										<div class="validation">
 										</div>
 									</div>
@@ -1037,7 +1043,7 @@
 										</div>
 									</div>
 									<div class="col-lg-6 field">
-										<input type="text" name="cidade" placeholder="Cidade" pattern="[a-z\s]+$" oninvalid="setCustomValidity('Preencha corretamente!')" onchange="try{setCustomValidity('')}catch(e){}"/>
+										<input type="text" name="cidade"  placeholder="Cidade" oninvalid="setCustomValidity('Preencha corretamente!')" onchange="try{setCustomValidity('')}catch(e){}"/>
 										<div class="validation">
 										</div>
 									</div>
@@ -1047,7 +1053,7 @@
 										</div>
 									</div>
 									<div class="col-lg-12 margintop10 field">
-										<textarea rows="12" name="message" class="input-block-level" placeholder="* Sua Mensagem..."></textarea>
+										<textarea rows="12" name="mensagem" maxlength="70" class="input-block-level" placeholder="* Sua Mensagem..."></textarea>
 										<div class="validation">
 										</div>
 										<p>
@@ -1151,7 +1157,7 @@
 									<li><a href="#feature-work">Eventos</a></li>
 									<li><a href="/pragas/">Pragas</a></li>
 									<li><a href="/classificados/">Classificados</a></li>
-									<li><a href="/judiciais/">Ações Judiciais</a></li>
+									
 									<li><a href="#contact-us">Contate-nos</a></li>
 								</ul>
 							</div>
