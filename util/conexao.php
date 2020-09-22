@@ -4,8 +4,8 @@
 
 $host = "localhost";
 $dbname = "sindcoco";
-$usuario = "sindcoco";
-$senha = "sindcocoNewSql";
+$usuario = "root";
+$senha = "BHU*nji9";
 
 try {
     $conexao = new PDO("mysql:host=$host; dbname=$dbname", "$usuario", "$senha");

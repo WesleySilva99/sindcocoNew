@@ -11,11 +11,11 @@
 							<div class="footer-logo">
 								<img src="/img/logoMini.png" alt="Footer Logo" />
 								<p></p>
-								<p>	Sub sede: Av. Barbosa Lima nº 149, Edifício Alfredo Fernandes, 3º andar, Salas 307/308 – 	Recife Antigo
-								</p>
-								<p>
-									CEP 50.030-330 Recife – Pernambuco 
-								</p>
+                                <p>	Sub sede: R. José Carvalheira, 100 - Empresarial José Cavalheira - Tamarineira
+                                </p>
+                                <p>
+                                    CEP: 52.051-060 Recife – Pernambuco
+                                </p>
 								<p>E-mail: sindcoco@ig.com.br</p>
 								<p>Fones: (81) 3224-0344/3224-2638ut .</p>
 							</div>
