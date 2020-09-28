@@ -982,7 +982,7 @@ include "util/conexao.php";
                 <br class="b1">
                 <div class="col-md-6 field">
                     <div class="map-responsive">
-                        <iframe src="https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Av.+Barbosa+Lima+n%C2%BA+149,+Recife+Antigo&aq=&sll=-6.643776,-36.868306&sspn=8.99385,14.27124&ie=UTF8&hq=&hnear=Av.+Barbosa+Lima,+149+-+Recife,+Pernambuco,+50030-330&t=m&ll=-8.061567,-34.881892&spn=0.014872,0.026393&z=15&output=embed"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15800.494787527838!2d-35.037886605896!3d-8.088865937854443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19ca2f0d3d63%3A0x452d66bfdf95c8ca!2sEmpresarial%20Jos%C3%A9%20Carvalheira!5e0!3m2!1spt-BR!2sbr!4v1601314925904!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
 
