@@ -153,7 +153,8 @@ while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
                 <td>
                      
                       
-                    <a href="/admin/classificados/nao.php?id=<?=$linha['id']?>">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
+                    <a href="/admin/classificados/nao.php?id=<?=$linha['id']?>&pg=1">  <button class="btn btn-warning btn-xs"><i class="fa fa-arrow-down "></i></button> </a>
+                    <a href="/admin/classificados/deletar.php?id=<?=$linha['id']?>&pg=1">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
                     </td>
                
                 </th>

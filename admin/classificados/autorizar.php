@@ -153,9 +153,9 @@ while($linha = $query->fetch(PDO::FETCH_ASSOC)){ ?>
                     <td style="width: 5%" scope="col"><?=$linha["fone"];?></td>
                 <td><span class="label label-warning label-mini">Pendente</span></td>
                 <td>
-                     <a href="/admin/classificados/sim.php?id=<?=$linha['id']?>"> <button  class="btn btn-primary btn-xs"><i class="fa fa-check"></i></button> </a>
+                     <a href="/admin/classificados/sim.php?id=<?=$linha['id']?>2"> <button  class="btn btn-primary btn-xs"><i class="fa fa-arrow-up"></i></button> </a>
                       
-                    <a href="/admin/classificados/deletar.php?id=<?=$linha['id']?>">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
+                    <a href="/admin/classificados/deletar.php?id=<?=$linha['id']?>&pg=2">  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button> </a>
                     </td>
                
                 </th>

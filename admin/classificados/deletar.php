@@ -3,6 +3,8 @@
 require "../../util/conexao.php";
 
 $id = $_GET["id"];
+$paginaRequest = $_GET["pg"];
+$response = "";
 
 try {
 
@@ -12,6 +14,12 @@ try {
     $stmt->bindValue(1, $id);
 
     $stmt->execute();
+
+    if ($paginaRequest == 1){
+        $response = "index.php";
+    }else{
+        $response = "autorizar.php";
+    }
 
     $msg = "Anuncio Deletado com sucesso!";
 
